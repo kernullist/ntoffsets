@@ -1,0 +1,83 @@
+# Extraction allowlist.
+#
+# A full type dump is over ten thousand records per PDB and nobody wants it.
+# This file is the curated set (6.1, 6.2); community PRs extend it.
+#
+# `gate` marks the types the bitfield golden test refuses to ship without
+# (13.5). They are here because bitfields are the most common source of a
+# silently wrong offset, and a silently wrong offset is the one failure this
+# project cannot recover from.
+
+[meta]
+schema = 1
+
+# What the pipeline extracts. `*` means everything the PDB holds.
+#
+# The original plan curated a type list on the assumption that a full dump ran
+# to ten thousand types. Measured, a kernel PDB has 1,646 struct and union
+# definitions, 408 enumerations and ~10,000 plain global symbols -- 1.5 MB,
+# 200 KB and 385 KB of compact JSON. Curating cost coverage (37 types, 16
+# symbols) to solve a size problem that was not real.
+[extract]
+types = ["*"]
+enums = ["*"]
+symbols = ["*"]
+
+# Below are curated subsets, kept for the jobs that need one: the bitfield gate,
+# and header generation for a driver that wants a handful of offsets rather than
+# the whole database.
+[types]
+process_thread = [
+  "_EPROCESS", "_KPROCESS", "_ETHREAD", "_KTHREAD", "_KAPC_STATE", "_KAPC",
+]
+cpu_context = [
+  "_KPCR", "_KPRCB", "_KTRAP_FRAME",
+]
+object_manager = [
+  "_OBJECT_HEADER", "_OBJECT_TYPE", "_OBJECT_TYPE_INITIALIZER",
+  "_HANDLE_TABLE", "_HANDLE_TABLE_ENTRY",
+]
+memory = [
+  "_MMVAD", "_MMVAD_SHORT", "_MMVAD_FLAGS", "_CONTROL_AREA", "_SEGMENT",
+  "_SUBSECTION", "_MMPTE", "_MMPTE_HARDWARE", "_MMPFN", "_POOL_HEADER",
+  "_POOL_TRACKER_BIG_PAGES",
+]
+io = [
+  "_DEVICE_OBJECT", "_DRIVER_OBJECT", "_FILE_OBJECT", "_IRP",
+  "_IO_STACK_LOCATION",
+]
+loader = [
+  "_KLDR_DATA_TABLE_ENTRY", "_LDR_DATA_TABLE_ENTRY",
+]
+registry = [
+  "_CM_KEY_BODY", "_CM_KEY_CONTROL_BLOCK",
+]
+synchronization = [
+  "_KMUTANT", "_ERESOURCE", "_EX_PUSH_LOCK",
+]
+
+# Types whose bitfield decoding gates every release (15.2).
+gate = [
+  "_EPROCESS", "_MMVAD_FLAGS", "_MMPTE_HARDWARE",
+]
+
+# Global symbol RVAs (6.2). This is what Vergilius does not publish and what
+# callers most often need alongside the struct offsets.
+[symbols]
+process = [
+  "PsInitialSystemProcess", "PsActiveProcessHead", "PspCidTable",
+  "PspNotifyEnableMask",
+]
+loader = [
+  "PsLoadedModuleList", "PsLoadedModuleResource",
+]
+object_manager = [
+  "ObTypeIndexTable", "ObpKernelHandleTable",
+]
+memory = [
+  "MmPfnDatabase", "MmSystemRangeStart", "MiState",
+]
+kernel = [
+  "KdDebuggerDataBlock", "KeServiceDescriptorTable", "KiWaitAlways",
+  "KiWaitNever", "KeNumberProcessors",
+]

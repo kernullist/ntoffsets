@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["crates/ntoff-extract"]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"

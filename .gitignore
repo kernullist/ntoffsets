@@ -1,0 +1,34 @@
+# Design docs and scratch material that must not be published
+do-not-commit/
+
+# Rust
+target/
+**/target/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Spike working data: PDBs and binaries are never redistributed (design §12)
+cache/
+*.pdb
+*.pd_
+*.exe
+*.bin
+
+# Generated spike output
+spike/out/
+
+# Winbindex snapshot and resolved build manifests are re-derivable
+spike/out/*.json
+
+# Python bytecode
+**/__pycache__/
+
+# Generated data store (rebuildable from the pipeline)
+data/
+
+# Generated static site
+site/

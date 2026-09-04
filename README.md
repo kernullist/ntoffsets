@@ -1,0 +1,218 @@
+# ntoffsets
+
+**Winbindex finds the file. ntoffsets finds the numbers inside it.**
+
+A public database of Windows kernel struct layouts and global symbol RVAs, per
+build, collected in CI without owning a single machine.
+
+```
+  Question:  "where is _EPROCESS.Token on build 26100.4351?"
+
+  +---------------------------------------------------------------+
+  |  ntoffsets        symbol meaning                               |
+  |                   struct layouts, global symbol RVAs, diffs    |
+  +---------------------------------------------------------------+
+                      | consumes
+  +---------------------------------------------------------------+
+  |  Winbindex        file identity                                |
+  |                   which versions exist, where to get them      |
+  +---------------------------------------------------------------+
+                      | consumes
+  +---------------------------------------------------------------+
+  |  msdl             original distribution                        |
+  |                   the PE and PDB themselves                    |
+  +---------------------------------------------------------------+
+```
+
+## Credit
+
+**This project does not exist without [Winbindex](https://winbindex.m417z.com)
+by [m417z](https://github.com/m417z).** The obstacle here was never parsing —
+it was obtaining kernel binaries for thousands of builds without thousands of
+machines. Winbindex's metadata index removes that obstacle entirely. Winbindex
+stops at "this file exists and here is where to get it"; ntoffsets starts
+exactly there.
+
+Symbols come from the [Microsoft Public Symbol
+Server](https://msdl.microsoft.com). We redistribute neither PDBs nor binaries —
+only offsets derived from them.
+
+We also try not to be a burden: the Winbindex snapshot is downloaded whole and
+queried locally rather than crawled, at most once a day. Binary reads against
+msdl use HTTP ranges and take about 48 KiB per build instead of the 8–14 MB a
+whole kernel would cost.
+
+## Status
+
+Backfilled: **1,967 of 2,154 known builds (91.3%)** — 1,210 amd64, 738 ARM64,
+19 x86, spanning 1507 through 26H1. 519 distinct layouts, 6,497 type bodies,
+25,223 global symbol names, **zero mismatches against DIA**.
+
+The 187 that are missing are missing upstream: 175 have no binary on the symbol
+server and 11 have a binary but no PDB. Nothing is missing because of us. See
+[`spike/FINDINGS.md`](spike/FINDINGS.md).
+
+The design document is not published yet.
+
+## The gate
+
+The largest risk in this project is not legal exposure or hosting limits — it
+is a parser that is quietly wrong. A bad offset does not raise an exception; it
+produces a plausible number that dereferences a kernel pointer at the wrong
+address, and the bug report arrives as a bugcheck on someone else's machine.
+
+So every layout is read twice, by two independent implementations, and the
+results must match exactly:
+
+| | |
+|---|---|
+| `crates/ntoff-extract` | Rust, the `pdb` crate. Ships. Runs on a Linux CI runner. |
+| `ntoff/dia.py` | Microsoft's own `msdia140.dll`, via registration-free COM. The oracle. Windows only, never ships. |
+
+DIA wins every disagreement, and it has earned that standing several times over:
+
+- `<unnamed-type-Foo>` is the type name MSVC gives an anonymous aggregate, and it
+  appears both where the member is anonymous (flatten it) and where the member is
+  named (do not). Keying off the type name invented 96 `_EPROCESS` members that do
+  not exist and dropped 4 that do — silently, in both directions.
+- `LF_CHAR` is a *signed* CodeView leaf that the `pdb` crate hands back unsigned, so
+  `ArbiterRequestUndefined` read as 255 instead of -1. Code comparing against a
+  sentinel would simply never match.
+- `PVOID64` is a 64-bit pointer on x86. Sizing pointers by the target machine —
+  itself a fix for having hardcoded eight — got `_FILE_SEGMENT_ELEMENT.Buffer` wrong
+  in the other direction.
+
+The comparison covers the **union** of what both readers found, not just the
+oracle's list. It did not always: a type the parser invented was never examined,
+and that hole let a chimeric `<unnamed-tag>` through three passing gates.
+
+```bash
+python -m ntoff gate --local
+```
+
+```bash
+python -m ntoff validate
+```
+
+## Usage
+
+```bash
+python -m ntoff collect --dataset ga --channel 11-24H2
+```
+
+`collect` runs the whole pipeline: enumerate from Winbindex, read each build's
+PDB GUID over HTTP ranges, fetch symbols, extract, cross-check against DIA, and
+write the content-addressed store. Nothing reaches the store that the oracle
+disagreed with, or that failed its own consistency checks.
+
+```bash
+python -m ntoff feed
+```
+
+`feed` answers the question this project exists to answer: **did this month's
+update move anything your driver depends on?** Most months it did not, and
+that is the useful answer — wire it into CI and patch Tuesday is either green
+or it names the types to retest.
+
+```bash
+python -m ntoff status
+```
+
+## Layout
+
+```
+types.toml                curated extraction allowlist
+crates/ntoff-extract/     the shipping parser (Rust)
+ntoff/winbindex.py        snapshot -> candidates -> PDB keys, three datasets
+ntoff/msdl.py             symbol server client: ranged reads, cache, backoff
+ntoff/ntpe.py             PE -> PDB GUID+Age over a random-access reader
+ntoff/extract.py          drives the Rust extractor
+ntoff/dia.py              the DIA oracle (Windows only, never ships)
+ntoff/compare.py          the oracle diff
+ntoff/validate.py         self-consistency and continuity (13.1, 13.4)
+ntoff/store.py            content-addressed store
+ntoff/coverage.py         what is missing and why
+ntoff/cli.py              collect / gate / validate / status
+spike/FINDINGS.md         what the spike measured
+
+data/
+  layouts/v1/<sha256>.json    one file per distinct layout
+  builds/<guid><age>.json     layout reference + global symbol RVAs
+  index/by-version.json       version -> build keys
+  index/coverage.json         gaps, with reasons
+  index/unresolved.json       per-build record of every gap
+  feed/changes.json           what moved between consecutive builds
+  feed/changes.xml            the same, as Atom
+  feed/aliases.json           confirmed member renames
+  feed/renames-review.json    rename candidates a human has to settle
+```
+
+The store is regenerated by the pipeline, so it is not committed.
+
+## Content addressing
+
+Most builds do not change any struct layout, so most builds write no new
+layout file. On 11-24H2 that is 58 consecutive amd64 builds sharing 8 layouts,
+and 48 ARM64 builds sharing 8. The bytes saved matter less than the fact that
+most days produce nothing to commit at all.
+
+## The diff feed
+
+Comparing consecutive builds within one channel and one architecture — both
+axes matter, and getting either wrong turns the output into noise — gives the
+one thing a file-identity layer cannot produce: not "a new kernel shipped" but
+"`_EPROCESS` grew two members in KB5070311, and `_KPRCB` moved sixteen".
+
+It also detects renames. A member that changes name is otherwise one removal
+plus one addition, and a caller hashing the old name gets `STATUS_NOT_FOUND`
+with nothing to explain it. When exactly one member disappears and exactly one
+appears at the identical offset, size and bit geometry, that is a rename and it
+goes into `aliases.json`. When two disappear and two appear, there is no way to
+tell which became which, so it goes to a review file instead. Being unable to
+answer is fine; answering wrongly puts a caller at the wrong offset.
+
+Except that in 225 transitions, not one of the candidates was a rename.
+Microsoft consumes padding and retires fields; it does not relabel them:
+
+```
+_KPRCB.BpbStateReserved       -> BpbDivideOnReturn   reserved bit -> mitigation flag
+_KPRCB.PrcbPad139c            -> RawRelativePerformance
+_EPROCESS.ProcessExecutionState -> Flags2Available1   field retired
+_EPROCESS.NumberOfLockedPages -> MmReserved2
+_ETHREAD.UpdateTebSpareLong2  -> HeapData
+```
+
+Aliasing any of those would be worse than useless. A caller asking for
+`ProcessExecutionState` and getting `Flags2Available1`'s bytes reads a correct
+offset holding a value that stopped meaning anything. So candidates are
+classified first, and only a genuine label change becomes an alias; where the
+classifier is unsure it errs toward *not* aliasing. `aliases.json` is empty,
+which is the honest answer — and the feature still earned its keep by naming
+seven changes that look like renames if you only compare offsets.
+
+## Why not just read Vergilius
+
+[Vergilius](https://www.vergiliusproject.com) is the real comparison, and it is
+good at what it does. The differences that matter:
+
+| | Vergilius | ntoffsets |
+|---|---|---|
+| Access | read it in a browser | API, generated headers, runtime blob |
+| Updates | manual, lagging | CI |
+| Identity | build number | PDB GUID + Age, exact per UBR |
+| Global symbol RVAs | no | yes |
+| Change tracking | no | diff feed |
+| Coverage | unstated | published, including what is missing |
+| Verifiable | no | `ntoff verify` re-derives any published value |
+
+## Misuse
+
+The same offsets serve EDR, DFIR, hypervisor and driver developers, and also
+whoever else reads them. Vergilius has published equivalent data for years; the
+marginal uplift here is small and the set of legitimate users is much larger.
+
+## License
+
+MIT for the code. Data derived from Microsoft symbols is published under the
+terms described in the design document; PDBs and binaries are never
+redistributed.
