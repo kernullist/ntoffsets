@@ -94,6 +94,24 @@ python -m ntoff gate --local
 python -m ntoff validate
 ```
 
+## Checking it yourself
+
+```bash
+python -m ntoff verify --source https://<host>/ --sample 30
+```
+
+`verify` re-fetches each PDB from Microsoft, extracts it again, and compares
+against what is **published** — not against our working copy, which would only
+show the store agrees with itself. It recomputes the content hash rather than
+trusting the filename, so a layout filed under the wrong name fails just as a
+layout whose bytes do not match its name does. Symbol bitmaps are decoded and
+compared as name-to-address pairs, because the encoding is positional and one
+wrong bit shifts everything after it.
+
+Tampering with a published offset, an RVA, a manifest entry or a single bitmap
+bit each makes it fail. `--seed` fixes the sample so a published result can be
+reproduced by anyone.
+
 ## Usage
 
 ```bash
@@ -132,7 +150,8 @@ ntoff/compare.py          the oracle diff
 ntoff/validate.py         self-consistency and continuity (13.1, 13.4)
 ntoff/store.py            content-addressed store
 ntoff/coverage.py         what is missing and why
-ntoff/cli.py              collect / gate / validate / status
+ntoff/verify.py           re-derive published values from Microsoft's PDBs
+ntoff/cli.py              collect / census / gate / validate / verify / feed / site
 spike/FINDINGS.md         what the spike measured
 
 data/

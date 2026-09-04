@@ -25,7 +25,8 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from . import config, coverage, diff, extract, msdl, site as site_mod, store as store_mod, winbindex
+from . import (config, coverage, diff, extract, msdl, site as site_mod,
+               store as store_mod, verify as verify_mod, winbindex)
 from .compare import compare
 from .model import Extraction
 from .ntpe import read_pe_info
@@ -278,6 +279,60 @@ def _undownloadable_entries(snapshot: Path):
 # ---------------------------------------------------------------------------
 # gate
 # ---------------------------------------------------------------------------
+
+
+def cmd_verify(args: argparse.Namespace) -> int:
+    """Re-derive published values from Microsoft's PDBs and compare (8.6)."""
+    import random
+
+    allowlist = config.load()
+    types = list(allowlist.types)
+    symbols = list(allowlist.symbols)
+    enum_names = list(config.enums())
+
+    source = verify_mod.Source(args.source)
+    keys = args.key or source.keys()
+    if args.sample and args.sample < len(keys):
+        # Seeded so a published result can be reproduced by anyone, which is
+        # the entire point of the command.
+        keys = random.Random(args.seed).sample(sorted(keys), args.sample)
+
+    print(f"verifying {len(keys)} build(s) against {source}")
+    if args.no_cache:
+        print("  (ignoring the local PDB cache; every symbol file is re-fetched)")
+
+    extract.build()
+    cache = Path(args.cache) if not args.no_cache else Path(args.work) / "verify-cache"
+
+    passed = failed = errored = 0
+    for position, key in enumerate(sorted(keys), start=1):
+        try:
+            published = source.build(key)
+            fetched = verify_mod.fetch_pdb_for(published, cache)
+            extraction = extract.run(
+                fetched.path, key, types, symbols,
+                Path(args.work) / f"{key}.verify.json", enums=enum_names,
+            )
+            result = verify_mod.verify_build(source, key, extraction)
+        except Exception as error:
+            errored += 1
+            print(f"  [{position}/{len(keys)}] {key[:12]} ERROR {type(error).__name__}: {error}")
+            continue
+
+        if result.passed:
+            passed += 1
+            print(f"  [{position}/{len(keys)}] {result.version:<18} PASS  "
+                  f"{result.checked_types} types / {result.checked_enums} enums / "
+                  f"{result.checked_symbols} symbols")
+        else:
+            failed += 1
+            print(f"  [{position}/{len(keys)}] {result.version:<18} FAIL  "
+                  f"{len(result.problems)} problem(s)")
+            for problem in result.problems[:5]:
+                print(f"        {problem}")
+
+    print(f"\nverify: {passed} pass, {failed} fail, {errored} error")
+    return 0 if failed == 0 and errored == 0 else 1
 
 
 def cmd_census(args: argparse.Namespace) -> int:
@@ -597,6 +652,20 @@ def main(argv: list[str] | None = None) -> int:
     collect.add_argument("--verbose", action="store_true")
     _add_common(collect)
     collect.set_defaults(func=cmd_collect, oracle=True)
+
+    verify = sub.add_parser(
+        "verify", help="re-derive published values from Microsoft's PDBs (8.6)")
+    verify.add_argument("--source", default=str(REPO / "site"),
+                        help="published API root: a directory or an https:// base URL")
+    verify.add_argument("--key", action="append", default=[],
+                        help="verify only these builds")
+    verify.add_argument("--sample", type=int, help="verify a random subset")
+    verify.add_argument("--seed", type=int, default=0,
+                        help="sample seed, so a published run is reproducible")
+    verify.add_argument("--no-cache", action="store_true",
+                        help="re-fetch every PDB instead of using the local cache")
+    _add_common(verify)
+    verify.set_defaults(func=cmd_verify)
 
     census = sub.add_parser("census", help="count every dataset, collecting none (11)")
     census.add_argument("--file", default="ntoskrnl.exe")
