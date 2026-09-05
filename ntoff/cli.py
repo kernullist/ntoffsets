@@ -493,35 +493,34 @@ def cmd_validate(args: argparse.Namespace) -> int:
 
 
 def _check_continuity_across(store, loaded: dict[str, Extraction]) -> list[str]:
-    """Compare each build with its neighbour in the same channel and machine.
+    """Compare each build with its neighbour, using the feed's idea of neighbour.
 
-    Both axes matter (13.4): `_KPRCB` moves tens of kilobytes between Windows
-    versions, and 22000 amd64 shares a version number with 22000 ARM64 and
-    almost no layout.
+    This used to group and order builds itself. It agreed with `diff.sequences`
+    by having the same code written twice, which lasted exactly until one of
+    them was fixed: the Insider dataset files every build under one channel,
+    and only the feed learned to split those by Windows version. The check went
+    on reporting 17763 -> 19041 as a suspicious move, which it is not -- it is
+    two different versions of Windows.
+
+    Two places deciding what "adjacent" means is the defect. There is one now,
+    and it is the one the published feed uses (10.0), so a continuity warning
+    and a feed entry always describe the same pair of builds.
     """
     from .validate import check_continuity
 
-    runs: dict[tuple[str, str], list[tuple[tuple, str, str]]] = {}
-    for build in store.read_builds():
-        key = build.get("symbol_key")
-        if key not in loaded:
-            continue
-        order = (build.get("release_date") or "",
-                 diff.version_key(build.get("file_version")))
-        for channel in build.get("channel") or ["unknown"]:
-            runs.setdefault((channel, build["machine"]), []).append(
-                (order, key, build.get("file_version") or key[:10])
-            )
+    def label(build: dict) -> str:
+        return build.get("file_version") or build["symbol_key"][:10]
 
     messages: list[str] = []
-    for (channel, machine), entries in sorted(runs.items()):
-        entries.sort()
-        for (_, before_key, before_label), (_, after_key, after_label) in zip(
-            entries, entries[1:]
-        ):
+    for (channel, machine), builds in diff.sequences(store.read_builds()).items():
+        # Filtered after sequencing, so a build we hold but could not load does
+        # not silently make its neighbours adjacent under a different name than
+        # the feed uses.
+        run = [b for b in builds if b.get("symbol_key") in loaded]
+        for before, after in zip(run, run[1:]):
             findings = check_continuity(
-                loaded[before_key], loaded[after_key],
-                f"{channel} {machine} {before_label}->{after_label}",
+                loaded[before["symbol_key"]], loaded[after["symbol_key"]],
+                f"{channel} {machine} {label(before)}->{label(after)}",
             )
             messages.extend(findings.warnings)
             messages.extend(findings.errors)
