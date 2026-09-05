@@ -112,6 +112,30 @@ Tampering with a published offset, an RVA, a manifest entry or a single bitmap
 bit each makes it fail. `--seed` fixes the sample so a published result can be
 reproduced by anyone.
 
+Against a URL, fetching every type body costs ~1,700 requests per build, so
+`--bodies` (40 by default remotely, all of them locally) samples them and the
+output says how many it actually fetched. The sample is chosen by hashing the
+build key with each type name, so it spreads across the manifest and anyone
+holding the key can recompute which bodies a published run looked at.
+
+## Previewing the site
+
+```bash
+python -m ntoff site --data-out site-data --data-base http://127.0.0.1:8018
+python -m ntoff serve
+```
+
+The output splits by how often a file changes rather than by channel: the site,
+indexes and feed are rewritten every run and come to a couple of megabytes,
+while the addressed data is immutable once written and is almost all of the
+bytes. The page finds the data through `v1/config.json`, so moving it later
+does not touch the page code.
+
+`serve` exists because `python -m http.server` cannot preview that. Once the
+data has its own origin every fetch for it is cross-origin, and the data host
+has to send `Access-Control-Allow-Origin` — GitHub Pages sends it on
+everything, object storage generally does not until told to.
+
 ## Usage
 
 ```bash
@@ -151,7 +175,9 @@ ntoff/validate.py         self-consistency and continuity (13.1, 13.4)
 ntoff/store.py            content-addressed store
 ntoff/coverage.py         what is missing and why
 ntoff/verify.py           re-derive published values from Microsoft's PDBs
-ntoff/cli.py              collect / census / gate / validate / verify / feed / site
+ntoff/site.py             assemble the static site; split site from data
+ntoff/serve.py            preview it, split origins and CORS included
+ntoff/cli.py              collect / census / gate / validate / verify / feed / site / serve
 spike/FINDINGS.md         what the spike measured
 
 data/

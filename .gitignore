@@ -30,5 +30,6 @@ spike/out/*.json
 # Generated data store (rebuildable from the pipeline)
 data/
 
-# Generated static site
+# Generated static site, and the data tree it is split from (8.4)
 site/
+site-data/

@@ -25,7 +25,8 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from . import (config, coverage, diff, extract, msdl, site as site_mod,
+from . import (config, coverage, diff, extract, msdl, serve as serve_mod,
+               site as site_mod,
                store as store_mod, verify as verify_mod, winbindex)
 from .compare import compare
 from .model import Extraction
@@ -290,7 +291,7 @@ def cmd_verify(args: argparse.Namespace) -> int:
     symbols = list(allowlist.symbols)
     enum_names = list(config.enums())
 
-    source = verify_mod.Source(args.source)
+    source = verify_mod.Source(args.source, args.data_base)
     keys = args.key or source.keys()
     if args.sample and args.sample < len(keys):
         # Seeded so a published result can be reproduced by anyone, which is
@@ -303,6 +304,10 @@ def cmd_verify(args: argparse.Namespace) -> int:
 
     extract.build()
     cache = Path(args.cache) if not args.no_cache else Path(args.work) / "verify-cache"
+    # Fetching every type body costs one request each, ~1,700 per build. Locally
+    # that is free; over a network it is the entire cost and a burden on the
+    # host, so it is sampled unless asked otherwise.
+    bodies = args.bodies if args.bodies is not None else (40 if source.data_remote else None)
 
     passed = failed = errored = 0
     for position, key in enumerate(sorted(keys), start=1):
@@ -313,7 +318,7 @@ def cmd_verify(args: argparse.Namespace) -> int:
                 fetched.path, key, types, symbols,
                 Path(args.work) / f"{key}.verify.json", enums=enum_names,
             )
-            result = verify_mod.verify_build(source, key, extraction)
+            result = verify_mod.verify_build(source, key, extraction, bodies)
         except Exception as error:
             errored += 1
             print(f"  [{position}/{len(keys)}] {key[:12]} ERROR {type(error).__name__}: {error}")
@@ -323,7 +328,8 @@ def cmd_verify(args: argparse.Namespace) -> int:
             passed += 1
             print(f"  [{position}/{len(keys)}] {result.version:<18} PASS  "
                   f"{result.checked_types} types / {result.checked_enums} enums / "
-                  f"{result.checked_symbols} symbols")
+                  f"{result.checked_symbols} symbols / "
+                  f"{result.checked_bodies} bodies fetched")
         else:
             failed += 1
             print(f"  [{position}/{len(keys)}] {result.version:<18} FAIL  "
@@ -583,11 +589,24 @@ def cmd_feed(args: argparse.Namespace) -> int:
 
 
 def cmd_site(args: argparse.Namespace) -> int:
-    stats = site_mod.build(args.data, args.out_dir)
-    print(f"site: {stats['files']} files, {stats['bytes']/1024/1024:.1f} MiB "
-          f"({stats['builds']} builds, {stats['layouts']} layouts)")
-    print(f"  {args.out_dir}")
-    print(f"\n  python -m http.server 8000 --directory {args.out_dir}")
+    stats = site_mod.build(args.data, args.out_dir, args.data_out, args.data_base)
+    print(f"site: {stats['files']} files, {stats['bytes']/1024/1024:.1f} MiB"
+          f"  {args.out_dir}")
+    if stats["split"]:
+        print(f"data: {stats['data_files']} files, {stats['data_bytes']/1024/1024:.1f} MiB"
+              f"  {args.data_out}")
+        print(f"      the page fetches it from {args.data_base or '(same origin)'}")
+    print(f"  {stats['builds']} builds, {stats['layouts']} layouts")
+    print("\n  python -m ntoff serve")
+    return 0
+
+
+def cmd_serve(args: argparse.Namespace) -> int:
+    if not args.site.is_dir():
+        raise SystemExit(f"{args.site} does not exist; run `site` first")
+    data = args.data_dir if args.data_dir.is_dir() else None
+    print("preview:")
+    serve_mod.serve(args.site, data, args.port, args.data_port)
     return 0
 
 
@@ -657,11 +676,18 @@ def main(argv: list[str] | None = None) -> int:
         "verify", help="re-derive published values from Microsoft's PDBs (8.6)")
     verify.add_argument("--source", default=str(REPO / "site"),
                         help="published API root: a directory or an https:// base URL")
+    verify.add_argument("--data-base", default=None,
+                        help="override where the addressed data lives; "
+                             "by default the source's v1/config.json decides")
     verify.add_argument("--key", action="append", default=[],
                         help="verify only these builds")
     verify.add_argument("--sample", type=int, help="verify a random subset")
     verify.add_argument("--seed", type=int, default=0,
                         help="sample seed, so a published run is reproducible")
+    verify.add_argument("--bodies", type=int,
+                        help="how many published type bodies to fetch and compare "
+                             "per build; all when the data is a local directory, "
+                             "40 when it is served over the network")
     verify.add_argument("--no-cache", action="store_true",
                         help="re-fetch every PDB instead of using the local cache")
     _add_common(verify)
@@ -692,8 +718,19 @@ def main(argv: list[str] | None = None) -> int:
 
     site = sub.add_parser("site", help="assemble the static site (8.1, 8.4)")
     site.add_argument("--out-dir", type=Path, default=REPO / "site")
+    site.add_argument("--data-out", type=Path,
+                      help="emit the addressed data into its own tree (8.4)")
+    site.add_argument("--data-base", default="",
+                      help="URL the page fetches that data from; empty = same origin")
     _add_common(site)
     site.set_defaults(func=cmd_site)
+
+    serve = sub.add_parser("serve", help="preview the site, split origins and all (8.4)")
+    serve.add_argument("--site", type=Path, default=REPO / "site")
+    serve.add_argument("--data-dir", type=Path, default=REPO / "site-data")
+    serve.add_argument("--port", type=int, default=8017)
+    serve.add_argument("--data-port", type=int, default=8018)
+    serve.set_defaults(func=cmd_serve)
 
     status = sub.add_parser("status", help="store size, dedup ratio, coverage")
     _add_common(status)

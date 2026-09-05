@@ -146,9 +146,27 @@ footer p { margin: 0 0 8px; max-width: 70ch; }
 const API = "v1";
 const cache = new Map();
 
+// The addressed data may live on another origin: it is almost all of the bytes
+// and it is immutable, so it is deployed apart from the site (8.4). An empty
+// `data_base` means same origin, which is the local and single-repo case — a
+// page that has to be told where its own data is will eventually be told wrong.
+let DATA = "";
+const ON_DATA = /^(build|layout|type|symbols)\//;
+
+async function loadConfig() {
+  try {
+    const r = await fetch(`${API}/config.json`);
+    if (r.ok) DATA = (await r.json()).data_base || "";
+  } catch { /* same origin */ }
+}
+
+function urlFor(path) {
+  return ON_DATA.test(path) && DATA ? `${DATA}/${API}/${path}` : `${API}/${path}`;
+}
+
 async function get(path) {
   if (!cache.has(path)) {
-    cache.set(path, fetch(`${API}/${path}`).then(r => {
+    cache.set(path, fetch(urlFor(path)).then(r => {
       if (!r.ok) throw new Error(`${path}: ${r.status}`);
       return r.json();
     }));
@@ -302,8 +320,8 @@ async function pageBuild(key) {
         <tbody>${page.map(([n, v]) =>
           `<tr><td class="mono">${esc(n)}</td><td class="num">${esc(v)}</td></tr>`).join("")}</tbody>`);
     },
-    foot: `<p class="hint"><a href="${API}/build/${key}.json">Raw JSON</a>
-      · <a href="${API}/symbols/universe.json">symbol universe</a></p>`,
+    foot: `<p class="hint"><a href="${urlFor(`build/${key}.json`)}">Raw JSON</a>
+      · <a href="${urlFor("symbols/universe.json")}">symbol universe</a></p>`,
   });
 }
 
@@ -382,7 +400,7 @@ async function pageLayout(hash) {
       <p class="hint">${users.slice(0, 20).map(b =>
         `<a href="#/build/${b.k}">${esc(label(b))}</a>`).join(" · ")}
         ${users.length > 20 ? ` and ${users.length - 20} more` : ""}
-        · <a href="${API}/layout/${hash}.json">Manifest JSON</a></p>`,
+        · <a href="${urlFor(`layout/${hash}.json`)}">Manifest JSON</a></p>`,
     placeholder: "type or enum name, e.g. _EPROCESS or PROTECTED_TYPE",
     value: "_EPROCESS",
     run: async q => {
@@ -673,7 +691,7 @@ async function route() {
 }
 
 addEventListener("hashchange", route);
-route();
+loadConfig().then(route);
 get("coverage.json").then(c => {
   document.getElementById("asof").textContent = `Data as of ${c.as_of}`;
 }).catch(() => {});

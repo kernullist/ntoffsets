@@ -43,14 +43,41 @@ from .store import Store
 class Source:
     """Reads the published API, from a directory or over HTTP."""
 
-    def __init__(self, location: str) -> None:
+    # Paths the addressed data owns. When the site is deployed split (8.4)
+    # these come from another origin, named by the site's `v1/config.json`.
+    DATA_PREFIXES = ("v1/build/", "v1/layout/", "v1/type/", "v1/symbols/")
+
+    def __init__(self, location: str, data_base: str | None = None) -> None:
         self.location = location.rstrip("/")
         self.remote = location.startswith(("http://", "https://"))
+        if data_base is None:
+            try:
+                data_base = self._read("v1/config.json").get("data_base") or ""
+            except Exception:
+                data_base = ""
+        self.data_base = data_base.rstrip("/")
+
+    @property
+    def data_remote(self) -> bool:
+        """Whether the *bodies* cost a network round trip.
+
+        Not the same question as `remote`: a local site directory can point at
+        a remote data origin, and it is the data origin that the ~1,700
+        per-build body fetches actually hit.
+        """
+        if self.data_base:
+            return self.data_base.startswith(("http://", "https://"))
+        return self.remote
 
     def __str__(self) -> str:  # pragma: no cover - display only
         return self.location
 
     def get(self, path: str) -> dict:
+        if self.data_base and path.startswith(self.DATA_PREFIXES):
+            return Source(self.data_base, data_base="")._read(path)
+        return self._read(path)
+
+    def _read(self, path: str) -> dict:
         if self.remote:
             request = urllib.request.Request(
                 f"{self.location}/{path}",
@@ -83,6 +110,7 @@ class Result:
     checked_types: int = 0
     checked_enums: int = 0
     checked_symbols: int = 0
+    checked_bodies: int = 0
     problems: list[str] = field(default_factory=list)
 
     @property
@@ -90,8 +118,26 @@ class Result:
         return not self.problems
 
 
-def verify_build(source: Source, key: str, extraction: Extraction) -> Result:
-    """Compare a fresh extraction against everything published for `key`."""
+def verify_build(source: Source, key: str, extraction: Extraction,
+                 bodies: int | None = None) -> Result:
+    """Compare a fresh extraction against everything published for `key`.
+
+    `bodies` caps how many published type bodies are fetched and compared. The
+    checks are not equally expensive:
+
+    * the layout hash covers the canonical form of *every* type and enum at
+      once, so one comparison settles whether our reading matches the one the
+      publisher hashed. Free.
+    * each per-type hash is recomputed locally and compared to the manifest
+      string, catching a manifest that points at the wrong body. Also free.
+    * fetching a body catches the remaining case -- right name, wrong bytes --
+      and costs one request per type, about 1,700 per build.
+
+    Over a network that last one is the whole cost, and it is the check a
+    consumer can most easily repeat for themselves: hash what you fetched. So
+    it is sampled remotely and exhaustive locally, and the count is reported
+    either way rather than quietly reduced.
+    """
     published = source.build(key)
     result = Result(key, published.get("file_version") or key[:12])
 
@@ -106,14 +152,34 @@ def verify_build(source: Source, key: str, extraction: Extraction) -> Result:
         return result
 
     manifest = source.manifest(published["layout"])
-    _verify_members(source, manifest, extraction, result)
-    _verify_enums(source, manifest, extraction, result)
+    wanted = _body_sample(key, manifest, bodies)
+    _verify_members(source, manifest, extraction, result, wanted)
+    _verify_enums(source, manifest, extraction, result, wanted)
     _verify_symbols(source, published, extraction, result)
     return result
 
 
+def _body_sample(key: str, manifest: dict, bodies: int | None) -> set[str] | None:
+    """Pick which type bodies to fetch. `None` means all of them.
+
+    Not the first N in name order: that would leave everything after the letter
+    C permanently unfetched, and a sample whose membership is predictable from
+    the name alone is one a tamperer can simply stay out of. Ordering by a hash
+    of the build key and the name spreads the sample across the manifest while
+    keeping it reproducible -- given the key, anyone can recompute exactly
+    which bodies a published run looked at.
+    """
+    if bodies is None:
+        return None
+    names = list(manifest.get("types") or {}) + list(manifest.get("enums") or {})
+    if bodies >= len(names):
+        return None
+    names.sort(key=lambda name: hashlib.sha256(f"{key}/{name}".encode()).digest())
+    return set(names[:bodies])
+
+
 def _verify_members(source: Source, manifest: dict, extraction: Extraction,
-                    result: Result) -> None:
+                    result: Result, wanted: set[str] | None) -> None:
     listed = manifest.get("types") or {}
     ours = extraction.types
 
@@ -134,6 +200,9 @@ def _verify_members(source: Source, manifest: dict, extraction: Extraction,
             )
             continue
 
+        if wanted is not None and name not in wanted:
+            continue
+        result.checked_bodies += 1
         blob = source.type_blob(listed[name])
         if blob != Store.type_document(name, ours[name]):
             # The hash matched, so this means the stored bytes are not what the
@@ -142,7 +211,7 @@ def _verify_members(source: Source, manifest: dict, extraction: Extraction,
 
 
 def _verify_enums(source: Source, manifest: dict, extraction: Extraction,
-                  result: Result) -> None:
+                  result: Result, wanted: set[str] | None) -> None:
     listed = manifest.get("enums") or {}
     ours = extraction.enums
 
@@ -163,6 +232,9 @@ def _verify_enums(source: Source, manifest: dict, extraction: Extraction,
             )
             continue
 
+        if wanted is not None and name not in wanted:
+            continue
+        result.checked_bodies += 1
         blob = source.type_blob(listed[name])
         if blob != Store.enum_document(name, ours[name]):
             result.problems.append(f"{name}: published enum differs from its own hash")

@@ -10,12 +10,26 @@ in the browser instead, against `v1/index/by-version.json`, so the URL becomes
 `#/version/10.0.26100.4061`. Same answer, no server; the JSON index is public
 either way, so a script can do the same lookup without the page.
 
-The layout files dominate the byte count -- 43 layouts against 237 builds, and
-each layout is two orders of magnitude larger than the build entry pointing at
-it. That ratio is why 8.4 puts layouts and builds in their own repositories:
-the site repo stays small enough to keep its history, and the data repos can be
-truncated. This builder emits one tree because that is what a local preview
-needs; the split is a deployment concern, not a format one.
+**The output splits by how often a file changes, not by channel.** 8.4
+originally proposed per-channel repositories, following Winbindex. That does
+not survive content addressing: 66% of type bodies are shared across channels
+and 55% across architectures, so a per-channel split would either duplicate two
+thirds of them or need cross-repository references for the shared part --
+undoing the saving that made per-type addressing worth doing (7.2).
+
+What does divide cleanly is mutability:
+
+* the site, indexes, feed and coverage change on every run and are small;
+* the addressed data is immutable once written and is almost all of the bytes.
+
+Keeping them apart means a re-extraction -- which rewrites every manifest --
+churns only the data repository, and its history can be truncated without
+losing the code's. `--data-out` emits that second tree; without it everything
+lands in one, which is what a local preview wants.
+
+When the two are served from different origins, the page needs to be told. It
+reads `v1/config.json`, which the site repo carries; an empty `data_base`
+means same origin, so the single-tree build needs no special case.
 """
 
 from __future__ import annotations
@@ -77,7 +91,20 @@ def _compact_layouts(builds: list[dict], store: Store) -> dict:
     return {"schema": 1, "count": len(entries), "layouts": entries}
 
 
-def build(data: Path, out: Path) -> dict:
+def _measure(root: Path) -> tuple[int, int]:
+    files = [f for f in root.rglob("*") if f.is_file()] if root.exists() else []
+    return len(files), sum(f.stat().st_size for f in files)
+
+
+def build(data: Path, out: Path, data_out: Path | None = None,
+          data_base: str = "") -> dict:
+    """Assemble the site, optionally splitting the addressed data into its own tree.
+
+    `data_base` is the URL the page should fetch that data from. Empty means
+    same origin, which is both the single-tree case and the sane default: a
+    page that has to be told where its own data is will eventually be told
+    wrong.
+    """
     store = Store(data)
     builds = store.read_builds()
     if not builds:
@@ -85,49 +112,55 @@ def build(data: Path, out: Path) -> dict:
 
     if out.exists():
         shutil.rmtree(out)
-    api = out / "v1"
-    (api / "build").mkdir(parents=True)
-    (api / "layout").mkdir(parents=True)
-    (api / "feed").mkdir(parents=True)
-    (api / "index").mkdir(parents=True)
+    if data_out is not None and data_out.exists():
+        shutil.rmtree(data_out)
+
+    site_api = out / "v1"
+    data_root = data_out if data_out is not None else out
+    data_api = data_root / "v1"
+
+    for directory in (site_api / "feed", site_api / "index",
+                      data_api / "build", data_api / "layout",
+                      data_api / "type", data_api / "symbols"):
+        directory.mkdir(parents=True, exist_ok=True)
 
     for build_document in builds:
-        (api / "build" / f"{build_document['symbol_key']}.json").write_text(
+        (data_api / "build" / f"{build_document['symbol_key']}.json").write_text(
             json.dumps(build_document, indent=1), encoding="utf-8"
         )
 
-    layout_dir = data / "layouts" / "v1"
-    for path in layout_dir.glob("*.json"):
-        shutil.copy2(path, api / "layout" / path.name)
+    for path in (data / "layouts" / "v1").glob("*.json"):
+        shutil.copy2(path, data_api / "layout" / path.name)
 
-    (api / "type").mkdir(parents=True, exist_ok=True)
     type_dir = data / "types" / "v1"
     if type_dir.is_dir():
         for path in type_dir.glob("*.json"):
-            shutil.copy2(path, api / "type" / path.name)
+            shutil.copy2(path, data_api / "type" / path.name)
 
-    (api / "symbols").mkdir(parents=True, exist_ok=True)
     universe = data / "symbols" / "universe.json"
     if universe.exists():
-        shutil.copy2(universe, api / "symbols" / "universe.json")
+        shutil.copy2(universe, data_api / "symbols" / "universe.json")
 
     for name in ("changes.json", "changes.xml", "aliases.json", "renames-review.json"):
         source = data / "feed" / name
         if source.exists():
-            shutil.copy2(source, api / "feed" / name)
+            shutil.copy2(source, site_api / "feed" / name)
 
-    for name, destination in (("coverage.json", api / "coverage.json"),
-                              ("by-version.json", api / "index" / "by-version.json")):
+    for name, destination in (("coverage.json", site_api / "coverage.json"),
+                              ("by-version.json", site_api / "index" / "by-version.json")):
         source = data / "index" / name
         if source.exists():
             shutil.copy2(source, destination)
 
-    (api / "index" / "builds.json").write_text(
-        json.dumps(_compact_builds(builds), indent=None, separators=(",", ":")),
+    (site_api / "index" / "builds.json").write_text(
+        json.dumps(_compact_builds(builds), separators=(",", ":")), encoding="utf-8",
+    )
+    (site_api / "index" / "layouts.json").write_text(
+        json.dumps(_compact_layouts(builds, store), separators=(",", ":")),
         encoding="utf-8",
     )
-    (api / "index" / "layouts.json").write_text(
-        json.dumps(_compact_layouts(builds, store), indent=None, separators=(",", ":")),
+    (site_api / "config.json").write_text(
+        json.dumps({"schema": 1, "data_base": data_base.rstrip("/")}, indent=1),
         encoding="utf-8",
     )
 
@@ -135,10 +168,17 @@ def build(data: Path, out: Path) -> dict:
         if path.is_file():
             shutil.copy2(path, out / path.name)
 
-    files = sorted(out.rglob("*"))
+    site_files, site_bytes = _measure(out)
+    if data_out is None:
+        return {"files": site_files, "bytes": site_bytes, "builds": len(builds),
+                "layouts": len(list((data_api / "layout").glob("*.json"))),
+                "split": False}
+
+    data_files, data_bytes = _measure(data_out)
     return {
-        "files": sum(1 for f in files if f.is_file()),
-        "bytes": sum(f.stat().st_size for f in files if f.is_file()),
+        "files": site_files, "bytes": site_bytes,
+        "data_files": data_files, "data_bytes": data_bytes,
         "builds": len(builds),
-        "layouts": len(list((api / "layout").glob("*.json"))),
+        "layouts": len(list((data_api / "layout").glob("*.json"))),
+        "split": True,
     }
