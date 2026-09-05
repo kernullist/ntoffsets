@@ -38,6 +38,7 @@ import json
 import shutil
 from pathlib import Path
 
+from . import diff
 from .store import Store
 
 REPO = Path(__file__).resolve().parents[1]
@@ -89,6 +90,44 @@ def _compact_layouts(builds: list[dict], store: Store) -> dict:
             "builds": sorted(keys),
         })
     return {"schema": 1, "count": len(entries), "layouts": entries}
+
+
+def _compact_names(builds: list[dict], store: Store) -> dict:
+    """Every type and enum name we hold, with how many distinct definitions.
+
+    Without this there is no way into the struct data at all. A layout manifest
+    is a map of hashes, so it answers "what is _EPROCESS in this build" but not
+    "what types are there" -- and a reader who does not already know the name
+    has nowhere to start. 519 manifests is not something a page can scan.
+
+    Names only, plus a variant count and the newest layout that defines each.
+    61 KiB for 2,505 names, against 161 KiB to also list every variant, and the
+    count is what a reader acts on: one definition means the type is identical
+    in every build we hold, forty means it is not. Newest rather than any, so
+    opening a name shows a definition that is still shipping.
+    """
+    seen: dict[str, dict[str, dict]] = {"types": {}, "enums": {}}
+    # Newest first, and one pass per distinct layout rather than per build:
+    # 519 manifests, not 1,967 reads of the same few hundred.
+    done: set[str] = set()
+    for build in sorted(builds, key=diff.order_key, reverse=True):
+        digest = build["layout"]
+        if digest in done:
+            continue
+        done.add(digest)
+        manifest = store.read_manifest(digest)
+        layout = digest.split(":")[-1]
+        for kind in ("types", "enums"):
+            for name, body in (manifest.get(kind) or {}).items():
+                entry = seen[kind].setdefault(name, {"variants": set(), "layout": layout})
+                entry["variants"].add(body)
+
+    return {
+        "schema": 1,
+        **{kind: {name: [len(entry["variants"]), entry["layout"]]
+                  for name, entry in sorted(names.items())}
+           for kind, names in seen.items()},
+    }
 
 
 def _measure(root: Path) -> tuple[int, int]:
@@ -157,6 +196,10 @@ def build(data: Path, out: Path, data_out: Path | None = None,
     )
     (site_api / "index" / "layouts.json").write_text(
         json.dumps(_compact_layouts(builds, store), separators=(",", ":")),
+        encoding="utf-8",
+    )
+    (site_api / "index" / "names.json").write_text(
+        json.dumps(_compact_names(builds, store), separators=(",", ":")),
         encoding="utf-8",
     )
     (site_api / "config.json").write_text(

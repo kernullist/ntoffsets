@@ -51,7 +51,11 @@ header {
 .logo { font-weight: 640; letter-spacing: -0.01em; font-size: 17px; }
 .logo span { color: var(--accent); }
 .tag { color: var(--muted); font-size: 13px; }
-nav { margin-left: auto; display: flex; gap: 16px; font-size: 14px; }
+/* Wraps rather than overflowing: `.bar` already wraps, but a nav that is one
+   flex line is still wider than a narrow viewport, and the body then scrolls
+   sideways to accommodate a header nobody wanted to scroll. */
+nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px 16px;
+      font-size: 14px; }
 nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
 
 main { max-width: 1120px; margin: 0 auto; padding: 26px 20px 70px; }
@@ -117,6 +121,7 @@ footer p { margin: 0 0 8px; max-width: 70ch; }
     <div class="tag">Winbindex finds the file. We find the numbers inside it.</div>
     <nav>
       <a href="#/builds">Builds</a>
+      <a href="#/types">Types</a>
       <a href="#/symbols">Symbols</a>
       <a href="#/changes">Changes</a>
       <a href="#/layouts">Layouts</a>
@@ -198,7 +203,15 @@ function zipSymbols(names, bitmap, rvas) {
 // A build with no version string still has to be identifiable. 79% of ARM64
 // index entries have none, so the KB number is the fallback a person can act
 // on -- not a truncated GUID.
-const label = b => b.v || (b.kb && b.kb.length ? b.kb.join("/") : b.k.slice(0, 12));
+// A version if there is one; 79% of the ARM64 index has none (4.5). `kb` is the
+// fallback, but only where it holds actual KB numbers -- the Insider dataset
+// puts update GUIDs in the same field, and four of those joined is 150
+// characters of noise where a name should be.
+const label = b => {
+  if (b.v) return b.v;
+  const kb = (b.kb || []).filter(k => /^KB\d+$/i.test(k));
+  return kb.length ? kb.join("/") : b.k.slice(0, 12);
+};
 
 function view(html) { document.getElementById("view").innerHTML = html; }
 
@@ -288,6 +301,16 @@ async function pageBuild(key) {
     ? zipSymbols((await get("symbols/universe.json")).names, b.symbols, b.rva)
     : Object.entries(b.rva);
 
+  // One box for both. Someone arriving at a build wants a number out of it and
+  // does not care whether it is a member offset or a global address, and the
+  // struct data used to be reachable only by going to the layout hash first --
+  // which meant knowing what a layout hash is.
+  const manifest = await get(`layout/${b.layout.split(":").pop()}.json`);
+  const defs = [
+    ...Object.entries(manifest.types || {}).map(([n, h]) => [n, h]),
+    ...Object.entries(manifest.enums || {}).map(([n, h]) => [n, h]),
+  ];
+
   searchPage({
     head: `
       <h1>${esc(b.file_version || (b.kb || []).join("/") || b.symbol_key)}</h1>
@@ -308,14 +331,28 @@ async function pageBuild(key) {
         <dt>Source</dt><dd>${esc(b.source)}</dd>
       </dl>
 
-      <h2>Global symbol RVAs (${rva.length.toLocaleString()})</h2>`,
-    placeholder: "filter symbols, e.g. Psp, ObType, KiService",
+      <h2>${defs.length.toLocaleString()} types and enums ·
+        ${rva.length.toLocaleString()} symbol RVAs</h2>`,
+    placeholder: "a struct, enum or symbol: _EPROCESS, PROTECTED_TYPE, PspCreateProcess",
     run: async q => {
       q = q.trim().toLowerCase();
+      const hits = q ? defs.filter(([n]) => n.toLowerCase().includes(q)) : [];
+      // Only the matches are fetched: the manifest is hashes, so showing one
+      // definition never downloads the other two thousand.
+      const shown = await Promise.all(hits.slice(0, 5).map(
+        async ([n, h]) => renderType(n, await get(`type/${h}.json`))));
+
       const found = q ? rva.filter(([n]) => n.toLowerCase().includes(q)) : rva;
       const page = found.slice(0, 400);
-      return `<p class="hint">${found.length.toLocaleString()} shown${
-          found.length > 400 ? ", first 400 listed" : ""}</p>` + rows(page, `
+      return (hits.length
+          ? `<p class="hint">${hits.length} type${hits.length === 1 ? "" : "s"}${
+              hits.length > 5 ? ", first 5 shown" : ""} — also on
+              <a href="#/layout/${b.layout.split(":").pop()}">this build's layout</a></p>`
+            + shown.join("")
+          : "")
+        + `<h3>Global symbol RVAs</h3><p class="hint">${
+            found.length.toLocaleString()} shown${
+            found.length > 400 ? ", first 400 listed" : ""}</p>` + rows(page, `
         <thead><tr><th>Symbol</th><th class="num">RVA</th></tr></thead>
         <tbody>${page.map(([n, v]) =>
           `<tr><td class="mono">${esc(n)}</td><td class="num">${esc(v)}</td></tr>`).join("")}</tbody>`);
@@ -417,6 +454,78 @@ async function pageLayout(hash) {
         + bodies.map(([n, t]) => renderType(n, t)).join("");
     },
   });
+}
+
+// -- types -----------------------------------------------------------------
+
+// Every name we hold, so a reader who does not already know one has somewhere
+// to start. A layout manifest answers "what is _EPROCESS in this build" but
+// cannot answer "what is there", and 519 manifests is not something a page can
+// scan; `index/names.json` is that answer in 24 KiB over the wire.
+async function pageTypes() {
+  const index = await get("index/names.json");
+  const all = [
+    ...Object.entries(index.types).map(([n, [v, l]]) => [n, v, l, "struct"]),
+    ...Object.entries(index.enums).map(([n, [v, l]]) => [n, v, l, "enum"]),
+  ].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const [worst, worstCount] = all[0];
+
+  searchPage({
+    head: `
+      <h1>${all.length.toLocaleString()} types and enums</h1>
+      <p class="lede">Ordered by how many distinct definitions we hold. One
+        means the type is byte-identical in every build here; the most
+        rearranged is <span class="mono">${esc(worst)}</span> at
+        ${worstCount}. That number is the reason this database exists.</p>`,
+    placeholder: "type or enum name, e.g. _EPROCESS, _KPRCB, PROTECTED_TYPE",
+    run: async q => {
+      q = q.trim().toLowerCase();
+      const found = q ? all.filter(([n]) => n.toLowerCase().includes(q)) : all;
+      const page = found.slice(0, 300);
+      return `<p class="hint">${found.length.toLocaleString()} shown${
+          found.length > 300 ? ", first 300 listed" : ""}</p>` + rows(page, `
+        <thead><tr><th>Name</th><th>Kind</th>
+          <th class="num">Definitions</th></tr></thead>
+        <tbody>${page.map(([n, v, , kind]) => `
+          <tr>
+            <td class="mono"><a href="#/type/${encodeURIComponent(n)}">${esc(n)}</a></td>
+            <td class="quiet">${kind}</td>
+            <td class="num${v > 1 ? "" : " quiet"}">${v}</td>
+          </tr>`).join("")}</tbody>`);
+    },
+  });
+}
+
+async function pageType(name) {
+  const index = await get("index/names.json");
+  const kind = index.types[name] ? "types" : index.enums[name] ? "enums" : null;
+  if (!kind) return view(`<p class="empty">Nothing here called ${esc(name)}.</p>`);
+
+  const [variants, layout] = index[kind][name];
+  const [manifest, builds] = await Promise.all([
+    get(`layout/${layout}.json`),
+    get("index/builds.json"),
+  ]);
+  const digest = manifest[kind][name];
+  const body = await get(`type/${digest}.json`);
+  // The newest layout that defines it, so what is shown is still shipping. The
+  // other definitions are reachable through the builds that use them.
+  const users = builds.builds.filter(b => b.l === layout);
+
+  view(`
+    <h1 class="mono">${esc(name)}</h1>
+    <p class="lede">${variants} distinct definition${variants === 1 ? "" : "s"}
+      across the ${builds.count.toLocaleString()} builds we hold${
+        variants === 1 ? " — this type has never moved" : ", showing the newest"}.</p>
+    <p class="hint">From layout
+      <a href="#/layout/${layout}">${layout.slice(0, 10)}</a>, shared by
+      ${users.length} build${users.length === 1 ? "" : "s"}:
+      ${users.slice(0, 12).map(b =>
+        `<a href="#/build/${b.k}">${esc(label(b))}</a>`).join(" · ")}
+      ${users.length > 12 ? ` and ${users.length - 12} more` : ""}</p>
+    ${renderType(name, body)}
+    <p class="hint"><a href="${urlFor(`type/${digest}.json`)}">Raw JSON</a>
+      · <a href="#/types">all types</a></p>`);
 }
 
 // -- symbols ---------------------------------------------------------------
@@ -627,6 +736,12 @@ function pageApi() {
             <td>Compact list of every build, for searching</td></tr>
         <tr><td class="mono">v1/index/by-version.json</td>
             <td>File version → build keys</td></tr>
+        <tr><td class="mono">v1/index/names.json</td>
+            <td>Every type and enum name, how many distinct definitions we hold
+              of it, and the newest layout defining it</td></tr>
+        <tr><td class="mono">v1/type/&lt;hash&gt;.json</td>
+            <td>One type or enum, named by the hash of its own definition.
+              A layout is a manifest of these</td></tr>
         <tr><td class="mono">v1/feed/changes.json</td>
             <td>What changed between consecutive builds</td></tr>
         <tr><td class="mono">v1/feed/changes.xml</td>
@@ -664,6 +779,8 @@ const ROUTES = [
   [/^\/?$/, () => pageBuilds()],
   [/^\/builds$/, () => pageBuilds()],
   [/^\/build\/([0-9A-Fa-f]+)$/, m => pageBuild(m[1])],
+  [/^\/types$/, () => pageTypes()],
+  [/^\/type\/(.+)$/, m => pageType(decodeURIComponent(m[1]))],
   [/^\/layouts$/, () => pageLayouts()],
   [/^\/layout\/([0-9a-f]+)$/, m => pageLayout(m[1])],
   [/^\/symbols$/, () => pageSymbols()],

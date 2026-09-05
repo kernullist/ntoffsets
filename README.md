@@ -118,6 +118,21 @@ output says how many it actually fetched. The sample is chosen by hashing the
 build key with each type name, so it spreads across the manifest and anyone
 holding the key can recompute which bodies a published run looked at.
 
+## What is in it
+
+1,967 builds, 519 distinct layouts, 2,505 type and enum names. The number that
+matters is how many distinct definitions each name has:
+
+```
+_KPRCB              119
+_EPROCESS            70
+PO_MEMORY_IMAGE      68
+_ETHREAD             38
+```
+
+119 definitions of `_KPRCB` across the builds we hold. That is the short answer
+to why picking offsets by version number breaks.
+
 ## Previewing the site
 
 ```bash
@@ -175,6 +190,7 @@ ntoff/validate.py         self-consistency and continuity (13.1, 13.4)
 ntoff/store.py            content-addressed store
 ntoff/coverage.py         what is missing and why
 ntoff/verify.py           re-derive published values from Microsoft's PDBs
+ntoff/version.py          how a Windows version string orders and groups
 ntoff/site.py             assemble the static site; split site from data
 ntoff/serve.py            preview it, split origins and CORS included
 ntoff/cli.py              collect / census / gate / validate / verify / feed / site / serve
