@@ -196,8 +196,3 @@ def check_continuity(previous: Extraction, current: Extraction, label: str) -> F
             )
 
     return findings
-
-
-def _version_key(version: str) -> tuple[int, ...]:
-    parts = [int(p) for p in version.split(".") if p.isdigit()]
-    return tuple(parts + [0] * (4 - len(parts)))[:4]

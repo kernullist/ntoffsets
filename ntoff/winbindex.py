@@ -28,7 +28,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from . import msdl
+from . import msdl, version
 from .ntpe import PdbKey, PeFormatError, ShortRead, read_pe_info
 
 # The three repositories do not share a layout. GA and ARM64 put every file at
@@ -261,13 +261,8 @@ def undownloadable(snapshot: Path) -> int:
     )
 
 
-def version_key(version: str) -> tuple[int, ...]:
-    parts = [int(part) for part in version.split(".") if part.isdigit()]
-    return tuple(parts + [0] * (4 - len(parts)))[:4]
-
-
 def newest_first(candidates: list[Candidate]) -> list[Candidate]:
-    return sorted(candidates, key=lambda c: version_key(c.version), reverse=True)
+    return sorted(candidates, key=lambda c: version.sort_key(c.version), reverse=True)
 
 
 def stratified(candidates: list[Candidate], count: int) -> list[Candidate]:
@@ -277,17 +272,28 @@ def stratified(candidates: list[Candidate], count: int) -> list[Candidate]:
     buys more confidence per download than depth inside one. Useless for
     measuring layout convergence, though -- that needs consecutive builds in a
     single channel (M2).
+
+    Channels are split by Windows version where the label covers more than one
+    (`version.mixed_channels`). Breadth is the entire point here, and the
+    Insider dataset's single `builds` channel spans 19041 to 28000 -- left
+    whole it contributes one candidate for every era it holds, which is the
+    opposite of stratifying.
     """
+    mixed = version.mixed_channels(
+        (candidate.channel_names, candidate.version) for candidate in candidates
+    )
     by_channel: dict[str, list[Candidate]] = defaultdict(list)
     for candidate in candidates:
         for channel in candidate.channel_names:
-            by_channel[channel].append(candidate)
+            label = version.channel_label(channel, candidate.version, mixed)
+            if label is not None:
+                by_channel[label].append(candidate)
     for builds in by_channel.values():
-        builds.sort(key=lambda c: version_key(c.version), reverse=True)
+        builds.sort(key=lambda c: version.sort_key(c.version), reverse=True)
 
     ordered = sorted(
         by_channel.values(),
-        key=lambda builds: version_key(builds[0].version),
+        key=lambda builds: version.sort_key(builds[0].version),
         reverse=True,
     )
 

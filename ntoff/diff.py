@@ -35,71 +35,43 @@ from datetime import datetime, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+from . import version
+
 FEED_SCHEMA = 1
 FEED_ID = "urn:ntoffsets:feed:changes"
 
 
-def version_key(version: str | None) -> tuple[int, ...]:
-    parts = [int(part) for part in (version or "").split(".") if part.isdigit()]
-    return tuple(parts + [0] * (4 - len(parts)))[:4]
-
-
 def order_key(build: dict) -> tuple:
-    return (build.get("release_date") or "", version_key(build.get("file_version")),
+    return (build.get("release_date") or "",
+            version.sort_key(build.get("file_version")),
             build.get("symbol_key") or "")
-
-
-def _version_family(build: dict) -> str | None:
-    """The Windows build number a version string belongs to: 10.0.**26100**.4652."""
-    parts = (build.get("file_version") or "").split(".")
-    return parts[2] if len(parts) >= 3 and parts[2].isdigit() else None
-
-
-def _mixed_channels(builds: list[dict]) -> set[str]:
-    """Channels that hold more than one Windows version.
-
-    A GA channel name pins a version -- 11-24H2 is 26100 and nothing else -- so
-    grouping by channel is enough there. The Insider dataset does not: every
-    build it lists is in a single channel called `builds`, spanning 19041 to
-    28000. Treating those as one run made 19041 and 22621 adjacent, and the
-    resulting "diff" moved 438 types. 96% of every type-change record came from
-    that one mistake, and none of it meant anything.
-    """
-    families: dict[str, set[str]] = defaultdict(set)
-    for build in builds:
-        family = _version_family(build)
-        if family:
-            for channel in build.get("channel") or []:
-                families[channel].add(family)
-    return {channel for channel, seen in families.items() if len(seen) > 1}
 
 
 def sequences(builds: list[dict]) -> dict[tuple[str, str], list[dict]]:
     """Group builds into ordered runs of genuinely adjacent releases.
 
     Keyed by channel and machine (13.4), and by Windows version too wherever
-    the channel does not already imply one.
+    the channel does not already imply one -- see `version.mixed_channels` for
+    why the label alone is not enough.
 
     A build shipped in several channels appears in each of their sequences,
     which is correct: it really is the neighbour of a different build in each.
+    A build whose channel is mixed and which carries no version string is left
+    out, because there is nothing to place it against.
 
-    A build in a mixed channel with no version string is left out entirely.
-    Insider rings ship different Windows versions in the same week, so release
-    date cannot stand in for the version, and a neighbour we cannot establish
-    is worse than a neighbour we do not claim.
+    This is the only definition of "adjacent" in the codebase. The continuity
+    check (13.4) reads it from here rather than deciding again.
     """
-    mixed = _mixed_channels(builds)
+    mixed = version.mixed_channels(
+        (build.get("channel") or [], build.get("file_version")) for build in builds
+    )
     grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
 
     for build in builds:
         for channel in build.get("channel") or ["unknown"]:
-            if channel in mixed:
-                family = _version_family(build)
-                if not family:
-                    continue
-                grouped[(f"{channel}/{family}", build["machine"])].append(build)
-            else:
-                grouped[(channel, build["machine"])].append(build)
+            label = version.channel_label(channel, build.get("file_version"), mixed)
+            if label is not None:
+                grouped[(label, build["machine"])].append(build)
 
     return {
         key: sorted(items, key=order_key)
