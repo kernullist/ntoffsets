@@ -118,6 +118,15 @@ output says how many it actually fetched. The sample is chosen by hashing the
 build key with each type name, so it spreads across the manifest and anyone
 holding the key can recompute which bodies a published run looked at.
 
+## Every page says which build
+
+The header carries the build in context on every page — version, architecture,
+channel, release date — and the type pages resolve against it. `_KPROCESS` is
+456 bytes in 10.0.28000.2804 and 728 in 10.0.14393.9418; change the build in
+the header and the table changes with it. A type the selected build does not
+have says so before falling back to the newest build that does, because a
+quiet fallback is how a reader ends up using another build's numbers.
+
 ## Members carry their type
 
 ```

@@ -58,6 +58,19 @@ nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px 16px;
       font-size: 14px; }
 nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
 
+/* The build every number on the page is read against. Sticky with the header
+   because an offset without a build is not an answer, and a reader who has
+   scrolled past the top of a 265-member struct has no other way to tell. */
+.ctxbar { border-top: 1px solid var(--line);
+          background: color-mix(in srgb, var(--accent) 5%, var(--panel)); }
+.ctxbar .bar { padding: 7px 20px; gap: 10px; align-items: baseline; }
+.ctx-label { color: var(--muted); font-size: 11.5px; text-transform: uppercase;
+             letter-spacing: 0.07em; font-weight: 620; }
+.ctx-now { font-family: var(--mono); font-size: 13.5px; font-weight: 620;
+           color: var(--accent); }
+.ctx-meta { color: var(--muted); font-size: 12.5px; }
+.ctx-swap { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+
 main { max-width: 1120px; margin: 0 auto; padding: 26px 20px 70px; }
 h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.01em; }
 h2 { font-size: 15px; margin: 30px 0 10px; text-transform: uppercase;
@@ -129,6 +142,7 @@ footer p { margin: 0 0 8px; max-width: 70ch; }
       <a href="#/api">API</a>
     </nav>
   </div>
+  <div class="ctxbar"><div class="bar" id="ctx"></div></div>
 </header>
 
 <main id="view"><p class="empty">Loading…</p></main>
@@ -214,6 +228,57 @@ const label = b => {
 };
 
 function view(html) { document.getElementById("view").innerHTML = html; }
+
+// -- build context ---------------------------------------------------------
+//
+// Every offset on this site is only true of one build, and until now the page
+// left that implicit: `#/type/_EPROCESS` quietly showed whichever build was
+// newest, and said so in body text a reader scrolls past in two lines. So the
+// build is a first-class, persistent selection, shown in the header on every
+// page, and the type pages resolve against it.
+//
+// It is remembered per viewer. `localStorage` throws outright in some contexts
+// (a thumbnailer, a browser set to block site data), so every access is
+// guarded and an empty result simply means the newest build.
+const CTX_KEY = "ntoff.build";
+let CTX = null;
+
+function remembered() {
+  try { return localStorage.getItem(CTX_KEY); } catch { return null; }
+}
+
+async function activeBuild() {
+  const index = await get("index/builds.json");
+  if (CTX) {
+    const found = index.builds.find(b => b.k === CTX);
+    if (found) return found;
+  }
+  const saved = remembered();
+  const match = saved && index.builds.find(b => b.k === saved);
+  // `builds` is newest first, so the head is the default and the fallback for
+  // a remembered key that no longer exists.
+  CTX = (match || index.builds[0]).k;
+  return match || index.builds[0];
+}
+
+function setContext(key) {
+  CTX = key;
+  try { localStorage.setItem(CTX_KEY, key); } catch { /* not remembered */ }
+}
+
+async function paintContext() {
+  const slot = document.getElementById("ctx");
+  let build;
+  try { build = await activeBuild(); } catch { slot.innerHTML = ""; return; }
+  if (!build) { slot.innerHTML = ""; return; }
+
+  const meta = [build.m, ...(build.c || []), build.d].filter(Boolean).join(" · ");
+  slot.innerHTML = `
+    <span class="ctx-label">Build</span>
+    <a class="ctx-now" href="#/build/${build.k}">${esc(label(build))}</a>
+    <span class="ctx-meta">${esc(meta)}</span>
+    <a class="ctx-swap" href="#/builds">change</a>`;
+}
 
 // Which names we actually hold, so a member's type can link to its own
 // definition. Fetched once and kept: 24 KiB gzipped, and every page that
@@ -321,6 +386,8 @@ async function pageBuilds(query = "") {
 
 async function pageBuild(key) {
   const b = await get(`build/${key}.json`);
+  // Opening a build is the clearest possible statement of which one you mean.
+  setContext(key);
 
   // Names live once in a shared universe; a build says which of them it has as
   // a bitmap, and its RVAs follow in the same order. 2.5 KiB per build instead
@@ -534,23 +601,41 @@ async function pageType(name) {
   const kind = index.types[name] ? "types" : index.enums[name] ? "enums" : null;
   if (!kind) return view(`<p class="empty">Nothing here called ${esc(name)}.</p>`);
 
-  const [variants, layout] = index[kind][name];
-  const [manifest, builds] = await Promise.all([
-    get(`layout/${layout}.json`),
-    get("index/builds.json"),
-    knownNames(),
+  const [variants, newest] = index[kind][name];
+  const [builds, active] = await Promise.all([
+    get("index/builds.json"), activeBuild(), knownNames(),
   ]);
+
+  // Resolve against the build in the header, not against whatever is newest.
+  // A type read from a different build than the reader thinks is exactly the
+  // failure this database exists to prevent, so the fallback is stated rather
+  // than performed quietly.
+  let layout = newest;
+  let scoped = false;
+  if (active) {
+    const theirs = await get(`layout/${active.l}.json`);
+    if ((theirs[kind] || {})[name]) {
+      layout = active.l;
+      scoped = true;
+    }
+  }
+
+  const manifest = layout === active?.l
+    ? await get(`layout/${active.l}.json`)
+    : await get(`layout/${layout}.json`);
   const digest = manifest[kind][name];
   const body = await get(`type/${digest}.json`);
-  // The newest layout that defines it, so what is shown is still shipping. The
-  // other definitions are reachable through the builds that use them.
   const users = builds.builds.filter(b => b.l === layout);
 
   view(`
     <h1 class="mono">${esc(name)}</h1>
     <p class="lede">${variants} distinct definition${variants === 1 ? "" : "s"}
       across the ${builds.count.toLocaleString()} builds we hold${
-        variants === 1 ? " — this type has never moved" : ", showing the newest"}.</p>
+        variants === 1 ? " — this type has never moved" : ""}.
+      ${scoped
+        ? `Showing it as of <b>${esc(label(active))}</b>.`
+        : `<span class="warn">Not present in ${esc(label(active))}</span> —
+           showing the newest build that has it.`}</p>
     <p class="hint">From layout
       <a href="#/layout/${layout}">${layout.slice(0, 10)}</a>, shared by
       ${users.length} build${users.length === 1 ? "" : "s"}:
@@ -837,10 +922,14 @@ async function route() {
       for (const a of document.querySelectorAll("nav a")) {
         a.toggleAttribute("aria-current", path.startsWith(a.hash.slice(1)));
       }
+      // After the handler, because opening a build changes which build the
+      // header should name.
+      paintContext();
       return;
     }
   }
   view(`<p class="empty">No such page.</p>`);
+  paintContext();
 }
 
 addEventListener("hashchange", route);
