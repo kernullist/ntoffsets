@@ -130,6 +130,26 @@ def _compact_names(builds: list[dict], store: Store) -> dict:
     }
 
 
+def _clear(root: Path) -> None:
+    """Empty an output tree, refusing to take a repository with it.
+
+    These directories are rebuilt from scratch every run, so clearing them is
+    correct. But the obvious way to publish by hand is to `git init` inside one
+    -- and then the next `ntoff site` deletes the branch, its history and its
+    remote without a word. Publishing rsyncs into a checkout kept elsewhere for
+    exactly this reason; this is the guard for the person who has not read that
+    yet.
+    """
+    if not root.exists():
+        return
+    if (root / ".git").exists():
+        raise SystemExit(
+            f"{root} contains a git repository; refusing to delete it. "
+            "Publish by copying this tree into a checkout kept elsewhere."
+        )
+    shutil.rmtree(root)
+
+
 def _measure(root: Path) -> tuple[int, int]:
     files = [f for f in root.rglob("*") if f.is_file()] if root.exists() else []
     return len(files), sum(f.stat().st_size for f in files)
@@ -149,10 +169,9 @@ def build(data: Path, out: Path, data_out: Path | None = None,
     if not builds:
         raise SystemExit("store is empty; run `collect` first")
 
-    if out.exists():
-        shutil.rmtree(out)
-    if data_out is not None and data_out.exists():
-        shutil.rmtree(data_out)
+    _clear(out)
+    if data_out is not None:
+        _clear(data_out)
 
     site_api = out / "v1"
     data_root = data_out if data_out is not None else out

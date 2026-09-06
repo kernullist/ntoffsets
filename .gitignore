@@ -33,3 +33,7 @@ data/
 # Generated static site, and the data tree it is split from (8.4)
 site/
 site-data/
+
+# Publishing checkouts (the CI job makes these; never the output trees themselves)
+publish-site/
+publish-data/
