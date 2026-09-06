@@ -251,6 +251,22 @@ class Store:
                 previous = [previous]
             return sorted(set(previous) | set(values))
 
+        def keep(field: str, value):
+            """Prefer what this run found, fall back to what is already stored.
+
+            The same binary is indexed by more than one dataset and they do not
+            carry the same metadata: the Insider index has no release dates at
+            all and 79% of the ARM64 index has no version string (4.5). Writing
+            the incoming value unconditionally means whichever dataset runs
+            last decides, so a re-run in the order ga, arm64, insider erased
+            the release date from 341 builds that GA had dated correctly.
+
+            Resuming hid this -- a build already in the store was skipped, so
+            the dateless pass never reached it. `--force` is what made it
+            visible, which is the wrong thing to have to depend on.
+            """
+            return value if value else existing.get(field)
+
         sources = merge("sha256", [candidate.sha256])
         channels = merge("channel", candidate.channel_names)
         kbs = merge("kb", candidate.kbs)
@@ -285,13 +301,13 @@ class Store:
             # were neither stored nor missing, and a resumed run that flipped
             # which hash it kept.
             "sha256": sources,
-            "file_version": candidate.version or None,
+            "file_version": keep("file_version", candidate.version),
             "machine": candidate.machine_name,
-            "timestamp": _hex(candidate.timestamp),
-            "size_of_image": _hex(candidate.size_of_image),
+            "timestamp": keep("timestamp", _hex(candidate.timestamp)),
+            "size_of_image": keep("size_of_image", _hex(candidate.size_of_image)),
             "channel": channels,
             "kb": kbs,
-            "release_date": candidate.release_date or None,
+            "release_date": keep("release_date", candidate.release_date),
             "layout": layout_hash,
             # Which of the universe's names this build has, and their addresses
             # in the same order. `universe_size` is how many names existed when
