@@ -118,6 +118,30 @@ output says how many it actually fetched. The sample is chosen by hashing the
 build key with each type name, so it spreads across the manifest and anyone
 holding the key can recompute which bodies a published run looked at.
 
+## Members carry their type
+
+```
+0x0     Pcb              _KPROCESS
+0x1C8   ProcessLock      _EX_PUSH_LOCK
+0x1D0   UniqueProcessId  void *
+0x248   Token            _EX_FAST_REF
+0x2E0   Peb              _PEB *
+0x338   ImageFileName    unsigned char[15]
+```
+
+An offset and a size say where a member is and how wide. They do not say how
+to read it, and `_EX_FAST_REF`, `PVOID` and `_LIST_ENTRY *` are all eight
+bytes. The type is part of the layout contract, so it is in the hash — which
+is why the layout schema is 2.
+
+The spelling is a contract too, not whatever each library happens to print:
+builtins use their C names, pointers are `T *`, arrays carry the element count,
+`const`/`volatile` attach to whichever half they qualify (`T * volatile` is a
+volatile pointer and `volatile T *` is not), and anything unresolvable is left
+empty rather than guessed. The Rust reader and the DIA oracle render the same
+records independently and are diffed against each other; the first run found
+two real bugs, one on each side.
+
 ## What is in it
 
 1,967 builds, 519 distinct layouts, 2,505 type and enum names. The number that

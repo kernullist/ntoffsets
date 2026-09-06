@@ -270,7 +270,7 @@ def diff_types(before: dict, after: dict) -> tuple[list[dict], list[Rename], lis
         renames.extend(confirmed)
         ambiguous.extend(unclear)
 
-        moved, resized, rebitted = [], [], []
+        moved, resized, rebitted, retyped = [], [], [], []
         for member_name in sorted(set(old_members) & set(new_members)):
             was, now = old_members[member_name], new_members[member_name]
             if was["offset"] != now["offset"]:
@@ -281,6 +281,13 @@ def diff_types(before: dict, after: dict) -> tuple[list[dict], list[Rename], lis
                 # number of bytes now reads past the member, or short of it.
                 resized.append({"name": member_name,
                                 "from": was["size"], "to": now["size"]})
+            if was.get("type") and now.get("type") and was["type"] != now["type"]:
+                # Same address, same width, different meaning: `void *` became
+                # `_EPROCESS *`, or a reserved field acquired a real type. The
+                # offset diff shows nothing at all, which is exactly the kind
+                # of change 10.1 calls silently breaking.
+                retyped.append({"name": member_name,
+                                "from": was["type"], "to": now["type"]})
             if (was["bit_position"], was["bit_count"]) != (now["bit_position"], now["bit_count"]):
                 rebitted.append({
                     "name": member_name,
@@ -297,6 +304,7 @@ def diff_types(before: dict, after: dict) -> tuple[list[dict], list[Rename], lis
             "members_moved": moved,
             "members_resized": resized,
             "members_rebitted": rebitted,
+            "members_retyped": retyped,
             "members_renamed": [
                 {"from": r.old, "to": r.new, "offset": r.offset, "size": r.size}
                 for r in confirmed
@@ -304,7 +312,8 @@ def diff_types(before: dict, after: dict) -> tuple[list[dict], list[Rename], lis
         }
         if old["size"] != new["size"] or any(
             entry[k] for k in ("members_added", "members_removed", "members_moved",
-                               "members_resized", "members_rebitted", "members_renamed")
+                               "members_resized", "members_rebitted", "members_retyped",
+                               "members_renamed")
         ):
             changes.append(entry)
 
@@ -541,7 +550,7 @@ def _describe(change: dict) -> str:
                 parts.append(f"{label}: {', '.join(entry[key][:6])}"
                              + (" ..." if len(entry[key]) > 6 else ""))
         for label, key in (("moved", "members_moved"), ("resized", "members_resized"),
-                           ("bitfields", "members_rebitted")):
+                           ("bitfields", "members_rebitted"), ("retyped", "members_retyped")):
             if entry[key]:
                 parts.append(f"{label}: {len(entry[key])}")
         if entry["members_renamed"]:

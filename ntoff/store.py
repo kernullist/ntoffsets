@@ -91,7 +91,7 @@ class Store:
         for member in sorted(layout.members):
             lines.append(
                 f"M {member.offset} {member.name} {member.size} "
-                f"{member.bit_position} {member.bit_count}"
+                f"{member.bit_position} {member.bit_count} {member.type}"
             )
         return "\n".join(lines).encode("utf-8")
 
@@ -111,6 +111,7 @@ class Store:
             "members": [
                 {
                     "name": m.name,
+                    "type": m.type,
                     "offset": m.offset,
                     "size": m.size,
                     "bit_position": m.bit_position,

@@ -17,7 +17,7 @@ from pathlib import Path
 # storage path (`layouts/v1/<hash>.json`) rather than inside the hashed bytes,
 # so that two generations of the same layout cannot collide in one namespace
 # while still being told apart (M7).
-LAYOUT_SCHEMA_VERSION = 1
+LAYOUT_SCHEMA_VERSION = 2
 
 
 @dataclass(frozen=True, order=True)
@@ -27,6 +27,12 @@ class Member:
     size: int
     bit_position: int = 0
     bit_count: int = 0
+    # The declared type, as `typename.rs` spells it. Part of the layout
+    # contract and hashed: offset and size locate a member and give its width,
+    # neither of which says how to read it -- `_EX_FAST_REF`, `PVOID` and
+    # `_LIST_ENTRY *` are all eight bytes at some offset. Empty when the record
+    # could not be resolved, never a guess.
+    type: str = ""
     # Set only by the Rust extractor; see its model.rs for why DIA cannot
     # supply it. Excluded from `canonical_layout`, so it never moves a hash.
     union_group: int = 0
@@ -130,7 +136,7 @@ class Extraction:
             for member in sorted(layout.members):
                 lines.append(
                     f"M {member.offset} {member.name} {member.size} "
-                    f"{member.bit_position} {member.bit_count}"
+                    f"{member.bit_position} {member.bit_count} {member.type}"
                 )
         for name, enum in sorted(self.enums.items()):
             lines.append(f"E {name} {enum.size}")

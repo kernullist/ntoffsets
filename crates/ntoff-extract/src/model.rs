@@ -14,6 +14,15 @@ pub struct Member {
     pub size: u32,
     pub bit_position: u16,
     pub bit_count: u16,
+    /// The member's declared type, spelled by `typename`.
+    ///
+    /// Part of the layout contract and therefore hashed: offset and size say
+    /// where a member is and how wide, not how to read it, and `_EX_FAST_REF`,
+    /// `PVOID` and `_LIST_ENTRY *` are all eight bytes.
+    ///
+    /// Empty when the record cannot be resolved. Never a guess.
+    #[serde(rename = "type")]
+    pub type_name: String,
     /// Identifies the outermost anonymous union a member was flattened out of,
     /// or zero for a member that sits directly in the struct.
     ///

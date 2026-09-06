@@ -168,15 +168,34 @@ def build(data: Path, out: Path, data_out: Path | None = None,
             json.dumps(build_document, indent=1), encoding="utf-8"
         )
 
-    for path in (data / "layouts" / "v1").glob("*.json"):
+    # From the store's own directories, not a hardcoded schema generation:
+    # the layout schema moves (LAYOUT_SCHEMA_VERSION) and a builder that names
+    # the previous one publishes an empty tree, or worse, a stale one.
+    #
+    # And only what is reachable. A content-addressed store never deletes, so a
+    # layout written by a run that was later corrected stays on disk forever
+    # with nothing pointing at it -- the v1 tree carried two. Publishing the
+    # directory wholesale ships that garbage to every mirror and grows the data
+    # repository with files no consumer can arrive at.
+    live_layouts = {build["layout"].split(":")[-1] for build in builds}
+    live_types: set[str] = set()
+    for digest in sorted(live_layouts):
+        path = store.layouts / f"{digest}.json"
+        if not path.exists():
+            raise SystemExit(f"build references layout {digest}, which is not in the store")
         shutil.copy2(path, data_api / "layout" / path.name)
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        for kind in ("types", "enums"):
+            live_types.update((manifest.get(kind) or {}).values())
 
-    type_dir = data / "types" / "v1"
-    if type_dir.is_dir():
-        for path in type_dir.glob("*.json"):
+    if store.types.is_dir():
+        for digest in sorted(live_types):
+            path = store.types / f"{digest}.json"
+            if not path.exists():
+                raise SystemExit(f"manifest references type {digest}, which is not in the store")
             shutil.copy2(path, data_api / "type" / path.name)
 
-    universe = data / "symbols" / "universe.json"
+    universe = store.universe_path
     if universe.exists():
         shutil.copy2(universe, data_api / "symbols" / "universe.json")
 

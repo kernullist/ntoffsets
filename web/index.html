@@ -215,6 +215,34 @@ const label = b => {
 
 function view(html) { document.getElementById("view").innerHTML = html; }
 
+// Which names we actually hold, so a member's type can link to its own
+// definition. Fetched once and kept: 24 KiB gzipped, and every page that
+// renders a member wants it.
+let KNOWN = null;
+async function knownNames() {
+  if (!KNOWN) {
+    const index = await get("index/names.json");
+    KNOWN = new Set([...Object.keys(index.types), ...Object.keys(index.enums)]);
+  }
+  return KNOWN;
+}
+
+// `_LIST_ENTRY *`, `const _EJOB * volatile`, `_HANDLE_TABLE_ENTRY[4]` -- the
+// aggregate is the linkable part and the decoration around it is not. Only
+// names we hold become links; a type from a header we never read stays plain
+// text rather than a promise the site cannot keep.
+function typeLink(declaration) {
+  if (!declaration) return "";
+  const base = declaration
+    .replace(/^(?:const |volatile )+/, "")
+    .replace(/[\s*[(].*$/, "");
+  if (!base || !KNOWN || !KNOWN.has(base)) return esc(declaration);
+  const at = declaration.indexOf(base);
+  return esc(declaration.slice(0, at))
+    + `<a href="#/type/${encodeURIComponent(base)}">${esc(base)}</a>`
+    + esc(declaration.slice(at + base.length));
+}
+
 // A search page renders its chrome once and replaces only the rows. Rebuilding
 // the whole page on every keystroke destroys the input the user is typing into:
 // the caret and selection go with it, so a replacement types itself onto the end
@@ -305,7 +333,10 @@ async function pageBuild(key) {
   // does not care whether it is a member offset or a global address, and the
   // struct data used to be reachable only by going to the layout hash first --
   // which meant knowing what a layout hash is.
-  const manifest = await get(`layout/${b.layout.split(":").pop()}.json`);
+  const [manifest] = await Promise.all([
+    get(`layout/${b.layout.split(":").pop()}.json`),
+    knownNames(),
+  ]);
   const defs = [
     ...Object.entries(manifest.types || {}).map(([n, h]) => [n, h]),
     ...Object.entries(manifest.enums || {}).map(([n, h]) => [n, h]),
@@ -408,12 +439,13 @@ function renderType(name, t) {
     <h2>${esc(name)} <span class="quiet">${hex(t.size)} bytes,
       ${t.members.length} members</span></h2>
     <div class="scroll"><table>
-      <thead><tr><th class="num">Offset</th><th>Member</th>
+      <thead><tr><th class="num">Offset</th><th>Member</th><th>Type</th>
         <th class="num">Size</th><th class="num">Bits</th></tr></thead>
       <tbody>${t.members.map(m => `
         <tr>
           <td class="num">${hex(m.offset)}</td>
           <td class="mono">${esc(m.name)}</td>
+          <td class="mono quiet">${typeLink(m.type)}</td>
           <td class="num quiet">${m.size}</td>
           <td class="num quiet">${m.bit_count ? `${m.bit_position}:${m.bit_count}` : ""}</td>
         </tr>`).join("")}</tbody>
@@ -424,6 +456,7 @@ async function pageLayout(hash) {
   const [manifest, index] = await Promise.all([
     get(`layout/${hash}.json`),
     get("index/builds.json"),
+    knownNames(),
   ]);
   const users = index.builds.filter(b => b.l === hash);
   const types = Object.entries(manifest.types || {});
@@ -505,6 +538,7 @@ async function pageType(name) {
   const [manifest, builds] = await Promise.all([
     get(`layout/${layout}.json`),
     get("index/builds.json"),
+    knownNames(),
   ]);
   const digest = manifest[kind][name];
   const body = await get(`type/${digest}.json`);
@@ -576,6 +610,8 @@ function describe(t) {
   if (t.members_moved.length) bits.push(`${t.members_moved.length} moved`);
   if (t.members_resized.length) bits.push(`${t.members_resized.length} resized`);
   if (t.members_rebitted.length) bits.push(`${t.members_rebitted.length} bitfield change(s)`);
+  // Same offset, same width, different type. Nothing in an offset diff shows it.
+  if ((t.members_retyped || []).length) bits.push(`${t.members_retyped.length} retyped`);
   for (const r of t.members_renamed) bits.push(`${esc(r.from)} → ${esc(r.to)}`);
   return `<li><span class="t">${esc(t.type)}</span> — ${bits.join("; ")}</li>`;
 }

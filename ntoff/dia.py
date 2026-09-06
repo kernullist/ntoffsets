@@ -97,6 +97,139 @@ def _pick_definition(enumerator):
     return best
 
 
+SymTagFunctionType = 13
+SymTagPointerType = 14
+SymTagArrayType = 15
+SymTagBaseType = 16
+SymTagTypedef = 17
+
+# DIA's BasicType enum. Only the ones a kernel struct can hold are listed; an
+# unlisted one renders empty rather than guessing, and the gate then reports a
+# disagreement, which is the correct outcome for a case nobody has looked at.
+_BT_VOID, _BT_CHAR, _BT_WCHAR = 1, 2, 3
+_BT_INT, _BT_UINT, _BT_FLOAT = 6, 7, 8
+_BT_BOOL, _BT_LONG, _BT_ULONG = 10, 13, 14
+_BT_COMPLEX, _BT_HRESULT = 28, 31
+_BT_CHAR16, _BT_CHAR32, _BT_CHAR8 = 32, 33, 34
+
+# Keyed by (basic type, byte width), because DIA reports width separately from
+# kind. The spelling has to match `typename.rs` exactly: the whole point of the
+# oracle is that a difference in the output is a difference in the reading, so
+# a difference in vocabulary would read as a bug that is not there.
+_BASIC_NAMES = {
+    (_BT_VOID, 0): "void",
+    (_BT_CHAR, 1): "char",
+    (_BT_CHAR8, 1): "char",
+    (_BT_WCHAR, 2): "wchar_t",
+    (_BT_CHAR16, 2): "char16_t",
+    (_BT_CHAR32, 4): "char32_t",
+    (_BT_INT, 1): "char",
+    (_BT_INT, 2): "short",
+    (_BT_INT, 4): "int",
+    (_BT_INT, 8): "__int64",
+    (_BT_INT, 16): "__int128",
+    (_BT_UINT, 1): "unsigned char",
+    (_BT_UINT, 2): "unsigned short",
+    (_BT_UINT, 4): "unsigned int",
+    (_BT_UINT, 8): "unsigned __int64",
+    (_BT_UINT, 16): "unsigned __int128",
+    (_BT_LONG, 4): "long",
+    (_BT_LONG, 8): "__int64",
+    (_BT_ULONG, 4): "unsigned long",
+    (_BT_ULONG, 8): "unsigned __int64",
+    (_BT_FLOAT, 2): "half",
+    (_BT_FLOAT, 4): "float",
+    (_BT_FLOAT, 8): "double",
+    (_BT_FLOAT, 16): "long double",
+    (_BT_BOOL, 1): "bool",
+    (_BT_BOOL, 2): "bool16",
+    (_BT_BOOL, 4): "bool32",
+    (_BT_BOOL, 8): "bool64",
+    (_BT_COMPLEX, 8): "_Complex float",
+    (_BT_COMPLEX, 16): "_Complex double",
+    (_BT_HRESULT, 4): "HRESULT",
+}
+
+
+def _attr(symbol, name, default=None):
+    """DIA raises rather than returning null for properties a symbol lacks."""
+    try:
+        return getattr(symbol, name)
+    except Exception:
+        return default
+
+
+def _type_name(symbol, depth: int = 0) -> str:
+    """Spell a DIA type symbol the way `typename.rs` spells the same record.
+
+    Written independently of the Rust renderer and diffed against it, for the
+    same reason every other field is (13-2). A field the oracle does not
+    produce is a field the gate cannot check, and the last time this codebase
+    had one of those a chimera walked through three gates unnoticed.
+    """
+    if symbol is None or depth > 12:
+        return ""
+
+    tag = int(_attr(symbol, "symTag", 0) or 0)
+    prefix = ""
+    if _attr(symbol, "constType", False):
+        prefix += "const "
+    if _attr(symbol, "volatileType", False):
+        prefix += "volatile "
+
+    if tag == SymTagBaseType:
+        base = int(_attr(symbol, "baseType", 0) or 0)
+        width = int(_attr(symbol, "length", 0) or 0)
+        name = _BASIC_NAMES.get((base, width), "")
+        return prefix + name if name else ""
+
+    if tag in (SymTagUDT, SymTagEnum):
+        name = _attr(symbol, "name") or ""
+        return prefix + name if name else ""
+
+    if tag == SymTagTypedef:
+        # The Rust reader never sees a typedef -- CodeView resolves member
+        # types past them -- so following it through is what keeps the two
+        # readings comparable.
+        return _type_name(_attr(symbol, "type"), depth + 1)
+
+    if tag == SymTagPointerType:
+        target = _attr(symbol, "type")
+        rendered = _type_name(target, depth + 1)
+        if not rendered:
+            return ""
+        # A qualifier on the pointer symbol qualifies the pointer, not what it
+        # points at, so it goes after the star. `T * volatile` and
+        # `volatile T *` are different types and DIA reports both by setting
+        # the same flag on different symbols.
+        suffix = prefix.replace("const ", " const").replace("volatile ", " volatile")
+        if int(_attr(target, "symTag", 0) or 0) == SymTagFunctionType:
+            return rendered.replace(" ()", " (*)()", 1) + suffix
+        return f"{rendered} *{suffix}"
+
+    if tag == SymTagArrayType:
+        element = _attr(symbol, "type")
+        rendered = _type_name(element, depth + 1)
+        if not rendered:
+            return ""
+        # A trailing zero-length array is a real declaration, so "counted
+        # zero" and "could not count" have to stay apart: only the second one
+        # renders unsized.
+        count = int(_attr(symbol, "count", 0) or 0)
+        if not count:
+            stride = int(_attr(element, "length", 0) or 0)
+            if not stride:
+                return f"{prefix}{rendered}[]"
+            count = int(_attr(symbol, "length", 0) or 0) // stride
+        return f"{prefix}{rendered}[{count}]"
+
+    if tag == SymTagFunctionType:
+        returns = _type_name(_attr(symbol, "type"), depth + 1)
+        return f"{returns} ()" if returns else ""
+
+    return ""
+
+
 def _member_size(member) -> int:
     member_type = member.type
     if member_type is None:
@@ -190,6 +323,7 @@ def extract(pdb_path: Path, type_names: list[str], symbol_names: list[str],
                         size=_member_size(member),
                         bit_position=int(member.bitPosition),
                         bit_count=int(member.length),
+                        type=_type_name(member.type),
                     )
                 )
             elif location == LocIsThisRel:
@@ -198,6 +332,7 @@ def extract(pdb_path: Path, type_names: list[str], symbol_names: list[str],
                         offset=int(member.offset),
                         name=member.name,
                         size=_member_size(member),
+                        type=_type_name(member.type),
                     )
                 )
             # Static members carry no instance offset and are not part of the

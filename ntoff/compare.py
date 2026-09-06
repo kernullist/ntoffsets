@@ -98,6 +98,14 @@ def compare(oracle: Extraction, subject: Extraction, type_names: list[str]) -> R
                 report.fatal.append(
                     (type_name, f"{name}: offset {got.offset:#x} != dia {want.offset:#x}")
                 )
+            # An empty type on either side is a reader that could not
+            # resolve the record, not a disagreement about what the record
+            # says. Reporting it as a mismatch would blame the parser for a
+            # gap in whichever renderer stopped first.
+            if want.type and got.type and want.type != got.type:
+                report.fatal.append(
+                    (type_name, f"{name}: type {got.type!r} != dia {want.type!r}")
+                )
             if (want.bit_position, want.bit_count) != (got.bit_position, got.bit_count):
                 report.fatal.append(
                     (

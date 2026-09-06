@@ -11,6 +11,7 @@ mod enums;
 mod layout;
 mod model;
 mod symbols;
+mod typename;
 
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs::File;

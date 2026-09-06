@@ -15,6 +15,7 @@ use pdb::FallibleIterator;
 use std::collections::BTreeMap;
 
 use crate::model::{Member, TypeLayout};
+use crate::typename;
 
 /// A name shared by many unrelated anonymous records, and therefore useless as
 /// an identifier.
@@ -150,6 +151,12 @@ impl<'a> TypeIndexMap<'a> {
             .filter(|name| !is_ambiguous_placeholder(name))
             .cloned()
             .collect()
+    }
+
+    /// Public for `typename`, which walks the same records to spell a
+    /// declaration out of them.
+    pub fn parse_type(&self, index: pdb::TypeIndex) -> Option<pdb::TypeData<'a>> {
+        self.parse(index)
     }
 
     fn parse(&self, index: pdb::TypeIndex) -> Option<pdb::TypeData<'a>> {
@@ -297,6 +304,9 @@ fn collect(
                     size: map.size_of(bitfield.underlying_type),
                     bit_position: u16::from(bitfield.position),
                     bit_count: u16::from(bitfield.length),
+                    // The storage unit's type, not the bitfield record: a
+                    // three-bit field in a `unsigned long` reads as one.
+                    type_name: typename::render(map, bitfield.underlying_type),
                     union_group: group,
                 });
             }
@@ -340,6 +350,7 @@ fn collect(
                     size: map.size_of(member.field_type),
                     bit_position: 0,
                     bit_count: 0,
+                    type_name: typename::render(map, member.field_type),
                     union_group: group,
                 });
             }
