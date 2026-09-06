@@ -1,0 +1,159 @@
+# Pick up whatever Microsoft shipped, and publish it.
+#
+# Most days this does nothing. Windows ships kernel updates on the second
+# Tuesday -- about 14 dated builds a month -- and `collect` resumes, so a build
+# already in the store is skipped without a single request. A daily cadence
+# therefore costs almost nothing and keeps the feed at most a day behind.
+name: collect
+
+on:
+  schedule:
+    # Well after the US Patch Tuesday window, and not on the hour: scheduled
+    # runs at :00 queue behind everyone else's.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+# Never two collections at once. Not a correctness problem -- the store is
+# content addressed and the writes are idempotent -- but msdl throttling is
+# real (4.3, and Winbindex's CI installs proxy rotation to cope with it). Two
+# overlapping runs would double our request rate against a free service we have
+# promised to go easy on.
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  DATA_BASE: https://${{ github.repository_owner }}.github.io/ntoffsets-data
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      # The store is the state. It lives in its own repository because a
+      # re-extraction rewrites every manifest and that history should be
+      # truncatable without losing the code's (8.4).
+      - name: Check out the store
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/ntoffsets-data
+          ref: store
+          path: data
+          token: ${{ secrets.NTOFF_DATA_TOKEN }}
+
+      - name: Check out the published data tree
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/ntoffsets-data
+          ref: gh-pages
+          path: publish-data
+          token: ${{ secrets.NTOFF_DATA_TOKEN }}
+
+      - name: Check out the published site
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: publish-site
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Only the extractor needs building; the pipeline itself is stdlib. The
+      # DIA oracle is Windows-only COM and runs in its own workflow (13-2).
+      - name: Cache the extractor build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: cargo-${{ runner.os }}-${{ hashFiles('Cargo.lock') }}
+
+      # Not the PDBs -- those are tens of gigabytes and a resumed run does not
+      # need them. This is the Winbindex snapshots and the sha256-to-PDB-key
+      # map, which spare us re-reading a PE header over HTTP for every
+      # candidate we have already identified. Both are derived and safe to
+      # lose; the rolling key just keeps yesterday's copy reachable.
+      - name: Cache the index lookups
+        uses: actions/cache@v4
+        with:
+          path: |
+            cache/winbindex
+            cache/pdb-keys.json
+          key: index-${{ github.run_id }}
+          restore-keys: index-
+
+      # Each dataset carries its own Winbindex snapshot, and 2.2 allows one
+      # refresh a day per snapshot. This is that refresh.
+      #
+      # Never --force here. It re-extracts every build, which needs the local
+      # PDB cache; without one it would re-download 1,967 PDBs from msdl, and
+      # that is exactly the traffic 4.3 exists to prevent. A schema bump is a
+      # local operation against the cache, not a CI job.
+      - name: Collect
+        run: |
+          python -m ntoff collect --dataset ga --refresh --no-oracle
+          python -m ntoff collect --dataset arm64 --refresh --no-oracle
+          python -m ntoff collect --dataset insider --refresh --no-oracle
+
+      # Self-consistency and continuity, both of which run without DIA on
+      # purpose so that they can block every run (13-1, 13-4). Non-zero exit
+      # on any error stops the publish.
+      - name: Validate
+        run: python -m ntoff validate
+
+      - name: Build the feed and the site
+        run: |
+          python -m ntoff feed
+          python -m ntoff site --data-out site-data --data-base "$DATA_BASE"
+          python -m ntoff status
+
+      - name: Publish the store
+        working-directory: data
+        run: |
+          git config user.name "ntoffsets"
+          git config user.email "ntoffsets@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no new builds; nothing to publish"
+            exit 0
+          fi
+          git commit -q -m "collect $(date -u +%F)"
+          git push -q
+
+      # rsync --delete rather than copy-over: a blob that stopped being
+      # reachable has to leave the published tree, or the thing site.py now
+      # refuses to publish would live on here instead.
+      - name: Publish the data tree
+        run: |
+          rsync -a --delete --exclude .git site-data/ publish-data/
+          cd publish-data
+          git config user.name "ntoffsets"
+          git config user.email "ntoffsets@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "data tree unchanged"
+            exit 0
+          fi
+          git commit -q -m "data $(date -u +%F)"
+          git push -q
+
+      - name: Publish the site
+        run: |
+          rsync -a --delete --exclude .git site/ publish-site/
+          cd publish-site
+          git config user.name "ntoffsets"
+          git config user.email "ntoffsets@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "site unchanged"
+            exit 0
+          fi
+          git commit -q -m "site $(date -u +%F)"
+          git push -q

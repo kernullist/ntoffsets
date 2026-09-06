@@ -1,0 +1,53 @@
+# Prove the published numbers, from the outside.
+#
+# 8.6: a security-adjacent database has to be checkable by someone who does not
+# take our word for it. This runs the same command a stranger would, against the
+# same public URLs, and publishes what it got. Verifying our own working copy
+# would only show the store agrees with itself.
+name: verify
+
+on:
+  schedule:
+    - cron: "23 9 * * 5"
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: How many published builds to re-derive
+        default: "30"
+
+concurrency:
+  group: verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      # No store checkout on purpose. This job gets the PDBs from Microsoft and
+      # the published values over HTTP, which is all a third party has.
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: cargo-${{ runner.os }}-${{ hashFiles('Cargo.lock') }}
+
+      # The seed is the date, so the sample is reproducible: anyone can re-run
+      # this exact selection and get the same builds. Publishing a result whose
+      # sample cannot be reproduced is another way of saying "trust us".
+      - name: Re-derive a sample from Microsoft's PDBs
+        run: |
+          SEED=$(date -u +%Y%m%d)
+          echo "seed $SEED" | tee -a "$GITHUB_STEP_SUMMARY"
+          python -m ntoff verify \
+            --source "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
+            --sample ${{ inputs.sample || 30 }} --seed "$SEED" \
+            | tee -a "$GITHUB_STEP_SUMMARY"

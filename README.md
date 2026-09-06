@@ -94,6 +94,28 @@ python -m ntoff gate --local
 python -m ntoff validate
 ```
 
+## Keeping up with Windows
+
+```
+.github/workflows/collect.yml   daily: collect, validate, feed, publish
+.github/workflows/gate.yml      weekly on Windows: cross-check against DIA
+.github/workflows/verify.yml    weekly: re-derive published values from msdl
+```
+
+Windows ships around 14 dated kernel builds a month, and `collect` resumes, so
+most days the run makes no requests at all and writes nothing. The gate is a
+separate workflow because DIA is Windows-only COM while the pipeline runs on
+Linux — which is why the self-consistency and continuity checks were built to
+run without DIA: those can block every collection, the oracle gates releases.
+
+`verify` deliberately checks out no store. It has what a stranger has: the
+public URLs and Microsoft's symbol server.
+
+CI never passes `--force`. Re-extracting everything needs the local PDB cache;
+without one it would re-download 1,967 PDBs from msdl, which is exactly the
+traffic the throttling rules exist to prevent. A schema change is a local
+operation.
+
 ## Checking it yourself
 
 ```bash

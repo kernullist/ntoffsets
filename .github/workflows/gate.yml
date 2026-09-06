@@ -1,0 +1,65 @@
+# The oracle. Two independent readings of the same PDB, diffed (13-2).
+#
+# Separate from `collect` because DIA is Windows-only COM and the pipeline runs
+# on Linux. That split is a design constraint, not an accident: the checks that
+# can block every collection were built to run without DIA, and this one is the
+# pre-release gate.
+name: gate
+
+on:
+  schedule:
+    # Weekly, after a week of daily collections have accumulated.
+    - cron: "41 7 * * 3"
+  pull_request:
+    paths:
+      - "crates/**"
+      - "ntoff/**"
+      - "types.toml"
+  workflow_dispatch:
+    inputs:
+      builds:
+        description: How many builds to cross-check
+        default: "12"
+
+concurrency:
+  group: gate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    # msdia140.dll ships with Visual Studio, which the Windows image has. It is
+    # activated through DllGetClassObject rather than regsvr32, so no admin
+    # step is needed.
+    runs-on: windows-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the store
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/ntoffsets-data
+          ref: store
+          path: data
+          token: ${{ secrets.NTOFF_DATA_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install comtypes
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: cargo-${{ runner.os }}-${{ hashFiles('Cargo.lock') }}
+
+      # A sample, not everything: each build costs a PDB fetch, and the point
+      # is to catch a reader that disagrees with Microsoft's own, which shows up
+      # within a handful of builds. Breadth across eras beats depth in one --
+      # a parser breaks on the eras it has never seen.
+      - name: Cross-check against DIA
+        run: python -m ntoff gate --limit ${{ inputs.builds || 12 }}

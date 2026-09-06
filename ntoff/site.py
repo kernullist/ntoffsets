@@ -230,6 +230,14 @@ def build(data: Path, out: Path, data_out: Path | None = None,
         if path.is_file():
             shutil.copy2(path, out / path.name)
 
+    # Without this GitHub Pages runs Jekyll over the tree, which silently drops
+    # anything it decides is a source file. Nothing here is a Jekyll site and
+    # 8.4 already wants the build step skipped, so say so in the tree rather
+    # than depending on a repository setting nobody can see from here.
+    (out / ".nojekyll").write_text("", encoding="utf-8")
+    if data_out is not None:
+        (data_out / ".nojekyll").write_text("", encoding="utf-8")
+
     site_files, site_bytes = _measure(out)
     if data_out is None:
         return {"files": site_files, "bytes": site_bytes, "builds": len(builds),
