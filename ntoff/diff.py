@@ -74,9 +74,30 @@ def sequences(builds: list[dict]) -> dict[tuple[str, str], list[dict]]:
                 grouped[(label, build["machine"])].append(build)
 
     return {
-        key: sorted(items, key=order_key)
+        key: sorted(items, key=_sequence_order(items))
         for key, items in sorted(grouped.items())
     }
+
+
+def _sequence_order(builds: list[dict]):
+    """Order one sequence by whichever signal is complete across it.
+
+    `order_key` leads with the release date, which is right when every build
+    has one and wrong when they do not: a missing date becomes `""` and sorts
+    the build to the front, so 26100.9233 landed next to 26100.1742 and the
+    continuity check reported a `_KPRCB` member moving 0x2afc between them.
+    Nothing moved. They are years apart and were never neighbours.
+
+    Inside a sequence the channel already pins one Windows version, so when
+    every build carries a version string that ordering is total and exact. The
+    date leads only where it has to -- the ARM64 index has no version for 79%
+    of its entries (4.5), and there the date is the only signal there is.
+    """
+    if all(build.get("file_version") for build in builds):
+        return lambda build: (version.sort_key(build["file_version"]),
+                              build.get("release_date") or "",
+                              build.get("symbol_key") or "")
+    return order_key
 
 
 # ---------------------------------------------------------------------------
