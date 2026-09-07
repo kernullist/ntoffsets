@@ -46,8 +46,13 @@ jobs:
       - name: Re-derive a sample from Microsoft's PDBs
         run: |
           SEED=$(date -u +%Y%m%d)
-          echo "seed $SEED" | tee -a "$GITHUB_STEP_SUMMARY"
-          python -m ntoff verify \
-            --source "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" \
+          # Not github.event.repository.name: a schedule payload carries no
+          # repository object, so the URL would collapse to ".github.io/" on
+          # exactly the runs nobody is watching -- and a 404 there reads like a
+          # verification failure rather than a broken URL. GITHUB_REPOSITORY is
+          # "owner/name" on every event.
+          SITE="https://${{ github.repository_owner }}.github.io/${GITHUB_REPOSITORY#*/}"
+          echo "seed $SEED against $SITE" | tee -a "$GITHUB_STEP_SUMMARY"
+          python -m ntoff verify --source "$SITE" \
             --sample ${{ inputs.sample || 30 }} --seed "$SEED" \
             | tee -a "$GITHUB_STEP_SUMMARY"
