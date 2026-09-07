@@ -1,0 +1,10 @@
+# leading comment block
+# second line
+name: t1
+on:
+  workflow_dispatch:
+jobs:
+  j:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok

@@ -1,0 +1,12 @@
+name: t4
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+env:
+  B: https://${{ github.repository_owner }}.github.io/x
+jobs:
+  j:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$B"
