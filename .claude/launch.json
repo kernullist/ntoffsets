@@ -4,7 +4,7 @@
     {
       "name": "site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8017", "--directory", "site"],
+      "runtimeArgs": ["-m", "ntoff", "serve"],
       "port": 8017
     }
   ]

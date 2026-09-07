@@ -45,7 +45,7 @@ whole kernel would cost.
 ## Status
 
 Backfilled: **1,967 of 2,154 known builds (91.3%)** — 1,210 amd64, 738 ARM64,
-19 x86, spanning 1507 through 26H1. 519 distinct layouts, 6,497 type bodies,
+19 x86, spanning 1507 through 26H1. 517 distinct layouts, 6,738 type bodies,
 25,223 global symbol names, **zero mismatches against DIA**.
 
 The 187 that are missing are missing upstream: 175 have no binary on the symbol
@@ -116,6 +116,19 @@ without one it would re-download 1,967 PDBs from msdl, which is exactly the
 traffic the throttling rules exist to prevent. A schema change is a local
 operation.
 
+## Licence
+
+The software is Apache-2.0 (`LICENSE`). The data — offsets, type layouts, enum
+constants, symbol addresses — is CC0 (`LICENSE-DATA`): public domain, no
+attribution required, no conditions.
+
+The split is deliberate. The numbers are measurements of Microsoft's binaries,
+not authorship, and a copyright claim over `0x248` is not one we think we have.
+Embed them in whatever you like.
+
+We redistribute neither PDBs nor binaries. Every value here is derived from
+files Microsoft serves from its own symbol server.
+
 ## Checking it yourself
 
 ```bash
@@ -175,7 +188,7 @@ two real bugs, one on each side.
 
 ## What is in it
 
-1,967 builds, 519 distinct layouts, 2,505 type and enum names. The number that
+1,967 builds, 517 distinct layouts, 2,505 type and enum names. The number that
 matters is how many distinct definitions each name has:
 
 ```

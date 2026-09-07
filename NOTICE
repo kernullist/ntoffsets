@@ -1,0 +1,24 @@
+ntoffsets
+Copyright 2026 the ntoffsets authors
+
+This product includes software developed for the ntoffsets project.
+
+Licensing is split, because the code and the numbers are different kinds of
+thing:
+
+  * The software in this repository -- the extractor, the pipeline and the web
+    UI -- is licensed under the Apache License, Version 2.0. See LICENSE.
+
+  * The offsets, type layouts, enum constants and symbol addresses published by
+    this project are dedicated to the public domain under CC0 1.0. See
+    LICENSE-DATA. They are measurements of Microsoft's own binaries, not
+    authorship, and claiming copyright over "0x248" would be a claim we do not
+    believe we have. Use them without attribution, permission or conditions.
+
+This project redistributes neither PDBs nor binaries. Every published value is
+derived from files that Microsoft serves from its own public symbol server; the
+originals are not mirrored here.
+
+Build identity comes from Winbindex (https://winbindex.m417z.com) by m417z,
+which indexes metadata about Windows binaries. Only that metadata is consumed,
+and only derived results are published.
