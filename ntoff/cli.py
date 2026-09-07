@@ -454,7 +454,15 @@ def cmd_gate(args: argparse.Namespace) -> int:
 def cmd_validate(args: argparse.Namespace) -> int:
     paths = sorted(args.work.glob("*.rust.json"))
     if not paths:
-        print(f"no extractions in {args.work}; run `collect` first")
+        # A resumed run that found nothing new extracts nothing, and most days
+        # are that day -- treating it as a failure means the daily job goes red
+        # for doing exactly what it should. But an empty work directory next to
+        # an empty store is the opposite situation, and that is a real error.
+        if store_mod.Store(args.data).read_builds():
+            print(f"no new extractions in {args.work}; the store is unchanged")
+            return 0
+        print(f"no extractions in {args.work} and no builds in {args.data}; "
+              "run `collect` first")
         return 1
 
     errors = warnings = 0
@@ -505,21 +513,43 @@ def _check_continuity_across(store, loaded: dict[str, Extraction]) -> list[str]:
     Two places deciding what "adjacent" means is the defect. There is one now,
     and it is the one the published feed uses (10.0), so a continuity warning
     and a feed entry always describe the same pair of builds.
+
+    Neighbours come from the store when this run did not extract them. On a
+    daily run the new build's neighbour shipped weeks ago and exists only as a
+    stored layout; comparing only what one run produced meant comparing new
+    builds to each other, which for a single new build is nothing at all.
     """
     from .validate import check_continuity
 
     def label(build: dict) -> str:
         return build.get("file_version") or build["symbol_key"][:10]
 
+    # Keyed by layout, not by build: 1,967 builds share 517 layouts, and the
+    # continuity check reads nothing that distinguishes two builds with the
+    # same one.
+    rebuilt: dict[str, Extraction] = {}
+
+    def materialise(build: dict) -> Extraction:
+        key = build["symbol_key"]
+        if key in loaded:
+            return loaded[key]
+        digest = build["layout"]
+        if digest not in rebuilt:
+            extraction = Extraction("store", key)
+            extraction.types = store.layout_types(digest)
+            rebuilt[digest] = extraction
+        return rebuilt[digest]
+
     messages: list[str] = []
     for (channel, machine), builds in diff.sequences(store.read_builds()).items():
-        # Filtered after sequencing, so a build we hold but could not load does
-        # not silently make its neighbours adjacent under a different name than
-        # the feed uses.
-        run = [b for b in builds if b.get("symbol_key") in loaded]
-        for before, after in zip(run, run[1:]):
+        for before, after in zip(builds, builds[1:]):
+            # Every pair when everything was extracted, which is the local
+            # case; only pairs touching something new otherwise.
+            if (before["symbol_key"] not in loaded
+                    and after["symbol_key"] not in loaded):
+                continue
             findings = check_continuity(
-                loaded[before["symbol_key"]], loaded[after["symbol_key"]],
+                materialise(before), materialise(after),
                 f"{channel} {machine} {label(before)}->{label(after)}",
             )
             messages.extend(findings.warnings)

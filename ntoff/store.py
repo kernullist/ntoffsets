@@ -55,7 +55,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from . import symbols as symbol_universe
-from .model import LAYOUT_SCHEMA_VERSION, Extraction
+from .model import LAYOUT_SCHEMA_VERSION, Extraction, Member, TypeLayout
 
 SOURCE = "winbindex+msdl"
 
@@ -346,6 +346,36 @@ class Store:
                 for name, blob in manifest.get("enums", {}).items()
             },
         }
+
+    def layout_types(self, digest: str) -> dict[str, TypeLayout]:
+        """Rebuild a layout's types as the model, for a build we did not extract.
+
+        The continuity check needs a build's neighbours (13.4), and on an
+        incremental run the neighbour was collected weeks ago and is only in
+        the store. Without this the check silently compares new builds to each
+        other and reports nothing, which is the shape of a check that has
+        stopped checking.
+
+        Types only: continuity reads sizes and member offsets and nothing else,
+        and the enums would double the reads for no one.
+        """
+        manifest = self.read_manifest(digest)
+        types: dict[str, TypeLayout] = {}
+        for name, blob in (manifest.get("types") or {}).items():
+            body = self.read_type(blob)
+            types[name] = TypeLayout(
+                name,
+                body["size"],
+                [
+                    Member(
+                        offset=m["offset"], name=m["name"], size=m["size"],
+                        bit_position=m["bit_position"], bit_count=m["bit_count"],
+                        type=m.get("type", ""),
+                    )
+                    for m in body["members"]
+                ],
+            )
+        return types
 
     def known_sources(self) -> set[str]:
         """Every Winbindex hash already represented in the store."""
