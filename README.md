@@ -116,6 +116,37 @@ without one it would re-download 1,967 PDBs from msdl, which is exactly the
 traffic the throttling rules exist to prevent. A schema change is a local
 operation.
 
+## Running your own copy
+
+The pipeline needs no machine and no licence, but it does need somewhere to
+keep its state. Two repositories: this one holds the code and serves the site,
+and `<owner>/ntoffsets-data` holds the store on a `store` branch and the
+published data on `gh-pages`. Both must be public — Pages on a private
+repository needs a paid plan, and the data origin has to answer cross-origin
+requests from the site.
+
+    gh repo create ntoffsets-data --public
+
+    # gh-pages has to exist before the first run: actions/checkout fails on a
+    # branch that is not there. The content arrives on the first run.
+    git init -q -b gh-pages && touch .nojekyll && git add -A
+    git commit -qm "bootstrap" && git push https://github.com/<owner>/ntoffsets-data gh-pages
+
+    # Push a store you already have. Starting from an empty one makes the first
+    # run fetch 1,967 PDBs from msdl, which is the traffic to avoid.
+    cd data && git init -q -b store && git add -A && git commit -qm store
+    git remote add origin https://github.com/<owner>/ntoffsets-data.git
+    git push -u origin store
+
+`collect` pushes to the other repository, so it needs a token the default
+`GITHUB_TOKEN` cannot replace: a fine-grained PAT with Contents: read and write
+on `ntoffsets-data`, stored on *this* repository as `NTOFF_DATA_TOKEN`. Then
+enable Pages on both, `gh-pages` at the root.
+
+One caveat worth knowing: a repository created and pushed in the same breath
+can land its workflow files while Actions is still being provisioned, and they
+are then never indexed. Any later push to the default branch fixes it.
+
 ## Licence
 
 The software is Apache-2.0 (`LICENSE`). The data — offsets, type layouts, enum
