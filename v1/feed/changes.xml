@@ -2,15 +2,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-09-07T09:05:00Z</updated>
-<link rel="self" href="https://ntoffsets.github.io/ntoffsets/feed/changes.xml"/>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/"/>
+<updated>2026-09-07T10:16:33Z</updated>
+<link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
 <entry>
 <title>builds/28000 amd64 10.0.28000.2704 -&gt; 10.0.28000.2804: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 38 more</title>
 <id>urn:ntoffsets:feed:changes:51C3CEDAEB2CDC29F17DFB9C52D59FFC1:D663EB7F3A0D6A8A34B96648EC41C0431</id>
 <updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
 <summary>32 type(s) changed in 8f595bc2-11e8-4b7d-91e0-c457277db89e, KB5120996, a75ef0ad-5dab-461e-a0a0-24cf7b3ee0e8 (builds/28000, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
 _EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
@@ -59,7 +59,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemIn
 <title>11-26H1 arm64 43c0f4d9-611f-4d36-8b04-5b692097a8ba/7cd9fa1f-62a4-4383-a79d-317535ca2a1c/84fddaa0-855c-4fbe-8d92-1a4e0ec07239/KB5101681 -&gt; 565031a5-7ba7-4b18-b986-854749de9248/KB5120996/deee09e7-795b-4ac6-ad80-a8680e97908d: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 36 more</title>
 <id>urn:ntoffsets:feed:changes:4A2F9E392DDFC17D2114FB188874F7831:25313F9C56F0E7CB66D191B130C0BB671</id>
 <updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/25313F9C56F0E7CB66D191B130C0BB671.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/25313F9C56F0E7CB66D191B130C0BB671.json"/>
 <summary>31 type(s) changed in 565031a5-7ba7-4b18-b986-854749de9248, KB5120996, deee09e7-795b-4ac6-ad80-a8680e97908d (11-26H1, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
 _EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
@@ -106,7 +106,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemIn
 <title>11-26H1 amd64 10.0.28000.2704 -&gt; 10.0.28000.2804: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 38 more</title>
 <id>urn:ntoffsets:feed:changes:51C3CEDAEB2CDC29F17DFB9C52D59FFC1:D663EB7F3A0D6A8A34B96648EC41C0431</id>
 <updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
 <summary>32 type(s) changed in 8f595bc2-11e8-4b7d-91e0-c457277db89e, KB5120996, a75ef0ad-5dab-461e-a0a0-24cf7b3ee0e8 (11-26H1, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
 _EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
@@ -155,7 +155,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemIn
 <title>11-24H2 arm64 1db7d109-ad8a-42f2-bbe7-e21f07664195/KB5101684/c0b27d8d-cbbb-4715-8129-e90aaadc8618 -&gt; 8f930372-11a1-4418-bb72-6700bd1f7f5b/KB5120998/bd00afed-db83-4448-a3b3-29c773d9378c/e89a903e-3d54-4bbb-9891-784d2b6ebc30: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _POP_COOLING_EXTENSION, and 28 more</title>
 <id>urn:ntoffsets:feed:changes:C97FAD530E54A057C0FDE79412D2E60D1:EFE8D03C6CA25620353ABAF92FDA31631</id>
 <updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/EFE8D03C6CA25620353ABAF92FDA31631.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/EFE8D03C6CA25620353ABAF92FDA31631.json"/>
 <summary>25 type(s) changed in 8f930372-11a1-4418-bb72-6700bd1f7f5b, KB5120998, bd00afed-db83-4448-a3b3-29c773d9378c, e89a903e-3d54-4bbb-9891-784d2b6ebc30 (11-24H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4f0; added: Feature_PlutonMDS_Enabled, Feature_StxTpmFix_Enabled; moved: 41; resized: 1; bitfields: 1
 _MI_PARTITION_SEGMENTS: added: ListWalkers; moved: 32
@@ -194,7 +194,7 @@ _SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE
 <title>11-24H2 amd64 10.0.26100.9168 -&gt; 10.0.26100.9278: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _POP_COOLING_EXTENSION, and 28 more</title>
 <id>urn:ntoffsets:feed:changes:72C69E726C648BC18257AF38FA78A2F21:822B6DB6E43D1FDF2008C884BC27FCA81</id>
 <updated>2026-08-27T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/822B6DB6E43D1FDF2008C884BC27FCA81.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/822B6DB6E43D1FDF2008C884BC27FCA81.json"/>
 <summary>25 type(s) changed in KB5120998, c1c737c2-f2d9-4824-bb5b-1af515179099, d922b79f-142d-4cf8-896b-515abfd01e66, def45c01-379e-4ded-8b1b-b870faaef6f8 (11-24H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4f0; added: Feature_PlutonMDS_Enabled, Feature_StxTpmFix_Enabled; moved: 41; resized: 1; bitfields: 1
 _MI_PARTITION_SEGMENTS: added: ListWalkers; moved: 32
@@ -233,7 +233,7 @@ _SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE
 <title>builds/28000 amd64 10.0.28000.2630 -&gt; 10.0.28000.2704: PO_MEMORY_IMAGE, _HEAP, _HEAP_COUNTERS, _KPRCB, and 14 more</title>
 <id>urn:ntoffsets:feed:changes:3C34B1C5E4C135C64E44FF8E3BA678081:51C3CEDAEB2CDC29F17DFB9C52D59FFC1</id>
 <updated>2026-08-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/51C3CEDAEB2CDC29F17DFB9C52D59FFC1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/51C3CEDAEB2CDC29F17DFB9C52D59FFC1.json"/>
 <summary>13 type(s) changed in 312f676b-2cbe-41aa-ba85-85c09c88518c, KB5121000 (builds/28000, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4f8 -&gt; 0x4e0; removed: Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
 _HEAP: size 0x2c8 -&gt; 0x2c0; moved: 1; resized: 1
@@ -258,7 +258,7 @@ _SYSTEM_INFORMATION_CLASS: removed: SystemFredInformation; renumbered: MaxSystem
 <title>builds/26100 amd64 10.0.26100.9032 -&gt; 10.0.26100.9168: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _PO_HIBER_PERF, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:E47F9811E35D5EC016EE99B4E0A0EDFD1:72C69E726C648BC18257AF38FA78A2F21</id>
 <updated>2026-08-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/72C69E726C648BC18257AF38FA78A2F21.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/72C69E726C648BC18257AF38FA78A2F21.json"/>
 <summary>5 type(s) changed in 0485f51d-b291-4823-89b8-c6be2fd43fee, 6a8c4c24-0dd2-46b9-9d8f-bd7a84ec5ad4, 721dfe56-4a9a-452f-8e73-934e3ac45619, 85379332-7c4a-4966-9fa5-4c48a7b934f1, KB5121003, c1c737c2-f2d9-4824-bb5b-1af515179099, d922b79f-142d-4cf8-896b-515abfd01e66, def45c01-379e-4ded-8b1b-b870faaef6f8, fc2fbfd7-10b4-480f-967e-9af61f9d48c3 (builds/26100, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4f0 -&gt; 0x4d8; moved: 41; resized: 1
 _MI_PARTITION_SEGMENTS: removed: ListWalkers; moved: 32
@@ -272,7 +272,7 @@ _SKSERVICE: removed: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVI
 <title>11-26H1 arm64 5b2d78ff-6654-4e90-8558-a58f0dc7a978/KB5101649 -&gt; 43c0f4d9-611f-4d36-8b04-5b692097a8ba/7cd9fa1f-62a4-4383-a79d-317535ca2a1c/84fddaa0-855c-4fbe-8d92-1a4e0ec07239/KB5101681: PO_MEMORY_IMAGE, _RTL_USER_PROCESS_PARAMETERS, _PS_ATTRIBUTE_NUM, _RTL_HP_FEATURE_ENABLEMENT</title>
 <id>urn:ntoffsets:feed:changes:C94A7530FCE04A8BF4C1100398B8B7D01:4A2F9E392DDFC17D2114FB188874F7831</id>
 <updated>2026-07-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/4A2F9E392DDFC17D2114FB188874F7831.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/4A2F9E392DDFC17D2114FB188874F7831.json"/>
 <summary>2 type(s) changed in 43c0f4d9-611f-4d36-8b04-5b692097a8ba, 7cd9fa1f-62a4-4383-a79d-317535ca2a1c, 84fddaa0-855c-4fbe-8d92-1a4e0ec07239, KB5101681 (11-26H1, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
 _RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
@@ -283,7 +283,7 @@ _RTL_HP_FEATURE_ENABLEMENT: added</content>
 <title>11-26H1 amd64 10.0.28000.2525 -&gt; 64820786-8417-4d45-9230-2dc3ee354e40/81988c5b-0c14-41fc-8a1f-79fb5e4eb2fb/KB5101681/cb51427d-cd3b-4a69-86c0-ab8c47723bf2: PO_MEMORY_IMAGE, _RTL_USER_PROCESS_PARAMETERS, _PS_ATTRIBUTE_NUM, _RTL_HP_FEATURE_ENABLEMENT</title>
 <id>urn:ntoffsets:feed:changes:BC7235DA3728A7BA5DC02351A90616151:C048C018B71B830AB3D44AFCBC58466B1</id>
 <updated>2026-07-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C048C018B71B830AB3D44AFCBC58466B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C048C018B71B830AB3D44AFCBC58466B1.json"/>
 <summary>2 type(s) changed in 64820786-8417-4d45-9230-2dc3ee354e40, 81988c5b-0c14-41fc-8a1f-79fb5e4eb2fb, KB5101681, cb51427d-cd3b-4a69-86c0-ab8c47723bf2 (11-26H1, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
 _RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
@@ -294,7 +294,7 @@ _RTL_HP_FEATURE_ENABLEMENT: added</content>
 <title>11-24H2 arm64 68ea9468-877e-4113-9f76-eebdb7604a81/KB5121767/b2260760-1fae-440c-994d-55e021ff4fa6 -&gt; 1db7d109-ad8a-42f2-bbe7-e21f07664195/KB5101684/c0b27d8d-cbbb-4715-8129-e90aaadc8618: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:123461CB97CD34C3A3DAC94A558995691:C97FAD530E54A057C0FDE79412D2E60D1</id>
 <updated>2026-07-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C97FAD530E54A057C0FDE79412D2E60D1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C97FAD530E54A057C0FDE79412D2E60D1.json"/>
 <summary>1 type(s) changed in 1db7d109-ad8a-42f2-bbe7-e21f07664195, KB5101684, c0b27d8d-cbbb-4715-8129-e90aaadc8618 (11-24H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; bitfields: 1</content>
 </entry>
@@ -302,7 +302,7 @@ _RTL_HP_FEATURE_ENABLEMENT: added</content>
 <title>11-24H2 amd64 10.0.26100.8894 -&gt; 10.0.26100.8972: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:2A6E73CB5CCE9CCDA64E151FAC38D45C1:C8A7F11B37FE28227B6B11412E3A05191</id>
 <updated>2026-07-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C8A7F11B37FE28227B6B11412E3A05191.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C8A7F11B37FE28227B6B11412E3A05191.json"/>
 <summary>1 type(s) changed in 78c3a5e5-d313-4e57-88b6-1d6ba3bc282d, KB5101684, b407eb4e-c0c2-47e8-a60c-ae837d058d1e, d71bafd6-0e32-4133-a2c5-04e9ba85b99f (11-24H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; bitfields: 1</content>
 </entry>
@@ -310,7 +310,7 @@ _RTL_HP_FEATURE_ENABLEMENT: added</content>
 <title>builds/28000 amd64 10.0.28000.2336 -&gt; 10.0.28000.2525: _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:FB597264E8FA15BDBC39E496A2F3D13F1:BC7235DA3728A7BA5DC02351A90616151</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
 <summary>1 type(s) changed in 533720b8-f9c8-4193-887c-780a92eec1e8, KB5101649 (builds/28000, amd64)</summary>
 <content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 </entry>
@@ -318,7 +318,7 @@ _RTL_HP_FEATURE_ENABLEMENT: added</content>
 <title>builds/26100 arm64 10.0.26100.8770 -&gt; 10.0.26100.8875: PO_MEMORY_IMAGE, _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:26858F34B02D536B141714759ADFBBED1:2B6A2E831D6B233ED3743386B65837781</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
 <summary>2 type(s) changed in 23a3b66b-74eb-45f0-9c7a-91a12bab3007, 42821a1d-0c11-4160-b9b1-fc8731e0b73d, 68ea9468-877e-4113-9f76-eebdb7604a81, 8d126cbd-94e9-4023-aa8a-5e811eca50bd, KB5101650, b045adcf-3361-4fd1-8afc-2533adf25431, b2260760-1fae-440c-994d-55e021ff4fa6 (builds/26100, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
 _HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
@@ -327,7 +327,7 @@ _HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 <title>builds/26100 amd64 10.0.26100.8770 -&gt; 10.0.26100.8875: PO_MEMORY_IMAGE, _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:71DD99BAD82A8857AD7E881CA6DB53CF1:1924BC23550919F88B17A384B944B5431</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
 <summary>2 type(s) changed in 23468e90-95f8-4370-ad30-e6465c5bc5a5, 44ac3fa1-0cef-463b-a650-6240d396f894, 57ee5844-e735-4dc8-a764-66b257e03b5b, 5b70cb74-ee06-4847-bf29-9be4e58055d4, 84f92676-c50f-47ba-8877-9cb3aded078f, KB5101650, a2702664-1144-411d-808a-fd316e393e58, c22a045a-e5cc-4849-aa4b-3bd49bb08d91, da3cb707-6819-4142-9721-e5981503a7c7, fecc1a74-859b-4ea2-be1f-e025e06b4af9 (builds/26100, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
 _HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
@@ -336,7 +336,7 @@ _HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 <title>21H2 arm64 07c4171f-7e58-432a-a4b6-eda921bd5684/5d0418c8-672a-43e6-8842-389549931da0/KB5087544/ab9f10c7-2734-436e-895f-429d23a6dc90 -&gt; 3eed2252-912c-4342-8afc-895bae4ae096/KB5099539/d3045ccb-b139-4a6d-97b0-09496b778119/e9505fd6-4408-4761-adba-b28e84ac5cb4: _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:59500DB9CCB3671DBD08FCA6A1B9E6DB1:BA3E9FAD1D8A6DD3CBCABA182CCC2F371</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BA3E9FAD1D8A6DD3CBCABA182CCC2F371.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BA3E9FAD1D8A6DD3CBCABA182CCC2F371.json"/>
 <summary>1 type(s) changed in 3eed2252-912c-4342-8afc-895bae4ae096, KB5099539, d3045ccb-b139-4a6d-97b0-09496b778119, e9505fd6-4408-4761-adba-b28e84ac5cb4 (21H2, arm64)</summary>
 <content type="text">_KPRCB: renamed: DoubleFlushTlb -&gt; PrcbPad5</content>
 </entry>
@@ -344,7 +344,7 @@ _HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 <title>11-26H1 arm64 4041170c-fcf0-4045-83b0-3dcd36bd979e/KB5095051 -&gt; 5b2d78ff-6654-4e90-8558-a58f0dc7a978/KB5101649: _HEAP_VS_AFFINITY_SLOT, _LOADER_PARAMETER_CI_EXTENSION, _PEB, _PEB32, and 5 more</title>
 <id>urn:ntoffsets:feed:changes:96943355064C9D950F14F78EA4F6B3E81:C94A7530FCE04A8BF4C1100398B8B7D01</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C94A7530FCE04A8BF4C1100398B8B7D01.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C94A7530FCE04A8BF4C1100398B8B7D01.json"/>
 <summary>8 type(s) changed in 5b2d78ff-6654-4e90-8558-a58f0dc7a978, KB5101649 (11-26H1, arm64)</summary>
 <content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset
 _LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
@@ -360,7 +360,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-26H1 amd64 10.0.28000.2336 -&gt; 10.0.28000.2525: _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:FB597264E8FA15BDBC39E496A2F3D13F1:BC7235DA3728A7BA5DC02351A90616151</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
 <summary>1 type(s) changed in 533720b8-f9c8-4193-887c-780a92eec1e8, KB5101649 (11-26H1, amd64)</summary>
 <content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 </entry>
@@ -368,7 +368,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-24H2 arm64 10.0.26100.8737 -&gt; 10.0.26100.8875: _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:14534FCED828B732E853CCD860E4B48D1:2B6A2E831D6B233ED3743386B65837781</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
 <summary>1 type(s) changed in 23a3b66b-74eb-45f0-9c7a-91a12bab3007, 42821a1d-0c11-4160-b9b1-fc8731e0b73d, 68ea9468-877e-4113-9f76-eebdb7604a81, 8d126cbd-94e9-4023-aa8a-5e811eca50bd, KB5101650, b045adcf-3361-4fd1-8afc-2533adf25431, b2260760-1fae-440c-994d-55e021ff4fa6 (11-24H2, arm64)</summary>
 <content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 </entry>
@@ -376,7 +376,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-24H2 amd64 10.0.26100.8737 -&gt; 10.0.26100.8875: _HEAP_VS_AFFINITY_SLOT</title>
 <id>urn:ntoffsets:feed:changes:B713FE65DB46757416FA7E4A0D0CA5941:1924BC23550919F88B17A384B944B5431</id>
 <updated>2026-07-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
 <summary>1 type(s) changed in 23468e90-95f8-4370-ad30-e6465c5bc5a5, 44ac3fa1-0cef-463b-a650-6240d396f894, 57ee5844-e735-4dc8-a764-66b257e03b5b, 5b70cb74-ee06-4847-bf29-9be4e58055d4, 84f92676-c50f-47ba-8877-9cb3aded078f, KB5101650, a2702664-1144-411d-808a-fd316e393e58, c22a045a-e5cc-4849-aa4b-3bd49bb08d91, da3cb707-6819-4142-9721-e5981503a7c7, fecc1a74-859b-4ea2-be1f-e025e06b4af9 (11-24H2, amd64)</summary>
 <content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
 </entry>
@@ -384,7 +384,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-26H1 amd64 10.0.28000.2269 -&gt; 10.0.28000.2336: _LOADER_PARAMETER_CI_EXTENSION, _PEB, _PEB32, _PEB64, and 4 more</title>
 <id>urn:ntoffsets:feed:changes:C19063F9222B565E70F8CADDFD38C1F81:FB597264E8FA15BDBC39E496A2F3D13F1</id>
 <updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FB597264E8FA15BDBC39E496A2F3D13F1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FB597264E8FA15BDBC39E496A2F3D13F1.json"/>
 <summary>7 type(s) changed in 3c6976a6-5903-428d-86fc-6565dae97d0c, KB5095091, a0270899-3389-4026-b66f-7d53b6610452 (11-26H1, amd64)</summary>
 <content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
 _PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
@@ -399,7 +399,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-24H2 arm64 10.0.26100.8655 -&gt; 10.0.26100.8737: _AMD64_DR7_REG, _ARM64_BCR_REG, _CHPEV2_CPUAREA_INFO, _KEMUL_CONTROL_BLOCK, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:9A6910DB4C3B517CADDB3E48C44E819B1:14534FCED828B732E853CCD860E4B48D1</id>
 <updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/14534FCED828B732E853CCD860E4B48D1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/14534FCED828B732E853CCD860E4B48D1.json"/>
 <summary>7 type(s) changed in 174c088a-32ea-443a-9d0d-399ad76cc4ed, KB5095093, ecbb98ac-df25-469a-8cbe-68a5c580a64d (11-24H2, arm64)</summary>
 <content type="text">_AMD64_DR7_REG: added
 _ARM64_BCR_REG: added
@@ -413,7 +413,7 @@ _PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo</content>
 <title>11-24H2 amd64 10.0.26100.8655 -&gt; 10.0.26100.8737: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:11D7FE79CC245612055503EE86BB0E3E1:B713FE65DB46757416FA7E4A0D0CA5941</id>
 <updated>2026-06-23T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B713FE65DB46757416FA7E4A0D0CA5941.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B713FE65DB46757416FA7E4A0D0CA5941.json"/>
 <summary>5 type(s) changed in 55b91426-bc5c-4ce1-94b0-b3f73ad96409, KB5095093, fe1f1547-38fb-4867-a152-ddec85a47b37 (11-24H2, amd64)</summary>
 <content type="text">_AMD64_DR7_REG: added
 _ARM64_BCR_REG: added
@@ -425,7 +425,7 @@ _PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo</content>
 <title>builds/28000 amd64 10.0.28000.2113 -&gt; 10.0.28000.2269: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:7619DE8013443574088B53EEE03E69BD1:C19063F9222B565E70F8CADDFD38C1F81</id>
 <updated>2026-06-09T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C19063F9222B565E70F8CADDFD38C1F81.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C19063F9222B565E70F8CADDFD38C1F81.json"/>
 <summary>1 type(s) changed in 413372f8-51db-4ea1-970a-8dce91db00aa, KB5095051 (builds/28000, amd64)</summary>
 <content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
 _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
@@ -434,7 +434,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>builds/26100 arm64 10.0.26100.8036 -&gt; 10.0.26100.8655: PO_MEMORY_IMAGE, _HEAP, _HEAP_COUNTERS, _KPRCB, and 10 more</title>
 <id>urn:ntoffsets:feed:changes:00D46CC0E2A13E486AC6C224799CFC231:9A6910DB4C3B517CADDB3E48C44E819B1</id>
 <updated>2026-06-09T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9A6910DB4C3B517CADDB3E48C44E819B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/9A6910DB4C3B517CADDB3E48C44E819B1.json"/>
 <summary>9 type(s) changed in KB5094126, d87783d7-1b94-44c0-a833-fb221ad1e6b9, f6f03ef4-7dc3-48a3-8a21-567e3060f968 (builds/26100, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
 _HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
@@ -455,7 +455,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>builds/26100 amd64 10.0.26100.8553 -&gt; 10.0.26100.8655: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:E08827CBC8B30BCB4D88967B9FAFEA9B1:11D7FE79CC245612055503EE86BB0E3E1</id>
 <updated>2026-06-09T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/11D7FE79CC245612055503EE86BB0E3E1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/11D7FE79CC245612055503EE86BB0E3E1.json"/>
 <summary>5 type(s) changed in KB5094126, cde62503-0f96-4273-8a1e-d25b94fe30ad, f7e8991e-4fd8-4bfd-a404-0de6dccd4191 (builds/26100, amd64)</summary>
 <content type="text">_AMD64_DR7_REG: removed
 _ARM64_BCR_REG: removed
@@ -467,7 +467,7 @@ _PEB64: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo</content>
 <title>builds/26100 amd64 10.0.26100.8497 -&gt; 10.0.26100.8521: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:E106F426C2E7CEC095825FB10911B47A1:AD545A46A85164627976D97280F483F21</id>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
 <summary>5 type(s) changed in 7cb3bf8e-cba4-4e21-a089-5787a76fd839, 86532d32-73b7-4e1e-87e6-2f0916526bdf, KB5089573, b4d8466a-0024-4453-a0ed-1e0b9f7793d3, b714e61f-e501-4bdc-8be9-cd99ced286cd (builds/26100, amd64)</summary>
 <content type="text">_AMD64_DR7_REG: removed
 _ARM64_BCR_REG: removed
@@ -479,7 +479,7 @@ _PEB64: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo</content>
 <title>11-26H1 arm64 5c36f73d-e866-456a-b3a7-fa48e86062b2/KB5089548 -&gt; KB5089570/be3f583b-3f18-4074-a78c-5c6dd1fbc710: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:23974FB58B6DD9D7095E7653A72CF3B71:00D9C587A31172AB37096508B9F7B98D1</id>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D9C587A31172AB37096508B9F7B98D1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/00D9C587A31172AB37096508B9F7B98D1.json"/>
 <summary>1 type(s) changed in KB5089570, be3f583b-3f18-4074-a78c-5c6dd1fbc710 (11-26H1, arm64)</summary>
 <content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
 _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
@@ -488,7 +488,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>11-26H1 amd64 10.0.28000.2113 -&gt; KB5089570/ebfcd736-eb43-42c3-aff2-35445412d076: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:7619DE8013443574088B53EEE03E69BD1:F5ACFCDABDCA8305C789EFB00F2DE5701</id>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/F5ACFCDABDCA8305C789EFB00F2DE5701.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/F5ACFCDABDCA8305C789EFB00F2DE5701.json"/>
 <summary>1 type(s) changed in KB5089570, ebfcd736-eb43-42c3-aff2-35445412d076 (11-26H1, amd64)</summary>
 <content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
 _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
@@ -497,7 +497,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>11-24H2 arm64 04ffaaeb-fea5-4223-9623-5755769549c9/313044fe-8fd8-4629-9f54-1e7104482d9e/KB5089549 -&gt; 3e0d5d78-b2fd-4318-b9e7-1404eac1b40d/648c682d-a0f9-4045-bd6e-5b8eeb00998c/886b936b-1f32-44d0-9a58-dd043017de00/9aa9f5ed-9fd3-42ce-92bd-400e12e337c4/KB5089573: _HEAP, _HEAP_COUNTERS, _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:5846006CBAFC4F9E07B846F1798587A91:6557860880CAD51D46B85ACF48E3BFB51</id>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6557860880CAD51D46B85ACF48E3BFB51.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/6557860880CAD51D46B85ACF48E3BFB51.json"/>
 <summary>6 type(s) changed in 3e0d5d78-b2fd-4318-b9e7-1404eac1b40d, 648c682d-a0f9-4045-bd6e-5b8eeb00998c, 886b936b-1f32-44d0-9a58-dd043017de00, 9aa9f5ed-9fd3-42ce-92bd-400e12e337c4, KB5089573 (11-24H2, arm64)</summary>
 <content type="text">_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
 _HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
@@ -511,7 +511,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>11-24H2 amd64 10.0.26100.8457 -&gt; 10.0.26100.8521: _HEAP, _HEAP_COUNTERS, _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:7427DA99C3D737202BFB359C2B0E1A5E1:AD545A46A85164627976D97280F483F21</id>
 <updated>2026-05-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
 <summary>6 type(s) changed in 7cb3bf8e-cba4-4e21-a089-5787a76fd839, 86532d32-73b7-4e1e-87e6-2f0916526bdf, KB5089573, b4d8466a-0024-4453-a0ed-1e0b9f7793d3, b714e61f-e501-4bdc-8be9-cd99ced286cd (11-24H2, amd64)</summary>
 <content type="text">_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
 _HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
@@ -525,7 +525,7 @@ _PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAtt
 <title>builds/28000 amd64 10.0.28000.1830 -&gt; 10.0.28000.2113: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:E1C95DFF936707B1891122040312642C1:7619DE8013443574088B53EEE03E69BD1</id>
 <updated>2026-05-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
 <summary>4 type(s) changed in 7bb2929b-0458-4241-a705-80c73d7c3b32, KB5089548 (builds/28000, amd64)</summary>
 <content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
 _KPRCB: moved: 1; resized: 2; retyped: 1
@@ -538,7 +538,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; ren
 <title>11-26H1 amd64 10.0.28000.1830 -&gt; 10.0.28000.2113: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:E1C95DFF936707B1891122040312642C1:7619DE8013443574088B53EEE03E69BD1</id>
 <updated>2026-05-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
 <summary>4 type(s) changed in 7bb2929b-0458-4241-a705-80c73d7c3b32, KB5089548 (11-26H1, amd64)</summary>
 <content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
 _KPRCB: moved: 1; resized: 2; retyped: 1
@@ -551,7 +551,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; ren
 <title>builds/26100 amd64 10.0.26100.8289 -&gt; 10.0.26100.8328: _HEAP, _HEAP_COUNTERS, _PEB, _PEB32, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:F68DD07A738086A9A392F1479F83B1F01:0D960CE103763A6097E839406D8B369F1</id>
 <updated>2026-04-30T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
 <summary>5 type(s) changed in 2de8f468-d3fa-4e4f-9462-48d86f9ba7af, 4949cbc1-234b-421f-9cc8-2128aaa46edf, 5662000d-11c7-40e1-bec3-357197281653, KB5083631 (builds/26100, amd64)</summary>
 <content type="text">_HEAP: size 0x2c8 -&gt; 0x2c0; moved: 1; resized: 1
 _HEAP_COUNTERS: size 0x80 -&gt; 0x78; removed: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalMemoryReservedInVirtualBlocks -&gt; TotalSizeInVirtualBlocks
@@ -563,7 +563,7 @@ _PEB64: added: SparePointers; removed: SparePointer, Win32ClientProcInfo</conten
 <title>11-26H1 arm64 KB5083768/b96f4e35-e7e6-4715-80d6-539193cab73c -&gt; 95b53909-a77c-4bd9-8649-22b3fcc101a0/KB5083806/ddbf0279-4bd1-4e34-bddb-ad74480bf26e: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:6402F10E638B9C76C9232620F5DEF4441:19D42955F8B6EBE96F818F61265C050F1</id>
 <updated>2026-04-30T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/19D42955F8B6EBE96F818F61265C050F1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/19D42955F8B6EBE96F818F61265C050F1.json"/>
 <summary>4 type(s) changed in 95b53909-a77c-4bd9-8649-22b3fcc101a0, KB5083806, ddbf0279-4bd1-4e34-bddb-ad74480bf26e (11-26H1, arm64)</summary>
 <content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
 _KPRCB: moved: 29; resized: 1
@@ -576,7 +576,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; ren
 <title>11-24H2 arm64 723e795d-27f4-4a48-bdb6-3942535f64f6/KB5083769/f77cf842-9337-4286-8403-a118c6b0c4c2 -&gt; 7b4471b5-179f-4c86-863a-f1dfce572128/KB5083631/ba079811-ce53-4be5-be36-7e3480aaf7c6: _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, _POWER_INFORMATION_LEVEL_INTERNAL, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:827E5BA772D70EC46FD00F48AE9FFD881:179BCEFFABA028E5036F2F465F74E54E1</id>
 <updated>2026-04-30T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/179BCEFFABA028E5036F2F465F74E54E1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/179BCEFFABA028E5036F2F465F74E54E1.json"/>
 <summary>2 type(s) changed in 7b4471b5-179f-4c86-863a-f1dfce572128, KB5083631, ba079811-ce53-4be5-be36-7e3480aaf7c6 (11-24H2, arm64)</summary>
 <content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
 _RTL_FEATURE_USAGE_CONTEXT: added
@@ -587,7 +587,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>11-24H2 amd64 10.0.26100.8246 -&gt; 10.0.26100.8328: _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, _POWER_INFORMATION_LEVEL_INTERNAL, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:04A313E5C86A0212FB000E449E728D8C1:0D960CE103763A6097E839406D8B369F1</id>
 <updated>2026-04-30T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
 <summary>2 type(s) changed in 2de8f468-d3fa-4e4f-9462-48d86f9ba7af, 4949cbc1-234b-421f-9cc8-2128aaa46edf, 5662000d-11c7-40e1-bec3-357197281653, KB5083631 (11-24H2, amd64)</summary>
 <content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
 _RTL_FEATURE_USAGE_CONTEXT: added
@@ -598,7 +598,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceG
 <title>builds/17763 amd64 10.0.17763.1 -&gt; 10.0.17763.8641: FEATURE_ERROR, FEATURE_LOGGED_TRAITS, FEATURE_STATE_CHANGE_SUBSCRIPTION__, HAL_PRIVATE_DISPATCH, and 129 more</title>
 <id>urn:ntoffsets:feed:changes:4637482964E314C9DD667ACD603B043F1:85AF99F7445C58F3118FE7AB773CA0741</id>
 <updated>2026-04-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/85AF99F7445C58F3118FE7AB773CA0741.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/85AF99F7445C58F3118FE7AB773CA0741.json"/>
 <summary>103 type(s) changed in 15abc668-3e2b-4b2a-b29b-8c2cf577ef24, KB5082123, KB5091573 (builds/17763, amd64)</summary>
 <content type="text">FEATURE_ERROR: removed
 FEATURE_LOGGED_TRAITS: removed
@@ -738,7 +738,7 @@ wil_details_StagingConfigFeatureFields: removed</content>
 <title>builds/28000 amd64 10.0.28000.1719 -&gt; 10.0.28000.1761: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
 <id>urn:ntoffsets:feed:changes:C1301902BC4D64531F744B95C87450571:2C6C368CE9A01A04675AC27D9AF8D40A1</id>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
 <summary>4 type(s) changed in 64d28313-83d2-471a-8923-e3fbbf347e61, KB5079489, bc5ad58e-6bec-470b-b7ff-76ddd94393d2 (builds/28000, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
 _DEBUG_DEVICE_DESCRIPTOR: resized: 1
@@ -754,7 +754,7 @@ EmptyCVariant_FeatureStaging_diagnostics: added</content>
 <title>11-26H1 arm64 KB5079466/fde8938f-4091-47eb-bde6-7756590e861b -&gt; 657d3358-1036-4e2e-a790-569f1e82d67d/KB5079489: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
 <id>urn:ntoffsets:feed:changes:CA037506E8D222586C5397D445267EFF1:C2D3A9BCAEB1D7AFB4317ACD60FC96F81</id>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C2D3A9BCAEB1D7AFB4317ACD60FC96F81.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C2D3A9BCAEB1D7AFB4317ACD60FC96F81.json"/>
 <summary>4 type(s) changed in 657d3358-1036-4e2e-a790-569f1e82d67d, KB5079489 (11-26H1, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
 _DEBUG_DEVICE_DESCRIPTOR: resized: 1
@@ -770,7 +770,7 @@ EmptyCVariant_FeatureStaging_diagnostics: added</content>
 <title>11-26H1 amd64 10.0.28000.1719 -&gt; 10.0.28000.1761: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
 <id>urn:ntoffsets:feed:changes:C1301902BC4D64531F744B95C87450571:2C6C368CE9A01A04675AC27D9AF8D40A1</id>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
 <summary>4 type(s) changed in 64d28313-83d2-471a-8923-e3fbbf347e61, KB5079489, bc5ad58e-6bec-470b-b7ff-76ddd94393d2 (11-26H1, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
 _DEBUG_DEVICE_DESCRIPTOR: resized: 1
@@ -786,7 +786,7 @@ EmptyCVariant_FeatureStaging_diagnostics: added</content>
 <title>11-24H2 arm64 10.0.26100.8036 -&gt; KB5079391: PO_MEMORY_IMAGE, _KPRCB, _POP_HIBER_CONTEXT, EmptyCVariant_FeatureStaging_diagnostics, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:00D46CC0E2A13E486AC6C224799CFC231:291B46B1DC3B815CF1C1E0CF8CDB7ACB1</id>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/291B46B1DC3B815CF1C1E0CF8CDB7ACB1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/291B46B1DC3B815CF1C1E0CF8CDB7ACB1.json"/>
 <summary>3 type(s) changed in KB5079391 (11-24H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
 _KPRCB: added: CompactionMaskInit; moved: 1; resized: 1; retyped: 1
@@ -798,7 +798,7 @@ _EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-
 <title>11-24H2 amd64 10.0.26100.8036 -&gt; 10.0.26100.8115: PO_MEMORY_IMAGE, _KPRCB, _POP_HIBER_CONTEXT, EmptyCVariant_FeatureStaging_diagnostics, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:24DE61DB3A27C5B383DFF181CB51F7E11:D7B73E18C29A0D879D852CADAA68F29F1</id>
 <updated>2026-03-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D7B73E18C29A0D879D852CADAA68F29F1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D7B73E18C29A0D879D852CADAA68F29F1.json"/>
 <summary>3 type(s) changed in KB5079391 (11-24H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
 _KPRCB: added: CompactionMaskInit; moved: 1; resized: 1; retyped: 1
@@ -810,7 +810,7 @@ _EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-
 <title>builds/28000 amd64 10.0.28000.4 -&gt; 10.0.28000.1719: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 6 more</title>
 <id>urn:ntoffsets:feed:changes:2454AFEA6A9453AE5DC6030E66AE47201:C1301902BC4D64531F744B95C87450571</id>
 <updated>2026-03-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C1301902BC4D64531F744B95C87450571.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C1301902BC4D64531F744B95C87450571.json"/>
 <summary>7 type(s) changed in 40a89789-cad6-4281-8e18-35c208f7b1d2, KB5079466 (builds/28000, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled, RootPartition; bitfields: 2
 _ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
@@ -827,7 +827,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>builds/26100 arm64 10.0.26100.1 -&gt; 10.0.26100.8036: PO_MEMORY_IMAGE, RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _CHPEV2_CPUAREA_INFO, and 94 more</title>
 <id>urn:ntoffsets:feed:changes:9B3C83B580575E719D5592619E29C0531:00D46CC0E2A13E486AC6C224799CFC231</id>
 <updated>2026-03-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
 <summary>76 type(s) changed in 3dd086b8-aa10-4214-807e-15fd2a8d4133, 949e9a3c-c24a-43a9-b23e-8a36d52da42b, KB5079473, KB5085516, be600926-784e-4e49-a9e1-4496eadf16ca, e5438cd6-94ea-4abe-927b-d41cbfb72dab (builds/26100, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
 RTLP_HP_LFH_PERF_FLAGS: added: Spare; renamed: EnableGarbageCollection -&gt; VsAffinitySlots
@@ -932,7 +932,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemCodeInteg
 <title>builds/22621 amd64 10.0.22621.1 -&gt; 10.0.22621.6783: _CC_NUMA_NODE, _CC_PARTITION, _CM_KCB_LAYER_INFO, _CM_KCB_UOW, and 74 more</title>
 <id>urn:ntoffsets:feed:changes:A225C579149AA40D9CC6DD172EF0F1701:D7DDBE59FF5DDE53E139F5D80FEC17791</id>
 <updated>2026-03-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D7DDBE59FF5DDE53E139F5D80FEC17791.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D7DDBE59FF5DDE53E139F5D80FEC17791.json"/>
 <summary>61 type(s) changed in 088c2bda-3548-4961-8d26-2f9594265915, KB5078883 (builds/22621, amd64)</summary>
 <content type="text">_CC_NUMA_NODE: size 0x1b0 -&gt; 0x1b8; added: QueueThrottle; moved: 20
 _CC_PARTITION: removed: QueueThrottle; moved: 1
@@ -1017,7 +1017,7 @@ _SKSERVICE: added: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE, SECURESERVICE_TERM
 <title>builds/19041 amd64 10.0.19041.1 -&gt; 10.0.19041.7058: Change, PERIODIC_CAPTURE_STATE_CONTEXT, PO_MEMORY_IMAGE, _ADAPTER_OBJECT, and 60 more</title>
 <id>urn:ntoffsets:feed:changes:8CF5A3F04362D657F99E7B13A5FF6E221:B9E105C703F28FE8B3BF1877133D5CC21</id>
 <updated>2026-03-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B9E105C703F28FE8B3BF1877133D5CC21.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B9E105C703F28FE8B3BF1877133D5CC21.json"/>
 <summary>55 type(s) changed in 4dbdef9e-d0e9-490b-88d3-0d53bc1ea693, 5820c0c7-90c6-4056-b318-4f19dc9d8dfc, KB5078885, cbb1f28a-54b5-4d42-a4f1-d4ce2bd4ff16 (builds/19041, amd64)</summary>
 <content type="text">Change: added
 PERIODIC_CAPTURE_STATE_CONTEXT: added
@@ -1088,7 +1088,7 @@ wil_FeatureEnabledStateKind: removed: wil_FeatureEnabledStateKind_All</content>
 <title>11-24H2 arm64 KB5077181 -&gt; 10.0.26100.8036: _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, _IOMMU_DMA_DEVICE, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:5324ED56BDFFEFE9B8E383F479FF12671:00D46CC0E2A13E486AC6C224799CFC231</id>
 <updated>2026-03-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
 <summary>4 type(s) changed in 3dd086b8-aa10-4214-807e-15fd2a8d4133, 949e9a3c-c24a-43a9-b23e-8a36d52da42b, KB5079473, KB5085516, be600926-784e-4e49-a9e1-4496eadf16ca, e5438cd6-94ea-4abe-927b-d41cbfb72dab (11-24H2, arm64)</summary>
 <content type="text">_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
 _ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
@@ -1101,7 +1101,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>11-26H1 arm64 KB5077179 -&gt; KB5077239: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:C1B8D0108E67196D84F5CB9B8732B50A1:A0A7E95719368EF5C306CBD68E8E376C1</id>
 <updated>2026-02-24T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A0A7E95719368EF5C306CBD68E8E376C1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/A0A7E95719368EF5C306CBD68E8E376C1.json"/>
 <summary>5 type(s) changed in KB5077239 (11-26H1, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: RootPartition; bitfields: 3
 _ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
@@ -1115,7 +1115,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>11-26H1 amd64 10.0.28000.1575 -&gt; KB5077239: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 3 more</title>
 <id>urn:ntoffsets:feed:changes:D4EB637DB41E589EBF1C6E4DAD87C2A31:EA5CD30AA11873BE7B0FA1B6E62F33C51</id>
 <updated>2026-02-24T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/EA5CD30AA11873BE7B0FA1B6E62F33C51.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/EA5CD30AA11873BE7B0FA1B6E62F33C51.json"/>
 <summary>5 type(s) changed in KB5077239 (11-26H1, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: RootPartition; bitfields: 3
 _ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
@@ -1129,7 +1129,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>11-24H2 amd64 10.0.26100.7824 -&gt; 10.0.26100.7920: _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, _IOMMU_DMA_DEVICE, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:A1C414A488BC6DE9308B5D3D7579D1091:2C8AEA6EFDCA390D905597EE55B556FD1</id>
 <updated>2026-02-24T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C8AEA6EFDCA390D905597EE55B556FD1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/2C8AEA6EFDCA390D905597EE55B556FD1.json"/>
 <summary>4 type(s) changed in KB5077241 (11-24H2, amd64)</summary>
 <content type="text">_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
 _ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
@@ -1142,7 +1142,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>1809 amd64 10.0.17763.8280 -&gt; 10.0.17763.8385: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:54482DA7946AB561BC5E855B4C3540261:A62EC3DD4F02E90C11395728561D94F81</id>
 <updated>2026-02-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A62EC3DD4F02E90C11395728561D94F81.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/A62EC3DD4F02E90C11395728561D94F81.json"/>
 <summary>1 type(s) changed in KB5075904 (1809, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
 </entry>
@@ -1150,7 +1150,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>1607 amd64 10.0.14393.8781 -&gt; 10.0.14393.8864: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:034421E5B5C549BEA776BBAEA20C983E1:D351A8560EEC4F6EB409948EBAE16C1B1</id>
 <updated>2026-02-10T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D351A8560EEC4F6EB409948EBAE16C1B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D351A8560EEC4F6EB409948EBAE16C1B1.json"/>
 <summary>1 type(s) changed in KB5075999 (1607, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
 </entry>
@@ -1158,7 +1158,7 @@ _POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnec
 <title>11-24H2 arm64 KB5077744/KB5078127 -&gt; 10.0.26100.7705: PO_MEMORY_IMAGE, _POP_FX_DEVICE_STATUS, _SYSTEM_INFORMATION_CLASS</title>
 <id>urn:ntoffsets:feed:changes:BBAB517B9DA9C84C479E5CCF79BA84E01:D616A5AC94F10F9EC78CCBB9AD5469A41</id>
 <updated>2026-01-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D616A5AC94F10F9EC78CCBB9AD5469A41.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D616A5AC94F10F9EC78CCBB9AD5469A41.json"/>
 <summary>2 type(s) changed in KB5074105 (11-24H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
 _POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
@@ -1168,7 +1168,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>11-24H2 amd64 10.0.26100.7627 -&gt; 10.0.26100.7705: PO_MEMORY_IMAGE, _POP_FX_DEVICE_STATUS, _SYSTEM_INFORMATION_CLASS</title>
 <id>urn:ntoffsets:feed:changes:87A00A457156E2568E5C7F2E20A2429D1:35EE8DEDAFBD2BD28644D4D36BB8A4BD1</id>
 <updated>2026-01-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/35EE8DEDAFBD2BD28644D4D36BB8A4BD1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/35EE8DEDAFBD2BD28644D4D36BB8A4BD1.json"/>
 <summary>2 type(s) changed in KB5074105 (11-24H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
 _POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
@@ -1178,7 +1178,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>21H2 arm64 KB5074976 -&gt; KB5073724: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:AD7C4DC3EB92B25ACC6F8055512AE0531:C68B2FCC3D497B2DDC061C7F690C3AD51</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C68B2FCC3D497B2DDC061C7F690C3AD51.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C68B2FCC3D497B2DDC061C7F690C3AD51.json"/>
 <summary>0 type(s) changed in KB5073724 (21H2, arm64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
 </entry>
@@ -1186,7 +1186,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>21H2 amd64 10.0.19041.6693 -&gt; 10.0.19041.6807: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:366EF4939F609DDDC1AE0267A7C9D1731:DFE5A00EF3F2E5952C223D63ED6EEAB01</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DFE5A00EF3F2E5952C223D63ED6EEAB01.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/DFE5A00EF3F2E5952C223D63ED6EEAB01.json"/>
 <summary>0 type(s) changed in KB5073724 (21H2, amd64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
 </entry>
@@ -1194,7 +1194,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>1809 amd64 10.0.17763.8148 -&gt; 10.0.17763.8276: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:6CB7D6C259EF5216E4F5DAE5F057134A1:9C63FDACCBA4EF8750A169B22748DFD51</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9C63FDACCBA4EF8750A169B22748DFD51.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/9C63FDACCBA4EF8750A169B22748DFD51.json"/>
 <summary>0 type(s) changed in KB5073723 (1809, amd64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
 </entry>
@@ -1202,7 +1202,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>11-24H2 arm64 KB5072033 -&gt; 10.0.26100.7623: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:B5BC20465910BBA8DFDD848714CCF9031:63932C6CC7E50112757DDFFC72BE5E0C1</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/63932C6CC7E50112757DDFFC72BE5E0C1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/63932C6CC7E50112757DDFFC72BE5E0C1.json"/>
 <summary>0 type(s) changed in KB5074109 (11-24H2, arm64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE; renumbered: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 278-&gt;279</content>
 </entry>
@@ -1210,7 +1210,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>11-24H2 amd64 10.0.26100.7462 -&gt; 10.0.26100.7623: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:0762CF42EF7F3E8116EF7329ADAA09A31:0385A3E51169BA7F84716B1C792977F71</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0385A3E51169BA7F84716B1C792977F71.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0385A3E51169BA7F84716B1C792977F71.json"/>
 <summary>0 type(s) changed in KB5074109 (11-24H2, amd64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE; renumbered: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 277-&gt;278</content>
 </entry>
@@ -1218,7 +1218,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>11-23H2 arm64 KB5071417 -&gt; KB5073455/KB5077797/KB5078132: _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:4DB13BD7F47C56EE1116F1A44926968B1:5BD90AE95D1DAB539A6881A3908754461</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/5BD90AE95D1DAB539A6881A3908754461.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/5BD90AE95D1DAB539A6881A3908754461.json"/>
 <summary>0 type(s) changed in KB5073455, KB5077797, KB5078132 (11-23H2, arm64)</summary>
 <content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
 </entry>
@@ -1226,7 +1226,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation
 <title>11-23H2 amd64 10.0.22621.6345 -&gt; 10.0.22621.6489: _KLDTENTRY, _KPROCESSOR_DESCRIPTOR_AREA, _KTRANSITION_STACK, _MI_FLAGS, and 4 more</title>
 <id>urn:ntoffsets:feed:changes:22A56AB3DB9338CFF9B2EA3A02D98A761:AF550CAA73AFB287705CC40079D786B41</id>
 <updated>2026-01-13T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AF550CAA73AFB287705CC40079D786B41.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/AF550CAA73AFB287705CC40079D786B41.json"/>
 <summary>7 type(s) changed in KB5073455, KB5077797, KB5078132 (11-23H2, amd64)</summary>
 <content type="text">_KLDTENTRY: added
 _KPROCESSOR_DESCRIPTOR_AREA: added
@@ -1241,7 +1241,7 @@ _SKSERVICE: added: SECURESERVICE_TERMINATE</content>
 <title>11-24H2 arm64 KB5068861 -&gt; 10.0.26100.7309: _EJOB, _EPROCESS, _KNODE, _KPCR, and 7 more</title>
 <id>urn:ntoffsets:feed:changes:A7E2682F0441CB74D71A138F3B5B4EC41:DE61013EC8D91D675BA40AE3C69C9F7B1</id>
 <updated>2025-12-01T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DE61013EC8D91D675BA40AE3C69C9F7B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/DE61013EC8D91D675BA40AE3C69C9F7B1.json"/>
 <summary>8 type(s) changed in KB5070311 (11-24H2, arm64)</summary>
 <content type="text">_EJOB: added: JobSystemUILimits
 _EPROCESS: added: BamPpmPolicy, PpmPolicyLock
@@ -1259,7 +1259,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 amd64 10.0.26100.7171 -&gt; 10.0.26100.7309: _EJOB, _EPROCESS, _KNODE, _KPRCB, and 6 more</title>
 <id>urn:ntoffsets:feed:changes:D6477C2EE3391555525A83E53C7895EB1:83E0CBB825CB8C723052E974BA46AC861</id>
 <updated>2025-12-01T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/83E0CBB825CB8C723052E974BA46AC861.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/83E0CBB825CB8C723052E974BA46AC861.json"/>
 <summary>7 type(s) changed in KB5070311 (11-24H2, amd64)</summary>
 <content type="text">_EJOB: added: JobSystemUILimits
 _EPROCESS: added: BamPpmPolicy, PpmPolicyLock
@@ -1276,7 +1276,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>21H2 arm64 10.0.19041.6456 -&gt; KB5068781: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:172EE909B13C1CBBBB30CB78F7B802CB1:134EAF4A638796C28DF572C46B0E63D01</id>
 <updated>2025-11-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/134EAF4A638796C28DF572C46B0E63D01.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/134EAF4A638796C28DF572C46B0E63D01.json"/>
 <summary>0 type(s) changed in KB5068781 (21H2, arm64)</summary>
 <content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
 </entry>
@@ -1284,7 +1284,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>21H2 amd64 10.0.19041.6456 -&gt; 10.0.19041.6575: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:F57E740B088E5056E8AF0772F1CC5BEB1:9CFCF55CD5DE5D79C34541C03FFBFDA21</id>
 <updated>2025-11-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9CFCF55CD5DE5D79C34541C03FFBFDA21.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/9CFCF55CD5DE5D79C34541C03FFBFDA21.json"/>
 <summary>0 type(s) changed in KB5068781 (21H2, amd64)</summary>
 <content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
 </entry>
@@ -1292,7 +1292,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 arm64 KB5067036 -&gt; KB5068861: _SEP_LOGON_SESSION_REFERENCES</title>
 <id>urn:ntoffsets:feed:changes:1C8AC6D7F2F10BF686CA8D3D0D4894701:A7E2682F0441CB74D71A138F3B5B4EC41</id>
 <updated>2025-11-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A7E2682F0441CB74D71A138F3B5B4EC41.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/A7E2682F0441CB74D71A138F3B5B4EC41.json"/>
 <summary>1 type(s) changed in KB5068861 (11-24H2, arm64)</summary>
 <content type="text">_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14</content>
 </entry>
@@ -1300,7 +1300,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 amd64 10.0.26100.7019 -&gt; 10.0.26100.7171: _SEP_LOGON_SESSION_REFERENCES</title>
 <id>urn:ntoffsets:feed:changes:BEA4BE7B19EEF0C97610A5ECE65CAE0C1:D6477C2EE3391555525A83E53C7895EB1</id>
 <updated>2025-11-11T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D6477C2EE3391555525A83E53C7895EB1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D6477C2EE3391555525A83E53C7895EB1.json"/>
 <summary>1 type(s) changed in KB5068861 (11-24H2, amd64)</summary>
 <content type="text">_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14</content>
 </entry>
@@ -1308,7 +1308,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 arm64 KB5070773 -&gt; KB5067036: PDCCLIENTID</title>
 <id>urn:ntoffsets:feed:changes:6700B0C832FA46F450D321D85603E2981:1C8AC6D7F2F10BF686CA8D3D0D4894701</id>
 <updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1C8AC6D7F2F10BF686CA8D3D0D4894701.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1C8AC6D7F2F10BF686CA8D3D0D4894701.json"/>
 <summary>0 type(s) changed in KB5067036 (11-24H2, arm64)</summary>
 <content type="text">PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125</content>
 </entry>
@@ -1316,7 +1316,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 amd64 10.0.26100.6901 -&gt; 10.0.26100.7019: PDCCLIENTID</title>
 <id>urn:ntoffsets:feed:changes:1382803A70C5F2762EF48191305174871:BEA4BE7B19EEF0C97610A5ECE65CAE0C1</id>
 <updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BEA4BE7B19EEF0C97610A5ECE65CAE0C1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BEA4BE7B19EEF0C97610A5ECE65CAE0C1.json"/>
 <summary>0 type(s) changed in KB5067036 (11-24H2, amd64)</summary>
 <content type="text">PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125</content>
 </entry>
@@ -1324,7 +1324,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-23H2 arm64 KB5065790 -&gt; KB5067112: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:083457BFECF8F5919CB7FEF7269CBDAF1:DE94C9C1DA31C4634DAB53C6FB812A891</id>
 <updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DE94C9C1DA31C4634DAB53C6FB812A891.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/DE94C9C1DA31C4634DAB53C6FB812A891.json"/>
 <summary>0 type(s) changed in KB5067112 (11-23H2, arm64)</summary>
 <content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
 </entry>
@@ -1332,7 +1332,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-23H2 amd64 10.0.22621.5983 -&gt; 10.0.22621.6133: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
 <id>urn:ntoffsets:feed:changes:32D8CFDFD04CBE46300A815F9ADD60FF1:323FB94F2067B69B3CA879EDC847E5BB1</id>
 <updated>2025-10-28T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/323FB94F2067B69B3CA879EDC847E5BB1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/323FB94F2067B69B3CA879EDC847E5BB1.json"/>
 <summary>0 type(s) changed in KB5067112 (11-23H2, amd64)</summary>
 <content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
 </entry>
@@ -1340,7 +1340,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-22H2 arm64 KB5065431 -&gt; KB5066793: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:F9F827A33D74A237A04C6CF27EDCEAC71:66D5FB8CAB854FFDE890D8FF15ADBD0B1</id>
 <updated>2025-10-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/66D5FB8CAB854FFDE890D8FF15ADBD0B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/66D5FB8CAB854FFDE890D8FF15ADBD0B1.json"/>
 <summary>1 type(s) changed in KB5066793 (11-22H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
 </entry>
@@ -1348,7 +1348,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-22H2 amd64 10.0.22621.5909 -&gt; 10.0.22621.6060: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:621801E9DBEB95A617726F00B9A767101:33BAAFAED913D5F0180FF18F587357161</id>
 <updated>2025-10-14T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/33BAAFAED913D5F0180FF18F587357161.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/33BAAFAED913D5F0180FF18F587357161.json"/>
 <summary>1 type(s) changed in KB5066793 (11-22H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
 </entry>
@@ -1356,7 +1356,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <title>11-24H2 arm64 KB5065426/KB5068221 -&gt; KB5065789: PO_MEMORY_IMAGE, _EPROCESS, _HALP_DMA_MASTER_ADAPTER_OBJECT, _MI_VAD_EVENT_BLOCK, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:36D33E649D94FF98D44813A0F326BB4F1:FE0DE78978C1415324DB14B350D856C91</id>
 <updated>2025-09-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FE0DE78978C1415324DB14B350D856C91.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FE0DE78978C1415324DB14B350D856C91.json"/>
 <summary>5 type(s) changed in KB5065789 (11-24H2, arm64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled
 _EPROCESS: renamed: NumberOfLockedPages -&gt; MmReserved2
@@ -1369,7 +1369,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigur
 <title>11-24H2 amd64 10.0.26100.6584 -&gt; 10.0.26100.6725: PO_MEMORY_IMAGE, _EPROCESS, _HALP_DMA_MASTER_ADAPTER_OBJECT, _MI_VAD_EVENT_BLOCK, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:E6426A07C26E66F8EB8594621A7B273B1:153C10B09E28FA791C9409621A62D0C81</id>
 <updated>2025-09-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/153C10B09E28FA791C9409621A62D0C81.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/153C10B09E28FA791C9409621A62D0C81.json"/>
 <summary>5 type(s) changed in KB5065789 (11-24H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled
 _EPROCESS: renamed: NumberOfLockedPages -&gt; MmReserved2
@@ -1382,7 +1382,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigur
 <title>11-23H2 amd64 10.0.22621.5840 -&gt; 10.0.22621.5983: PO_MEMORY_IMAGE</title>
 <id>urn:ntoffsets:feed:changes:E0B1FD29169051BA56A10979635A026A1:32D8CFDFD04CBE46300A815F9ADD60FF1</id>
 <updated>2025-09-23T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/32D8CFDFD04CBE46300A815F9ADD60FF1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/32D8CFDFD04CBE46300A815F9ADD60FF1.json"/>
 <summary>1 type(s) changed in KB5065790 (11-23H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
 </entry>
@@ -1390,7 +1390,7 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigur
 <title>11-24H2 arm64 10.0.26100.4946 -&gt; KB5064081: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _CHPEV2_CPUAREA_INFO, _ETW_APC_POOL, and 2 more</title>
 <id>urn:ntoffsets:feed:changes:1500F00FEAEE8413C67EA13F8373B3811:58191FE7944A5BDE0CF8D795B453064A1</id>
 <updated>2025-08-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/58191FE7944A5BDE0CF8D795B453064A1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/58191FE7944A5BDE0CF8D795B453064A1.json"/>
 <summary>6 type(s) changed in KB5064081 (11-24H2, arm64)</summary>
 <content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
 _CC_NUMA_NODE: retyped: 2
@@ -1403,7 +1403,7 @@ _SHARED_CACHE_MAP: retyped: 1</content>
 <title>11-24H2 amd64 10.0.26100.4946 -&gt; 10.0.26100.5074: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _ETW_APC_POOL, _PRIVATE_CACHE_MAP_FLAGS, and 1 more</title>
 <id>urn:ntoffsets:feed:changes:91F95759B8A1C35A0A9773FCA2A8A67E1:6765ABB4477B954A2F537F8F741EC02E1</id>
 <updated>2025-08-29T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6765ABB4477B954A2F537F8F741EC02E1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/6765ABB4477B954A2F537F8F741EC02E1.json"/>
 <summary>5 type(s) changed in KB5064081 (11-24H2, amd64)</summary>
 <content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
 _CC_NUMA_NODE: retyped: 2
@@ -1415,7 +1415,7 @@ _SHARED_CACHE_MAP: retyped: 1</content>
 <title>22H2 arm64 KB5062649 -&gt; KB5063842: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:2B9803F3F586270EF0DA14642FD23AED1:10E394B8DD4EC97D5E088112F967FA941</id>
 <updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/10E394B8DD4EC97D5E088112F967FA941.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/10E394B8DD4EC97D5E088112F967FA941.json"/>
 <summary>1 type(s) changed in KB5063842 (22H2, arm64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1423,7 +1423,7 @@ _SHARED_CACHE_MAP: retyped: 1</content>
 <title>22H2 amd64 10.0.19041.6157 -&gt; 10.0.19041.6280: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:BE95F82E6CB52C0AB868F08DAB9D82301:1901E56231EB3DD3C6BF8E90DCC8F6931</id>
 <updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1901E56231EB3DD3C6BF8E90DCC8F6931.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1901E56231EB3DD3C6BF8E90DCC8F6931.json"/>
 <summary>1 type(s) changed in KB5063842 (22H2, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1431,7 +1431,7 @@ _SHARED_CACHE_MAP: retyped: 1</content>
 <title>11-23H2 amd64 10.0.22621.2428 -&gt; 10.0.22621.5840: PO_MEMORY_IMAGE, _CM_KCB_UOW, _CM_KEY_BODY, _DIAGNOSTIC_CONTEXT, and 28 more</title>
 <id>urn:ntoffsets:feed:changes:CF32DE2E4A334C7C06FB63FCB6FAFB5C1:E0B1FD29169051BA56A10979635A026A1</id>
 <updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/E0B1FD29169051BA56A10979635A026A1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/E0B1FD29169051BA56A10979635A026A1.json"/>
 <summary>28 type(s) changed in KB5064080 (11-23H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
 _CM_KCB_UOW: added: UpdateEntireSecurity
@@ -1470,7 +1470,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>21H2 arm64 KB5062554 -&gt; KB5063709: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:D448047E3794298DCE0871A8129647181:3013771A4EE49D33D73217D6E6DF90971</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/3013771A4EE49D33D73217D6E6DF90971.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/3013771A4EE49D33D73217D6E6DF90971.json"/>
 <summary>1 type(s) changed in KB5063709 (21H2, arm64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1478,7 +1478,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>21H2 amd64 10.0.19041.6093 -&gt; 10.0.19041.6216: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:495E39042A6983378CBD822FEB4E91ED1:B6121DA15DDCF625C8C7273C0D85EB101</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B6121DA15DDCF625C8C7273C0D85EB101.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B6121DA15DDCF625C8C7273C0D85EB101.json"/>
 <summary>1 type(s) changed in KB5063709 (21H2, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1486,7 +1486,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>1809 amd64 10.0.17763.7558 -&gt; 10.0.17763.7671: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:70EBB62A57774A0C01C2B776107F42231:C4C42156D35ADC5B96994FD42A6EC7B61</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C4C42156D35ADC5B96994FD42A6EC7B61.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C4C42156D35ADC5B96994FD42A6EC7B61.json"/>
 <summary>1 type(s) changed in KB5063877 (1809, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1494,7 +1494,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>1607 amd64 10.0.14393.8246 -&gt; 10.0.14393.8330: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:39C0001161C344BBB7598C13FD96BD9B1:CD646780614C4E5F85A988A5925BB7AF1</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/CD646780614C4E5F85A988A5925BB7AF1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/CD646780614C4E5F85A988A5925BB7AF1.json"/>
 <summary>1 type(s) changed in KB5063871 (1607, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1502,7 +1502,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>1507 amd64 10.0.10240.21072 -&gt; 10.0.10240.21100: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:B6E4516C9D3D4653ACD67CD60686FA291:FDB171B3F4AC4454AE76962B21D672001</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FDB171B3F4AC4454AE76962B21D672001.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FDB171B3F4AC4454AE76962B21D672001.json"/>
 <summary>1 type(s) changed in KB5063889 (1507, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1510,7 +1510,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>11-24H2 arm64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:9F503A215825861861792E31F0216EB71:1500F00FEAEE8413C67EA13F8373B3811</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1500F00FEAEE8413C67EA13F8373B3811.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1500F00FEAEE8413C67EA13F8373B3811.json"/>
 <summary>1 type(s) changed in KB5063878 (11-24H2, arm64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1518,7 +1518,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>11-24H2 amd64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:37037C16F29E2343ED6D79A5C68F87221:91F95759B8A1C35A0A9773FCA2A8A67E1</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/91F95759B8A1C35A0A9773FCA2A8A67E1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/91F95759B8A1C35A0A9773FCA2A8A67E1.json"/>
 <summary>1 type(s) changed in KB5063878 (11-24H2, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1526,7 +1526,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>11-22H2 arm64 10.0.22621.5697 -&gt; KB5063875: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:66685665A2A7950703F6896268A697E91:32314A3ABCF14E71F0A2F8F841E15BE71</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/32314A3ABCF14E71F0A2F8F841E15BE71.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/32314A3ABCF14E71F0A2F8F841E15BE71.json"/>
 <summary>1 type(s) changed in KB5063875 (11-22H2, arm64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1534,7 +1534,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>11-22H2 amd64 10.0.22621.5697 -&gt; 10.0.22621.5766: _DIAGNOSTIC_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:950041821FDEF16AD603C25FDD31FE511:364F039B4838A8FBCB31F47E6E4BD4C71</id>
 <updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/364F039B4838A8FBCB31F47E6E4BD4C71.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/364F039B4838A8FBCB31F47E6E4BD4C71.json"/>
 <summary>1 type(s) changed in KB5063875 (11-22H2, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
@@ -1542,7 +1542,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>22H2 amd64 10.0.19041.6033 -&gt; 10.0.19041.6157: _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:B02A5AEC4BF32CBD6F5D31E5AC144E681:BE95F82E6CB52C0AB868F08DAB9D82301</id>
 <updated>2025-07-22T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BE95F82E6CB52C0AB868F08DAB9D82301.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BE95F82E6CB52C0AB868F08DAB9D82301.json"/>
 <summary>1 type(s) changed in KB5062649 (22H2, amd64)</summary>
 <content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
 </entry>
@@ -1550,7 +1550,7 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <title>11-24H2 arm64 KB5064489 -&gt; 10.0.26100.4768: _DELAY_ACK_FO, _ETHREAD, _NONOPAQUE_OPLOCK, _OPLOCK_ACK_TIMEOUT, and 5 more</title>
 <id>urn:ntoffsets:feed:changes:0293E0B12A87BB612517848656C681711:9F503A215825861861792E31F0216EB71</id>
 <updated>2025-07-22T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9F503A215825861861792E31F0216EB71.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/9F503A215825861861792E31F0216EB71.json"/>
 <summary>6 type(s) changed in KB5062660 (11-24H2, arm64)</summary>
 <content type="text">_DELAY_ACK_FO: size 0x18 -&gt; 0x30; added: AckTimeout, TelemetryData
 _ETHREAD: size 0x768 -&gt; 0x778; added: MmFaultClusterContext, ProcessFastRef
@@ -1566,7 +1566,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCou
 <title>11-24H2 amd64 10.0.26100.4656 -&gt; 10.0.26100.4768: _DELAY_ACK_FO, _ETHREAD, _HV_X64_HYPERVISOR_FEATURES, _NONOPAQUE_OPLOCK, and 6 more</title>
 <id>urn:ntoffsets:feed:changes:9360F9C0BD4B7C6C876274B99D8073E11:37037C16F29E2343ED6D79A5C68F87221</id>
 <updated>2025-07-22T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/37037C16F29E2343ED6D79A5C68F87221.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/37037C16F29E2343ED6D79A5C68F87221.json"/>
 <summary>7 type(s) changed in KB5062660 (11-24H2, amd64)</summary>
 <content type="text">_DELAY_ACK_FO: size 0x18 -&gt; 0x30; added: AckTimeout, TelemetryData
 _ETHREAD: size 0x788 -&gt; 0x798; added: MmFaultClusterContext, ProcessFastRef
@@ -1583,7 +1583,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCou
 <title>21H2 amd64 10.0.19041.5965 -&gt; 10.0.19041.6093: _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:10EFC2288044B448D2954F042A3396E01:495E39042A6983378CBD822FEB4E91ED1</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/495E39042A6983378CBD822FEB4E91ED1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/495E39042A6983378CBD822FEB4E91ED1.json"/>
 <summary>1 type(s) changed in KB5062554 (21H2, amd64)</summary>
 <content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
 </entry>
@@ -1591,7 +1591,7 @@ _SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCou
 <title>1809 amd64 10.0.17763.7434 -&gt; 10.0.17763.7558: PO_MEMORY_IMAGE, _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:1FE643F07FA91AB0EB843B5B41BC3AA41:70EBB62A57774A0C01C2B776107F42231</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/70EBB62A57774A0C01C2B776107F42231.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/70EBB62A57774A0C01C2B776107F42231.json"/>
 <summary>2 type(s) changed in KB5062557 (1809, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
 _KPRCB: added: VerwOnIdle; bitfields: 1</content>
@@ -1600,7 +1600,7 @@ _KPRCB: added: VerwOnIdle; bitfields: 1</content>
 <title>1607 amd64 10.0.14393.8146 -&gt; 10.0.14393.8246: PO_MEMORY_IMAGE, _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:A4B0279934D94867B740CFED2DFE577C1:39C0001161C344BBB7598C13FD96BD9B1</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/39C0001161C344BBB7598C13FD96BD9B1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/39C0001161C344BBB7598C13FD96BD9B1.json"/>
 <summary>2 type(s) changed in KB5062560 (1607, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
 _KPRCB: added: VerwOnIdle; bitfields: 1</content>
@@ -1609,7 +1609,7 @@ _KPRCB: added: VerwOnIdle; bitfields: 1</content>
 <title>1507 amd64 10.0.10240.21033 -&gt; 10.0.10240.21072: PO_MEMORY_IMAGE, _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:240EF74E930E431896432584CB6946151:B6E4516C9D3D4653ACD67CD60686FA291</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B6E4516C9D3D4653ACD67CD60686FA291.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B6E4516C9D3D4653ACD67CD60686FA291.json"/>
 <summary>2 type(s) changed in KB5062561 (1507, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
 _KPRCB: added: VerwOnIdle; bitfields: 1</content>
@@ -1618,7 +1618,7 @@ _KPRCB: added: VerwOnIdle; bitfields: 1</content>
 <title>11-24H2 arm64 KB5060829 -&gt; 10.0.26100.4652: _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION, _SKSERVICE</title>
 <id>urn:ntoffsets:feed:changes:2F5EDE9CE5DB3A956E002CE117395EF31:0221F2D4E8E0BCCE13BB32530B3CC12D1</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0221F2D4E8E0BCCE13BB32530B3CC12D1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0221F2D4E8E0BCCE13BB32530B3CC12D1.json"/>
 <summary>2 type(s) changed in KB5062553 (11-24H2, arm64)</summary>
 <content type="text">_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
 _LOADER_PARAMETER_EXTENSION: size 0x10f8 -&gt; 0x1108; added: BootAppSvnInfo
@@ -1628,7 +1628,7 @@ _SKSERVICE: added: SECURESERVICE_MAKE_KERNEL_NONGLOBAL, SECURESERVICE_SWEEP_PROC
 <title>11-24H2 amd64 10.0.26100.4484 -&gt; 10.0.26100.4652: _KPRCB_BPB_FEATURES, _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION</title>
 <id>urn:ntoffsets:feed:changes:ECDC735E7B90585D3ED73CFF1AA760031:00D01401874F8CC3F5F5DA237013C16A1</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D01401874F8CC3F5F5DA237013C16A1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/00D01401874F8CC3F5F5DA237013C16A1.json"/>
 <summary>3 type(s) changed in KB5062553 (11-24H2, amd64)</summary>
 <content type="text">_KPRCB_BPB_FEATURES: added: VerwOnIdle; bitfields: 1
 _LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
@@ -1638,7 +1638,7 @@ _LOADER_PARAMETER_EXTENSION: size 0x1120 -&gt; 0x1130; added: BootAppSvnInfo</co
 <title>11-22H2 amd64 10.0.22621.5547 -&gt; 10.0.22621.5624: _KPRCB</title>
 <id>urn:ntoffsets:feed:changes:76D055B14FCAD8D233C7D96FC7F52CBC1:6DFBCDD820A41870655EEA0B9EA2F41C1</id>
 <updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6DFBCDD820A41870655EEA0B9EA2F41C1.json"/>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/6DFBCDD820A41870655EEA0B9EA2F41C1.json"/>
 <summary>1 type(s) changed in KB5062552 (11-22H2, amd64)</summary>
 <content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
 </entry>
