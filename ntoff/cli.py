@@ -741,7 +741,13 @@ def main(argv: list[str] | None = None) -> int:
     validate.set_defaults(func=cmd_validate)
 
     feed = sub.add_parser("feed", help="diff feed: what changed between builds (10)")
-    feed.add_argument("--base-url", default="https://ntoffsets.github.io/ntoffsets")
+    # Localhost, not a plausible-looking production host. The old default was
+    # `https://ntoffsets.github.io/ntoffsets`, a domain nobody here owns, and
+    # because it looked right the published Atom feed pointed every reader at
+    # it for as long as the flag went unpassed. A default that is obviously
+    # unset fails visibly; one that is merely wrong does not.
+    feed.add_argument("--base-url", default="http://localhost:8017",
+                      help="public site root, used for the Atom feed's links")
     _add_common(feed)
     feed.set_defaults(func=cmd_feed)
 

@@ -604,7 +604,9 @@ def atom(feed: Feed, *, base_url: str, limit: int = 100) -> str:
         "<title>ntoffsets kernel layout changes</title>",
         f"<id>{FEED_ID}</id>",
         f"<updated>{generated}</updated>",
-        f'<link rel="self" href="{escape(base_url)}/feed/changes.xml"/>',
+        # /v1/ like every other path: a feed reader polls `self`, and this
+        # one pointed at a directory that has never existed.
+        f'<link rel="self" href="{escape(base_url)}/v1/feed/changes.xml"/>',
         f'<link rel="alternate" href="{escape(base_url)}/"/>',
         "<subtitle>Which kernel structs moved, and in which update. "
         "No entries means nothing moved.</subtitle>",
