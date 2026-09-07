@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ntoffsets — Windows kernel struct offsets, per build</title>
+<meta name="description" content="Struct layouts and global symbol RVAs for every Windows kernel build, keyed by PDB GUID.">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fbfbfa;
+  --panel: #ffffff;
+  --ink: #1a1a18;
+  --muted: #6b6b66;
+  --faint: #9a9a94;
+  --line: #e3e3de;
+  --accent: #2f5d50;
+  --accent-ink: #ffffff;
+  --warn: #8a5a1a;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16171a;
+    --panel: #1d1f23;
+    --ink: #e6e6e1;
+    --muted: #9b9b95;
+    --faint: #6e6e69;
+    --line: #2c2f34;
+    --accent: #7fc0ac;
+    --accent-ink: #10201c;
+    --warn: #d9a441;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.55 var(--sans);
+}
+a { color: inherit; text-decoration-color: var(--faint); text-underline-offset: 2px; }
+a:hover { text-decoration-color: var(--accent); }
+code, .mono { font-family: var(--mono); font-size: 0.92em; }
+
+header {
+  border-bottom: 1px solid var(--line); background: var(--panel);
+  position: sticky; top: 0; z-index: 10;
+}
+.bar { max-width: 1120px; margin: 0 auto; padding: 14px 20px; display: flex;
+       gap: 20px; align-items: baseline; flex-wrap: wrap; }
+.logo { font-weight: 640; letter-spacing: -0.01em; font-size: 17px; }
+.logo span { color: var(--accent); }
+.tag { color: var(--muted); font-size: 13px; }
+/* Wraps rather than overflowing: `.bar` already wraps, but a nav that is one
+   flex line is still wider than a narrow viewport, and the body then scrolls
+   sideways to accommodate a header nobody wanted to scroll. */
+nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px 16px;
+      font-size: 14px; }
+nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+
+/* The build every number on the page is read against. Sticky with the header
+   because an offset without a build is not an answer, and a reader who has
+   scrolled past the top of a 265-member struct has no other way to tell. */
+.ctxbar { border-top: 1px solid var(--line);
+          background: color-mix(in srgb, var(--accent) 5%, var(--panel)); }
+.ctxbar .bar { padding: 7px 20px; gap: 10px; align-items: baseline; }
+.ctx-label { color: var(--muted); font-size: 11.5px; text-transform: uppercase;
+             letter-spacing: 0.07em; font-weight: 620; }
+.ctx-now { font-family: var(--mono); font-size: 13.5px; font-weight: 620;
+           color: var(--accent); }
+.ctx-meta { color: var(--muted); font-size: 12.5px; }
+.ctx-swap { margin-left: auto; font-size: 12.5px; color: var(--muted); }
+
+main { max-width: 1120px; margin: 0 auto; padding: 26px 20px 70px; }
+h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.01em; }
+h2 { font-size: 15px; margin: 30px 0 10px; text-transform: uppercase;
+     letter-spacing: 0.07em; color: var(--muted); font-weight: 620; }
+.lede { color: var(--muted); margin: 0 0 22px; max-width: 62ch; }
+
+.stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 13px 15px; }
+.stat b { display: block; font-size: 25px; font-weight: 640; letter-spacing: -0.02em; }
+.stat span { color: var(--muted); font-size: 12.5px; }
+
+.search { display: flex; gap: 8px; margin: 6px 0 4px; }
+.search input {
+  flex: 1; padding: 10px 13px; font: 14px var(--mono);
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 7px;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.hint { color: var(--faint); font-size: 12.5px; margin: 0 0 18px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); }
+th { text-align: left; font-weight: 620; color: var(--muted); font-size: 12px;
+     text-transform: uppercase; letter-spacing: 0.05em; padding: 9px 12px;
+     border-bottom: 1px solid var(--line); white-space: nowrap; position: sticky; top: 0;
+     background: var(--panel); }
+td { padding: 7px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: color-mix(in srgb, var(--accent) 7%, transparent); }
+td.num, th.num { text-align: right; font-family: var(--mono); white-space: nowrap; }
+
+.pill { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11.5px;
+        border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.pill.arm { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); color: var(--accent); }
+
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 5px 18px; font-size: 13.5px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-family: var(--mono); word-break: break-all; }
+
+.change { background: var(--panel); border: 1px solid var(--line); border-radius: 7px;
+          padding: 14px 16px; margin-bottom: 12px; }
+.change h3 { margin: 0 0 3px; font-size: 14.5px; font-family: var(--mono); font-weight: 620; }
+.change .when { color: var(--muted); font-size: 12.5px; margin-bottom: 9px; }
+.change ul { margin: 0; padding-left: 17px; font-size: 13.5px; }
+.change li { margin-bottom: 3px; }
+.change .t { font-family: var(--mono); font-weight: 620; }
+.quiet { color: var(--muted); }
+.warn { color: var(--warn); }
+
+footer { border-top: 1px solid var(--line); margin-top: 50px; background: var(--panel); }
+footer .bar { display: block; padding: 22px 20px 34px; color: var(--muted); font-size: 13px; }
+footer p { margin: 0 0 8px; max-width: 70ch; }
+.empty { color: var(--muted); padding: 26px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="logo">nt<span>offsets</span></div>
+    <div class="tag">Winbindex finds the file. We find the numbers inside it.</div>
+    <nav>
+      <a href="#/builds">Builds</a>
+      <a href="#/types">Types</a>
+      <a href="#/symbols">Symbols</a>
+      <a href="#/changes">Changes</a>
+      <a href="#/layouts">Layouts</a>
+      <a href="#/coverage">Coverage</a>
+      <a href="#/api">API</a>
+    </nav>
+  </div>
+  <div class="ctxbar"><div class="bar" id="ctx"></div></div>
+</header>
+
+<main id="view"><p class="empty">Loading…</p></main>
+
+<footer>
+  <div class="bar">
+    <p><strong>This project does not exist without
+      <a href="https://winbindex.m417z.com">Winbindex</a> by
+      <a href="https://github.com/m417z">m417z</a>.</strong>
+      Winbindex answers which kernel binaries exist and where to get them.
+      ntoffsets starts exactly where that stops.</p>
+    <p>Symbols come from the
+      <a href="https://msdl.microsoft.com">Microsoft Public Symbol Server</a>.
+      We redistribute neither PDBs nor binaries — only offsets derived from them.</p>
+    <p class="mono" id="asof"></p>
+  </div>
+</footer>
+
+<script>
+const API = "v1";
+const cache = new Map();
+
+// The addressed data may live on another origin: it is almost all of the bytes
+// and it is immutable, so it is deployed apart from the site (8.4). An empty
+// `data_base` means same origin, which is the local and single-repo case — a
+// page that has to be told where its own data is will eventually be told wrong.
+let DATA = "";
+const ON_DATA = /^(build|layout|type|symbols)\//;
+
+async function loadConfig() {
+  try {
+    const r = await fetch(`${API}/config.json`);
+    if (r.ok) DATA = (await r.json()).data_base || "";
+  } catch { /* same origin */ }
+}
+
+function urlFor(path) {
+  return ON_DATA.test(path) && DATA ? `${DATA}/${API}/${path}` : `${API}/${path}`;
+}
+
+async function get(path) {
+  if (!cache.has(path)) {
+    cache.set(path, fetch(urlFor(path)).then(r => {
+      if (!r.ok) throw new Error(`${path}: ${r.status}`);
+      return r.json();
+    }));
+  }
+  return cache.get(path);
+}
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const hex = n => "0x" + Number(n).toString(16).toUpperCase();
+const machine = m => `<span class="pill${m === "arm64" ? " arm" : ""}">${esc(m)}</span>`;
+
+// Walk the bitmap in universe order, pairing each set bit with the next RVA.
+// Bits past the universe the build was written against are ignored: the
+// universe only ever grows, so a stale bitmap is short, never wrong.
+function zipSymbols(names, bitmap, rvas) {
+  const raw = Uint8Array.from(atob(bitmap), c => c.charCodeAt(0));
+  const out = [];
+  let taken = 0;
+  for (let i = 0; i < raw.length * 8 && taken < rvas.length; i++) {
+    if (raw[i >> 3] & (1 << (i & 7))) {
+      if (i < names.length) out.push([names[i], rvas[taken]]);
+      taken++;
+    }
+  }
+  return out;
+}
+
+// A build with no version string still has to be identifiable. 79% of ARM64
+// index entries have none, so the KB number is the fallback a person can act
+// on -- not a truncated GUID.
+// A version if there is one; 79% of the ARM64 index has none (4.5). `kb` is the
+// fallback, but only where it holds actual KB numbers -- the Insider dataset
+// puts update GUIDs in the same field, and four of those joined is 150
+// characters of noise where a name should be.
+const label = b => {
+  if (b.v) return b.v;
+  const kb = (b.kb || []).filter(k => /^KB\d+$/i.test(k));
+  return kb.length ? kb.join("/") : b.k.slice(0, 12);
+};
+
+function view(html) { document.getElementById("view").innerHTML = html; }
+
+// -- build context ---------------------------------------------------------
+//
+// Every offset on this site is only true of one build, and until now the page
+// left that implicit: `#/type/_EPROCESS` quietly showed whichever build was
+// newest, and said so in body text a reader scrolls past in two lines. So the
+// build is a first-class, persistent selection, shown in the header on every
+// page, and the type pages resolve against it.
+//
+// It is remembered per viewer. `localStorage` throws outright in some contexts
+// (a thumbnailer, a browser set to block site data), so every access is
+// guarded and an empty result simply means the newest build.
+const CTX_KEY = "ntoff.build";
+let CTX = null;
+
+function remembered() {
+  try { return localStorage.getItem(CTX_KEY); } catch { return null; }
+}
+
+async function activeBuild() {
+  const index = await get("index/builds.json");
+  if (CTX) {
+    const found = index.builds.find(b => b.k === CTX);
+    if (found) return found;
+  }
+  const saved = remembered();
+  const match = saved && index.builds.find(b => b.k === saved);
+  // `builds` is newest first, so the head is the default and the fallback for
+  // a remembered key that no longer exists.
+  CTX = (match || index.builds[0]).k;
+  return match || index.builds[0];
+}
+
+function setContext(key) {
+  CTX = key;
+  try { localStorage.setItem(CTX_KEY, key); } catch { /* not remembered */ }
+}
+
+async function paintContext() {
+  const slot = document.getElementById("ctx");
+  let build;
+  try { build = await activeBuild(); } catch { slot.innerHTML = ""; return; }
+  if (!build) { slot.innerHTML = ""; return; }
+
+  const meta = [build.m, ...(build.c || []), build.d].filter(Boolean).join(" · ");
+  slot.innerHTML = `
+    <span class="ctx-label">Build</span>
+    <a class="ctx-now" href="#/build/${build.k}">${esc(label(build))}</a>
+    <span class="ctx-meta">${esc(meta)}</span>
+    <a class="ctx-swap" href="#/builds">change</a>`;
+}
+
+// Which names we actually hold, so a member's type can link to its own
+// definition. Fetched once and kept: 24 KiB gzipped, and every page that
+// renders a member wants it.
+let KNOWN = null;
+async function knownNames() {
+  if (!KNOWN) {
+    const index = await get("index/names.json");
+    KNOWN = new Set([...Object.keys(index.types), ...Object.keys(index.enums)]);
+  }
+  return KNOWN;
+}
+
+// `_LIST_ENTRY *`, `const _EJOB * volatile`, `_HANDLE_TABLE_ENTRY[4]` -- the
+// aggregate is the linkable part and the decoration around it is not. Only
+// names we hold become links; a type from a header we never read stays plain
+// text rather than a promise the site cannot keep.
+function typeLink(declaration) {
+  if (!declaration) return "";
+  const base = declaration
+    .replace(/^(?:const |volatile )+/, "")
+    .replace(/[\s*[(].*$/, "");
+  if (!base || !KNOWN || !KNOWN.has(base)) return esc(declaration);
+  const at = declaration.indexOf(base);
+  return esc(declaration.slice(0, at))
+    + `<a href="#/type/${encodeURIComponent(base)}">${esc(base)}</a>`
+    + esc(declaration.slice(at + base.length));
+}
+
+// A search page renders its chrome once and replaces only the rows. Rebuilding
+// the whole page on every keystroke destroys the input the user is typing into:
+// the caret and selection go with it, so a replacement types itself onto the end
+// of the old value instead of over it.
+//
+// The token exists because each query awaits a fetch, so two can be in flight
+// and the slower one can land last. A superseded run drops its output.
+function searchPage({ head, placeholder, value = "", run, foot = "" }) {
+  view(`${head}
+    <div class="search"><input id="q" placeholder="${esc(placeholder)}"
+      value="${esc(value)}" autocomplete="off" spellcheck="false"></div>
+    <div id="results"></div>${foot}`);
+
+  const input = document.getElementById("q");
+  const results = document.getElementById("results");
+  let token = 0;
+
+  const refresh = async () => {
+    const mine = ++token;
+    const html = await run(input.value);
+    if (mine === token) results.innerHTML = html;
+  };
+
+  input.addEventListener("input", refresh);
+  input.focus();
+  input.setSelectionRange(input.value.length, input.value.length);
+  refresh();
+}
+
+function rows(list, render) {
+  return list.length
+    ? `<div class="scroll"><table>${render}</table></div>`
+    : `<p class="empty">Nothing here.</p>`;
+}
+
+// -- builds ----------------------------------------------------------------
+
+async function pageBuilds(query = "") {
+  const index = await get("index/builds.json");
+
+  searchPage({
+    head: `
+      <h1>${index.count} builds</h1>
+      <p class="lede">Every build is keyed by its PDB GUID and age — the identifier
+        the linker writes into both the binary and the PDB. Build numbers collide
+        across channels, and a monthly update can change a struct without changing
+        one.</p>`,
+    placeholder: "version, KB, PDB GUID, channel or architecture",
+    value: query,
+    run: async q => {
+      q = q.trim().toLowerCase();
+      const found = index.builds.filter(b => !q
+        || (b.v || "").toLowerCase().includes(q)
+        || b.k.toLowerCase().includes(q)
+        || b.m.includes(q)
+        || b.c.some(c => c.toLowerCase().includes(q))
+        || b.kb.some(k => k.toLowerCase().includes(q)));
+      const page = found.slice(0, 300);
+      return `<p class="hint">${found.length} of ${index.count} shown${
+          found.length > 300 ? ", first 300 listed" : ""}</p>` + rows(page, `
+        <thead><tr><th>Build</th><th>Arch</th><th>Channel</th><th>KB</th>
+          <th>Released</th><th class="num">Symbols</th><th>Layout</th></tr></thead>
+        <tbody>${page.map(b => `
+          <tr>
+            <td><a href="#/build/${b.k}"><b>${esc(label(b))}</b></a></td>
+            <td>${machine(b.m)}</td>
+            <td class="quiet">${esc(b.c.join(", "))}</td>
+            <td class="quiet mono">${esc(b.kb.join(", "))}</td>
+            <td class="quiet mono">${esc(b.d || "")}</td>
+            <td class="num quiet">${(b.y || 0).toLocaleString()}</td>
+            <td><a class="mono" href="#/layout/${b.l}">${b.l.slice(0, 10)}</a></td>
+          </tr>`).join("")}</tbody>`);
+    },
+  });
+}
+
+async function pageBuild(key) {
+  const b = await get(`build/${key}.json`);
+  // Opening a build is the clearest possible statement of which one you mean.
+  setContext(key);
+
+  // Names live once in a shared universe; a build says which of them it has as
+  // a bitmap, and its RVAs follow in the same order. 2.5 KiB per build instead
+  // of the 254 KiB a per-build name list costs.
+  const rva = b.symbols
+    ? zipSymbols((await get("symbols/universe.json")).names, b.symbols, b.rva)
+    : Object.entries(b.rva);
+
+  // One box for both. Someone arriving at a build wants a number out of it and
+  // does not care whether it is a member offset or a global address, and the
+  // struct data used to be reachable only by going to the layout hash first --
+  // which meant knowing what a layout hash is.
+  const [manifest] = await Promise.all([
+    get(`layout/${b.layout.split(":").pop()}.json`),
+    knownNames(),
+  ]);
+  const defs = [
+    ...Object.entries(manifest.types || {}).map(([n, h]) => [n, h]),
+    ...Object.entries(manifest.enums || {}).map(([n, h]) => [n, h]),
+  ];
+
+  searchPage({
+    head: `
+      <h1>${esc(b.file_version || (b.kb || []).join("/") || b.symbol_key)}</h1>
+      <p class="lede">${esc(b.file_name)} · ${esc(b.machine)}</p>
+
+      <h2>Identity</h2>
+      <dl class="kv">
+        <dt>PDB GUID</dt><dd>${esc(b.pdb_guid)}</dd>
+        <dt>Age</dt><dd>${b.pdb_age}</dd>
+        <dt>Symbol key</dt><dd>${esc(b.symbol_key)}</dd>
+        <dt>PDB name</dt><dd>${esc(b.pdb_name)}</dd>
+        <dt>Timestamp</dt><dd>${esc(b.timestamp)}</dd>
+        <dt>Image size</dt><dd>${esc(b.size_of_image)}</dd>
+        <dt>Channel</dt><dd>${esc((b.channel || []).join(", "))}</dd>
+        <dt>KB</dt><dd>${esc((b.kb || []).join(", "))}</dd>
+        <dt>Released</dt><dd>${esc(b.release_date || "—")}</dd>
+        <dt>Layout</dt><dd><a href="#/layout/${b.layout.split(":").pop()}">${esc(b.layout)}</a></dd>
+        <dt>Source</dt><dd>${esc(b.source)}</dd>
+      </dl>
+
+      <h2>${defs.length.toLocaleString()} types and enums ·
+        ${rva.length.toLocaleString()} symbol RVAs</h2>`,
+    placeholder: "a struct, enum or symbol: _EPROCESS, PROTECTED_TYPE, PspCreateProcess",
+    run: async q => {
+      q = q.trim().toLowerCase();
+      const hits = q ? defs.filter(([n]) => n.toLowerCase().includes(q)) : [];
+      // Only the matches are fetched: the manifest is hashes, so showing one
+      // definition never downloads the other two thousand.
+      const shown = await Promise.all(hits.slice(0, 5).map(
+        async ([n, h]) => renderType(n, await get(`type/${h}.json`))));
+
+      const found = q ? rva.filter(([n]) => n.toLowerCase().includes(q)) : rva;
+      const page = found.slice(0, 400);
+      return (hits.length
+          ? `<p class="hint">${hits.length} type${hits.length === 1 ? "" : "s"}${
+              hits.length > 5 ? ", first 5 shown" : ""} — also on
+              <a href="#/layout/${b.layout.split(":").pop()}">this build's layout</a></p>`
+            + shown.join("")
+          : "")
+        + `<h3>Global symbol RVAs</h3><p class="hint">${
+            found.length.toLocaleString()} shown${
+            found.length > 400 ? ", first 400 listed" : ""}</p>` + rows(page, `
+        <thead><tr><th>Symbol</th><th class="num">RVA</th></tr></thead>
+        <tbody>${page.map(([n, v]) =>
+          `<tr><td class="mono">${esc(n)}</td><td class="num">${esc(v)}</td></tr>`).join("")}</tbody>`);
+    },
+    foot: `<p class="hint"><a href="${urlFor(`build/${key}.json`)}">Raw JSON</a>
+      · <a href="${urlFor("symbols/universe.json")}">symbol universe</a></p>`,
+  });
+}
+
+// -- layouts ---------------------------------------------------------------
+
+async function pageLayouts() {
+  const index = await get("index/layouts.json");
+  const builds = (await get("index/builds.json")).count;
+  view(`
+    <h1>${index.count} layouts for ${builds} builds</h1>
+    <p class="lede">A layout is a manifest of hashes, one per type and enum, so a
+      build that changes a single struct reuses the other two thousand bodies
+      unchanged. Hashing the set as a whole cost twelve times the storage for the
+      same data.</p>
+    <div class="stats">
+      <div class="stat"><b>${(builds / index.count).toFixed(2)}:1</b><span>builds per layout</span></div>
+      <div class="stat"><b>${index.layouts[0].builds.length}</b><span>largest shared layout</span></div>
+      <div class="stat"><b>${index.layouts.filter(l => l.builds.length === 1).length}</b><span>used by one build</span></div>
+    </div>
+    <h2>Layouts</h2>
+    ${rows(index.layouts, `
+      <thead><tr><th>Hash</th><th class="num">Builds</th><th class="num">Types</th>
+        <th class="num">Enums</th></tr></thead>
+      <tbody>${index.layouts.map(l => `
+        <tr>
+          <td><a class="mono" href="#/layout/${l.hash}">${l.hash.slice(0, 16)}…</a></td>
+          <td class="num">${l.builds.length}</td>
+          <td class="num">${l.types}</td>
+          <td class="num">${l.enums ?? 0}</td>
+        </tr>`).join("")}</tbody>`)}
+  `);
+}
+
+function renderType(name, t) {
+  if (t.kind === "enum") {
+    return `
+      <h2>${esc(name)} <span class="quiet">enum, ${t.size} bytes,
+        ${t.constants.length} constants</span></h2>
+      <div class="scroll"><table>
+        <thead><tr><th class="num">Value</th><th>Constant</th></tr></thead>
+        <tbody>${t.constants.map(c => `
+          <tr><td class="num">${c.value}</td>
+              <td class="mono">${esc(c.name)}</td></tr>`).join("")}</tbody>
+      </table></div>`;
+  }
+  return `
+    <h2>${esc(name)} <span class="quiet">${hex(t.size)} bytes,
+      ${t.members.length} members</span></h2>
+    <div class="scroll"><table>
+      <thead><tr><th class="num">Offset</th><th>Member</th><th>Type</th>
+        <th class="num">Size</th><th class="num">Bits</th></tr></thead>
+      <tbody>${t.members.map(m => `
+        <tr>
+          <td class="num">${hex(m.offset)}</td>
+          <td class="mono">${esc(m.name)}</td>
+          <td class="mono quiet">${typeLink(m.type)}</td>
+          <td class="num quiet">${m.size}</td>
+          <td class="num quiet">${m.bit_count ? `${m.bit_position}:${m.bit_count}` : ""}</td>
+        </tr>`).join("")}</tbody>
+    </table></div>`;
+}
+
+async function pageLayout(hash) {
+  const [manifest, index] = await Promise.all([
+    get(`layout/${hash}.json`),
+    get("index/builds.json"),
+    knownNames(),
+  ]);
+  const users = index.builds.filter(b => b.l === hash);
+  const types = Object.entries(manifest.types || {});
+  const enums = Object.entries(manifest.enums || {});
+
+  searchPage({
+    head: `
+      <h1 class="mono">${hash.slice(0, 24)}…</h1>
+      <p class="lede">${types.length} types · ${enums.length} enums ·
+        shared by ${users.length} build${users.length === 1 ? "" : "s"}</p>
+      <p class="hint">${users.slice(0, 20).map(b =>
+        `<a href="#/build/${b.k}">${esc(label(b))}</a>`).join(" · ")}
+        ${users.length > 20 ? ` and ${users.length - 20} more` : ""}
+        · <a href="${urlFor(`layout/${hash}.json`)}">Manifest JSON</a></p>`,
+    placeholder: "type or enum name, e.g. _EPROCESS or PROTECTED_TYPE",
+    value: "_EPROCESS",
+    run: async q => {
+      q = q.trim().toLowerCase();
+      if (!q) return `<p class="empty">Type to search 2,054 definitions.</p>`;
+      const hits = [...types, ...enums].filter(([n]) => n.toLowerCase().includes(q));
+      const page = hits.slice(0, 10);
+      // Only the matches are fetched: the manifest is hashes, so the page never
+      // downloads the other two thousand definitions to show one.
+      const bodies = await Promise.all(
+        page.map(async ([n, h]) => [n, await get(`type/${h}.json`)]));
+      return `<p class="hint">${hits.length} match${hits.length === 1 ? "" : "es"}${
+          hits.length > 10 ? ", first 10 shown" : ""}</p>`
+        + bodies.map(([n, t]) => renderType(n, t)).join("");
+    },
+  });
+}
+
+// -- types -----------------------------------------------------------------
+
+// Every name we hold, so a reader who does not already know one has somewhere
+// to start. A layout manifest answers "what is _EPROCESS in this build" but
+// cannot answer "what is there", and 519 manifests is not something a page can
+// scan; `index/names.json` is that answer in 24 KiB over the wire.
+async function pageTypes() {
+  const index = await get("index/names.json");
+  const all = [
+    ...Object.entries(index.types).map(([n, [v, l]]) => [n, v, l, "struct"]),
+    ...Object.entries(index.enums).map(([n, [v, l]]) => [n, v, l, "enum"]),
+  ].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const [worst, worstCount] = all[0];
+
+  searchPage({
+    head: `
+      <h1>${all.length.toLocaleString()} types and enums</h1>
+      <p class="lede">Ordered by how many distinct definitions we hold. One
+        means the type is byte-identical in every build here; the most
+        rearranged is <span class="mono">${esc(worst)}</span> at
+        ${worstCount}. That number is the reason this database exists.</p>`,
+    placeholder: "type or enum name, e.g. _EPROCESS, _KPRCB, PROTECTED_TYPE",
+    run: async q => {
+      q = q.trim().toLowerCase();
+      const found = q ? all.filter(([n]) => n.toLowerCase().includes(q)) : all;
+      const page = found.slice(0, 300);
+      return `<p class="hint">${found.length.toLocaleString()} shown${
+          found.length > 300 ? ", first 300 listed" : ""}</p>` + rows(page, `
+        <thead><tr><th>Name</th><th>Kind</th>
+          <th class="num">Definitions</th></tr></thead>
+        <tbody>${page.map(([n, v, , kind]) => `
+          <tr>
+            <td class="mono"><a href="#/type/${encodeURIComponent(n)}">${esc(n)}</a></td>
+            <td class="quiet">${kind}</td>
+            <td class="num${v > 1 ? "" : " quiet"}">${v}</td>
+          </tr>`).join("")}</tbody>`);
+    },
+  });
+}
+
+async function pageType(name) {
+  const index = await get("index/names.json");
+  const kind = index.types[name] ? "types" : index.enums[name] ? "enums" : null;
+  if (!kind) return view(`<p class="empty">Nothing here called ${esc(name)}.</p>`);
+
+  const [variants, newest] = index[kind][name];
+  const [builds, active] = await Promise.all([
+    get("index/builds.json"), activeBuild(), knownNames(),
+  ]);
+
+  // Resolve against the build in the header, not against whatever is newest.
+  // A type read from a different build than the reader thinks is exactly the
+  // failure this database exists to prevent, so the fallback is stated rather
+  // than performed quietly.
+  let layout = newest;
+  let scoped = false;
+  if (active) {
+    const theirs = await get(`layout/${active.l}.json`);
+    if ((theirs[kind] || {})[name]) {
+      layout = active.l;
+      scoped = true;
+    }
+  }
+
+  const manifest = layout === active?.l
+    ? await get(`layout/${active.l}.json`)
+    : await get(`layout/${layout}.json`);
+  const digest = manifest[kind][name];
+  const body = await get(`type/${digest}.json`);
+  const users = builds.builds.filter(b => b.l === layout);
+
+  view(`
+    <h1 class="mono">${esc(name)}</h1>
+    <p class="lede">${variants} distinct definition${variants === 1 ? "" : "s"}
+      across the ${builds.count.toLocaleString()} builds we hold${
+        variants === 1 ? " — this type has never moved" : ""}.
+      ${scoped
+        ? `Showing it as of <b>${esc(label(active))}</b>.`
+        : `<span class="warn">Not present in ${esc(label(active))}</span> —
+           showing the newest build that has it.`}</p>
+    <p class="hint">From layout
+      <a href="#/layout/${layout}">${layout.slice(0, 10)}</a>, shared by
+      ${users.length} build${users.length === 1 ? "" : "s"}:
+      ${users.slice(0, 12).map(b =>
+        `<a href="#/build/${b.k}">${esc(label(b))}</a>`).join(" · ")}
+      ${users.length > 12 ? ` and ${users.length - 12} more` : ""}</p>
+    ${renderType(name, body)}
+    <p class="hint"><a href="${urlFor(`type/${digest}.json`)}">Raw JSON</a>
+      · <a href="#/types">all types</a></p>`);
+}
+
+// -- symbols ---------------------------------------------------------------
+
+async function pageSymbols() {
+  const index = await get("index/builds.json");
+  const newest = index.builds[0];
+  if (!newest) {
+    view(`<p class="empty">No builds in this store.</p>`);
+    return;
+  }
+  const table = await get("symbols/universe.json");
+
+  searchPage({
+    head: `
+      <h1>${table.count.toLocaleString()} global symbols</h1>
+      <p class="lede">Every plain global the kernel exports an address for, not a
+        curated handful. Decorated C++ names, string literals and import thunks are
+        filtered out; what remains contains
+        <span class="mono">PsInitialSystemProcess</span>,
+        <span class="mono">PspCreateProcessNotifyRoutine</span> and
+        <span class="mono">KiServiceTable</span>. Names live in a shared table and
+        each build carries only its addresses.</p>
+      <p class="hint">Every name seen across all ${index.count} builds. Open a build
+        for the addresses in that build.</p>`,
+    placeholder: "symbol name, e.g. Psp, ObType, KiService",
+    run: async q => {
+      q = q.trim().toLowerCase();
+      if (!q) return `<p class="empty">Type to search.</p>`;
+      const found = table.names.filter(n => n.toLowerCase().includes(q));
+      const page = found.slice(0, 300);
+      return `<p class="hint">${found.length} match${found.length === 1 ? "" : "es"}${
+          found.length > 300 ? ", first 300 shown" : ""}</p>` + rows(page, `
+        <thead><tr><th>Symbol</th></tr></thead>
+        <tbody>${page.map(n => `<tr><td class="mono">${esc(n)}</td></tr>`).join("")}</tbody>`);
+    },
+  });
+}
+
+// -- changes ---------------------------------------------------------------
+
+function describe(t) {
+  if (t.status) return `<li><span class="t">${esc(t.type)}</span> ${t.status}</li>`;
+  const bits = [];
+  if (t.size_from !== t.size_to) bits.push(`size ${hex(t.size_from)} → ${hex(t.size_to)}`);
+  if (t.members_added.length) bits.push(`added ${t.members_added.map(esc).join(", ")}`);
+  if (t.members_removed.length) bits.push(`removed ${t.members_removed.map(esc).join(", ")}`);
+  if (t.members_moved.length) bits.push(`${t.members_moved.length} moved`);
+  if (t.members_resized.length) bits.push(`${t.members_resized.length} resized`);
+  if (t.members_rebitted.length) bits.push(`${t.members_rebitted.length} bitfield change(s)`);
+  // Same offset, same width, different type. Nothing in an offset diff shows it.
+  if ((t.members_retyped || []).length) bits.push(`${t.members_retyped.length} retyped`);
+  for (const r of t.members_renamed) bits.push(`${esc(r.from)} → ${esc(r.to)}`);
+  return `<li><span class="t">${esc(t.type)}</span> — ${bits.join("; ")}</li>`;
+}
+
+function describeEnum(e) {
+  if (e.status) return `<li><span class="t">${esc(e.enum)}</span> ${e.status}</li>`;
+  const bits = [];
+  if (e.constants_added.length) bits.push(`added ${e.constants_added.map(esc).join(", ")}`);
+  if (e.constants_removed.length) bits.push(`removed ${e.constants_removed.map(esc).join(", ")}`);
+  for (const c of e.constants_renumbered) bits.push(`${esc(c.name)} ${c.from} → ${c.to}`);
+  if (e.size_from !== e.size_to) bits.push(`size ${e.size_from} → ${e.size_to}`);
+  return `<li><span class="t">${esc(e.enum)}</span> (enum) — ${bits.join("; ")}</li>`;
+}
+
+async function pageChanges() {
+  const feed = await get("feed/changes.json");
+  const compared = feed.sequences.filter(s => s.transitions > 0);
+  const quiet = compared.filter(s => s.layout_changes === 0);
+  const transitions = feed.sequences.reduce((n, s) => n + s.transitions, 0);
+
+  view(`
+    <h1>What moved, and in which update</h1>
+    <p class="lede">Kernel structs do not change most months. That is the useful
+      answer: point CI at this and patch Tuesday is either silent or it names the
+      types to retest. Comparisons run within one channel and one architecture —
+      22000 amd64 and 22000 ARM64 share a version number and almost no layout.</p>
+    <div class="stats">
+      <div class="stat"><b>${transitions}</b><span>build transitions compared</span></div>
+      <div class="stat"><b>${feed.changes.length}</b><span>changed a layout</span></div>
+      <div class="stat"><b>${quiet.length}/${compared.length}</b><span>sequences with no change</span></div>
+    </div>
+    <p class="hint"><a href="${API}/feed/changes.xml">Atom feed</a> ·
+      <a href="${API}/feed/changes.json">JSON</a> · generated ${esc(feed.generated)}</p>
+
+    <h2>Changes</h2>
+    ${feed.changes.map(c => `
+      <div class="change">
+        <h3>${esc(c.from_version || (c.from_kb || []).join("/") || c.from_key.slice(0, 10))}
+          → ${esc(c.to_version || (c.kb || []).join("/") || c.to_key.slice(0, 10))}</h3>
+        <div class="when">${esc(c.channel)} · ${esc(c.machine)}
+          · ${esc((c.kb || []).join(", ") || "unknown KB")}
+          · ${esc(c.date || "")}</div>
+        <ul>${c.types_changed.map(describe).join("")}${
+          (c.enums_changed || []).map(describeEnum).join("")}</ul>
+      </div>`).join("")}
+
+    <h2>Sequences</h2>
+    ${rows(feed.sequences, `
+      <thead><tr><th>Channel</th><th>Arch</th><th class="num">Builds</th>
+        <th class="num">Compared</th><th class="num">Changed</th><th>Gaps</th></tr></thead>
+      <tbody>${feed.sequences.map(s => `
+        <tr>
+          <td>${esc(s.channel)}</td>
+          <td>${machine(s.machine)}</td>
+          <td class="num">${s.builds}</td>
+          <td class="num">${s.transitions || `<span class="quiet">—</span>`}</td>
+          <td class="num">${s.transitions ? s.layout_changes : `<span class="quiet">n/a</span>`}</td>
+          <td class="quiet">${s.known_missing_in_channel
+            ? `${s.known_missing_in_channel} known missing` : ""}</td>
+        </tr>`).join("")}</tbody>`)}
+    <p class="hint">A sequence holding one build has nothing to compare, which is
+      not the same as having compared and found nothing.</p>
+  `);
+}
+
+// -- coverage --------------------------------------------------------------
+
+async function pageCoverage() {
+  const [cov, review] = await Promise.all([
+    get("coverage.json"),
+    get("feed/renames-review.json").catch(() => null),
+  ]);
+  const t = cov.totals;
+  const channels = Object.entries(cov.by_channel);
+
+  view(`
+    <h1>Coverage</h1>
+    <p class="lede">The difference from reading a website by hand is not having more
+      data. It is saying which data is missing and why. Everything below is derived
+      from the store, not from whichever command ran last.</p>
+    <div class="stats">
+      <div class="stat"><b>${t.resolved}</b><span>builds resolved</span></div>
+      <div class="stat"><b>${t.known}</b><span>known to the index</span></div>
+      <div class="stat"><b>${t.accounted_missing}</b><span>missing, with a reason</span></div>
+      <div class="stat"><b>${t.unattempted}</b><span>not yet attempted</span></div>
+      <div class="stat"><b class="${cov.defects ? "warn" : ""}">${cov.defects}</b><span>defects (ours)</span></div>
+    </div>
+
+    <h2>Why builds are missing</h2>
+    ${rows(Object.entries(cov.missing_reasons), `
+      <thead><tr><th>Reason</th><th class="num">Builds</th></tr></thead>
+      <tbody>${Object.entries(cov.missing_reasons).map(([r, n]) =>
+        `<tr><td class="mono">${esc(r)}</td><td class="num">${n}</td></tr>`).join("")}</tbody>`)}
+    <p class="hint">A 404 on the symbol server is a normal outcome — plenty of builds
+      never had symbols published. <span class="mono">undownloadable</span> means the
+      index entry has no timestamp or image size, so no URL can be built at all.</p>
+
+    <h2>By architecture</h2>
+    ${rows(Object.entries(cov.by_machine), `
+      <thead><tr><th>Machine</th><th class="num">Builds</th></tr></thead>
+      <tbody>${Object.entries(cov.by_machine).map(([m, n]) =>
+        `<tr><td>${machine(m)}</td><td class="num">${n}</td></tr>`).join("")}</tbody>`)}
+
+    <h2>By channel</h2>
+    ${rows(channels, `
+      <thead><tr><th>Channel</th><th class="num">Resolved</th><th class="num">Known</th>
+        <th class="num">Missing</th><th class="num">Not attempted</th></tr></thead>
+      <tbody>${channels.map(([c, v]) => {
+        const known = v.known || 0, done = v.resolved || 0;
+        return `<tr><td>${esc(c)}</td>
+          <td class="num">${done}</td>
+          <td class="num quiet">${known || "—"}</td>
+          <td class="num quiet">${v.missing || 0}</td>
+          <td class="num quiet">${v.unattempted || 0}</td></tr>`;
+      }).join("")}</tbody>`)}
+    <p class="hint">A channel showing 0 resolved against a large "known" is one we
+      have not collected yet, not one that failed. Backfill runs by tier, newest
+      supported channels first.</p>
+
+    <h2>Findable by version</h2>
+    <p class="lede">${cov.no_version_metadata} resolved builds carry no version string
+      in the upstream index — almost all ARM64. Their offsets are complete and correct;
+      they simply cannot be looked up by build number. Use the KB or the PDB key.</p>
+
+    ${review && review.not_a_rename && review.not_a_rename.count ? `
+      <h2>Looks like a rename, is not</h2>
+      <p class="lede">Members whose bytes kept their position but whose name changed
+        because the field was retired or repurposed. Aliasing these would hand a
+        caller a correct offset holding a value that stopped meaning what they asked
+        for, so they are recorded and not acted on.</p>
+      ${rows(review.not_a_rename.candidates, `
+        <thead><tr><th>Type</th><th>From</th><th>To</th><th class="num">Offset</th>
+          <th>Kind</th></tr></thead>
+        <tbody>${review.not_a_rename.candidates.map(c => `
+          <tr><td class="mono">${esc(c.type)}</td><td class="mono">${esc(c.from)}</td>
+          <td class="mono">${esc(c.to)}</td><td class="num">${hex(c.offset)}</td>
+          <td class="quiet">${esc(c.kind)}</td></tr>`).join("")}</tbody>`)}` : ""}
+  `);
+}
+
+// -- api -------------------------------------------------------------------
+
+function pageApi() {
+  view(`
+    <h1>API</h1>
+    <p class="lede">Static files. No server, no authentication, no rate limit.
+      Fetch them from anything.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Path</th><th>What</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">v1/build/&lt;guid&gt;&lt;age&gt;.json</td>
+            <td>One build: layout reference, global symbol RVAs, metadata</td></tr>
+        <tr><td class="mono">v1/layout/&lt;sha256&gt;.json</td>
+            <td>A layout: every type, member, enum and constant</td></tr>
+        <tr><td class="mono">v1/symbols/universe.json</td>
+            <td>Every symbol name, in the order a build's bitmap indexes them</td></tr>
+        <tr><td class="mono">v1/index/builds.json</td>
+            <td>Compact list of every build, for searching</td></tr>
+        <tr><td class="mono">v1/index/by-version.json</td>
+            <td>File version → build keys</td></tr>
+        <tr><td class="mono">v1/index/names.json</td>
+            <td>Every type and enum name, how many distinct definitions we hold
+              of it, and the newest layout defining it</td></tr>
+        <tr><td class="mono">v1/type/&lt;hash&gt;.json</td>
+            <td>One type or enum, named by the hash of its own definition.
+              A layout is a manifest of these</td></tr>
+        <tr><td class="mono">v1/feed/changes.json</td>
+            <td>What changed between consecutive builds</td></tr>
+        <tr><td class="mono">v1/feed/changes.xml</td>
+            <td>The same as Atom</td></tr>
+        <tr><td class="mono">v1/coverage.json</td>
+            <td>What is missing, and why</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>The age is hex in the path</h2>
+    <p class="lede">A build key is the PDB GUID followed by the age <em>in
+      hexadecimal</em> — the same string the symbol server uses. Build entries also
+      carry a readable <span class="mono">key</span> field with the age in decimal.
+      They look identical while the age is below ten, which every kernel published so
+      far has been. Use <span class="mono">symbol_key</span> in code.</p>
+
+    <h2>Symbols come in two files</h2>
+    <p class="lede">A build entry holds <span class="mono">symbols</span>, a base64
+      bitmap, and <span class="mono">rva</span>, an array. Fetch
+      <span class="mono">v1/symbols/universe.json</span>, walk the bitmap in order,
+      and the <em>n</em>th set bit names the <em>n</em>th address. The universe is
+      append-only, so a bitmap written before it grew stays correct — it is short,
+      never wrong. Storing names per build costs 254 KiB each instead of 2.5 KiB.</p>
+
+    <h2>Looking up a version</h2>
+    <p class="lede">Version resolution happens in your client, not on a server:
+      fetch <span class="mono">v1/index/by-version.json</span> and look the version up.
+      A query-string endpoint would need something running, and nothing here does.</p>
+  `);
+}
+
+// -- routing ---------------------------------------------------------------
+
+const ROUTES = [
+  [/^\/?$/, () => pageBuilds()],
+  [/^\/builds$/, () => pageBuilds()],
+  [/^\/build\/([0-9A-Fa-f]+)$/, m => pageBuild(m[1])],
+  [/^\/types$/, () => pageTypes()],
+  [/^\/type\/(.+)$/, m => pageType(decodeURIComponent(m[1]))],
+  [/^\/layouts$/, () => pageLayouts()],
+  [/^\/layout\/([0-9a-f]+)$/, m => pageLayout(m[1])],
+  [/^\/symbols$/, () => pageSymbols()],
+  [/^\/changes$/, () => pageChanges()],
+  [/^\/coverage$/, () => pageCoverage()],
+  [/^\/api$/, () => pageApi()],
+  [/^\/version\/(.+)$/, m => pageBuilds(decodeURIComponent(m[1]))],
+];
+
+async function route() {
+  const path = location.hash.replace(/^#/, "") || "/";
+  for (const [pattern, handler] of ROUTES) {
+    const match = path.match(pattern);
+    if (match) {
+      try { await handler(match); }
+      catch (e) { view(`<p class="empty warn">${esc(e.message)}</p>`); }
+      window.scrollTo(0, 0);
+      for (const a of document.querySelectorAll("nav a")) {
+        a.toggleAttribute("aria-current", path.startsWith(a.hash.slice(1)));
+      }
+      // After the handler, because opening a build changes which build the
+      // header should name.
+      paintContext();
+      return;
+    }
+  }
+  view(`<p class="empty">No such page.</p>`);
+  paintContext();
+}
+
+addEventListener("hashchange", route);
+loadConfig().then(route);
+get("coverage.json").then(c => {
+  document.getElementById("asof").textContent = `Data as of ${c.as_of}`;
+}).catch(() => {});
+</script>
+</body>
+</html>

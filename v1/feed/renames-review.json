@@ -1,0 +1,311 @@
+{
+ "schema": 1,
+ "ambiguous": {
+  "count": 0,
+  "note": "same offset and width, but not a 1:1 pairing; no way to tell which member became which",
+  "candidates": []
+ },
+ "not_a_rename": {
+  "count": 27,
+  "note": "one side is reserved or padding, so the meaning changed rather than the label; an alias here would mislead",
+  "candidates": [
+   {
+    "type": "_DISPATCHER_HEADER",
+    "from": "ThreadReserved",
+    "to": "ThreadSpecControl",
+    "offset": 1,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 5
+   },
+   {
+    "type": "_DISPATCHER_HEADER",
+    "from": "ThreadSpecControl",
+    "to": "ThreadReserved",
+    "offset": 1,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 5
+   },
+   {
+    "type": "_EPROCESS",
+    "from": "NumberOfLockedPages",
+    "to": "MmReserved2",
+    "offset": 656,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_EPROCESS",
+    "from": "ProcessExecutionState",
+    "to": "Flags2Available1",
+    "offset": 1120,
+    "size": 4,
+    "bit_position": 22,
+    "bit_count": 2,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_ETHREAD",
+    "from": "UpdateTebSpareLong2",
+    "to": "HeapData",
+    "offset": 1908,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_HAL_LBR_ENTRY",
+    "from": "Reserved",
+    "to": "Information",
+    "offset": 16,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_HV_X64_HYPERVISOR_FEATURES",
+    "from": "SvmFeaturesAvailable",
+    "to": "PasidFeaturesAvailable",
+    "offset": 12,
+    "size": 4,
+    "bit_position": 16,
+    "bit_count": 1,
+    "kind": "padding_shuffle",
+    "observations": 2
+   },
+   {
+    "type": "_KAPC",
+    "from": "SpareByte0",
+    "to": "AllFlags",
+    "offset": 1,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 7
+   },
+   {
+    "type": "_KPRCB",
+    "from": "BpbReserved2",
+    "to": "VerwOnNonKvaReturn",
+    "offset": 11568,
+    "size": 1,
+    "bit_position": 7,
+    "bit_count": 1,
+    "kind": "repurposed",
+    "observations": 2
+   },
+   {
+    "type": "_KPRCB",
+    "from": "BpbStateReserved",
+    "to": "BpbDivideOnReturn",
+    "offset": 248,
+    "size": 1,
+    "bit_position": 7,
+    "bit_count": 1,
+    "kind": "repurposed",
+    "observations": 5
+   },
+   {
+    "type": "_KPRCB",
+    "from": "DoubleFlushTlb",
+    "to": "PrcbPad5",
+    "offset": 2194,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad10",
+    "to": "ProcessorSignature",
+    "offset": 1644,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 2
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad12",
+    "to": "PrcbPad12c",
+    "offset": 1752,
+    "size": 24,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "padding_shuffle",
+    "observations": 9
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad138e",
+    "to": "VerwSelector",
+    "offset": 28330,
+    "size": 2,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad139c",
+    "to": "RawRelativePerformance",
+    "offset": 47948,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 3
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad20",
+    "to": "MsrIa32TsxCtrl",
+    "offset": 11392,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 9
+   },
+   {
+    "type": "_KPRCB",
+    "from": "PrcbPad70",
+    "to": "DpcWatchdogProfileCumulativeDpcThreshold",
+    "offset": 22644,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
+    "type": "_KPRCB",
+    "from": "RawRelativePerformance",
+    "to": "PrcbPad139c",
+    "offset": 47948,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
+    "type": "_KSCHEDULER_SUBNODE",
+    "from": "SubNodeLock",
+    "to": "Spare0",
+    "offset": 0,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_KSHARED_READY_QUEUE",
+    "from": "Spare1",
+    "to": "Group",
+    "offset": 662,
+    "size": 2,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 4
+   },
+   {
+    "type": "_KTHREAD",
+    "from": "TebMappedLowVa",
+    "to": "Spare21",
+    "offset": 512,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 3
+   },
+   {
+    "type": "_KUSER_SHARED_DATA",
+    "from": "UserCetAvailableEnvironments",
+    "to": "Reserved2",
+    "offset": 780,
+    "size": 4,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 5
+   },
+   {
+    "type": "_MI_SECTION_STATE",
+    "from": "UnusedSubsectionPagedPool",
+    "to": "UnusedSegmentPagedPool",
+    "offset": 40,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "padding_shuffle",
+    "observations": 1
+   },
+   {
+    "type": "_MMSUPPORT_SHARED",
+    "from": "Reserved0",
+    "to": "ShadowMapping",
+    "offset": 64,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 3
+   },
+   {
+    "type": "_PROCESSOR_POWER_STATE",
+    "from": "Reserved",
+    "to": "SoftParked",
+    "offset": 51,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 2
+   },
+   {
+    "type": "_PROC_PERF_DOMAIN",
+    "from": "Spare",
+    "to": "Hidden",
+    "offset": 199,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 6
+   },
+   {
+    "type": "_SEGMENT_FLAGS",
+    "from": "ImageCetShadowStacksReady",
+    "to": "Spare",
+    "offset": 2,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 1,
+    "kind": "repurposed",
+    "observations": 5
+   }
+  ]
+ }
+}

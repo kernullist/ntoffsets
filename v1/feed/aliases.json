@@ -1,0 +1,3706 @@
+{
+ "schema": 1,
+ "count": 370,
+ "aliases": [
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "FreeMapCheck",
+   "to": "RestoredPagesBitmapBitmapCheck",
+   "offset": 76,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "HvCr3",
+   "to": "HvPageTableRoot",
+   "offset": 736,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "HvPageTableRoot",
+   "to": "HvCr3",
+   "offset": 872,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "NoFreePages",
+   "to": "RestoredPagesBitmapSize",
+   "offset": 72,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "RestoredPagesBitmapBitmapCheck",
+   "to": "FreeMapCheck",
+   "offset": 76,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "RestoredPagesBitmapSize",
+   "to": "NoFreePages",
+   "offset": 72,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "ActiveSubsegment",
+   "to": "ThreadPrivateSlot",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "EnableGarbageCollection",
+   "to": "LfhConservativeAffinity",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 22
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "EnableGarbageCollection",
+   "to": "VsAffinitySlots",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 19
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "HotspotFullCommit",
+   "to": "LfhSubsegmentPrefetch",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "LfhConservativeAffinity",
+   "to": "EnableGarbageCollection",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "LfhSubsegmentPrefetch",
+   "to": "HotspotFullCommit",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "SmallerSubsegment",
+   "to": "VsAffinitySlots",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 22
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "ThreadPrivateSlot",
+   "to": "ActiveSubsegment",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "VsAffinitySlots",
+   "to": "EnableGarbageCollection",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "RTLP_HP_LFH_PERF_FLAGS",
+   "from": "VsAffinitySlots",
+   "to": "SmallerSubsegment",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "_ADAPTER_OBJECT",
+   "from": "ExpiredLock",
+   "to": "DomainLeaveLock",
+   "offset": 320,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_CMHIVE",
+   "from": "FlushLogEntry",
+   "to": "FlushLogEntryOffsetArray",
+   "offset": 1112,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_CMHIVE",
+   "from": "FlushLogEntryOffsetArray",
+   "to": "FlushLogEntry",
+   "offset": 1704,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_CM_KEY_CONTROL_BLOCK",
+   "from": "Freed",
+   "to": "PrivateAlloc",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 16,
+   "bit_count": 1,
+   "observations": 12
+  },
+  {
+   "type": "_CM_KEY_CONTROL_BLOCK",
+   "from": "PrivateAlloc",
+   "to": "Freed",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 16,
+   "bit_count": 1,
+   "observations": 12
+  },
+  {
+   "type": "_CM_KEY_CONTROL_BLOCK",
+   "from": "ValueCache",
+   "to": "ValueList",
+   "offset": 48,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_CM_KEY_CONTROL_BLOCK",
+   "from": "ValueList",
+   "to": "ValueCache",
+   "offset": 48,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_CONTROL_AREA",
+   "from": "Flags1",
+   "to": "u1",
+   "offset": 60,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_CONTROL_AREA",
+   "from": "u1",
+   "to": "Flags1",
+   "offset": 60,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_DISPATCHER_HEADER",
+   "from": "Emulation",
+   "to": "UmsScheduled",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_DISPATCHER_HEADER",
+   "from": "UmsScheduled",
+   "to": "Emulation",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_DYNAMIC_FUNCTION_TABLE",
+   "from": "TreeNode",
+   "to": "TreeNodeMin",
+   "offset": 88,
+   "size": 24,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 77
+  },
+  {
+   "type": "_DYNAMIC_FUNCTION_TABLE",
+   "from": "TreeNodeMin",
+   "to": "TreeNode",
+   "offset": 88,
+   "size": 24,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 5
+  },
+  {
+   "type": "_EPROCESS",
+   "from": "MemoryDisambiguationDisable",
+   "to": "SpeculativeStoreBypassDisable",
+   "offset": 1716,
+   "size": 4,
+   "bit_position": 13,
+   "bit_count": 1,
+   "observations": 24
+  },
+  {
+   "type": "_EPROCESS",
+   "from": "NetworkCounters",
+   "to": "WakeChannel",
+   "offset": 2032,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_EPROCESS",
+   "from": "WakeChannel",
+   "to": "NetworkCounters",
+   "offset": 2032,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_ESERVERSILO_GLOBALS",
+   "from": "ExpLicenseState",
+   "to": "MiSessionLeaderProcess",
+   "offset": 872,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_ESERVERSILO_GLOBALS",
+   "from": "MiSessionLeaderProcess",
+   "to": "ExpLicenseState",
+   "offset": 872,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_ETHREAD",
+   "from": "CmDbgInfo",
+   "to": "CmThreadInfo",
+   "offset": 1976,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 21
+  },
+  {
+   "type": "_ETHREAD",
+   "from": "CmThreadInfo",
+   "to": "CmDbgInfo",
+   "offset": 1108,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 3
+  },
+  {
+   "type": "_EXT_IOMMU_S1_X64_DOMAIN_SETTINGS",
+   "from": "PasidTable",
+   "to": "PageTableRoot",
+   "offset": 8,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_GIC3_DATA",
+   "from": "ExtEnv",
+   "to": "Mode",
+   "offset": 40,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 38
+  },
+  {
+   "type": "_GIC3_DATA",
+   "from": "Mode",
+   "to": "ExtEnv",
+   "offset": 40,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 36
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "AcknowledgePageRequest",
+   "to": "SvmAcknowledgePageRequest",
+   "offset": 320,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "AttachPasidSpace",
+   "to": "SvmAttachPasidSpace",
+   "offset": 288,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "ClearPrqStalled",
+   "to": "SvmClearPrqStalled",
+   "offset": 344,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "CreatePasidSpace",
+   "to": "SvmCreatePasidSpace",
+   "offset": 264,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "CreatePrQueue",
+   "to": "SvmCreatePrQueue",
+   "offset": 328,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "DeletePrQueue",
+   "to": "SvmDeletePrQueue",
+   "offset": 336,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "DetachPasidSpace",
+   "to": "SvmDetachPasidSpace",
+   "offset": 296,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "DisablePasid",
+   "to": "SvmDisablePasid",
+   "offset": 312,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "EnablePasid",
+   "to": "SvmEnablePasid",
+   "offset": 304,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "FlushPasid",
+   "to": "SvmFlushPasid",
+   "offset": 280,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "GetDeviceCapabilities",
+   "to": "SvmGetDeviceCapabilities",
+   "offset": 256,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "GetSystemPasidCapabilities",
+   "to": "SvmGetSystemCapabilities",
+   "offset": 248,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SetDeviceAtsEnabled",
+   "to": "SetDeviceDmaEnabled",
+   "offset": 352,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SetDeviceDmaEnabled",
+   "to": "SvmSetDeviceEnabled",
+   "offset": 352,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SetPasidAddressSpace",
+   "to": "SvmSetPasidAddressSpace",
+   "offset": 272,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmAcknowledgePageRequest",
+   "to": "AcknowledgePageRequest",
+   "offset": 320,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmAttachPasidSpace",
+   "to": "AttachPasidSpace",
+   "offset": 288,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmClearPrqStalled",
+   "to": "ClearPrqStalled",
+   "offset": 344,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmCreatePasidSpace",
+   "to": "CreatePasidSpace",
+   "offset": 264,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmCreatePrQueue",
+   "to": "CreatePrQueue",
+   "offset": 328,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmDeletePrQueue",
+   "to": "DeletePrQueue",
+   "offset": 336,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmDetachPasidSpace",
+   "to": "DetachPasidSpace",
+   "offset": 296,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmDisablePasid",
+   "to": "DisablePasid",
+   "offset": 312,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmEnablePasid",
+   "to": "EnablePasid",
+   "offset": 304,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmFlushPasid",
+   "to": "FlushPasid",
+   "offset": 280,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmGetDeviceCapabilities",
+   "to": "GetDeviceCapabilities",
+   "offset": 256,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmGetSystemCapabilities",
+   "to": "GetSystemPasidCapabilities",
+   "offset": 248,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmSetDeviceEnabled",
+   "to": "SetDeviceAtsEnabled",
+   "offset": 352,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmSetDeviceEnabled",
+   "to": "SetDeviceDmaEnabled",
+   "offset": 352,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
+   "from": "SvmSetPasidAddressSpace",
+   "to": "SetPasidAddressSpace",
+   "offset": 272,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HEAP_COUNTERS",
+   "from": "TotalMemoryReservedInVirtualBlocks",
+   "to": "TotalSizeInVirtualBlocks",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 94
+  },
+  {
+   "type": "_HEAP_COUNTERS",
+   "from": "TotalSizeInVirtualBlocks",
+   "to": "TotalMemoryReservedInVirtualBlocks",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 143
+  },
+  {
+   "type": "_HEAP_LFH_BUCKET",
+   "from": "AffinityMappingLock",
+   "to": "PrivSlotListLock",
+   "offset": 80,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HEAP_LFH_BUCKET",
+   "from": "AffinitySlots",
+   "to": "LastContentionTime",
+   "offset": 96,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_HEAP_LFH_BUCKET",
+   "from": "PrivSlotListLock",
+   "to": "AffinityMappingLock",
+   "offset": 80,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_HEAP_VAMGR_ALLOCATOR",
+   "from": "ContextHandle",
+   "to": "PartitionHandle",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_HEAP_VAMGR_ALLOCATOR",
+   "from": "PartitionHandle",
+   "to": "ContextHandle",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_HEAP_VS_AFFINITY_SLOT",
+   "from": "VsContext",
+   "to": "VsContextOffset",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 105
+  },
+  {
+   "type": "_HEAP_VS_AFFINITY_SLOT",
+   "from": "VsContextOffset",
+   "to": "VsContext",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 55
+  },
+  {
+   "type": "_HEAP_VS_CONTEXT",
+   "from": "AffinityMgr",
+   "to": "DelayFreeContext",
+   "offset": 64,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_HEAP_VS_CONTEXT",
+   "from": "DelayFreeContext",
+   "to": "AffinityMgr",
+   "offset": 64,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 47
+  },
+  {
+   "type": "_IOMMU_DMA_DOMAIN_CREATION_FLAGS",
+   "from": "SkipMmioPreReservation",
+   "to": "SkipMmioRangesReservation",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_ITS_DATA",
+   "from": "ExtEnv",
+   "to": "Mode",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 38
+  },
+  {
+   "type": "_ITS_DATA",
+   "from": "Mode",
+   "to": "ExtEnv",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 36
+  },
+  {
+   "type": "_KALPC_DIRECT_EVENT",
+   "from": "DirectType",
+   "to": "Referenced",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KALPC_DIRECT_EVENT",
+   "from": "Event",
+   "to": "Value",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_KALPC_DIRECT_EVENT",
+   "from": "Referenced",
+   "to": "DirectType",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KALPC_DIRECT_EVENT",
+   "from": "Value",
+   "to": "Event",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_KNODE",
+   "from": "NonParkedSet",
+   "to": "SearchRanks",
+   "offset": 80,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_KNODE",
+   "from": "SearchRanks",
+   "to": "NonParkedSet",
+   "offset": 80,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KNODE",
+   "from": "SharedReadyQueueLeaders",
+   "to": "SharedReadyQueueMask",
+   "offset": 144,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_KNODE",
+   "from": "SharedReadyQueueMask",
+   "to": "SharedReadyQueueLeaders",
+   "offset": 152,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KPCR",
+   "from": "SsbMitigation",
+   "to": "SsbMitigationFlags",
+   "offset": 77,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KPCR",
+   "from": "SsbMitigationFlags",
+   "to": "SsbMitigation",
+   "offset": 77,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KPRCB",
+   "from": "BpbCtxSwapSetValue",
+   "to": "BpbKernelSpecCtrl",
+   "offset": 11579,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 24
+  },
+  {
+   "type": "_KPRCB",
+   "from": "BpbIbrsPresent",
+   "to": "BpbClearOnIdle",
+   "offset": 11568,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_KPRCB",
+   "from": "BpbSmepPresent",
+   "to": "BpbSmep",
+   "offset": 11568,
+   "size": 1,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_KPRCB",
+   "from": "BpbSpecCtrlValue",
+   "to": "BpbCurrentSpecCtrl",
+   "offset": 11578,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 24
+  },
+  {
+   "type": "_KPRCB",
+   "from": "BpbStibpPresent",
+   "to": "BpbEnabled",
+   "offset": 11568,
+   "size": 1,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_KPRCB",
+   "from": "DpcDelegateThread",
+   "to": "HyperPte",
+   "offset": 5808,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_KPRCB",
+   "from": "DpcRuntimeHistoryCleanupTime",
+   "to": "DpcRuntimeHistoryHashTableCleanupDpc",
+   "offset": 14360,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_KPRCB",
+   "from": "DpcRuntimeHistoryHashTableCleanupDpc",
+   "to": "DpcRuntimeHistoryCleanupTime",
+   "offset": 14360,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KPRCB",
+   "from": "DpcTimeLimit",
+   "to": "DpcTimeLimitTicks",
+   "offset": 3872,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_KPRCB",
+   "from": "DpcWatchdogPeriod",
+   "to": "DpcWatchdogPeriodTicks",
+   "offset": 3048,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_KPRCB",
+   "from": "MmFlushList",
+   "to": "MmInternal",
+   "offset": 23800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_KPRCB",
+   "from": "ParentNode",
+   "to": "SchedulerSubNode",
+   "offset": 192,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KPRCB",
+   "from": "SchedulerSubNode",
+   "to": "ParentNode",
+   "offset": 192,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_KPRCB_BPB_STATE",
+   "from": "AllFlags",
+   "to": "StateFlags",
+   "offset": 0,
+   "size": 2,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_KPROCESS",
+   "from": "PpmPolicy",
+   "to": "ProcessPpmPolicy",
+   "offset": 136,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 4,
+   "observations": 50
+  },
+  {
+   "type": "_KPROCESS",
+   "from": "ProcessPpmPolicy",
+   "to": "PpmPolicy",
+   "offset": 136,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 4,
+   "observations": 50
+  },
+  {
+   "type": "_KSCB",
+   "from": "SoftCap",
+   "to": "UnconstrainedMaxQuota",
+   "offset": 112,
+   "size": 1,
+   "bit_position": 4,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_KSCHEDULER_SUBNODE",
+   "from": "IdleModuleSet",
+   "to": "ThreadQosGroupingSet",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_KSCHEDULER_SUBNODE",
+   "from": "ThreadQosGroupingSet",
+   "to": "IdleModuleSet",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "AbAllocationRegionCount",
+   "to": "FreezeFlags",
+   "offset": 794,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "AbOrphanedEntrySummary",
+   "to": "DecayBoost",
+   "offset": 870,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 18
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "CetShadowStack",
+   "to": "CetUserShadowStack",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 20,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "CetUserShadowStack",
+   "to": "CetShadowStack",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 20,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "DecayBoost",
+   "to": "AbOrphanedEntrySummary",
+   "offset": 870,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "EmulationControlBlock",
+   "to": "Ucb",
+   "offset": 488,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "FreezeFlags",
+   "to": "AbAllocationRegionCount",
+   "offset": 794,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "HgsFeedbackStartTime",
+   "to": "WpsFeedback",
+   "offset": 1072,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "LastXStateSaveDebugInfo",
+   "to": "Uch",
+   "offset": 504,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "LockEntries",
+   "to": "SchedulerSharedSystemSlot",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "SameThreadTransientFlags",
+   "to": "SystemHeteroCpuPolicy",
+   "offset": 125,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "SchedulerSharedSystemSlot",
+   "to": "LockEntries",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "SecureThread",
+   "to": "UmsDirectedSwitchEnable",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "SystemHeteroCpuPolicy",
+   "to": "SameThreadTransientFlags",
+   "offset": 125,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "SystemPriority",
+   "to": "WobPriority",
+   "offset": 795,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "Ucb",
+   "to": "EmulationControlBlock",
+   "offset": 488,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "Uch",
+   "to": "LastXStateSaveDebugInfo",
+   "offset": 504,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "UmsDirectedSwitchEnable",
+   "to": "SecureThread",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "UmsPerformingSyscall",
+   "to": "WaitNextClearWobPriorityFloor",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 16,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "WaitNextClearWobPriorityFloor",
+   "to": "UmsPerformingSyscall",
+   "offset": 116,
+   "size": 4,
+   "bit_position": 16,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "WobPriority",
+   "to": "SystemPriority",
+   "offset": 795,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_KTHREAD",
+   "from": "WpsFeedback",
+   "to": "HgsFeedbackStartTime",
+   "offset": 1072,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_KTIMER2",
+   "from": "AusterityResilient",
+   "to": "RestrictedStandbyResilient",
+   "offset": 129,
+   "size": 1,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_KTIMER2",
+   "from": "RestrictedStandbyResilient",
+   "to": "AusterityResilient",
+   "offset": 129,
+   "size": 1,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_LDR_DATA_TABLE_ENTRY",
+   "from": "CorDeferredValidate",
+   "to": "ScpInExceptionTable",
+   "offset": 104,
+   "size": 4,
+   "bit_position": 21,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "_LDR_DATA_TABLE_ENTRY",
+   "from": "ScpInExceptionTable",
+   "to": "CorDeferredValidate",
+   "offset": 104,
+   "size": 4,
+   "bit_position": 21,
+   "bit_count": 1,
+   "observations": 26
+  },
+  {
+   "type": "_LOADER_PARAMETER_EXTENSION",
+   "from": "IoPortAccessSupported",
+   "to": "IumPersistentDatabaseEnabled",
+   "offset": 132,
+   "size": 4,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 18
+  },
+  {
+   "type": "_LOADER_PARAMETER_EXTENSION",
+   "from": "IumPersistentDatabaseEnabled",
+   "to": "IoPortAccessSupported",
+   "offset": 132,
+   "size": 4,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_LOADER_PARAMETER_EXTENSION",
+   "from": "KernelScpReserveSize",
+   "to": "RetpolineReserveSize",
+   "offset": 3500,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_LOADER_PARAMETER_EXTENSION",
+   "from": "RetpolineReserveSize",
+   "to": "KernelScpReserveSize",
+   "offset": 3500,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_ACCESS_LOG_STATE",
+   "from": "DisableAccessLogging",
+   "to": "DisableAccessLoggingWorkItem",
+   "offset": 8,
+   "size": 32,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_ACCESS_LOG_STATE",
+   "from": "DisableAccessLoggingWorkItem",
+   "to": "DisableAccessLogging",
+   "offset": 8,
+   "size": 32,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_CACHED_PTE",
+   "from": "EntireField",
+   "to": "EntirePteField",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_CACHED_PTE",
+   "from": "EntireField",
+   "to": "Long",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_MI_CACHED_PTE",
+   "from": "Long",
+   "to": "EntireField",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_MI_CLONE_BLOCK_FLAGS",
+   "from": "OwningPartitionResidentCharged",
+   "to": "ScpPage",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 60,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_MI_CLONE_BLOCK_FLAGS",
+   "from": "ScpPage",
+   "to": "OwningPartitionResidentCharged",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 60,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_COMBINE_STATE",
+   "from": "CommonPageCombineDomain",
+   "to": "ZeroPageHashValue",
+   "offset": 16,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_COMBINE_STATE",
+   "from": "ZeroPageHashValue",
+   "to": "CommonPageCombineDomain",
+   "offset": 16,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_COMMON_PAGE_STATE",
+   "from": "BitmapGapFrames",
+   "to": "OnesGapFrames",
+   "offset": 72,
+   "size": 32,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_COMMON_PAGE_STATE",
+   "from": "PageTableOfZeroes",
+   "to": "TbFlushVa",
+   "offset": 136,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MI_COMMON_PAGE_STATE",
+   "from": "PfnGapFrames",
+   "to": "ZeroesGapFrames",
+   "offset": 104,
+   "size": 32,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_COMMON_PAGE_STATE",
+   "from": "TbFlushVa",
+   "to": "PageTableOfZeroes",
+   "offset": 136,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MI_CROSS_PARTITION_CHARGES",
+   "from": "ChargeMinimum",
+   "to": "MaximumAllowed",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_CROSS_PARTITION_CHARGES",
+   "from": "MaximumAllowed",
+   "to": "ChargeMinimum",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_ERROR_STATE",
+   "from": "InitFailure",
+   "to": "BootConditions",
+   "offset": 138,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_ERROR_STATE",
+   "from": "PageHashErrors",
+   "to": "PageHashReadErrors",
+   "offset": 144,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MI_ERROR_STATE",
+   "from": "PageHashReadErrors",
+   "to": "PageHashErrors",
+   "offset": 144,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MI_FLAGS",
+   "from": "ProtectedPagesEnabled",
+   "to": "SecureKernelEnabled",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 14,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "AccessBitReplacementHonored",
+   "to": "NodeShift",
+   "offset": 9,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "ChannelHintIndex",
+   "to": "ChannelShift",
+   "offset": 10,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "ChannelShift",
+   "to": "ChannelHintIndex",
+   "offset": 10,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "EnclaveMetadataPage",
+   "to": "HotRemoveSequenceNumber",
+   "offset": 336,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "EnclaveMetadataPageLock",
+   "to": "HotAddInFlightCount",
+   "offset": 360,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "EnclaveRegions",
+   "to": "HotAddSequenceNumber",
+   "offset": 328,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "HotAddInFlightCount",
+   "to": "EnclaveMetadataPageLock",
+   "offset": 360,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "HotAddSequenceNumber",
+   "to": "EnclaveRegions",
+   "offset": 328,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "HotRemoveSequenceNumber",
+   "to": "EnclaveMetadataPage",
+   "offset": 336,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "LogicalProcessorsPerCore",
+   "to": "PfnDatabasePageBits",
+   "offset": 100,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "MemoryNodeWithNoProcessorsFound",
+   "to": "NumaTableCaptured",
+   "offset": 8,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NodeMask",
+   "to": "NumaHintIndex",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NodeShift",
+   "to": "AccessBitReplacementHonored",
+   "offset": 9,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaHintIndex",
+   "to": "NodeMask",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaHintIndex",
+   "to": "NumaLastRangeIndex",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaLastRangeIndex",
+   "to": "NumaHintIndex",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaLastRangeIndex",
+   "to": "NumaLastRangeIndexInclusive",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaLastRangeIndexInclusive",
+   "to": "NumaLastRangeIndex",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "NumaTableCaptured",
+   "to": "MemoryNodeWithNoProcessorsFound",
+   "offset": 8,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "PerformanceCounterFrequency",
+   "to": "PfnDatabaseEnd",
+   "offset": 144,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "PfnDatabaseEnd",
+   "to": "PerformanceCounterFrequency",
+   "offset": 144,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "PfnDatabasePageBits",
+   "to": "SecondaryColors",
+   "offset": 124,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "SecondaryColors",
+   "to": "PfnDatabasePageBits",
+   "offset": 124,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_HARDWARE_STATE",
+   "from": "SystemNodeInformation",
+   "to": "SystemNodeNonPagedPool",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_IMAGE_LOAD_CONFIG",
+   "from": "RetpolineRelocations",
+   "to": "EcCodeRanges",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_IO_CACHE_STATS",
+   "from": "HotAddIoNodeConflict",
+   "to": "UnmappedCacheMatch",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MI_IO_CACHE_STATS",
+   "from": "UnmappedCacheMatch",
+   "to": "HotAddIoNodeConflict",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_PAGEFILE_TRACES",
+   "from": "LocalMdl",
+   "to": "MdlHack",
+   "offset": 72,
+   "size": 56,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PAGEFILE_TRACES",
+   "from": "MdlHack",
+   "to": "LocalMdl",
+   "offset": 72,
+   "size": 56,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MI_PAGELIST_STATE",
+   "from": "NumberOfLargePageListHeads",
+   "to": "NumberOfZeroFreePageListHeads",
+   "offset": 128,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 18
+  },
+  {
+   "type": "_MI_PAGELIST_STATE",
+   "from": "NumberOfZeroFreePageListHeads",
+   "to": "NumberOfLargePageListHeads",
+   "offset": 128,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_MI_PAGING_IO_STATE",
+   "from": "FileCompressionBoundary",
+   "to": "NumberOfFailedStoreReads",
+   "offset": 160,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 18
+  },
+  {
+   "type": "_MI_PAGING_IO_STATE",
+   "from": "NumberOfFailedStoreReads",
+   "to": "FileCompressionBoundary",
+   "offset": 160,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_PARTITION_COMMIT",
+   "from": "EventLock",
+   "to": "ExtremelyHighCommitThreshold",
+   "offset": 40,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_PARTITION_COMMIT",
+   "from": "ExtremelyHighCommitThreshold",
+   "to": "EventLock",
+   "offset": 40,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_PARTITION_CORE",
+   "from": "Flags",
+   "to": "u",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_PARTITION_CORE",
+   "from": "u",
+   "to": "Flags",
+   "offset": 4,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "BackgroundZeroAllPages",
+   "to": "BackgroundZeroingDisabled",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "BackgroundZeroingDisabled",
+   "to": "BackgroundZeroAllPages",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "BackgroundZeroingDisabled",
+   "to": "VirtualLockWithoutPrivilege",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 52
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "CachingMemory",
+   "to": "ContainsInsecureMemory",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 2
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "PureHolding",
+   "to": "PureHoldingPartition",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 4,
+   "bit_count": 1,
+   "observations": 12
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "PureHolding",
+   "to": "UseUnprotectedSlabAllocators",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 4,
+   "bit_count": 1,
+   "observations": 14
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "PureHoldingPartition",
+   "to": "PureHolding",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 4,
+   "bit_count": 1,
+   "observations": 18
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "PureHoldingPartition",
+   "to": "SpecialPurposeMemory",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "SpecialPurposeMemory",
+   "to": "PureHoldingPartition",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "SpecialPurposeMemory",
+   "to": "SpecialPurposeMemoryPartition",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "SpecialPurposeMemory",
+   "to": "ZeroPagesOptional",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "SpecialPurposeMemoryPartition",
+   "to": "BackgroundZeroAllPages",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 1,
+   "observations": 2
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "SpecialPurposeMemoryPartition",
+   "to": "SpecialPurposeMemory",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 7,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "UseProtectedSlabAllocators",
+   "to": "UseSlabAllocators",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "UseSlabAllocators",
+   "to": "UseProtectedSlabAllocators",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "UseUnprotectedSlabAllocators",
+   "to": "PureHolding",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 4,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "VirtualLockWithoutPrivilege",
+   "to": "BackgroundZeroingDisabled",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "VirtualLockWithoutPrivilege",
+   "to": "ZeroPagesOptional",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "ZeroPagesOptional",
+   "to": "SpecialPurposeMemory",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 5,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_MI_PARTITION_FLAGS",
+   "from": "ZeroPagesOptional",
+   "to": "VirtualLockWithoutPrivilege",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 6,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_STORES",
+   "from": "AffinityEx",
+   "to": "NodeAffinityEx",
+   "offset": 232,
+   "size": 264,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 50
+  },
+  {
+   "type": "_MI_PARTITION_STORES",
+   "from": "NodeAffinityEx",
+   "to": "AffinityEx",
+   "offset": 232,
+   "size": 264,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 50
+  },
+  {
+   "type": "_MI_PARTITION_STORES",
+   "from": "WriteAllStoreHintedPages",
+   "to": "WriteAllStoreSwapPages",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_PARTITION_STORES",
+   "from": "WriteAllStoreSwapPages",
+   "to": "WriteAllStoreHintedPages",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "BackgroundZeroingDisabled",
+   "to": "BackgroundZeroingPreference",
+   "offset": 68,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "BackgroundZeroingPreference",
+   "to": "BackgroundZeroingDisabled",
+   "offset": 68,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "Gate",
+   "to": "LargeBootZeroingComplete",
+   "offset": 44,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "LargeBootZeroingComplete",
+   "to": "Gate",
+   "offset": 72,
+   "size": 24,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "NodeCount",
+   "to": "ThreadCount",
+   "offset": 64,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_MI_PARTITION_ZEROING",
+   "from": "ThreadCount",
+   "to": "NodeCount",
+   "offset": 40,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MI_REVERSE_VIEW_MAP",
+   "from": "Attributes",
+   "to": "SectionOffset",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_REVERSE_VIEW_MAP",
+   "from": "SectionOffset",
+   "to": "Attributes",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageBiasWow",
+   "to": "CfgBitMapSection64",
+   "offset": 584,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageBitMap",
+   "to": "ImageBitMapNative",
+   "offset": 268,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageBitMapNative",
+   "to": "ImageBitMap",
+   "offset": 268,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageBreakpointChecksum",
+   "to": "ImageSizeBreakpoint",
+   "offset": 316,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageBreakpointEnabled",
+   "to": "ImageChecksumBreakpoint",
+   "offset": 312,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageChecksumBreakpoint",
+   "to": "CfgBitMapSection",
+   "offset": 312,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageChecksumBreakpoint",
+   "to": "ImageBreakpointChecksum",
+   "offset": 760,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageChecksumBreakpoint",
+   "to": "ImageBreakpointEnabled",
+   "offset": 628,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageSizeBreakpoint",
+   "to": "CfgBitMapControlArea",
+   "offset": 316,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageSizeBreakpoint",
+   "to": "ImageBreakpointChecksum",
+   "offset": 632,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_SECTION_STATE",
+   "from": "ImageSizeBreakpoint",
+   "to": "ImageBreakpointSize",
+   "offset": 764,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
+   "from": "AllocationsTree",
+   "to": "SlabTree",
+   "offset": 0,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
+   "from": "Partition",
+   "to": "SlabEntryHint",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
+   "from": "SlabEntryHint",
+   "to": "Partition",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
+   "from": "SlabTree",
+   "to": "AllocationsTree",
+   "offset": 0,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MI_SYSTEM_IMAGE_STATE",
+   "from": "ImportEntriesReplaced",
+   "to": "PageCount",
+   "offset": 152,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SYSTEM_IMAGE_STATE",
+   "from": "PageCount",
+   "to": "ImportEntriesReplaced",
+   "offset": 152,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_MI_SYSTEM_IMAGE_STATE",
+   "from": "PageCount",
+   "to": "SecurePteExclusionLock",
+   "offset": 152,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_MI_SYSTEM_IMAGE_STATE",
+   "from": "SecurePteExclusionLock",
+   "to": "PageCount",
+   "offset": 152,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_VISIBLE_PARTITION",
+   "from": "PartitionWs",
+   "to": "SystemCacheWs",
+   "offset": 320,
+   "size": 512,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_WRITE_CALIBRATION",
+   "from": "RawTimeStamps",
+   "to": "PureZeroing",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MI_ZERO_COST_COUNTS",
+   "from": "AlternateSum",
+   "to": "CachedSum",
+   "offset": 8,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MI_ZERO_COST_COUNTS",
+   "from": "CachedSum",
+   "to": "AlternateSum",
+   "offset": 8,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MMCLONE_BLOCK",
+   "from": "CloneRefCount",
+   "to": "UseCount",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MMCLONE_BLOCK",
+   "from": "UseCount",
+   "to": "CloneRefCount",
+   "offset": 24,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MMDEREFERENCE_SEGMENT_HEADER",
+   "from": "ListHead",
+   "to": "ControlAreaDeleteListHead",
+   "offset": 32,
+   "size": 16,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MMINPAGE_SUPPORT",
+   "from": "AutoBoostLock",
+   "to": "Autoboost",
+   "offset": 216,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_MMINPAGE_SUPPORT",
+   "from": "Autoboost",
+   "to": "AutoBoostLock",
+   "offset": 216,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MMINPAGE_SUPPORT",
+   "from": "DuringIo",
+   "to": "u2",
+   "offset": 104,
+   "size": 48,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_MMINPAGE_SUPPORT",
+   "from": "u2",
+   "to": "DuringIo",
+   "offset": 104,
+   "size": 48,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 60
+  },
+  {
+   "type": "_MMPAGE_FILE_EXPANSION",
+   "from": "u",
+   "to": "u1",
+   "offset": 76,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_MMPAGING_FILE",
+   "from": "Lock",
+   "to": "SpinLock",
+   "offset": 136,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MMPAGING_FILE",
+   "from": "SpinLock",
+   "to": "Lock",
+   "offset": 136,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_MMPTE_LIST",
+   "from": "Protection",
+   "to": "filler1",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 5,
+   "bit_count": 5,
+   "observations": 12
+  },
+  {
+   "type": "_MMPTE_LIST",
+   "from": "filler1",
+   "to": "Protection",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 5,
+   "bit_count": 5,
+   "observations": 12
+  },
+  {
+   "type": "_MMPTE_TRANSITION",
+   "from": "MemoryTag",
+   "to": "Write",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_MMPTE_TRANSITION",
+   "from": "Write",
+   "to": "MemoryTag",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 20
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "AttemptingDelete",
+   "to": "NoCrossPartitionAccess",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "AttemptingDelete",
+   "to": "SectionOfInterest",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "ControlAreaOnUnusedList",
+   "to": "UserWritable",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 28,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "GlobalOnlyPerSession",
+   "to": "SubsectionCrossPartitionReferenceOverflow",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 27,
+   "bit_count": 1,
+   "observations": 52
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "NoCrossPartitionAccess",
+   "to": "AttemptingDelete",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "NoCrossPartitionAccess",
+   "to": "SectionOfInterest",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "NotBeingUsed",
+   "to": "PreferredFsCompressionBoundary",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 30,
+   "bit_count": 1,
+   "observations": 6
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "NotBeingUsed",
+   "to": "UsingFileExtents",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 30,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "PreferredFsCompressionBoundary",
+   "to": "ControlAreaOnUnusedList",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 30,
+   "bit_count": 1,
+   "observations": 2
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "PreferredFsCompressionBoundary",
+   "to": "NotBeingUsed",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 30,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "SectionOfInterest",
+   "to": "AttemptingDelete",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 16
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "SectionOfInterest",
+   "to": "NoCrossPartitionAccess",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "SubsectionCrossPartitionReferenceOverflow",
+   "to": "GlobalOnlyPerSession",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 27,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "SubsectionCrossPartitionReferenceOverflow",
+   "to": "UserWritable",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 27,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "UserWritable",
+   "to": "ControlAreaOnUnusedList",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 28,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "UserWritable",
+   "to": "SubsectionCrossPartitionReferenceOverflow",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 27,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MMSECTION_FLAGS",
+   "from": "UsingFileExtents",
+   "to": "NotBeingUsed",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 30,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_MMSUPPORT_FLAGS",
+   "from": "ForceAge",
+   "to": "UsedHuge",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 4
+  },
+  {
+   "type": "_MMVAD",
+   "from": "VadFlags2",
+   "to": "u2",
+   "offset": 64,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_MMVAD",
+   "from": "u2",
+   "to": "VadFlags2",
+   "offset": 64,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_MMVAD",
+   "from": "u4",
+   "to": "ExtendedInfo",
+   "offset": 128,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_MMVAD_SHORT",
+   "from": "CommitCharge",
+   "to": "u1",
+   "offset": 52,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MMVAD_SHORT",
+   "from": "EventList",
+   "to": "u5",
+   "offset": 56,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MMVAD_SHORT",
+   "from": "u1",
+   "to": "CommitCharge",
+   "offset": 52,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_MMVAD_SHORT",
+   "from": "u5",
+   "to": "EventList",
+   "offset": 56,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_MM_PRIVATE_VAD_FLAGS",
+   "from": "Graphics",
+   "to": "SecurePages",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 26,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_MM_PRIVATE_VAD_FLAGS",
+   "from": "SecurePages",
+   "to": "Graphics",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 26,
+   "bit_count": 1,
+   "observations": 50
+  },
+  {
+   "type": "_PEB",
+   "from": "ChpeV2ProcessInfo",
+   "to": "FlsBitmap",
+   "offset": 824,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PEB",
+   "from": "FlsBitmap",
+   "to": "ChpeV2ProcessInfo",
+   "offset": 824,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PEB",
+   "from": "FlsCallback",
+   "to": "PointerIgnoreBits",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_PEB",
+   "from": "PointerIgnoreBits",
+   "to": "FlsCallback",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_PEB",
+   "from": "PointerIgnoreBits",
+   "to": "Win32ClientProcInfo",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PEB",
+   "from": "Win32ClientProcInfo",
+   "to": "PointerIgnoreBits",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_PEB32",
+   "from": "ChpeV2ProcessInfo",
+   "to": "FlsBitmap",
+   "offset": 536,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PEB32",
+   "from": "FlsBitmap",
+   "to": "ChpeV2ProcessInfo",
+   "offset": 536,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PEB64",
+   "from": "ChpeV2ProcessInfo",
+   "to": "FlsBitmap",
+   "offset": 824,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PEB64",
+   "from": "FlsBitmap",
+   "to": "ChpeV2ProcessInfo",
+   "offset": 824,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PEB64",
+   "from": "FlsCallback",
+   "to": "PointerIgnoreBits",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_PEB64",
+   "from": "PointerIgnoreBits",
+   "to": "FlsCallback",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_PEB64",
+   "from": "PointerIgnoreBits",
+   "to": "Win32ClientProcInfo",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PEB64",
+   "from": "Win32ClientProcInfo",
+   "to": "PointerIgnoreBits",
+   "offset": 800,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_PNP_WATCHDOG",
+   "from": "FirstChanceTriggered",
+   "to": "TriggerEventLogged",
+   "offset": 32,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "_PNP_WATCHDOG",
+   "from": "TriggerEventLogged",
+   "to": "FirstChanceTriggered",
+   "offset": 32,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "_POOL_TRACKER_BIG_PAGES",
+   "from": "PoolFlags",
+   "to": "PoolType",
+   "offset": 12,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 12,
+   "observations": 26
+  },
+  {
+   "type": "_POOL_TRACKER_BIG_PAGES",
+   "from": "PoolType",
+   "to": "PoolFlags",
+   "offset": 12,
+   "size": 4,
+   "bit_position": 8,
+   "bit_count": 12,
+   "observations": 26
+  },
+  {
+   "type": "_POP_FX_ACCOUNTING",
+   "from": "AccountingMode",
+   "to": "Level",
+   "offset": 16,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_POP_FX_ACCOUNTING",
+   "from": "Level",
+   "to": "AccountingMode",
+   "offset": 16,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_POP_FX_DEVICE_STATUS",
+   "from": "BlockFastResume",
+   "to": "PendSIrpCompletion",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 11,
+   "bit_count": 1,
+   "observations": 67
+  },
+  {
+   "type": "_POP_FX_DEVICE_STATUS",
+   "from": "PendSIrpCompletion",
+   "to": "BlockFastResume",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 11,
+   "bit_count": 1,
+   "observations": 34
+  },
+  {
+   "type": "_POP_FX_DRIVER_CALLBACKS",
+   "from": "DirectedPowerTransitionCallback",
+   "to": "DirectedPowerUpCallback",
+   "offset": 64,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_POP_FX_DRIVER_CALLBACKS",
+   "from": "DirectedPowerUpCallback",
+   "to": "DirectedPowerTransitionCallback",
+   "offset": 64,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_POP_HIBER_CONTEXT",
+   "from": "EnableVpciHibernationCallbacks",
+   "to": "Feature_Servicing_ARM64_LLVMHibernate_Enabled",
+   "offset": 493,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_POP_HIBER_CONTEXT",
+   "from": "Feature_Servicing_PopResetOnHiber_IsEnabled",
+   "to": "EnableVpciHibernationCallbacks",
+   "offset": 489,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 5
+  },
+  {
+   "type": "_PO_HIBER_PERF",
+   "from": "BootCompressTicks",
+   "to": "HiberCompressTicks",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_PO_HIBER_PERF",
+   "from": "HiberCompressTicks",
+   "to": "BootCompressTicks",
+   "offset": 32,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_PO_HIBER_PERF",
+   "from": "HighestPhysicalPage",
+   "to": "HvlTscOffset",
+   "offset": 256,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 18
+  },
+  {
+   "type": "_PO_HIBER_PERF",
+   "from": "HvlTscOffset",
+   "to": "HighestPhysicalPage",
+   "offset": 256,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 16
+  },
+  {
+   "type": "_PPM_IDLE_STATES",
+   "from": "Context",
+   "to": "IdleCancel",
+   "offset": 664,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PPM_IDLE_STATES",
+   "from": "EnforceStateConstraints",
+   "to": "InterfaceVersion",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_PPM_IDLE_STATES",
+   "from": "IdleCancel",
+   "to": "Context",
+   "offset": 664,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_PPM_IDLE_STATES",
+   "from": "InterfaceVersion",
+   "to": "EnforceStateConstraints",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_PROCESSOR_POWER_STATE",
+   "from": "ContainmentGroupType",
+   "to": "NotUsed",
+   "offset": 552,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_PROCESSOR_POWER_STATE",
+   "from": "LastQosTransitionTime",
+   "to": "LastQosTranstionTsc",
+   "offset": 496,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_PROCESSOR_POWER_STATE",
+   "from": "LastQosTranstionTsc",
+   "to": "LastQosTransitionTime",
+   "offset": 496,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PROCESSOR_POWER_STATE",
+   "from": "NotUsed",
+   "to": "ContainmentGroupType",
+   "offset": 552,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_PROCESS_EXECUTION",
+   "from": "Requested",
+   "to": "RequestedProcess",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 4
+  },
+  {
+   "type": "_PROC_PERF_CONSTRAINT",
+   "from": "CheckContext",
+   "to": "Prcb",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_PROC_PERF_CONSTRAINT",
+   "from": "HiddenProcessorId",
+   "to": "ProcessorId",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PROC_PERF_CONSTRAINT",
+   "from": "Prcb",
+   "to": "CheckContext",
+   "offset": 0,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_PROC_PERF_CONSTRAINT",
+   "from": "ProcessorId",
+   "to": "HiddenProcessorId",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 8
+  },
+  {
+   "type": "_PROC_PERF_DOMAIN",
+   "from": "HighestPerformanceClass",
+   "to": "PerformanceClass",
+   "offset": 302,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 10
+  },
+  {
+   "type": "_PROC_PERF_DOMAIN",
+   "from": "PerformanceClass",
+   "to": "HighestPerformanceClass",
+   "offset": 302,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 6
+  },
+  {
+   "type": "_REQUEST_MAILBOX",
+   "from": "NodeTargetCount",
+   "to": "SubNodeTargetCount",
+   "offset": 56,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_REQUEST_MAILBOX",
+   "from": "NodeTargetCountAddr",
+   "to": "SubNodeTargetCountAddr",
+   "offset": 48,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_REQUEST_MAILBOX",
+   "from": "SubNodeTargetCount",
+   "to": "NodeTargetCount",
+   "offset": 56,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_REQUEST_MAILBOX",
+   "from": "SubNodeTargetCountAddr",
+   "to": "NodeTargetCountAddr",
+   "offset": 48,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_SEGMENT_FLAGS",
+   "from": "Signature",
+   "to": "UChar2",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_SEGMENT_FLAGS",
+   "from": "UChar2",
+   "to": "Signature",
+   "offset": 3,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_SUBSECTION",
+   "from": "SubsectionFlags",
+   "to": "u",
+   "offset": 32,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_SUBSECTION",
+   "from": "u",
+   "to": "SubsectionFlags",
+   "offset": 32,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 26
+  },
+  {
+   "type": "_TEB",
+   "from": "ChpeV2CpuAreaInfo",
+   "to": "DeallocationBStore",
+   "offset": 6024,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_TEB",
+   "from": "DeallocationBStore",
+   "to": "ChpeV2CpuAreaInfo",
+   "offset": 6024,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_TEB64",
+   "from": "ChpeV2CpuAreaInfo",
+   "to": "DeallocationBStore",
+   "offset": 6024,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_TEB64",
+   "from": "DeallocationBStore",
+   "to": "ChpeV2CpuAreaInfo",
+   "offset": 6024,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 20
+  },
+  {
+   "type": "_TRAPFRAME_LOG_ENTRY",
+   "from": "CycleCount",
+   "to": "TimeStamp",
+   "offset": 124,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 38
+  },
+  {
+   "type": "_TRAPFRAME_LOG_ENTRY",
+   "from": "TimeStamp",
+   "to": "CycleCount",
+   "offset": 124,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 36
+  },
+  {
+   "type": "_WMI_LOGGER_CONTEXT",
+   "from": "PeriodicCaptureStateContext",
+   "to": "RelativeTimerDueTime",
+   "offset": 1064,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 2
+  },
+  {
+   "type": "_WMI_LOGGER_CONTEXT",
+   "from": "RelativeTimerDueTime",
+   "to": "PeriodicCaptureStateContext",
+   "offset": 1080,
+   "size": 8,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 73
+  },
+  {
+   "type": "_flags",
+   "from": "GroupAssigned",
+   "to": "MaintainCoreShareCounts",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_flags",
+   "from": "GroupAssignmentFixed",
+   "to": "MaintainScuShareCounts",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_flags",
+   "from": "GroupCommitted",
+   "to": "MaintainModuleShareCounts",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "_flags",
+   "from": "MaintainCoreShareCounts",
+   "to": "GroupAssigned",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 1,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_flags",
+   "from": "MaintainModuleShareCounts",
+   "to": "GroupCommitted",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 2,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_flags",
+   "from": "MaintainScuShareCounts",
+   "to": "GroupAssignmentFixed",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 3,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "_flags",
+   "from": "Removable",
+   "to": "SmtSetsPresent",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 12
+  },
+  {
+   "type": "_flags",
+   "from": "SmtSetsPresent",
+   "to": "Removable",
+   "offset": 0,
+   "size": 1,
+   "bit_position": 0,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "wil_FeatureState",
+   "from": "isVariantConfiguration",
+   "to": "isWexpConfiguration",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "wil_FeatureState",
+   "from": "isWexpConfiguration",
+   "to": "isVariantConfiguration",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  },
+  {
+   "type": "wil_details_FeatureStateCache",
+   "from": "isVariant",
+   "to": "isWexpConfiguration",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 11,
+   "bit_count": 1,
+   "observations": 8
+  },
+  {
+   "type": "wil_details_FeatureStateCache",
+   "from": "isWexpConfiguration",
+   "to": "isVariant",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 11,
+   "bit_count": 1,
+   "observations": 10
+  },
+  {
+   "type": "wil_details_FeatureStateCache",
+   "from": "reservedForKernelModeSupport",
+   "to": "configuredState",
+   "offset": 0,
+   "size": 4,
+   "bit_position": 5,
+   "bit_count": 2,
+   "observations": 28
+  },
+  {
+   "type": "wil_details_RecordUsageResult",
+   "from": "isVariantConfiguration",
+   "to": "isWexpConfiguration",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 12
+  },
+  {
+   "type": "wil_details_RecordUsageResult",
+   "from": "isWexpConfiguration",
+   "to": "isVariantConfiguration",
+   "offset": 20,
+   "size": 4,
+   "bit_position": 0,
+   "bit_count": 0,
+   "observations": 14
+  }
+ ]
+}

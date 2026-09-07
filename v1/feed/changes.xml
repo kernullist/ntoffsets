@@ -1,0 +1,1645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>ntoffsets kernel layout changes</title>
+<id>urn:ntoffsets:feed:changes</id>
+<updated>2026-09-07T09:05:00Z</updated>
+<link rel="self" href="https://ntoffsets.github.io/ntoffsets/feed/changes.xml"/>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/"/>
+<subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>builds/28000 amd64 10.0.28000.2704 -&gt; 10.0.28000.2804: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 38 more</title>
+<id>urn:ntoffsets:feed:changes:51C3CEDAEB2CDC29F17DFB9C52D59FFC1:D663EB7F3A0D6A8A34B96648EC41C0431</id>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
+<summary>32 type(s) changed in 8f595bc2-11e8-4b7d-91e0-c457277db89e, KB5120996, a75ef0ad-5dab-461e-a0a0-24cf7b3ee0e8 (builds/28000, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
+_EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
+_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_KPRCB: added: NormalizedRelativeEfficiency, NormalizedRelativePerformance, RawRelativeEfficiency; moved: 1; resized: 1; retyped: 1; renamed: PrcbPad139c -&gt; RawRelativePerformance
+_KTRAP_FRAME: moved: 15; bitfields: 18
+_MI_FLAGS: added: SimulateCachingPartition
+_MI_PARTITION: moved: 2; resized: 1
+_MI_PARTITION_CORE: size 0x220 -&gt; 0x230; added: CachingPartitionChild
+_MI_PARTITION_FLAGS: added: CachingMemory
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0x110; added: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid, FileObject, PdoName ...
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEGMENT_HEAP: added: CompactionLock; moved: 1
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_SID: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x4a0 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids; moved: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: added
+EmptyCVariant_FeatureStaging_NTOS: added
+HV_PARTITION_PROPERTY_CODE: added: HvPartitionPropertyDisabledProcessorFeaturesEx, HvPartitionPropertyEnabledProcessorFeaturesEx, HvPartitionPropertyNestedVmxExitCtls2, HvPartitionPropertyNestedVmxProcbasedCtls3, HvPartitionPropertyRootProcessorFeaturesEx; renumbered: HvPartitionExtendedPropertiesMax 589838-&gt;589841, HvPartitionNestedVirtualizationPropertiesMax 524308-&gt;524310
+_HV_REGISTER_NAME: added
+_PS_ATTRIBUTE_NUM: added: PsAttributeIsolationConfiguration; renumbered: PsAttributeMax 36-&gt;37
+_SEP_ANTITAMPER_SID_TYPE: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 283-&gt;284, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 291-&gt;292, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 288-&gt;289, SECURESERVICE_KSR_CALL 286-&gt;287
+_SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemInfoClass 257-&gt;259</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 43c0f4d9-611f-4d36-8b04-5b692097a8ba/7cd9fa1f-62a4-4383-a79d-317535ca2a1c/84fddaa0-855c-4fbe-8d92-1a4e0ec07239/KB5101681 -&gt; 565031a5-7ba7-4b18-b986-854749de9248/KB5120996/deee09e7-795b-4ac6-ad80-a8680e97908d: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 36 more</title>
+<id>urn:ntoffsets:feed:changes:4A2F9E392DDFC17D2114FB188874F7831:25313F9C56F0E7CB66D191B130C0BB671</id>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/25313F9C56F0E7CB66D191B130C0BB671.json"/>
+<summary>31 type(s) changed in 565031a5-7ba7-4b18-b986-854749de9248, KB5120996, deee09e7-795b-4ac6-ad80-a8680e97908d (11-26H1, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
+_EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
+_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_KPRCB: added: NormalizedRelativeEfficiency, NormalizedRelativePerformance, PrcbPad30, RawRelativeEfficiency, RawRelativePerformance
+_MI_FLAGS: added: SimulateCachingPartition
+_MI_PARTITION: moved: 2; resized: 1
+_MI_PARTITION_CORE: size 0x220 -&gt; 0x230; added: CachingPartitionChild
+_MI_PARTITION_FLAGS: added: CachingMemory
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0x110; added: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid, FileObject, PdoName ...
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEGMENT_HEAP: added: CompactionLock; moved: 1
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_SID: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x4a0 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids; moved: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: added
+EmptyCVariant_FeatureStaging_NTOS: added
+HV_PARTITION_PROPERTY_CODE: added: HvPartitionPropertyDisabledProcessorFeaturesEx, HvPartitionPropertyEnabledProcessorFeaturesEx, HvPartitionPropertyNestedVmxExitCtls2, HvPartitionPropertyNestedVmxProcbasedCtls3, HvPartitionPropertyRootProcessorFeaturesEx; renumbered: HvPartitionExtendedPropertiesMax 589838-&gt;589841, HvPartitionNestedVirtualizationPropertiesMax 524308-&gt;524310
+_PS_ATTRIBUTE_NUM: added: PsAttributeIsolationConfiguration; renumbered: PsAttributeMax 36-&gt;37
+_SEP_ANTITAMPER_SID_TYPE: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 283-&gt;284, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 292-&gt;293, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 288-&gt;289, SECURESERVICE_KSR_CALL 286-&gt;287
+_SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemInfoClass 257-&gt;259</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.2704 -&gt; 10.0.28000.2804: PO_MEMORY_IMAGE, _EX_WORK_QUEUE, _HEAP, _HEAP_COUNTERS, and 38 more</title>
+<id>urn:ntoffsets:feed:changes:51C3CEDAEB2CDC29F17DFB9C52D59FFC1:D663EB7F3A0D6A8A34B96648EC41C0431</id>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D663EB7F3A0D6A8A34B96648EC41C0431.json"/>
+<summary>32 type(s) changed in 8f595bc2-11e8-4b7d-91e0-c457277db89e, KB5120996, a75ef0ad-5dab-461e-a0a0-24cf7b3ee0e8 (11-26H1, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4e0 -&gt; 0x4f8; added: Feature_PlutonMDS_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
+_EX_WORK_QUEUE: moved: 4; resized: 1; bitfields: 2; retyped: 1
+_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_KPRCB: added: NormalizedRelativeEfficiency, NormalizedRelativePerformance, RawRelativeEfficiency; moved: 1; resized: 1; retyped: 1; renamed: PrcbPad139c -&gt; RawRelativePerformance
+_KTRAP_FRAME: moved: 15; bitfields: 18
+_MI_FLAGS: added: SimulateCachingPartition
+_MI_PARTITION: moved: 2; resized: 1
+_MI_PARTITION_CORE: size 0x220 -&gt; 0x230; added: CachingPartitionChild
+_MI_PARTITION_FLAGS: added: CachingMemory
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0x110; added: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid, FileObject, PdoName ...
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEGMENT_HEAP: added: CompactionLock; moved: 1
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_SID: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x4a0 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids; moved: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: added
+EmptyCVariant_FeatureStaging_NTOS: added
+HV_PARTITION_PROPERTY_CODE: added: HvPartitionPropertyDisabledProcessorFeaturesEx, HvPartitionPropertyEnabledProcessorFeaturesEx, HvPartitionPropertyNestedVmxExitCtls2, HvPartitionPropertyNestedVmxProcbasedCtls3, HvPartitionPropertyRootProcessorFeaturesEx; renumbered: HvPartitionExtendedPropertiesMax 589838-&gt;589841, HvPartitionNestedVirtualizationPropertiesMax 524308-&gt;524310
+_HV_REGISTER_NAME: added
+_PS_ATTRIBUTE_NUM: added: PsAttributeIsolationConfiguration; renumbered: PsAttributeMax 36-&gt;37
+_SEP_ANTITAMPER_SID_TYPE: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 283-&gt;284, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 291-&gt;292, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 288-&gt;289, SECURESERVICE_KSR_CALL 286-&gt;287
+_SYSTEM_INFORMATION_CLASS: added: SystemFredInformation; renumbered: MaxSystemInfoClass 257-&gt;259</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 1db7d109-ad8a-42f2-bbe7-e21f07664195/KB5101684/c0b27d8d-cbbb-4715-8129-e90aaadc8618 -&gt; 8f930372-11a1-4418-bb72-6700bd1f7f5b/KB5120998/bd00afed-db83-4448-a3b3-29c773d9378c/e89a903e-3d54-4bbb-9891-784d2b6ebc30: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _POP_COOLING_EXTENSION, and 28 more</title>
+<id>urn:ntoffsets:feed:changes:C97FAD530E54A057C0FDE79412D2E60D1:EFE8D03C6CA25620353ABAF92FDA31631</id>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/EFE8D03C6CA25620353ABAF92FDA31631.json"/>
+<summary>25 type(s) changed in 8f930372-11a1-4418-bb72-6700bd1f7f5b, KB5120998, bd00afed-db83-4448-a3b3-29c773d9378c, e89a903e-3d54-4bbb-9891-784d2b6ebc30 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4f0; added: Feature_PlutonMDS_Enabled, Feature_StxTpmFix_Enabled; moved: 41; resized: 1; bitfields: 1
+_MI_PARTITION_SEGMENTS: added: ListWalkers; moved: 32
+_MI_PARTITION_STORES: added: AvoidTrimmingStoreProcess; moved: 1
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0x110; added: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid, FileObject, PdoName ...
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_SID: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x4a0 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids, IsAgentic; moved: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: added
+_PS_ATTRIBUTE_NUM: added: PsAttributeHeapFeatures, PsAttributeIsolationConfiguration, PsAttributeReserved0; renumbered: PsAttributeContainmentConfiguration 33-&gt;35, PsAttributeMax 34-&gt;37
+_RTL_HP_FEATURE_ENABLEMENT: added
+_SE_ANTITAMPER_ENUM_SID: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 268-&gt;269, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 277-&gt;278, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 273-&gt;274, SECURESERVICE_KSR_CALL 271-&gt;272</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.9168 -&gt; 10.0.26100.9278: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _POP_COOLING_EXTENSION, and 28 more</title>
+<id>urn:ntoffsets:feed:changes:72C69E726C648BC18257AF38FA78A2F21:822B6DB6E43D1FDF2008C884BC27FCA81</id>
+<updated>2026-08-27T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/822B6DB6E43D1FDF2008C884BC27FCA81.json"/>
+<summary>25 type(s) changed in KB5120998, c1c737c2-f2d9-4824-bb5b-1af515179099, d922b79f-142d-4cf8-896b-515abfd01e66, def45c01-379e-4ded-8b1b-b870faaef6f8 (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4f0; added: Feature_PlutonMDS_Enabled, Feature_StxTpmFix_Enabled; moved: 41; resized: 1; bitfields: 1
+_MI_PARTITION_SEGMENTS: added: ListWalkers; moved: 32
+_MI_PARTITION_STORES: added: AvoidTrimmingStoreProcess; moved: 1
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0x110; added: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid, FileObject, PdoName ...
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_ENTRY: added
+_SEP_OBJECT_ANTITAMPER_SID: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x4a0 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids, IsAgentic; moved: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: added
+_PS_ATTRIBUTE_NUM: added: PsAttributeHeapFeatures, PsAttributeIsolationConfiguration, PsAttributeReserved0; renumbered: PsAttributeContainmentConfiguration 33-&gt;35, PsAttributeMax 34-&gt;37
+_RTL_HP_FEATURE_ENABLEMENT: added
+_SE_ANTITAMPER_ENUM_SID: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 268-&gt;269, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 276-&gt;277, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 273-&gt;274, SECURESERVICE_KSR_CALL 271-&gt;272</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.2630 -&gt; 10.0.28000.2704: PO_MEMORY_IMAGE, _HEAP, _HEAP_COUNTERS, _KPRCB, and 14 more</title>
+<id>urn:ntoffsets:feed:changes:3C34B1C5E4C135C64E44FF8E3BA678081:51C3CEDAEB2CDC29F17DFB9C52D59FFC1</id>
+<updated>2026-08-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/51C3CEDAEB2CDC29F17DFB9C52D59FFC1.json"/>
+<summary>13 type(s) changed in 312f676b-2cbe-41aa-ba85-85c09c88518c, KB5121000 (builds/28000, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4f8 -&gt; 0x4e0; removed: Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; moved: 42; resized: 1; bitfields: 1
+_HEAP: size 0x2c8 -&gt; 0x2c0; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x80 -&gt; 0x78; removed: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalMemoryReservedInVirtualBlocks -&gt; TotalSizeInVirtualBlocks
+_KPRCB: removed: NormalizedRelativeEfficiency, NormalizedRelativePerformance, RawRelativeEfficiency; moved: 1; resized: 1; retyped: 1; renamed: RawRelativePerformance -&gt; PrcbPad139c
+_KTRAP_FRAME: moved: 15; bitfields: 18
+_MI_FLAGS: removed: SimulateCachingPartition
+_MI_PARTITION: moved: 2; resized: 1
+_MI_PARTITION_CORE: size 0x230 -&gt; 0x220; removed: CachingPartitionChild
+_MI_PARTITION_FLAGS: removed: CachingMemory
+_PO_HIBER_PERF: size 0x300 -&gt; 0x2e8; removed: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_SEGMENT_HEAP: removed: CompactionLock; moved: 1
+_TOKEN: size 0x5c0 -&gt; 0x4a0; removed: AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids; moved: 1
+wil_details_RecordedState: removed: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: removed
+HV_PARTITION_PROPERTY_CODE: removed: HvPartitionPropertyDisabledProcessorFeaturesEx, HvPartitionPropertyEnabledProcessorFeaturesEx, HvPartitionPropertyNestedVmxExitCtls2, HvPartitionPropertyNestedVmxProcbasedCtls3, HvPartitionPropertyRootProcessorFeaturesEx; renumbered: HvPartitionExtendedPropertiesMax 589841-&gt;589838, HvPartitionNestedVirtualizationPropertiesMax 524310-&gt;524308
+_HV_REGISTER_NAME: removed
+_SKSERVICE: removed: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 284-&gt;283, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 292-&gt;291, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 289-&gt;288, SECURESERVICE_KSR_CALL 287-&gt;286
+_SYSTEM_INFORMATION_CLASS: removed: SystemFredInformation; renumbered: MaxSystemInfoClass 259-&gt;257</content>
+</entry>
+<entry>
+<title>builds/26100 amd64 10.0.26100.9032 -&gt; 10.0.26100.9168: PO_MEMORY_IMAGE, _MI_PARTITION_SEGMENTS, _MI_PARTITION_STORES, _PO_HIBER_PERF, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:E47F9811E35D5EC016EE99B4E0A0EDFD1:72C69E726C648BC18257AF38FA78A2F21</id>
+<updated>2026-08-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/72C69E726C648BC18257AF38FA78A2F21.json"/>
+<summary>5 type(s) changed in 0485f51d-b291-4823-89b8-c6be2fd43fee, 6a8c4c24-0dd2-46b9-9d8f-bd7a84ec5ad4, 721dfe56-4a9a-452f-8e73-934e3ac45619, 85379332-7c4a-4966-9fa5-4c48a7b934f1, KB5121003, c1c737c2-f2d9-4824-bb5b-1af515179099, d922b79f-142d-4cf8-896b-515abfd01e66, def45c01-379e-4ded-8b1b-b870faaef6f8, fc2fbfd7-10b4-480f-967e-9af61f9d48c3 (builds/26100, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4f0 -&gt; 0x4d8; moved: 41; resized: 1
+_MI_PARTITION_SEGMENTS: removed: ListWalkers; moved: 32
+_MI_PARTITION_STORES: removed: AvoidTrimmingStoreProcess; moved: 1
+_PO_HIBER_PERF: size 0x300 -&gt; 0x2e8; removed: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+wil_details_RecordedState: removed: recordedProcessUsage; bitfields: 1
+EmptyCVariant_FeatureStaging_KVS: removed
+_SKSERVICE: removed: SECURESERVICE_QUERY_TSC_ADJUSTMENT; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 269-&gt;268, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 277-&gt;276, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 274-&gt;273, SECURESERVICE_KSR_CALL 272-&gt;271</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 5b2d78ff-6654-4e90-8558-a58f0dc7a978/KB5101649 -&gt; 43c0f4d9-611f-4d36-8b04-5b692097a8ba/7cd9fa1f-62a4-4383-a79d-317535ca2a1c/84fddaa0-855c-4fbe-8d92-1a4e0ec07239/KB5101681: PO_MEMORY_IMAGE, _RTL_USER_PROCESS_PARAMETERS, _PS_ATTRIBUTE_NUM, _RTL_HP_FEATURE_ENABLEMENT</title>
+<id>urn:ntoffsets:feed:changes:C94A7530FCE04A8BF4C1100398B8B7D01:4A2F9E392DDFC17D2114FB188874F7831</id>
+<updated>2026-07-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/4A2F9E392DDFC17D2114FB188874F7831.json"/>
+<summary>2 type(s) changed in 43c0f4d9-611f-4d36-8b04-5b692097a8ba, 7cd9fa1f-62a4-4383-a79d-317535ca2a1c, 84fddaa0-855c-4fbe-8d92-1a4e0ec07239, KB5101681 (11-26H1, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
+_RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
+_PS_ATTRIBUTE_NUM: added: PsAttributeHeapFeatures; renumbered: PsAttributeContainmentConfiguration 34-&gt;35, PsAttributeMax 35-&gt;36
+_RTL_HP_FEATURE_ENABLEMENT: added</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.2525 -&gt; 64820786-8417-4d45-9230-2dc3ee354e40/81988c5b-0c14-41fc-8a1f-79fb5e4eb2fb/KB5101681/cb51427d-cd3b-4a69-86c0-ab8c47723bf2: PO_MEMORY_IMAGE, _RTL_USER_PROCESS_PARAMETERS, _PS_ATTRIBUTE_NUM, _RTL_HP_FEATURE_ENABLEMENT</title>
+<id>urn:ntoffsets:feed:changes:BC7235DA3728A7BA5DC02351A90616151:C048C018B71B830AB3D44AFCBC58466B1</id>
+<updated>2026-07-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C048C018B71B830AB3D44AFCBC58466B1.json"/>
+<summary>2 type(s) changed in 64820786-8417-4d45-9230-2dc3ee354e40, 81988c5b-0c14-41fc-8a1f-79fb5e4eb2fb, KB5101681, cb51427d-cd3b-4a69-86c0-ab8c47723bf2 (11-26H1, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
+_RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
+_PS_ATTRIBUTE_NUM: added: PsAttributeHeapFeatures; renumbered: PsAttributeContainmentConfiguration 34-&gt;35, PsAttributeMax 35-&gt;36
+_RTL_HP_FEATURE_ENABLEMENT: added</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 68ea9468-877e-4113-9f76-eebdb7604a81/KB5121767/b2260760-1fae-440c-994d-55e021ff4fa6 -&gt; 1db7d109-ad8a-42f2-bbe7-e21f07664195/KB5101684/c0b27d8d-cbbb-4715-8129-e90aaadc8618: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:123461CB97CD34C3A3DAC94A558995691:C97FAD530E54A057C0FDE79412D2E60D1</id>
+<updated>2026-07-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C97FAD530E54A057C0FDE79412D2E60D1.json"/>
+<summary>1 type(s) changed in 1db7d109-ad8a-42f2-bbe7-e21f07664195, KB5101684, c0b27d8d-cbbb-4715-8129-e90aaadc8618 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; bitfields: 1</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8894 -&gt; 10.0.26100.8972: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:2A6E73CB5CCE9CCDA64E151FAC38D45C1:C8A7F11B37FE28227B6B11412E3A05191</id>
+<updated>2026-07-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C8A7F11B37FE28227B6B11412E3A05191.json"/>
+<summary>1 type(s) changed in 78c3a5e5-d313-4e57-88b6-1d6ba3bc282d, KB5101684, b407eb4e-c0c2-47e8-a60c-ae837d058d1e, d71bafd6-0e32-4133-a2c5-04e9ba85b99f (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled, Feature_PlutonNvidiaDriver_Enabled, Feature_PlutonNvidiaN1c_Enabled; bitfields: 1</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.2336 -&gt; 10.0.28000.2525: _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:FB597264E8FA15BDBC39E496A2F3D13F1:BC7235DA3728A7BA5DC02351A90616151</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
+<summary>1 type(s) changed in 533720b8-f9c8-4193-887c-780a92eec1e8, KB5101649 (builds/28000, amd64)</summary>
+<content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>builds/26100 arm64 10.0.26100.8770 -&gt; 10.0.26100.8875: PO_MEMORY_IMAGE, _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:26858F34B02D536B141714759ADFBBED1:2B6A2E831D6B233ED3743386B65837781</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
+<summary>2 type(s) changed in 23a3b66b-74eb-45f0-9c7a-91a12bab3007, 42821a1d-0c11-4160-b9b1-fc8731e0b73d, 68ea9468-877e-4113-9f76-eebdb7604a81, 8d126cbd-94e9-4023-aa8a-5e811eca50bd, KB5101650, b045adcf-3361-4fd1-8afc-2533adf25431, b2260760-1fae-440c-994d-55e021ff4fa6 (builds/26100, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
+_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>builds/26100 amd64 10.0.26100.8770 -&gt; 10.0.26100.8875: PO_MEMORY_IMAGE, _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:71DD99BAD82A8857AD7E881CA6DB53CF1:1924BC23550919F88B17A384B944B5431</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
+<summary>2 type(s) changed in 23468e90-95f8-4370-ad30-e6465c5bc5a5, 44ac3fa1-0cef-463b-a650-6240d396f894, 57ee5844-e735-4dc8-a764-66b257e03b5b, 5b70cb74-ee06-4847-bf29-9be4e58055d4, 84f92676-c50f-47ba-8877-9cb3aded078f, KB5101650, a2702664-1144-411d-808a-fd316e393e58, c22a045a-e5cc-4849-aa4b-3bd49bb08d91, da3cb707-6819-4142-9721-e5981503a7c7, fecc1a74-859b-4ea2-be1f-e025e06b4af9 (builds/26100, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: DevControlInitialized, Feature_PlutonNVDynamicUpgrade_Enabled; bitfields: 1
+_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>21H2 arm64 07c4171f-7e58-432a-a4b6-eda921bd5684/5d0418c8-672a-43e6-8842-389549931da0/KB5087544/ab9f10c7-2734-436e-895f-429d23a6dc90 -&gt; 3eed2252-912c-4342-8afc-895bae4ae096/KB5099539/d3045ccb-b139-4a6d-97b0-09496b778119/e9505fd6-4408-4761-adba-b28e84ac5cb4: _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:59500DB9CCB3671DBD08FCA6A1B9E6DB1:BA3E9FAD1D8A6DD3CBCABA182CCC2F371</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BA3E9FAD1D8A6DD3CBCABA182CCC2F371.json"/>
+<summary>1 type(s) changed in 3eed2252-912c-4342-8afc-895bae4ae096, KB5099539, d3045ccb-b139-4a6d-97b0-09496b778119, e9505fd6-4408-4761-adba-b28e84ac5cb4 (21H2, arm64)</summary>
+<content type="text">_KPRCB: renamed: DoubleFlushTlb -&gt; PrcbPad5</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 4041170c-fcf0-4045-83b0-3dcd36bd979e/KB5095051 -&gt; 5b2d78ff-6654-4e90-8558-a58f0dc7a978/KB5101649: _HEAP_VS_AFFINITY_SLOT, _LOADER_PARAMETER_CI_EXTENSION, _PEB, _PEB32, and 5 more</title>
+<id>urn:ntoffsets:feed:changes:96943355064C9D950F14F78EA4F6B3E81:C94A7530FCE04A8BF4C1100398B8B7D01</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C94A7530FCE04A8BF4C1100398B8B7D01.json"/>
+<summary>8 type(s) changed in 5b2d78ff-6654-4e90-8558-a58f0dc7a978, KB5101649 (11-26H1, arm64)</summary>
+<content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset
+_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
+_PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_PEB32: size 0x488 -&gt; 0x490; added: Win32ClientProcInfo
+_PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_RTL_FEATURE_USAGE_CONTEXT: size 0x18 -&gt; 0x20; added: DescriptorVersion, Unused
+_TOKEN: size 0x498 -&gt; 0x4a0; added: IsInstaller, TokenFlags2; moved: 1
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAttributeMax 34-&gt;35</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.2336 -&gt; 10.0.28000.2525: _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:FB597264E8FA15BDBC39E496A2F3D13F1:BC7235DA3728A7BA5DC02351A90616151</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BC7235DA3728A7BA5DC02351A90616151.json"/>
+<summary>1 type(s) changed in 533720b8-f9c8-4193-887c-780a92eec1e8, KB5101649 (11-26H1, amd64)</summary>
+<content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 10.0.26100.8737 -&gt; 10.0.26100.8875: _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:14534FCED828B732E853CCD860E4B48D1:2B6A2E831D6B233ED3743386B65837781</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2B6A2E831D6B233ED3743386B65837781.json"/>
+<summary>1 type(s) changed in 23a3b66b-74eb-45f0-9c7a-91a12bab3007, 42821a1d-0c11-4160-b9b1-fc8731e0b73d, 68ea9468-877e-4113-9f76-eebdb7604a81, 8d126cbd-94e9-4023-aa8a-5e811eca50bd, KB5101650, b045adcf-3361-4fd1-8afc-2533adf25431, b2260760-1fae-440c-994d-55e021ff4fa6 (11-24H2, arm64)</summary>
+<content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8737 -&gt; 10.0.26100.8875: _HEAP_VS_AFFINITY_SLOT</title>
+<id>urn:ntoffsets:feed:changes:B713FE65DB46757416FA7E4A0D0CA5941:1924BC23550919F88B17A384B944B5431</id>
+<updated>2026-07-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1924BC23550919F88B17A384B944B5431.json"/>
+<summary>1 type(s) changed in 23468e90-95f8-4370-ad30-e6465c5bc5a5, 44ac3fa1-0cef-463b-a650-6240d396f894, 57ee5844-e735-4dc8-a764-66b257e03b5b, 5b70cb74-ee06-4847-bf29-9be4e58055d4, 84f92676-c50f-47ba-8877-9cb3aded078f, KB5101650, a2702664-1144-411d-808a-fd316e393e58, c22a045a-e5cc-4849-aa4b-3bd49bb08d91, da3cb707-6819-4142-9721-e5981503a7c7, fecc1a74-859b-4ea2-be1f-e025e06b4af9 (11-24H2, amd64)</summary>
+<content type="text">_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.2269 -&gt; 10.0.28000.2336: _LOADER_PARAMETER_CI_EXTENSION, _PEB, _PEB32, _PEB64, and 4 more</title>
+<id>urn:ntoffsets:feed:changes:C19063F9222B565E70F8CADDFD38C1F81:FB597264E8FA15BDBC39E496A2F3D13F1</id>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FB597264E8FA15BDBC39E496A2F3D13F1.json"/>
+<summary>7 type(s) changed in 3c6976a6-5903-428d-86fc-6565dae97d0c, KB5095091, a0270899-3389-4026-b66f-7d53b6610452 (11-26H1, amd64)</summary>
+<content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
+_PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_PEB32: size 0x488 -&gt; 0x490; added: Win32ClientProcInfo
+_PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_RTL_FEATURE_USAGE_CONTEXT: size 0x18 -&gt; 0x20; added: DescriptorVersion, Unused
+_TOKEN: size 0x498 -&gt; 0x4a0; added: IsInstaller, TokenFlags2; moved: 1
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAttributeMax 34-&gt;35</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 10.0.26100.8655 -&gt; 10.0.26100.8737: _AMD64_DR7_REG, _ARM64_BCR_REG, _CHPEV2_CPUAREA_INFO, _KEMUL_CONTROL_BLOCK, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:9A6910DB4C3B517CADDB3E48C44E819B1:14534FCED828B732E853CCD860E4B48D1</id>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/14534FCED828B732E853CCD860E4B48D1.json"/>
+<summary>7 type(s) changed in 174c088a-32ea-443a-9d0d-399ad76cc4ed, KB5095093, ecbb98ac-df25-469a-8cbe-68a5c580a64d (11-24H2, arm64)</summary>
+<content type="text">_AMD64_DR7_REG: added
+_ARM64_BCR_REG: added
+_CHPEV2_CPUAREA_INFO: size 0x850 -&gt; 0x8b0; added: Bcr, Bvr
+_KEMUL_CONTROL_BLOCK: size 0x80 -&gt; 0xe0; added: Bcr, Bvr
+_PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_PEB32: size 0x488 -&gt; 0x490; added: Win32ClientProcInfo
+_PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8655 -&gt; 10.0.26100.8737: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:11D7FE79CC245612055503EE86BB0E3E1:B713FE65DB46757416FA7E4A0D0CA5941</id>
+<updated>2026-06-23T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B713FE65DB46757416FA7E4A0D0CA5941.json"/>
+<summary>5 type(s) changed in 55b91426-bc5c-4ce1-94b0-b3f73ad96409, KB5095093, fe1f1547-38fb-4867-a152-ddec85a47b37 (11-24H2, amd64)</summary>
+<content type="text">_AMD64_DR7_REG: added
+_ARM64_BCR_REG: added
+_PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_PEB32: size 0x488 -&gt; 0x490; added: Win32ClientProcInfo
+_PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.2113 -&gt; 10.0.28000.2269: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:7619DE8013443574088B53EEE03E69BD1:C19063F9222B565E70F8CADDFD38C1F81</id>
+<updated>2026-06-09T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C19063F9222B565E70F8CADDFD38C1F81.json"/>
+<summary>1 type(s) changed in 413372f8-51db-4ea1-970a-8dce91db00aa, KB5095051 (builds/28000, amd64)</summary>
+<content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>builds/26100 arm64 10.0.26100.8036 -&gt; 10.0.26100.8655: PO_MEMORY_IMAGE, _HEAP, _HEAP_COUNTERS, _KPRCB, and 10 more</title>
+<id>urn:ntoffsets:feed:changes:00D46CC0E2A13E486AC6C224799CFC231:9A6910DB4C3B517CADDB3E48C44E819B1</id>
+<updated>2026-06-09T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9A6910DB4C3B517CADDB3E48C44E819B1.json"/>
+<summary>9 type(s) changed in KB5094126, d87783d7-1b94-44c0-a833-fb221ad1e6b9, f6f03ef4-7dc3-48a3-8a21-567e3060f968 (builds/26100, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
+_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_KPRCB: added: CompactionMaskInit; moved: 1; resized: 1; retyped: 1
+_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x90; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize, SmbiosInfoOffset ...; moved: 2; bitfields: 2
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled, HardwareConfigurationSignatureValid; moved: 7
+_RTL_FEATURE_USAGE_CONTEXT: added
+_TOKEN: size 0x498 -&gt; 0x4a0; added: IsInstaller, TokenFlags2; moved: 1
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+EmptyCVariant_FeatureStaging_diagnostics: added
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAttributeMax 33-&gt;34
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>builds/26100 amd64 10.0.26100.8553 -&gt; 10.0.26100.8655: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:E08827CBC8B30BCB4D88967B9FAFEA9B1:11D7FE79CC245612055503EE86BB0E3E1</id>
+<updated>2026-06-09T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/11D7FE79CC245612055503EE86BB0E3E1.json"/>
+<summary>5 type(s) changed in KB5094126, cde62503-0f96-4273-8a1e-d25b94fe30ad, f7e8991e-4fd8-4bfd-a404-0de6dccd4191 (builds/26100, amd64)</summary>
+<content type="text">_AMD64_DR7_REG: removed
+_ARM64_BCR_REG: removed
+_PEB: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo
+_PEB32: size 0x490 -&gt; 0x488; removed: Win32ClientProcInfo
+_PEB64: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo</content>
+</entry>
+<entry>
+<title>builds/26100 amd64 10.0.26100.8497 -&gt; 10.0.26100.8521: _AMD64_DR7_REG, _ARM64_BCR_REG, _PEB, _PEB32, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:E106F426C2E7CEC095825FB10911B47A1:AD545A46A85164627976D97280F483F21</id>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
+<summary>5 type(s) changed in 7cb3bf8e-cba4-4e21-a089-5787a76fd839, 86532d32-73b7-4e1e-87e6-2f0916526bdf, KB5089573, b4d8466a-0024-4453-a0ed-1e0b9f7793d3, b714e61f-e501-4bdc-8be9-cd99ced286cd (builds/26100, amd64)</summary>
+<content type="text">_AMD64_DR7_REG: removed
+_ARM64_BCR_REG: removed
+_PEB: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo
+_PEB32: size 0x490 -&gt; 0x488; removed: Win32ClientProcInfo
+_PEB64: size 0x7d8 -&gt; 0x7d0; removed: Win32ClientProcInfo</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 5c36f73d-e866-456a-b3a7-fa48e86062b2/KB5089548 -&gt; KB5089570/be3f583b-3f18-4074-a78c-5c6dd1fbc710: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:23974FB58B6DD9D7095E7653A72CF3B71:00D9C587A31172AB37096508B9F7B98D1</id>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D9C587A31172AB37096508B9F7B98D1.json"/>
+<summary>1 type(s) changed in KB5089570, be3f583b-3f18-4074-a78c-5c6dd1fbc710 (11-26H1, arm64)</summary>
+<content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.2113 -&gt; KB5089570/ebfcd736-eb43-42c3-aff2-35445412d076: _CIM_FILE_LAYER_INFORMATION, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:7619DE8013443574088B53EEE03E69BD1:F5ACFCDABDCA8305C789EFB00F2DE5701</id>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/F5ACFCDABDCA8305C789EFB00F2DE5701.json"/>
+<summary>1 type(s) changed in KB5089570, ebfcd736-eb43-42c3-aff2-35445412d076 (11-26H1, amd64)</summary>
+<content type="text">_CIM_FILE_LAYER_INFORMATION: added: FlagsDiskHashesLookup, HashAlgId; moved: 2
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 04ffaaeb-fea5-4223-9623-5755769549c9/313044fe-8fd8-4629-9f54-1e7104482d9e/KB5089549 -&gt; 3e0d5d78-b2fd-4318-b9e7-1404eac1b40d/648c682d-a0f9-4045-bd6e-5b8eeb00998c/886b936b-1f32-44d0-9a58-dd043017de00/9aa9f5ed-9fd3-42ce-92bd-400e12e337c4/KB5089573: _HEAP, _HEAP_COUNTERS, _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:5846006CBAFC4F9E07B846F1798587A91:6557860880CAD51D46B85ACF48E3BFB51</id>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6557860880CAD51D46B85ACF48E3BFB51.json"/>
+<summary>6 type(s) changed in 3e0d5d78-b2fd-4318-b9e7-1404eac1b40d, 648c682d-a0f9-4045-bd6e-5b8eeb00998c, 886b936b-1f32-44d0-9a58-dd043017de00, 9aa9f5ed-9fd3-42ce-92bd-400e12e337c4, KB5089573 (11-24H2, arm64)</summary>
+<content type="text">_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_LOADER_PARAMETER_CI_EXTENSION: size 0x88 -&gt; 0x90; added: SmbiosInfoOffset, SmbiosInfoSize; moved: 2
+_RTL_FEATURE_USAGE_CONTEXT: size 0x18 -&gt; 0x20; added: DescriptorVersion, Unused
+_TOKEN: size 0x498 -&gt; 0x4a0; added: IsInstaller, TokenFlags2; moved: 1
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAttributeMax 33-&gt;34</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8457 -&gt; 10.0.26100.8521: _HEAP, _HEAP_COUNTERS, _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:7427DA99C3D737202BFB359C2B0E1A5E1:AD545A46A85164627976D97280F483F21</id>
+<updated>2026-05-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AD545A46A85164627976D97280F483F21.json"/>
+<summary>6 type(s) changed in 7cb3bf8e-cba4-4e21-a089-5787a76fd839, 86532d32-73b7-4e1e-87e6-2f0916526bdf, KB5089573, b4d8466a-0024-4453-a0ed-1e0b9f7793d3, b714e61f-e501-4bdc-8be9-cd99ced286cd (11-24H2, amd64)</summary>
+<content type="text">_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_LOADER_PARAMETER_CI_EXTENSION: size 0x88 -&gt; 0x90; added: SmbiosInfoOffset, SmbiosInfoSize; moved: 2
+_RTL_FEATURE_USAGE_CONTEXT: size 0x18 -&gt; 0x20; added: DescriptorVersion, Unused
+_TOKEN: size 0x498 -&gt; 0x4a0; added: IsInstaller, TokenFlags2; moved: 1
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration; renumbered: PsAttributeMax 33-&gt;34</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.1830 -&gt; 10.0.28000.2113: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:E1C95DFF936707B1891122040312642C1:7619DE8013443574088B53EEE03E69BD1</id>
+<updated>2026-05-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
+<summary>4 type(s) changed in 7bb2929b-0458-4241-a705-80c73d7c3b32, KB5089548 (builds/28000, amd64)</summary>
+<content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
+_KPRCB: moved: 1; resized: 2; retyped: 1
+_PROCESSOR_POWER_STATE: size 0x260 -&gt; 0x268; added: ContainmentZoneMask; moved: 3
+_RTL_FEATURE_USAGE_CONTEXT: added
+_IOMMU_DMA_DEVICE_FAULT_POLICY: added: DmaDeviceFaultPolicyStage1Masked; renumbered: DmaDeviceFaultPolicyMax 2-&gt;3
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.1830 -&gt; 10.0.28000.2113: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:E1C95DFF936707B1891122040312642C1:7619DE8013443574088B53EEE03E69BD1</id>
+<updated>2026-05-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/7619DE8013443574088B53EEE03E69BD1.json"/>
+<summary>4 type(s) changed in 7bb2929b-0458-4241-a705-80c73d7c3b32, KB5089548 (11-26H1, amd64)</summary>
+<content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
+_KPRCB: moved: 1; resized: 2; retyped: 1
+_PROCESSOR_POWER_STATE: size 0x260 -&gt; 0x268; added: ContainmentZoneMask; moved: 3
+_RTL_FEATURE_USAGE_CONTEXT: added
+_IOMMU_DMA_DEVICE_FAULT_POLICY: added: DmaDeviceFaultPolicyStage1Masked; renumbered: DmaDeviceFaultPolicyMax 2-&gt;3
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100</content>
+</entry>
+<entry>
+<title>builds/26100 amd64 10.0.26100.8289 -&gt; 10.0.26100.8328: _HEAP, _HEAP_COUNTERS, _PEB, _PEB32, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:F68DD07A738086A9A392F1479F83B1F01:0D960CE103763A6097E839406D8B369F1</id>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
+<summary>5 type(s) changed in 2de8f468-d3fa-4e4f-9462-48d86f9ba7af, 4949cbc1-234b-421f-9cc8-2128aaa46edf, 5662000d-11c7-40e1-bec3-357197281653, KB5083631 (builds/26100, amd64)</summary>
+<content type="text">_HEAP: size 0x2c8 -&gt; 0x2c0; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x80 -&gt; 0x78; removed: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalMemoryReservedInVirtualBlocks -&gt; TotalSizeInVirtualBlocks
+_PEB: added: SparePointers; removed: SparePointer, Win32ClientProcInfo
+_PEB32: added: SparePointers; removed: SparePointer, Win32ClientProcInfo
+_PEB64: added: SparePointers; removed: SparePointer, Win32ClientProcInfo</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 KB5083768/b96f4e35-e7e6-4715-80d6-539193cab73c -&gt; 95b53909-a77c-4bd9-8649-22b3fcc101a0/KB5083806/ddbf0279-4bd1-4e34-bddb-ad74480bf26e: _KHETERO_PARKING_TABLE_INFO, _KPRCB, _PROCESSOR_POWER_STATE, _RTL_FEATURE_USAGE_CONTEXT, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:6402F10E638B9C76C9232620F5DEF4441:19D42955F8B6EBE96F818F61265C050F1</id>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/19D42955F8B6EBE96F818F61265C050F1.json"/>
+<summary>4 type(s) changed in 95b53909-a77c-4bd9-8649-22b3fcc101a0, KB5083806, ddbf0279-4bd1-4e34-bddb-ad74480bf26e (11-26H1, arm64)</summary>
+<content type="text">_KHETERO_PARKING_TABLE_INFO: size 0x8 -&gt; 0xc; added: ParkPreferenceReason; moved: 1
+_KPRCB: moved: 29; resized: 1
+_PROCESSOR_POWER_STATE: size 0x240 -&gt; 0x248; added: ContainmentZoneMask; moved: 3
+_RTL_FEATURE_USAGE_CONTEXT: added
+_IOMMU_DMA_DEVICE_FAULT_POLICY: added: DmaDeviceFaultPolicyStage1Masked; renumbered: DmaDeviceFaultPolicyMax 2-&gt;3
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 723e795d-27f4-4a48-bdb6-3942535f64f6/KB5083769/f77cf842-9337-4286-8403-a118c6b0c4c2 -&gt; 7b4471b5-179f-4c86-863a-f1dfce572128/KB5083631/ba079811-ce53-4be5-be36-7e3480aaf7c6: _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, _POWER_INFORMATION_LEVEL_INTERNAL, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:827E5BA772D70EC46FD00F48AE9FFD881:179BCEFFABA028E5036F2F465F74E54E1</id>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/179BCEFFABA028E5036F2F465F74E54E1.json"/>
+<summary>2 type(s) changed in 7b4471b5-179f-4c86-863a-f1dfce572128, KB5083631, ba079811-ce53-4be5-be36-7e3480aaf7c6 (11-24H2, arm64)</summary>
+<content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
+_RTL_FEATURE_USAGE_CONTEXT: added
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8246 -&gt; 10.0.26100.8328: _LOADER_PARAMETER_CI_EXTENSION, _RTL_FEATURE_USAGE_CONTEXT, _POWER_INFORMATION_LEVEL_INTERNAL, _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:04A313E5C86A0212FB000E449E728D8C1:0D960CE103763A6097E839406D8B369F1</id>
+<updated>2026-04-30T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0D960CE103763A6097E839406D8B369F1.json"/>
+<summary>2 type(s) changed in 2de8f468-d3fa-4e4f-9462-48d86f9ba7af, 4949cbc1-234b-421f-9cc8-2128aaa46edf, 5662000d-11c7-40e1-bec3-357197281653, KB5083631 (11-24H2, amd64)</summary>
+<content type="text">_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x88; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize; moved: 2; bitfields: 2
+_RTL_FEATURE_USAGE_CONTEXT: added
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 99-&gt;100
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityServiceGuard</content>
+</entry>
+<entry>
+<title>builds/17763 amd64 10.0.17763.1 -&gt; 10.0.17763.8641: FEATURE_ERROR, FEATURE_LOGGED_TRAITS, FEATURE_STATE_CHANGE_SUBSCRIPTION__, HAL_PRIVATE_DISPATCH, and 129 more</title>
+<id>urn:ntoffsets:feed:changes:4637482964E314C9DD667ACD603B043F1:85AF99F7445C58F3118FE7AB773CA0741</id>
+<updated>2026-04-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/85AF99F7445C58F3118FE7AB773CA0741.json"/>
+<summary>103 type(s) changed in 15abc668-3e2b-4b2a-b29b-8c2cf577ef24, KB5082123, KB5091573 (builds/17763, amd64)</summary>
+<content type="text">FEATURE_ERROR: removed
+FEATURE_LOGGED_TRAITS: removed
+FEATURE_STATE_CHANGE_SUBSCRIPTION__: removed
+HAL_PRIVATE_DISPATCH: size 0x478 -&gt; 0x4a0; added: HalGetHiddenPackageProcessorCount, HalGetHiddenProcessorApicIdByIndex, HalGetHiddenProcessorPackageId, HalGetHiddenProcessorPowerInterface, HalRegisterHiddenProcessorIdleState
+PERIODIC_CAPTURE_STATE_CONTEXT: added
+RTLP_HP_LFH_PERF_FLAGS: added
+RTL_HP_ENV_HANDLE: added
+_ALPC_COMMUNICATION_INFO: size 0x48 -&gt; 0x50; moved: 1; resized: 1
+_ALPC_HANDLE_TABLE: size 0x18 -&gt; 0x20; moved: 3; resized: 1; retyped: 1
+_CM_KCB_LAYER_INFO: size 0x30 -&gt; 0x40; added: DiscardedUpperLayerListHead
+_CM_KCB_UOW: added: UpdateEntireSecurity
+_CM_KEY_BODY: added: AccessCheckedLayerHeight
+_CM_UOW_SET_SD_DATA: size 0x4 -&gt; 0x10; added: Hive
+_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
+_DYNAMIC_FUNCTION_TABLE: size 0x70 -&gt; 0x88; added: TreeNodeMax; renamed: TreeNode -&gt; TreeNodeMin
+_EPROCESS: size 0x850 -&gt; 0x858; added: PathRedirectionHashes
+_ESERVERSILO_GLOBALS: size 0x480 -&gt; 0x4d8; added: CriticalProcessExceptionData, CriticalProcessExited, CriticalProcessName, CriticalProcessStatus, ExTimeZoneState, ImgFileExecOptions ...; moved: 9
+_ETHREAD: renamed: CmDbgInfo -&gt; CmThreadInfo
+_ETW_FILTER_HEADER: size 0x60 -&gt; 0x68; added: ContainerFilter; moved: 7
+_ETW_GUID_ENTRY: size 0x190 -&gt; 0x1a8; added: HostEntry, SiloGuidList; moved: 12
+_ETW_REG_ENTRY: added: HostEnableMask, HostGroupEnableMask
+_ETW_SILODRIVERSTATE: size 0x11c0 -&gt; 0x11e8; added: PartitionName, PartitionNameSize, UnusedPadding; moved: 17; resized: 1
+_EXT_IOMMU_DEVICE_ID_PCI: added: Reserved; moved: 1; bitfields: 1
+_EX_HEAP_POOL_NODE: added
+_EX_HEAP_SESSION_STATE: added
+_EX_POOL_HEAP_MANAGER_STATE: added
+_EX_TIMEZONE_STATE: added
+_HEAP_DESCRIPTOR_KEY: added
+_HEAP_LARGE_ALLOC_DATA: added
+_HEAP_LFH_AFFINITY_SLOT: added
+_HEAP_LFH_BUCKET: added
+_HEAP_LFH_CONTEXT: added
+_HEAP_LFH_FAST_REF: added
+_HEAP_LFH_ONDEMAND_POINTER: added
+_HEAP_LFH_SUBSEGMENT: added
+_HEAP_LFH_SUBSEGMENT_DELAY_FREE: added
+_HEAP_LFH_SUBSEGMENT_ENCODED_OFFSETS: added
+_HEAP_LFH_SUBSEGMENT_OWNER: added
+_HEAP_LFH_SUBSEGMENT_STAT: added
+_HEAP_LFH_SUBSEGMENT_STATS: added
+_HEAP_LFH_UNUSED_BYTES_INFO: added
+_HEAP_LOOKASIDE: removed
+_HEAP_OPPORTUNISTIC_LARGE_PAGE_STATS: added
+_HEAP_PAGE_RANGE_DESCRIPTOR: added
+_HEAP_PAGE_SEGMENT: added
+_HEAP_RUNTIME_MEMORY_STATS: added
+_HEAP_SEGMENT_MGR_COMMIT_STATE: added
+_HEAP_SEG_CONTEXT: added
+_HEAP_VS_CHUNK_FREE_HEADER: added
+_HEAP_VS_CHUNK_HEADER: added
+_HEAP_VS_CHUNK_HEADER_SIZE: added
+_HEAP_VS_CONTEXT: added
+_HEAP_VS_DELAY_FREE_CONTEXT: added
+_HEAP_VS_SUBSEGMENT: added
+_HEAP_VS_UNUSED_BYTES_INFO: added
+_HIDDEN_PROCESSOR_POWER_INTERFACE: added
+_IO_COMPLETION_CONTEXT: size 0x10 -&gt; 0x18; added: UsageCount
+_KALPC_RESERVE: size 0x28 -&gt; 0x30; added: Size; moved: 1
+_KPRCB: added: BhbFlushSequence, BpbDivideOnReturn, BpbFlushRsbOnRetpolineExit, BpbFlushRsbOnReturn, BpbKCet, BpbTrappedBpbStateReserved ...; removed: BpbStateReserved, BpbtrappedBpbStateReserved; moved: 37; resized: 24; bitfields: 1; retyped: 24; renamed: PrcbPad12 -&gt; PrcbPad12c, PrcbPad20 -&gt; MsrIa32TsxCtrl
+_KTRAP_FRAME: added: NmiPreviousSpecCtrl, NmiPreviousSpecCtrlPad
+_LFH_RANDOM_DATA: added
+_LOADER_PARAMETER_EXTENSION: size 0xd60 -&gt; 0xd78; added: HotPatchReserveSize, MiniExecutive, RetpolineReserveSize
+_MI_SECTION_STATE: size 0x340 -&gt; 0x2c0; added: HotPatchReserveSize, ImageBreakpointChecksum, ImageBreakpointEnabled, ImageBreakpointSize, RetpolineReservePages; removed: ImageChecksumBreakpoint, ImageSizeBreakpoint, RetpolineStubStart; moved: 5; resized: 1; retyped: 1
+_MI_SESSION_STATE: size 0x1088 -&gt; 0x1090; added: SessionIdNodes
+_MI_SYSTEM_INFORMATION: size 0x3180 -&gt; 0x3100; moved: 25; resized: 2
+_MM_SESSION_SPACE: added: WsTreeEntry; moved: 1
+_OPEN_PACKET: size 0xd8 -&gt; 0xe0; added: ExtendedCreateFlags
+_PROC_PERF_CONSTRAINT: size 0x80 -&gt; 0x88; added: HiddenProcessor, HiddenProcessorId; moved: 17
+_PROC_PERF_DOMAIN: size 0x2a8 -&gt; 0x2b0; added: Apply, PerfControlHandlerHidden, Update; moved: 30; renamed: Spare -&gt; Hidden
+_RTLP_HP_QUEUE_LOCK_HANDLE: added
+_RTL_DYNAMIC_LOOKASIDE: added
+_RTL_DYNAMIC_TIME_ZONE_INFORMATION: added
+_RTL_HP_LFH_CONFIG: added: WitholdPageCrossingBlocks; removed: MaxSubsegmentPages
+_RTL_HP_SEG_ALLOC_POLICY: added
+_RTL_LOOKASIDE: added
+_RTL_RETPOLINE_ROUTINES: size 0x4c -&gt; 0x50; added: UnwindDataOffset; moved: 4
+_RTL_STACKDB_CONTEXT: added
+_SEGMENT_HEAP: added
+_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
+_SILO_USER_SHARED_DATA: size 0x248 -&gt; 0x270; added: TimeZoneBias, TimeZoneBiasEffectiveEnd, TimeZoneBiasEffectiveStart, TimeZoneBiasStamp, TimeZoneId
+_TIMEZONE_CHANGE_EVENT: added
+_TOKEN: resized: 1
+_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
+_WMI_LOGGER_CONTEXT: size 0x520 -&gt; 0x500; removed: PeriodicCaptureStateGuids, PeriodicCaptureStateTimer, PeriodicCaptureStateTimerState; moved: 18; renamed: RelativeTimerDueTime -&gt; PeriodicCaptureStateContext
+_WNF_TYPE_ID: removed
+__WIL__WNF_STATE_NAME: removed
+__WIL__WNF_TYPE_ID: removed
+_wil_details_UsageSubscriptionData: removed
+wil_FeatureState: removed
+wil_details_FeatureProperties: removed
+wil_details_FeaturePropertyCache: removed
+wil_details_FeatureTestState: removed
+wil_details_FeatureVariantPropertyCache: removed
+wil_details_RecordUsageResult: removed
+wil_details_SetPropertyCacheUsageContext: removed
+wil_details_SetPropertyFlagContext: removed
+wil_details_StagingConfig: removed
+wil_details_StagingConfigFeature: removed
+wil_details_StagingConfigHeader: removed
+wil_details_StagingConfigHeaderProperties: removed
+wil_details_StagingConfigUsageTrigger: removed
+wil_details_StagingConfigWnfStateName: removed
+wil_details_VariantProperties: removed
+FEATURE_CHANGE_TIME: removed
+FEATURE_ENABLED_STATE: removed
+LSA_FOREST_TRUST_RECORD_TYPE: added: ForestTrustBinaryInfo, ForestTrustScannerInfo; renumbered: ForestTrustRecordTypeLast 2-&gt;4
+UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
+_CMP_FAILURE_INJECTION_POINT: added: CmpFailurePointKcbLockUpgrade, CmpFailurePointKcbLockUpgradeDelay; renumbered: CmpFailureInjectionPointCount 21-&gt;23, CmpFailurePointForceLazyCOWByPolicy 20-&gt;22, CmpFailurePointKeyEnumForceRetry 19-&gt;21, CmpFailurePointKeyEnumResumeContextVerification 18-&gt;20
+_ETW_STRING_TOKEN_TYPE: added: ETW_STRING_TOKEN_CONTAINER; renumbered: ETW_STRING_TOKEN_MAX_COUNT 3-&gt;4
+_EX_HEAP_TYPE: added
+_HEAP_LFH_LOCKMODE: added
+_HEAP_SEGMGR_LARGE_PAGE_POLICY: added
+_HEAP_SEG_RANGE_TYPE: added
+_JOBOBJECTINFOCLASS: added: JobObjectReserved28Information, JobObjectServerSiloDiagnosticInformation; renumbered: MaxJobObjectInfoClass 48-&gt;51
+_PCI_BUSMASTER_RID_TYPE: added: BusmasterRidInvalid; renumbered: BusmasterRidFromBridgeRid 1-&gt;2, BusmasterRidFromDeviceRid 0-&gt;1, BusmasterRidFromMultipleBridges 2-&gt;3
+_RTLP_HP_ALLOCATOR: added
+_SKSERVICE: added: SECURESERVICE_TERMINATE; removed: SECURESERVICE_SET_RETPOLINE_PFN; renumbered: SECURESERVICE_PERFORM_RETPOLINE_RELOCATIONS 222-&gt;221, SECURESERVICE_UPDATE_IMPORT_RELOCATIONS 223-&gt;222
+wil_FeatureChangeTime: removed
+wil_FeatureEnabledState: removed
+wil_FeatureEnabledStateKind: removed
+wil_FeatureEnabledStateOptions: removed
+wil_FeatureStage: removed
+wil_FeatureStore: removed
+wil_FeatureVariantPayloadKind: removed
+wil_ReportingKind: removed
+wil_UsageReportingMode: removed
+wil_VariantReportingKind: removed
+wil_details_CachedFeatureEnabledState: removed
+wil_details_CachedHasNotificationState: removed
+wil_details_FeatureTestStateKind: removed
+wil_details_ServiceReportingKind: removed
+wil_details_ServiceReportingOptions: removed
+wil_details_StagingConfigFeatureFields: removed</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.1719 -&gt; 10.0.28000.1761: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
+<id>urn:ntoffsets:feed:changes:C1301902BC4D64531F744B95C87450571:2C6C368CE9A01A04675AC27D9AF8D40A1</id>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
+<summary>4 type(s) changed in 64d28313-83d2-471a-8923-e3fbbf347e61, KB5079489, bc5ad58e-6bec-470b-b7ff-76ddd94393d2 (builds/28000, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
+_DEBUG_DEVICE_DESCRIPTOR: resized: 1
+_DEBUG_TRANSPORT_DATA: size 0xc -&gt; 0x10; added: DevControlInitialized, DevControlPciLocation
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled
+EmptyCVariant_FeatureStaging_IoManager: added
+EmptyCVariant_FeatureStaging_KernelBase: added
+EmptyCVariant_FeatureStaging_StorageAndFilesystems: added
+EmptyCVariant_FeatureStaging_StorageCore: added
+EmptyCVariant_FeatureStaging_diagnostics: added</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 KB5079466/fde8938f-4091-47eb-bde6-7756590e861b -&gt; 657d3358-1036-4e2e-a790-569f1e82d67d/KB5079489: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
+<id>urn:ntoffsets:feed:changes:CA037506E8D222586C5397D445267EFF1:C2D3A9BCAEB1D7AFB4317ACD60FC96F81</id>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C2D3A9BCAEB1D7AFB4317ACD60FC96F81.json"/>
+<summary>4 type(s) changed in 657d3358-1036-4e2e-a790-569f1e82d67d, KB5079489 (11-26H1, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
+_DEBUG_DEVICE_DESCRIPTOR: resized: 1
+_DEBUG_TRANSPORT_DATA: size 0xc -&gt; 0x10; added: DevControlInitialized, DevControlPciLocation
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled
+EmptyCVariant_FeatureStaging_IoManager: added
+EmptyCVariant_FeatureStaging_KernelBase: added
+EmptyCVariant_FeatureStaging_StorageAndFilesystems: added
+EmptyCVariant_FeatureStaging_StorageCore: added
+EmptyCVariant_FeatureStaging_diagnostics: added</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.1719 -&gt; 10.0.28000.1761: PO_MEMORY_IMAGE, _DEBUG_DEVICE_DESCRIPTOR, _DEBUG_TRANSPORT_DATA, _POP_HIBER_CONTEXT, and 5 more</title>
+<id>urn:ntoffsets:feed:changes:C1301902BC4D64531F744B95C87450571:2C6C368CE9A01A04675AC27D9AF8D40A1</id>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C6C368CE9A01A04675AC27D9AF8D40A1.json"/>
+<summary>4 type(s) changed in 64d28313-83d2-471a-8923-e3fbbf347e61, KB5079489, bc5ad58e-6bec-470b-b7ff-76ddd94393d2 (11-26H1, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4e0; added: DevControlInitialized, DevControlPciLocation; bitfields: 1
+_DEBUG_DEVICE_DESCRIPTOR: resized: 1
+_DEBUG_TRANSPORT_DATA: size 0xc -&gt; 0x10; added: DevControlInitialized, DevControlPciLocation
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled
+EmptyCVariant_FeatureStaging_IoManager: added
+EmptyCVariant_FeatureStaging_KernelBase: added
+EmptyCVariant_FeatureStaging_StorageAndFilesystems: added
+EmptyCVariant_FeatureStaging_StorageCore: added
+EmptyCVariant_FeatureStaging_diagnostics: added</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 10.0.26100.8036 -&gt; KB5079391: PO_MEMORY_IMAGE, _KPRCB, _POP_HIBER_CONTEXT, EmptyCVariant_FeatureStaging_diagnostics, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:00D46CC0E2A13E486AC6C224799CFC231:291B46B1DC3B815CF1C1E0CF8CDB7ACB1</id>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/291B46B1DC3B815CF1C1E0CF8CDB7ACB1.json"/>
+<summary>3 type(s) changed in KB5079391 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
+_KPRCB: added: CompactionMaskInit; moved: 1; resized: 1; retyped: 1
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled, HardwareConfigurationSignatureValid; moved: 7
+EmptyCVariant_FeatureStaging_diagnostics: added
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.8036 -&gt; 10.0.26100.8115: PO_MEMORY_IMAGE, _KPRCB, _POP_HIBER_CONTEXT, EmptyCVariant_FeatureStaging_diagnostics, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:24DE61DB3A27C5B383DFF181CB51F7E11:D7B73E18C29A0D879D852CADAA68F29F1</id>
+<updated>2026-03-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D7B73E18C29A0D879D852CADAA68F29F1.json"/>
+<summary>3 type(s) changed in KB5079391 (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: HardwareSignatureValid, RootPartition; bitfields: 2
+_KPRCB: added: CompactionMaskInit; moved: 1; resized: 1; retyped: 1
+_POP_HIBER_CONTEXT: added: Feature_Servicing_ARM64_LLVMHibernate_Enabled, HardwareConfigurationSignatureValid; moved: 7
+EmptyCVariant_FeatureStaging_diagnostics: added
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5</content>
+</entry>
+<entry>
+<title>builds/28000 amd64 10.0.28000.4 -&gt; 10.0.28000.1719: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 6 more</title>
+<id>urn:ntoffsets:feed:changes:2454AFEA6A9453AE5DC6030E66AE47201:C1301902BC4D64531F744B95C87450571</id>
+<updated>2026-03-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C1301902BC4D64531F744B95C87450571.json"/>
+<summary>7 type(s) changed in 40a89789-cad6-4281-8e18-35c208f7b1d2, KB5079466 (builds/28000, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled, RootPartition; bitfields: 2
+_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_IOMMU_DMA_DEVICE: size 0x1b0 -&gt; 0x1b8; added: InterfaceCallbackRecordLock
+_POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99
+_SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation; renumbered: MaxSystemInfoClass 256-&gt;257</content>
+</entry>
+<entry>
+<title>builds/26100 arm64 10.0.26100.1 -&gt; 10.0.26100.8036: PO_MEMORY_IMAGE, RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _CHPEV2_CPUAREA_INFO, and 94 more</title>
+<id>urn:ntoffsets:feed:changes:9B3C83B580575E719D5592619E29C0531:00D46CC0E2A13E486AC6C224799CFC231</id>
+<updated>2026-03-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
+<summary>76 type(s) changed in 3dd086b8-aa10-4214-807e-15fd2a8d4133, 949e9a3c-c24a-43a9-b23e-8a36d52da42b, KB5079473, KB5085516, be600926-784e-4e49-a9e1-4496eadf16ca, e5438cd6-94ea-4abe-927b-d41cbfb72dab (builds/26100, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
+RTLP_HP_LFH_PERF_FLAGS: added: Spare; renamed: EnableGarbageCollection -&gt; VsAffinitySlots
+_CC_NUMA_NODE: retyped: 2
+_CHPEV2_CPUAREA_INFO: added: Pad1, Pad2; moved: 1; resized: 1; retyped: 1
+_DELAY_ACK_FO: size 0x18 -&gt; 0x30; added: AckTimeout, TelemetryData
+_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
+_EJOB: added: JobSystemUILimits; retyped: 1
+_EPROCESS: added: BamPpmPolicy, FreezeWorkLinks, PpmPolicyLock; renamed: NumberOfLockedPages -&gt; MmReserved2
+_ETHREAD: size 0x768 -&gt; 0x778; added: MmFaultClusterContext, ProcessFastRef; renamed: UpdateTebSpareLong2 -&gt; HeapData
+_ETW_APC_POOL: retyped: 2
+_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_LBR_SUPPORT: retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_EXT_IOMMU_FUNCTION_TABLE_EXTENDED: size 0xb0 -&gt; 0xb8; added: SetDeviceSvmCapabilitiesLegacy
+_HALP_DMA_MASTER_ADAPTER_OBJECT: size 0xe0 -&gt; 0xe8; added: QueueLock; moved: 8
+_HAL_ARM_ENLIGHTENMENT_INFORMATION: size 0x190 -&gt; 0x198; added: ChangeIsolatedMemoryVisibility
+_HAL_LBR_ENTRY: renamed: Reserved -&gt; Information
+_HEAP_AFFINITY_MGR: added
+_HEAP_LFH_BUCKET: size 0x68 -&gt; 0x78; added: AffinityMgr; removed: AffinityMapInProgress, ContentionCount, LastContentionTime; resized: 1; retyped: 1
+_HEAP_LFH_THREAD_DATA: removed: ThreadExiting; bitfields: 1
+_HEAP_VS_AFFINITY_SLOT: added
+_HEAP_VS_CONTEXT: size 0xc0 -&gt; 0x60; added: AffinityMask, SlotMapRef; removed: FreeChunkTree, Lock, SubsegmentList; moved: 8; resized: 3; retyped: 2; renamed: DelayFreeContext -&gt; AffinityMgr
+_HEAP_VS_SLOT_MAP: added
+_HEAP_VS_SUBSEGMENT: added: OwnerSlotRef; moved: 2
+_IOMMU_DMA_DEVICE: size 0x1a0 -&gt; 0x1a8; added: InterfaceCallbackRecordLock; removed: PasidDomainId; moved: 12; resized: 1
+_IO_ADAPTER_CRYPTO_KEY_DESCRIPTOR: size 0x48 -&gt; 0x70; added: AdjustCryptoParametersCallback, AdjustCryptoParametersCallbackContext, KeyNamespaceId, KeyType
+_KI_RESCHEDULE_CONTEXT: size 0xb0 -&gt; 0xf0; added: SharedReadyLockQueues
+_KI_SHARED_READY_QUEUE_LOCK_HANDLE: added
+_KNODE: moved: 2; resized: 1; retyped: 1
+_KPCR: size 0xa880 -&gt; 0xa980; resized: 1
+_KPRCB: size 0x9f00 -&gt; 0xa000; added: ComplexId, ComplexProcessorSet; moved: 16; resized: 3; retyped: 3
+_KPROCESS: added: Padding2, SchedulerAssistYieldBoostAllowedTime, SchedulerAssistYieldBoostCount; resized: 1; retyped: 1
+_KSCHEDULER_SUBNODE: size 0x400 -&gt; 0x500; added: CoreShareCounts, Spare9, StealableLocalReadyQueues, StealableSharedReadyQueues, StealableStandbyThreads; removed: IdleModuleSet, NonPairedSmtSet; moved: 6; resized: 1; retyped: 1; renamed: SubNodeLock -&gt; Spare0
+_KSHARED_READY_QUEUE: size 0x390 -&gt; 0x500; added: Spare1, Spare4, SubNode; removed: Spare3; moved: 23; resized: 1; retyped: 1
+_KTHREAD: added: SchedulerAssistLastYieldBoostTime, SchedulerAssistYieldBoostCount, SchedulerAssistYieldCounter, Spare24; removed: Spare23; moved: 4; resized: 4; bitfields: 1; retyped: 4
+_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
+_LOADER_FEATURE_CONFIGURATION_INFORMATION2: size 0x20 -&gt; 0x30; added: GovernedFeatureInfoTable, GovernedFeatureInfoTableSize
+_LOADER_PARAMETER_EXTENSION: size 0x10f8 -&gt; 0x1108; added: BootAppSvnInfo
+_MI_CACHE_ALIGNED_ARRAY: added
+_MI_POOL_STATE: retyped: 1
+_MI_SHUTDOWN_STATE: size 0x80 -&gt; 0x88; added: CrashDumpPteCount
+_MI_SYSTEM_IMAGE_STATE: resized: 1; retyped: 1
+_MI_SYSTEM_INFORMATION: moved: 3; resized: 1
+_MI_SYSTEM_PTE_STATE: retyped: 2
+_MI_SYSTEM_VA_STATE: retyped: 1
+_MI_VAD_EVENT_BLOCK: added: WriteWatch; removed: BitMap
+_MI_WORKING_SET_LOCK_ARRAY: removed
+_MI_WRITE_WATCH_BLOCK: added
+_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xb8; added: AckTimeout, TelemetryData
+_OPLOCK_ACK_TIMEOUT: added
+_OPLOCK_TELEMETRY: added
+_POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
+_POP_HIBER_CONTEXT: added: EnableVpciHibernationCallbacks; removed: Reset; moved: 10
+_PRIVATE_CACHE_MAP_FLAGS: added: EntireField
+_PROCESS_EXTENDED_ENERGY_VALUES: removed
+_PROCESS_EXTENDED_ENERGY_VALUES_V1: added
+_REGISTERED_IOMMU: size 0x248 -&gt; 0x250; moved: 16; resized: 1
+_RH_OP_CONTEXT: size 0x48 -&gt; 0x60; added: AckTimeout, TelemetryData
+_RTLP_HP_THREAD_CTX: added
+_RTL_FUNCTION_OVERRIDE_CAPABILITIES: size 0x39 -&gt; 0x45; moved: 2; resized: 3; retyped: 3
+_RTL_HP_SUB_ALLOCATOR_CONFIGS: resized: 1
+_RTL_HP_VS_CONFIG: size 0x4 -&gt; 0x1; resized: 1
+_SEGMENT_HEAP: size 0xa40 -&gt; 0xa00; moved: 1; resized: 1
+_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14
+_SHARED_CACHE_MAP: retyped: 1
+_STORAGE_CRYPTO_KEY_TYPE: added
+_STORAGE_DESCRIPTOR_HEADER: added
+_STORAGE_HW_CRYPTO_CAPABILITY: added
+_STORAGE_HW_CRYPTO_DESCRIPTOR: added
+_STORAGE_SECURITY_COMPLIANCE_BITMASK: added
+_TOKEN: resized: 1
+_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
+_WNF_NAME_INSTANCE: retyped: 2
+wil_details_FeatureDescriptorMapping: added
+EmptyCVariant_FeatureStaging_ContinuousDelivery: added
+EmptyCVariant_FeatureStaging_StorageAndFilesystems: added
+EmptyCVariant_FeatureStaging_StorageCore: added
+EmptyCVariant_FeatureStaging_servicing_releases: added
+EmptyCVariant_featurestaging_moments: added
+FEATURE_CHANGE_TIME: added: FEATURE_CHANGE_TIME_EXTERNAL_FLAG, FEATURE_CHANGE_TIME_TEST_READY_FLAG
+PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125
+POWER_POLICY_DEVICE_TYPE: added: PolicyDevicePowerAdapter; renumbered: PolicyDeviceMax 16-&gt;17
+SLEEPSTUDY_SPM_SCENARIO_CS_EXIT: renumbered: SpmScenarioStopReasonCsExit 17-&gt;18, SpmScenarioStopReasonInternalSegmentTransition 18-&gt;19, SpmScenarioStopReasonMax 19-&gt;20, SpmScenarioStopReasonUnspecified 16-&gt;17
+_DEVICE_USAGE_NOTIFICATION_TYPE: added: DeviceUsageTypeInlineCryptoEngine
+_KPROCESS_PPM_POLICY: added: ProcessPpmWindowInFocusUserIdle; renumbered: MaxProcessPpmPolicy 9-&gt;10
+_KTOPOLOGY_LEVEL: added: KTopologyLevelComplex, KTopologyLevelCountV1; renumbered: KTopologyLevelCount 5-&gt;6
+_OPLOCK_TELEMETRY_FLAGS: added
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99
+_POWER_LIMIT_TYPES: added: PowerLimitType1, PowerLimitType2, PowerLimitType3, PowerLimitType4
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem, FeatureConfigurationPriorityImageDefaultEditionOverride; removed: FeatureConfigurationPriorityReserved11, FeatureConfigurationPriorityReserved3
+_SKSERVICE: added: SECURESERVICE_MAKE_KERNEL_NONGLOBAL, SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT, SECURESERVICE_SWEEP_PROCESS_ICACHE_RANGE, SECURESERVICE_TERMINATE; removed: SECURESERVICE_DEBUG_SWEEP_ICACHE_RANGE; renumbered: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 276-&gt;277, SECURESERVICE_REQUEST_BREAK_IN 275-&gt;276
+_STORAGE_CRYPTO_ALGORITHM_ID: added
+_STORAGE_CRYPTO_KEY_SIZE: added
+_STORAGE_ICE_TYPE: added
+_SYSTEM_FEATURE_CONFIGURATION_SECTION_TYPE: added: SystemFeatureConfigurationSectionTypeGoverned; renumbered: SystemFeatureConfigurationSectionTypeCount 3-&gt;4
+_SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemCodeIntegrityEndpointSecurityInformation, SystemHandleCountInformation, SystemProcessorFeaturesBitMapInformation, SystemRuntimeAttestationReport, SystemSecureCoreInformation; removed: SystemSecureSecretsInformation; renumbered: MaxSystemInfoClass 248-&gt;257</content>
+</entry>
+<entry>
+<title>builds/22621 amd64 10.0.22621.1 -&gt; 10.0.22621.6783: _CC_NUMA_NODE, _CC_PARTITION, _CM_KCB_LAYER_INFO, _CM_KCB_UOW, and 74 more</title>
+<id>urn:ntoffsets:feed:changes:A225C579149AA40D9CC6DD172EF0F1701:D7DDBE59FF5DDE53E139F5D80FEC17791</id>
+<updated>2026-03-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D7DDBE59FF5DDE53E139F5D80FEC17791.json"/>
+<summary>61 type(s) changed in 088c2bda-3548-4961-8d26-2f9594265915, KB5078883 (builds/22621, amd64)</summary>
+<content type="text">_CC_NUMA_NODE: size 0x1b0 -&gt; 0x1b8; added: QueueThrottle; moved: 20
+_CC_PARTITION: removed: QueueThrottle; moved: 1
+_CM_KCB_LAYER_INFO: size 0x30 -&gt; 0x40; added: DiscardedUpperLayerListHead
+_CM_KCB_UOW: added: UpdateEntireSecurity
+_CM_KEY_BODY: added: AccessCheckedLayerHeight
+_CM_UOW_SET_SD_DATA: size 0x4 -&gt; 0x10; added: Hive
+_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
+_DMA_IOMMU_INTERFACE_EX: size 0xc0 -&gt; 0xe8; added: V3
+_DMA_IOMMU_INTERFACE_V3: added
+_EJOB: size 0x710 -&gt; 0x718; added: EffectiveGraphicsFreezeCount, JobGraphicsFreezeOptimized; moved: 105
+_EPROCESS: added: Execution, Flags2Available2; removed: ProcessStateChangeInProgress, ProcessStateChangeRequest; renamed: ProcessExecutionState -&gt; Flags2Available1
+_ETHREAD: size 0x900 -&gt; 0x910; added: LastSoftParkElectionGroupAffinity
+_EXT_IOMMU_DEVICE_ID: removed: Gic
+_EXT_IOMMU_DEVICE_ID_GIC: removed
+_EXT_IOMMU_S1_X64_DOMAIN_SETTINGS: renamed: PasidTable -&gt; PageTableRoot
+_GROUP_FAULT_REFERENCE: added
+_HAL_HV_DMA_DOMAIN_CONFIG_X64: added: Blocked
+_HAL_HV_SVM_SYSTEM_CAPABILITIES: removed
+_HAL_HV_SYSTEM_PASID_CAPABILITIES: added
+_HAL_INTEL_ENLIGHTENMENT_INFORMATION: size 0x220 -&gt; 0x248; added: AttachPrQueue, DetachPrQueue, ReserveDeviceDomainAttachment, RestoreTime, UnreserveDeviceDomainAttachment; moved: 22; renamed: SvmGetSystemCapabilities -&gt; GetSystemPasidCapabilities, SvmCreatePasidSpace -&gt; CreatePasidSpace, SvmSetPasidAddressSpace -&gt; SetPasidAddressSpace, SvmFlushPasid -&gt; FlushPasid
+_HV_X64_HYPERVISOR_FEATURES: renamed: SvmFeaturesAvailable -&gt; PasidFeaturesAvailable
+_IOMMU_BUS_INTERFACE: added
+_IOMMU_DEVICE_CREATION_CONFIGURATION: added: Pasid
+_IOMMU_DEVICE_CREATION_CONFIGURATION_PASID: added
+_IOMMU_DEVICE_PROPERTIES: added
+_IOMMU_DMA_DEVICE: size 0x108 -&gt; 0x1a0; added: CreationStateCurrent, CreationStateInitial, DefaultPasidEnabled, DomainDmaDeviceEntry, IommuInterface, PasidDevicesList ...
+_IOMMU_DMA_DEVICE_INFORMATION: added
+_IOMMU_DMA_DOMAIN: size 0x40 -&gt; 0x70; added: AttachedDevicesList, AttachedDevicesListLock, HvDomainIdAllocated, HvPushLock, HvReferences; moved: 2; resized: 1; retyped: 1
+_IOMMU_PASID_TABLE_OBJECT: size 0x40 -&gt; 0x48; added: AtsEnabled, DefaultPasidEnabled
+_IOMMU_SVM_CAPABILITIES: size 0xc -&gt; 0x4; added: AtsPriPasidBits, CapRegBits, DeviceInformation, DeviceInformationBits, Rsvd0, Rsvd1; removed: Rsvd; moved: 1
+_IOMMU_TRACKED_DEVICE: size 0x70 -&gt; 0x1070; added: GroupFaultReferences, LastGroupFaultSequenceNumber; moved: 5; resized: 1
+_KLDTENTRY: added
+_KPRCB: added: BhbFlushSequence, BpbDivideOnReturn, BpbFlushRsbOnRetpolineExit, BpbFlushRsbOnReturn, BpbKCet, BpbTrappedBpbStateReserved ...; removed: BpbStateReserved, BpbtrappedBpbStateReserved; moved: 31; resized: 22; bitfields: 1; retyped: 21; renamed: PrcbPad12 -&gt; PrcbPad12c
+_KPROCESSOR_DESCRIPTOR_AREA: added
+_KSHARED_READY_QUEUE: size 0x680 -&gt; 0x698; added: SoftParkElectionAffinityStats, SoftParkElectionLock, SoftParkElectionThreadCount, Spare3; moved: 6; resized: 1; retyped: 2; renamed: Spare1 -&gt; Group
+_KSHARED_READY_QUEUE_AFFINITY_STATISTICS: added
+_KTRANSITION_STACK: added
+_KTRAP_FRAME: added: NmiPreviousSpecCtrl, NmiPreviousSpecCtrlPad
+_LOADER_FEATURE_CONFIGURATION_INFORMATION2: added
+_LOADER_PARAMETER_EXTENSION: size 0xf20 -&gt; 0xf28; added: FeatureConfigurationInformation2
+_MI_FLAGS: added: KvaShadow; moved: 2; bitfields: 12
+_MI_HARDWARE_STATE: size 0x1180 -&gt; 0x1280; added: GlobalBitPolarity, ParkedCores, ParkedCoresLock, ParkedCoresWorkItem; moved: 2
+_MI_SYSTEM_INFORMATION: size 0x5040 -&gt; 0x5180; moved: 24; resized: 2
+_MI_SYSTEM_VA_STATE: size 0x500 -&gt; 0x540; added: VaRegionShadowed; moved: 12
+_POP_IRP_DATA: size 0x130 -&gt; 0x138; added: BlackboxWatchdogStartTime
+_PPM_ENGINE_SETTINGS: added: LatencyHintEpp; moved: 1
+_PPM_POLICY_SETTINGS_MASK: added: LatencyHintEpp; bitfields: 1
+_PRIVATE_VOLUME_CACHEMAP: removed: QueueThrottle; moved: 1
+_PROCESSOR_POWER_STATE: size 0x230 -&gt; 0x238; added: FrequencyBucketThresholds
+_PROCESS_EXECUTION: added
+_PROCESS_EXECUTION_STATE: added
+_PROCESS_EXECUTION_TRANSITION: added
+_PROC_FEEDBACK_COUNTER: moved: 1; resized: 1; retyped: 1
+_PROC_PERF_DOMAIN: added: TurboRangeKnown; moved: 15
+_PROC_PERF_QOS_CLASS_POLICY: added: LatencyHintEpp; moved: 1
+_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
+_TOKEN: resized: 1
+_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
+wil_details_FeatureDescriptor: size 0x30 -&gt; 0x38; added: featureLoggedTraits; moved: 9
+wil_details_FeatureDescriptorMapping: added
+wil_details_FeatureStateCache: added: deviceOpportunityFastPathEnabled, deviceUsageFastPathEnabled; bitfields: 11
+EmptyCVariant_FeatureStaging_CSD_Servicing: added
+EmptyCVariant_featurestaging_moments: added
+FEATURE_CHANGE_TIME: added: FEATURE_CHANGE_TIME_EXTERNAL_FLAG, FEATURE_CHANGE_TIME_TEST_READY_FLAG
+UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
+_EXT_IOMMU_DEVICE_TYPE: removed: EXT_IOMMU_DEVICE_TYPE_GIC; renumbered: EXT_IOMMU_DEVICE_TYPE_MAX 7-&gt;6, EXT_IOMMU_DEVICE_TYPE_TEST 6-&gt;5
+_FILE_INFORMATION_CLASS: added: FileId64ExtdBothDirectoryInformation, FileId64ExtdDirectoryInformation, FileIdAllExtdBothDirectoryInformation, FileIdAllExtdDirectoryInformation, FileStatBasicInformation; renumbered: FileMaximumInformation 77-&gt;82
+_FSINFOCLASS: added: FileFsGuidInformation; renumbered: FileFsMaximumInformation 15-&gt;16
+_HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode
+_IOMMU_DEVICE_CREATION_CONFIGURATION_TYPE: added: IommuDeviceCreationConfigTypePasid; renumbered: IommuDeviceCreationConfigTypeMax 3-&gt;4
+_IOMMU_DMA_DEVICE_CREATION_STATE: added
+_IOMMU_DMA_DOMAIN_TYPE: added: DomainTypeTranslateS1; renumbered: DomainTypeMax 3-&gt;4
+_IOMMU_PASID_CONFIGURATION_TYPE: added
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalEnergyEstimationInfo; renumbered: PowerInformationInternalMaximum 91-&gt;92
+_PS_MITIGATION_OPTION: added: PS_MITIGATION_OPTION_FSCTL_SYSTEM_CALL_DISABLE
+_REFS_SET_VOLUME_COMPRESSION_INFO_FLAGS: added: REFS_SET_VOLUME_COMPRESSION_INFO_FLAG_GC_ONLY, REFS_SET_VOLUME_COMPRESSION_INFO_FLAG_START_COMPRESSION, REFS_SET_VOLUME_COMPRESSION_INFO_FLAG_STOP_COMPRESSION; removed: REFS_SET_VOLUME_COMPRESSION_INFO_FLAG_COMPRESS_SYNC; renumbered: REFS_SET_VOLUME_COMPRESSION_INFO_FLAG_MAX 1-&gt;2
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem, FeatureConfigurationPriorityDynamic, FeatureConfigurationPriorityEKB, FeatureConfigurationPriorityPersistent, FeatureConfigurationPriorityReserved13, FeatureConfigurationPriorityReserved14; removed: FeatureConfigurationPriorityEnrollment
+_SKSERVICE: added: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE, SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>builds/19041 amd64 10.0.19041.1 -&gt; 10.0.19041.7058: Change, PERIODIC_CAPTURE_STATE_CONTEXT, PO_MEMORY_IMAGE, _ADAPTER_OBJECT, and 60 more</title>
+<id>urn:ntoffsets:feed:changes:8CF5A3F04362D657F99E7B13A5FF6E221:B9E105C703F28FE8B3BF1877133D5CC21</id>
+<updated>2026-03-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B9E105C703F28FE8B3BF1877133D5CC21.json"/>
+<summary>55 type(s) changed in 4dbdef9e-d0e9-490b-88d3-0d53bc1ea693, 5820c0c7-90c6-4056-b318-4f19dc9d8dfc, KB5078885, cbb1f28a-54b5-4d42-a4f1-d4ce2bd4ff16 (builds/19041, amd64)</summary>
+<content type="text">Change: added
+PERIODIC_CAPTURE_STATE_CONTEXT: added
+PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
+_ADAPTER_OBJECT: size 0x278 -&gt; 0x280; added: ExpiredFlag, ExpiredLock; moved: 42
+_ALPC_COMMUNICATION_INFO: size 0x48 -&gt; 0x50; moved: 1; resized: 1
+_ALPC_HANDLE_TABLE: size 0x18 -&gt; 0x20; moved: 3; resized: 1; retyped: 1
+_CM_KCB_LAYER_INFO: size 0x30 -&gt; 0x40; added: DiscardedUpperLayerListHead
+_CM_KCB_UOW: added: UpdateEntireSecurity
+_CM_KEY_BODY: added: AccessCheckedLayerHeight
+_CM_UOW_SET_SD_DATA: size 0x4 -&gt; 0x10; added: Hive
+_COPY_INFORMATION: added
+_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
+_DYNAMIC_FUNCTION_TABLE: size 0x70 -&gt; 0x88; added: TreeNodeMax; renamed: TreeNode -&gt; TreeNodeMin
+_EPROCESS: added: DisabledComponentFlags, DisallowUserTerminate, DynamicEnforcedCetCompatibleRanges, MitigationFlags3, MitigationFlags3Values, PathRedirectionHashes
+_ESERVERSILO_GLOBALS: size 0x490 -&gt; 0x4a0; added: ExTimeZoneState, ImgFileExecOptions, TzVirtualizationSupported; moved: 10
+_EXT_IOMMU_DEVICE_ID: added: Flags
+_EXT_IOMMU_DEVICE_ID_FLAGS: added
+_EXT_IOMMU_DEVICE_ID_PCI: added: Reserved; moved: 1; bitfields: 1
+_EX_TIMEZONE_STATE: added
+_FADT: size 0x10c -&gt; 0x114; added: hypervisor_vendor_identity
+_HAL_INTEL_ENLIGHTENMENT_INFORMATION: size 0x1f0 -&gt; 0x1f8; added: RestoreTime; moved: 1
+_IOP_IRP_EXTENSION: size 0x40 -&gt; 0x50; added: CopyInformation
+_IO_COMPLETION_CONTEXT: size 0x10 -&gt; 0x18; added: UsageCount
+_KAPC: added: CallbackDataContext, Unused; renamed: SpareByte0 -&gt; AllFlags
+_KPRCB: added: BhbFlushSequence, BpbDivideOnReturn, BpbFlushRsbOnRetpolineExit, BpbFlushRsbOnReturn, BpbKCet, BpbTrappedBpbStateReserved ...; removed: BpbStateReserved, BpbtrappedBpbStateReserved; moved: 33; resized: 22; bitfields: 1; retyped: 22; renamed: PrcbPad12 -&gt; PrcbPad12c
+_KTHREAD: added: Spare31; removed: SchedulerApcFill0; moved: 2; resized: 1; retyped: 1
+_KTRAP_FRAME: added: NmiPreviousSpecCtrl, NmiPreviousSpecCtrlPad
+_KUSER_SHARED_DATA: renamed: UserCetAvailableEnvironments -&gt; Reserved2
+_LOADER_FEATURE_CONFIGURATION_DIAGNOSTIC_INFORMATION: added
+_LOADER_FEATURE_CONFIGURATION_INFORMATION: added
+_LOADER_PARAMETER_EXTENSION: size 0xdf0 -&gt; 0xe38; added: FeatureConfigurationInformation
+_MI_EXTRA_IMAGE_INFORMATION: size 0xc -&gt; 0x10; added: ImageCetDowngradeReserved1, ImageCetDowngradeReserved2, ImageCetDynamicApisAllowInProc, ImageCetSetContextIpValidationRelaxedMode, ImageCetShadowStacksReady, ImageCetShadowStacksStrictMode ...
+_MI_FREE_LARGE_PAGES: size 0x130 -&gt; 0x430; moved: 1; resized: 2; retyped: 2
+_MI_NODE_INFORMATION: size 0x8c0 -&gt; 0x11c0; moved: 40; resized: 1
+_MI_PAGELIST_STATE: size 0x28 -&gt; 0x88; added: LargePfnBasePageTemplate, LargePfnTemplate; moved: 1
+_MI_PARTITION_FLAGS: added: BackgroundZeroingDisabled
+_MI_PARTITION_PAGE_LISTS: added: HugePfnBadPages
+_MI_PARTITION_ZEROING: added: BackgroundZeroingDisabled
+_MI_SECTION_IMAGE_INFORMATION: resized: 1
+_MI_SYSTEM_INFORMATION: size 0x3280 -&gt; 0x32c0; moved: 19; resized: 1
+_MMPFN: added: AnchorLargePageSize
+_OPEN_PACKET: size 0xd8 -&gt; 0xe0; added: ExtendedCreateFlags
+_POP_FX_DEVICE: size 0x4b0 -&gt; 0x4b8; added: CommonReferenceFlags; moved: 31
+_PS_DYNAMIC_ENFORCED_ADDRESS_RANGES: added
+_RTL_DYNAMIC_TIME_ZONE_INFORMATION: added
+_SEGMENT_FLAGS: renamed: ImageCetShadowStacksReady -&gt; Spare
+_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
+_SILO_USER_SHARED_DATA: size 0x248 -&gt; 0x270; added: TimeZoneBias, TimeZoneBiasEffectiveEnd, TimeZoneBiasEffectiveStart, TimeZoneBiasStamp, TimeZoneId
+_TIMEZONE_CHANGE_EVENT: added
+_TOKEN: resized: 1
+_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
+_WMI_LOGGER_CONTEXT: size 0x550 -&gt; 0x530; removed: PeriodicCaptureStateGuids, PeriodicCaptureStateTimer, PeriodicCaptureStateTimerState; moved: 23; renamed: RelativeTimerDueTime -&gt; PeriodicCaptureStateContext
+_flags: added: SmtSetsPresent; bitfields: 1
+wil_details_FeatureDescriptor: added
+wil_details_FeatureStateCache: added: configuredState, deviceOpportunityFastPathEnabled, deviceUsageFastPathEnabled, needsRefresh; removed: reservedForKernelModeSupport; bitfields: 9
+LSA_FOREST_TRUST_RECORD_TYPE: added: ForestTrustBinaryInfo, ForestTrustScannerInfo; renumbered: ForestTrustRecordTypeLast 2-&gt;4
+UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
+_PCI_BUSMASTER_RID_TYPE: added: BusmasterRidInvalid; renumbered: BusmasterRidFromBridgeRid 1-&gt;2, BusmasterRidFromDeviceRid 0-&gt;1, BusmasterRidFromMultipleBridges 2-&gt;3
+_PS_ATTRIBUTE_NUM: added: PsAttributeComponentFilter, PsAttributeMachineType, PsAttributeMitigationAuditOptions; renumbered: PsAttributeMax 27-&gt;30
+_PS_MITIGATION_OPTION: added: PS_MITIGATION_OPTION_BLOCK_NON_CET_BINARIES, PS_MITIGATION_OPTION_CET_DYNAMIC_APIS_OUT_OF_PROC_ONLY, PS_MITIGATION_OPTION_FSCTL_SYSTEM_CALL_DISABLE, PS_MITIGATION_OPTION_REDIRECTION_TRUST
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem, FeatureConfigurationPriorityDynamic, FeatureConfigurationPriorityEKB, FeatureConfigurationPriorityImageDefault, FeatureConfigurationPriorityImageOverride, FeatureConfigurationPriorityPersistent; removed: FeatureConfigurationPriorityAll
+_SKSERVICE: added: SECURESERVICE_TERMINATE
+_SYSTEM_INFORMATION_CLASS: added
+wil_FeatureEnabledStateKind: removed: wil_FeatureEnabledStateKind_All</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5077181 -&gt; 10.0.26100.8036: _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, _IOMMU_DMA_DEVICE, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:5324ED56BDFFEFE9B8E383F479FF12671:00D46CC0E2A13E486AC6C224799CFC231</id>
+<updated>2026-03-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D46CC0E2A13E486AC6C224799CFC231.json"/>
+<summary>4 type(s) changed in 3dd086b8-aa10-4214-807e-15fd2a8d4133, 949e9a3c-c24a-43a9-b23e-8a36d52da42b, KB5079473, KB5085516, be600926-784e-4e49-a9e1-4496eadf16ca, e5438cd6-94ea-4abe-927b-d41cbfb72dab (11-24H2, arm64)</summary>
+<content type="text">_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_IOMMU_DMA_DEVICE: size 0x1a0 -&gt; 0x1a8; added: InterfaceCallbackRecordLock
+EmptyCVariant_FeatureStaging_KVS: removed
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99</content>
+</entry>
+<entry>
+<title>11-26H1 arm64 KB5077179 -&gt; KB5077239: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:C1B8D0108E67196D84F5CB9B8732B50A1:A0A7E95719368EF5C306CBD68E8E376C1</id>
+<updated>2026-02-24T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A0A7E95719368EF5C306CBD68E8E376C1.json"/>
+<summary>5 type(s) changed in KB5077239 (11-26H1, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: RootPartition; bitfields: 3
+_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_IOMMU_DMA_DEVICE: size 0x1b0 -&gt; 0x1b8; added: InterfaceCallbackRecordLock
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.1575 -&gt; KB5077239: PO_MEMORY_IMAGE, _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:D4EB637DB41E589EBF1C6E4DAD87C2A31:EA5CD30AA11873BE7B0FA1B6E62F33C51</id>
+<updated>2026-02-24T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/EA5CD30AA11873BE7B0FA1B6E62F33C51.json"/>
+<summary>5 type(s) changed in KB5077239 (11-26H1, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: RootPartition; bitfields: 3
+_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_IOMMU_DMA_DEVICE: size 0x1b0 -&gt; 0x1b8; added: InterfaceCallbackRecordLock
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.7824 -&gt; 10.0.26100.7920: _ETW_GUID_ENTRY, _ETW_REG_ENTRY, _ETW_SILODRIVERSTATE, _IOMMU_DMA_DEVICE, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:A1C414A488BC6DE9308B5D3D7579D1091:2C8AEA6EFDCA390D905597EE55B556FD1</id>
+<updated>2026-02-24T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/2C8AEA6EFDCA390D905597EE55B556FD1.json"/>
+<summary>4 type(s) changed in KB5077241 (11-24H2, amd64)</summary>
+<content type="text">_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_IOMMU_DMA_DEVICE: size 0x1a0 -&gt; 0x1a8; added: InterfaceCallbackRecordLock
+EmptyCVariant_FeatureStaging_KVS: removed
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement; renumbered: PowerInformationInternalMaximum 97-&gt;99</content>
+</entry>
+<entry>
+<title>1809 amd64 10.0.17763.8280 -&gt; 10.0.17763.8385: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:54482DA7946AB561BC5E855B4C3540261:A62EC3DD4F02E90C11395728561D94F81</id>
+<updated>2026-02-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A62EC3DD4F02E90C11395728561D94F81.json"/>
+<summary>1 type(s) changed in KB5075904 (1809, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
+</entry>
+<entry>
+<title>1607 amd64 10.0.14393.8781 -&gt; 10.0.14393.8864: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:034421E5B5C549BEA776BBAEA20C983E1:D351A8560EEC4F6EB409948EBAE16C1B1</id>
+<updated>2026-02-10T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D351A8560EEC4F6EB409948EBAE16C1B1.json"/>
+<summary>1 type(s) changed in KB5075999 (1607, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5077744/KB5078127 -&gt; 10.0.26100.7705: PO_MEMORY_IMAGE, _POP_FX_DEVICE_STATUS, _SYSTEM_INFORMATION_CLASS</title>
+<id>urn:ntoffsets:feed:changes:BBAB517B9DA9C84C479E5CCF79BA84E01:D616A5AC94F10F9EC78CCBB9AD5469A41</id>
+<updated>2026-01-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D616A5AC94F10F9EC78CCBB9AD5469A41.json"/>
+<summary>2 type(s) changed in KB5074105 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
+_POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
+_SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation; renumbered: MaxSystemInfoClass 255-&gt;257</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.7627 -&gt; 10.0.26100.7705: PO_MEMORY_IMAGE, _POP_FX_DEVICE_STATUS, _SYSTEM_INFORMATION_CLASS</title>
+<id>urn:ntoffsets:feed:changes:87A00A457156E2568E5C7F2E20A2429D1:35EE8DEDAFBD2BD28644D4D36BB8A4BD1</id>
+<updated>2026-01-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/35EE8DEDAFBD2BD28644D4D36BB8A4BD1.json"/>
+<summary>2 type(s) changed in KB5074105 (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_PlutonDynamicUpgrade_Enabled; bitfields: 1
+_POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
+_SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation; renumbered: MaxSystemInfoClass 255-&gt;257</content>
+</entry>
+<entry>
+<title>21H2 arm64 KB5074976 -&gt; KB5073724: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:AD7C4DC3EB92B25ACC6F8055512AE0531:C68B2FCC3D497B2DDC061C7F690C3AD51</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C68B2FCC3D497B2DDC061C7F690C3AD51.json"/>
+<summary>0 type(s) changed in KB5073724 (21H2, arm64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>21H2 amd64 10.0.19041.6693 -&gt; 10.0.19041.6807: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:366EF4939F609DDDC1AE0267A7C9D1731:DFE5A00EF3F2E5952C223D63ED6EEAB01</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DFE5A00EF3F2E5952C223D63ED6EEAB01.json"/>
+<summary>0 type(s) changed in KB5073724 (21H2, amd64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>1809 amd64 10.0.17763.8148 -&gt; 10.0.17763.8276: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:6CB7D6C259EF5216E4F5DAE5F057134A1:9C63FDACCBA4EF8750A169B22748DFD51</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9C63FDACCBA4EF8750A169B22748DFD51.json"/>
+<summary>0 type(s) changed in KB5073723 (1809, amd64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5072033 -&gt; 10.0.26100.7623: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:B5BC20465910BBA8DFDD848714CCF9031:63932C6CC7E50112757DDFFC72BE5E0C1</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/63932C6CC7E50112757DDFFC72BE5E0C1.json"/>
+<summary>0 type(s) changed in KB5074109 (11-24H2, arm64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE; renumbered: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 278-&gt;279</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.7462 -&gt; 10.0.26100.7623: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:0762CF42EF7F3E8116EF7329ADAA09A31:0385A3E51169BA7F84716B1C792977F71</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0385A3E51169BA7F84716B1C792977F71.json"/>
+<summary>0 type(s) changed in KB5074109 (11-24H2, amd64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE; renumbered: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 277-&gt;278</content>
+</entry>
+<entry>
+<title>11-23H2 arm64 KB5071417 -&gt; KB5073455/KB5077797/KB5078132: _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:4DB13BD7F47C56EE1116F1A44926968B1:5BD90AE95D1DAB539A6881A3908754461</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/5BD90AE95D1DAB539A6881A3908754461.json"/>
+<summary>0 type(s) changed in KB5073455, KB5077797, KB5078132 (11-23H2, arm64)</summary>
+<content type="text">_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>11-23H2 amd64 10.0.22621.6345 -&gt; 10.0.22621.6489: _KLDTENTRY, _KPROCESSOR_DESCRIPTOR_AREA, _KTRANSITION_STACK, _MI_FLAGS, and 4 more</title>
+<id>urn:ntoffsets:feed:changes:22A56AB3DB9338CFF9B2EA3A02D98A761:AF550CAA73AFB287705CC40079D786B41</id>
+<updated>2026-01-13T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/AF550CAA73AFB287705CC40079D786B41.json"/>
+<summary>7 type(s) changed in KB5073455, KB5077797, KB5078132 (11-23H2, amd64)</summary>
+<content type="text">_KLDTENTRY: added
+_KPROCESSOR_DESCRIPTOR_AREA: added
+_KTRANSITION_STACK: added
+_MI_FLAGS: added: KvaShadow; moved: 2; bitfields: 12
+_MI_HARDWARE_STATE: added: GlobalBitPolarity
+_MI_SYSTEM_INFORMATION: size 0x5140 -&gt; 0x5180; moved: 23; resized: 1
+_MI_SYSTEM_VA_STATE: size 0x500 -&gt; 0x540; added: VaRegionShadowed; moved: 12
+_SKSERVICE: added: SECURESERVICE_TERMINATE</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5068861 -&gt; 10.0.26100.7309: _EJOB, _EPROCESS, _KNODE, _KPCR, and 7 more</title>
+<id>urn:ntoffsets:feed:changes:A7E2682F0441CB74D71A138F3B5B4EC41:DE61013EC8D91D675BA40AE3C69C9F7B1</id>
+<updated>2025-12-01T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DE61013EC8D91D675BA40AE3C69C9F7B1.json"/>
+<summary>8 type(s) changed in KB5070311 (11-24H2, arm64)</summary>
+<content type="text">_EJOB: added: JobSystemUILimits
+_EPROCESS: added: BamPpmPolicy, PpmPolicyLock
+_KNODE: moved: 2; resized: 1; retyped: 1
+_KPCR: size 0xa880 -&gt; 0xa980; resized: 1
+_KPRCB: size 0x9f00 -&gt; 0xa000; added: ComplexId, ComplexProcessorSet; moved: 16; resized: 3; retyped: 3
+_KSCHEDULER_SUBNODE: removed: IdleModuleSet, NonPairedSmtSet; moved: 2; resized: 1; retyped: 1; renamed: SubNodeLock -&gt; Spare0
+_MI_SHUTDOWN_STATE: size 0x80 -&gt; 0x88; added: CrashDumpPteCount
+_MI_SYSTEM_INFORMATION: moved: 3; resized: 1
+_KTOPOLOGY_LEVEL: added: KTopologyLevelComplex, KTopologyLevelCountV1; renumbered: KTopologyLevelCount 5-&gt;6
+_SKSERVICE: added: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT
+_SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: MaxSystemInfoClass 254-&gt;255</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.7171 -&gt; 10.0.26100.7309: _EJOB, _EPROCESS, _KNODE, _KPRCB, and 6 more</title>
+<id>urn:ntoffsets:feed:changes:D6477C2EE3391555525A83E53C7895EB1:83E0CBB825CB8C723052E974BA46AC861</id>
+<updated>2025-12-01T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/83E0CBB825CB8C723052E974BA46AC861.json"/>
+<summary>7 type(s) changed in KB5070311 (11-24H2, amd64)</summary>
+<content type="text">_EJOB: added: JobSystemUILimits
+_EPROCESS: added: BamPpmPolicy, PpmPolicyLock
+_KNODE: moved: 2; resized: 1; retyped: 1
+_KPRCB: added: ComplexId, ComplexProcessorSet, LogicalProcessorsPerComplex, PrcbPad101, PrcbPad139b, PrcbPad139c; moved: 2; resized: 3; retyped: 3
+_KSCHEDULER_SUBNODE: removed: IdleModuleSet, NonPairedSmtSet; moved: 2; resized: 1; retyped: 1; renamed: SubNodeLock -&gt; Spare0
+_MI_SHUTDOWN_STATE: size 0x80 -&gt; 0x88; added: CrashDumpPteCount
+_MI_SYSTEM_INFORMATION: moved: 2; resized: 1
+_KTOPOLOGY_LEVEL: added: KTopologyLevelComplex, KTopologyLevelCountV1; renumbered: KTopologyLevelCount 5-&gt;6
+_SKSERVICE: added: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT
+_SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: MaxSystemInfoClass 254-&gt;255</content>
+</entry>
+<entry>
+<title>21H2 arm64 10.0.19041.6456 -&gt; KB5068781: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:172EE909B13C1CBBBB30CB78F7B802CB1:134EAF4A638796C28DF572C46B0E63D01</id>
+<updated>2025-11-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/134EAF4A638796C28DF572C46B0E63D01.json"/>
+<summary>0 type(s) changed in KB5068781 (21H2, arm64)</summary>
+<content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>21H2 amd64 10.0.19041.6456 -&gt; 10.0.19041.6575: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:F57E740B088E5056E8AF0772F1CC5BEB1:9CFCF55CD5DE5D79C34541C03FFBFDA21</id>
+<updated>2025-11-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9CFCF55CD5DE5D79C34541C03FFBFDA21.json"/>
+<summary>0 type(s) changed in KB5068781 (21H2, amd64)</summary>
+<content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5067036 -&gt; KB5068861: _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:1C8AC6D7F2F10BF686CA8D3D0D4894701:A7E2682F0441CB74D71A138F3B5B4EC41</id>
+<updated>2025-11-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/A7E2682F0441CB74D71A138F3B5B4EC41.json"/>
+<summary>1 type(s) changed in KB5068861 (11-24H2, arm64)</summary>
+<content type="text">_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.7019 -&gt; 10.0.26100.7171: _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:BEA4BE7B19EEF0C97610A5ECE65CAE0C1:D6477C2EE3391555525A83E53C7895EB1</id>
+<updated>2025-11-11T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/D6477C2EE3391555525A83E53C7895EB1.json"/>
+<summary>1 type(s) changed in KB5068861 (11-24H2, amd64)</summary>
+<content type="text">_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5070773 -&gt; KB5067036: PDCCLIENTID</title>
+<id>urn:ntoffsets:feed:changes:6700B0C832FA46F450D321D85603E2981:1C8AC6D7F2F10BF686CA8D3D0D4894701</id>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1C8AC6D7F2F10BF686CA8D3D0D4894701.json"/>
+<summary>0 type(s) changed in KB5067036 (11-24H2, arm64)</summary>
+<content type="text">PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.6901 -&gt; 10.0.26100.7019: PDCCLIENTID</title>
+<id>urn:ntoffsets:feed:changes:1382803A70C5F2762EF48191305174871:BEA4BE7B19EEF0C97610A5ECE65CAE0C1</id>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BEA4BE7B19EEF0C97610A5ECE65CAE0C1.json"/>
+<summary>0 type(s) changed in KB5067036 (11-24H2, amd64)</summary>
+<content type="text">PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125</content>
+</entry>
+<entry>
+<title>11-23H2 arm64 KB5065790 -&gt; KB5067112: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:083457BFECF8F5919CB7FEF7269CBDAF1:DE94C9C1DA31C4634DAB53C6FB812A891</id>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/DE94C9C1DA31C4634DAB53C6FB812A891.json"/>
+<summary>0 type(s) changed in KB5067112 (11-23H2, arm64)</summary>
+<content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>11-23H2 amd64 10.0.22621.5983 -&gt; 10.0.22621.6133: _RTL_FEATURE_CONFIGURATION_PRIORITY</title>
+<id>urn:ntoffsets:feed:changes:32D8CFDFD04CBE46300A815F9ADD60FF1:323FB94F2067B69B3CA879EDC847E5BB1</id>
+<updated>2025-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/323FB94F2067B69B3CA879EDC847E5BB1.json"/>
+<summary>0 type(s) changed in KB5067112 (11-23H2, amd64)</summary>
+<content type="text">_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>11-22H2 arm64 KB5065431 -&gt; KB5066793: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:F9F827A33D74A237A04C6CF27EDCEAC71:66D5FB8CAB854FFDE890D8FF15ADBD0B1</id>
+<updated>2025-10-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/66D5FB8CAB854FFDE890D8FF15ADBD0B1.json"/>
+<summary>1 type(s) changed in KB5066793 (11-22H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
+</entry>
+<entry>
+<title>11-22H2 amd64 10.0.22621.5909 -&gt; 10.0.22621.6060: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:621801E9DBEB95A617726F00B9A767101:33BAAFAED913D5F0180FF18F587357161</id>
+<updated>2025-10-14T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/33BAAFAED913D5F0180FF18F587357161.json"/>
+<summary>1 type(s) changed in KB5066793 (11-22H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5065426/KB5068221 -&gt; KB5065789: PO_MEMORY_IMAGE, _EPROCESS, _HALP_DMA_MASTER_ADAPTER_OBJECT, _MI_VAD_EVENT_BLOCK, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:36D33E649D94FF98D44813A0F326BB4F1:FE0DE78978C1415324DB14B350D856C91</id>
+<updated>2025-09-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FE0DE78978C1415324DB14B350D856C91.json"/>
+<summary>5 type(s) changed in KB5065789 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled
+_EPROCESS: renamed: NumberOfLockedPages -&gt; MmReserved2
+_HALP_DMA_MASTER_ADAPTER_OBJECT: size 0xe0 -&gt; 0xe8; added: QueueLock; moved: 8
+_MI_VAD_EVENT_BLOCK: removed: BitMap
+_POP_HIBER_CONTEXT: added: EnableVpciHibernationCallbacks
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.6584 -&gt; 10.0.26100.6725: PO_MEMORY_IMAGE, _EPROCESS, _HALP_DMA_MASTER_ADAPTER_OBJECT, _MI_VAD_EVENT_BLOCK, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:E6426A07C26E66F8EB8594621A7B273B1:153C10B09E28FA791C9409621A62D0C81</id>
+<updated>2025-09-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/153C10B09E28FA791C9409621A62D0C81.json"/>
+<summary>5 type(s) changed in KB5065789 (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled
+_EPROCESS: renamed: NumberOfLockedPages -&gt; MmReserved2
+_HALP_DMA_MASTER_ADAPTER_OBJECT: size 0xe0 -&gt; 0xe8; added: QueueLock; moved: 8
+_MI_VAD_EVENT_BLOCK: removed: BitMap
+_POP_HIBER_CONTEXT: added: EnableVpciHibernationCallbacks
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
+</entry>
+<entry>
+<title>11-23H2 amd64 10.0.22621.5840 -&gt; 10.0.22621.5983: PO_MEMORY_IMAGE</title>
+<id>urn:ntoffsets:feed:changes:E0B1FD29169051BA56A10979635A026A1:32D8CFDFD04CBE46300A815F9ADD60FF1</id>
+<updated>2025-09-23T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/32D8CFDFD04CBE46300A815F9ADD60FF1.json"/>
+<summary>1 type(s) changed in KB5065790 (11-23H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 10.0.26100.4946 -&gt; KB5064081: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _CHPEV2_CPUAREA_INFO, _ETW_APC_POOL, and 2 more</title>
+<id>urn:ntoffsets:feed:changes:1500F00FEAEE8413C67EA13F8373B3811:58191FE7944A5BDE0CF8D795B453064A1</id>
+<updated>2025-08-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/58191FE7944A5BDE0CF8D795B453064A1.json"/>
+<summary>6 type(s) changed in KB5064081 (11-24H2, arm64)</summary>
+<content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
+_CC_NUMA_NODE: retyped: 2
+_CHPEV2_CPUAREA_INFO: added: Pad1, Pad2; moved: 1; resized: 1; retyped: 1
+_ETW_APC_POOL: retyped: 2
+_PRIVATE_CACHE_MAP_FLAGS: added: EntireField
+_SHARED_CACHE_MAP: retyped: 1</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.4946 -&gt; 10.0.26100.5074: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _ETW_APC_POOL, _PRIVATE_CACHE_MAP_FLAGS, and 1 more</title>
+<id>urn:ntoffsets:feed:changes:91F95759B8A1C35A0A9773FCA2A8A67E1:6765ABB4477B954A2F537F8F741EC02E1</id>
+<updated>2025-08-29T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6765ABB4477B954A2F537F8F741EC02E1.json"/>
+<summary>5 type(s) changed in KB5064081 (11-24H2, amd64)</summary>
+<content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
+_CC_NUMA_NODE: retyped: 2
+_ETW_APC_POOL: retyped: 2
+_PRIVATE_CACHE_MAP_FLAGS: added: EntireField
+_SHARED_CACHE_MAP: retyped: 1</content>
+</entry>
+<entry>
+<title>22H2 arm64 KB5062649 -&gt; KB5063842: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:2B9803F3F586270EF0DA14642FD23AED1:10E394B8DD4EC97D5E088112F967FA941</id>
+<updated>2025-08-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/10E394B8DD4EC97D5E088112F967FA941.json"/>
+<summary>1 type(s) changed in KB5063842 (22H2, arm64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>22H2 amd64 10.0.19041.6157 -&gt; 10.0.19041.6280: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:BE95F82E6CB52C0AB868F08DAB9D82301:1901E56231EB3DD3C6BF8E90DCC8F6931</id>
+<updated>2025-08-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1901E56231EB3DD3C6BF8E90DCC8F6931.json"/>
+<summary>1 type(s) changed in KB5063842 (22H2, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>11-23H2 amd64 10.0.22621.2428 -&gt; 10.0.22621.5840: PO_MEMORY_IMAGE, _CM_KCB_UOW, _CM_KEY_BODY, _DIAGNOSTIC_CONTEXT, and 28 more</title>
+<id>urn:ntoffsets:feed:changes:CF32DE2E4A334C7C06FB63FCB6FAFB5C1:E0B1FD29169051BA56A10979635A026A1</id>
+<updated>2025-08-26T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/E0B1FD29169051BA56A10979635A026A1.json"/>
+<summary>28 type(s) changed in KB5064080 (11-23H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
+_CM_KCB_UOW: added: UpdateEntireSecurity
+_CM_KEY_BODY: added: AccessCheckedLayerHeight
+_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
+_EJOB: size 0x710 -&gt; 0x718; added: EffectiveGraphicsFreezeCount, JobGraphicsFreezeOptimized; moved: 105
+_EPROCESS: added: Execution, Flags2Available2; removed: ProcessStateChangeInProgress, ProcessStateChangeRequest; renamed: ProcessExecutionState -&gt; Flags2Available1
+_ETHREAD: size 0x900 -&gt; 0x910; added: LastSoftParkElectionGroupAffinity
+_EXT_IOMMU_DEVICE_ID: removed: Gic
+_EXT_IOMMU_DEVICE_ID_GIC: removed
+_KPRCB: added: BhbFlushSequence, BpbDivideOnReturn, BpbTrappedBpbStateReserved2, FlushBhbOnTrap, NumberOfSecureFaults, PrcbPad12d ...; removed: BpbStateReserved; moved: 36; resized: 25; bitfields: 1; retyped: 25; renamed: PrcbPad12 -&gt; PrcbPad12c
+_KSHARED_READY_QUEUE: size 0x680 -&gt; 0x698; added: SoftParkElectionAffinityStats, SoftParkElectionLock, SoftParkElectionThreadCount, Spare3; moved: 6; resized: 1; retyped: 2; renamed: Spare1 -&gt; Group
+_KSHARED_READY_QUEUE_AFFINITY_STATISTICS: added
+_KTRAP_FRAME: added: NmiPreviousSpecCtrl, NmiPreviousSpecCtrlPad
+_LOADER_FEATURE_CONFIGURATION_INFORMATION2: added
+_LOADER_PARAMETER_EXTENSION: size 0xf20 -&gt; 0xf28; added: FeatureConfigurationInformation2
+_PPM_ENGINE_SETTINGS: added: LatencyHintEpp; moved: 1
+_PPM_POLICY_SETTINGS_MASK: added: LatencyHintEpp; bitfields: 1
+_PROCESS_EXECUTION: added
+_PROCESS_EXECUTION_STATE: added
+_PROCESS_EXECUTION_TRANSITION: added
+_PROC_FEEDBACK_COUNTER: moved: 1; resized: 1; retyped: 1
+_PROC_PERF_QOS_CLASS_POLICY: added: LatencyHintEpp; moved: 1
+_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
+_TOKEN: resized: 1
+_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
+wil_details_FeatureDescriptor: size 0x30 -&gt; 0x38; added: featureLoggedTraits; moved: 9
+wil_details_FeatureDescriptorMapping: added
+wil_details_FeatureStateCache: added: deviceOpportunityFastPathEnabled, deviceUsageFastPathEnabled; bitfields: 11
+FEATURE_CHANGE_TIME: added: FEATURE_CHANGE_TIME_EXTERNAL_FLAG, FEATURE_CHANGE_TIME_TEST_READY_FLAG
+UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
+_EXT_IOMMU_DEVICE_TYPE: removed: EXT_IOMMU_DEVICE_TYPE_GIC; renumbered: EXT_IOMMU_DEVICE_TYPE_MAX 7-&gt;6, EXT_IOMMU_DEVICE_TYPE_TEST 6-&gt;5
+_HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
+</entry>
+<entry>
+<title>21H2 arm64 KB5062554 -&gt; KB5063709: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:D448047E3794298DCE0871A8129647181:3013771A4EE49D33D73217D6E6DF90971</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/3013771A4EE49D33D73217D6E6DF90971.json"/>
+<summary>1 type(s) changed in KB5063709 (21H2, arm64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>21H2 amd64 10.0.19041.6093 -&gt; 10.0.19041.6216: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:495E39042A6983378CBD822FEB4E91ED1:B6121DA15DDCF625C8C7273C0D85EB101</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B6121DA15DDCF625C8C7273C0D85EB101.json"/>
+<summary>1 type(s) changed in KB5063709 (21H2, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>1809 amd64 10.0.17763.7558 -&gt; 10.0.17763.7671: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:70EBB62A57774A0C01C2B776107F42231:C4C42156D35ADC5B96994FD42A6EC7B61</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/C4C42156D35ADC5B96994FD42A6EC7B61.json"/>
+<summary>1 type(s) changed in KB5063877 (1809, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>1607 amd64 10.0.14393.8246 -&gt; 10.0.14393.8330: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:39C0001161C344BBB7598C13FD96BD9B1:CD646780614C4E5F85A988A5925BB7AF1</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/CD646780614C4E5F85A988A5925BB7AF1.json"/>
+<summary>1 type(s) changed in KB5063871 (1607, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>1507 amd64 10.0.10240.21072 -&gt; 10.0.10240.21100: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:B6E4516C9D3D4653ACD67CD60686FA291:FDB171B3F4AC4454AE76962B21D672001</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/FDB171B3F4AC4454AE76962B21D672001.json"/>
+<summary>1 type(s) changed in KB5063889 (1507, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:9F503A215825861861792E31F0216EB71:1500F00FEAEE8413C67EA13F8373B3811</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/1500F00FEAEE8413C67EA13F8373B3811.json"/>
+<summary>1 type(s) changed in KB5063878 (11-24H2, arm64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:37037C16F29E2343ED6D79A5C68F87221:91F95759B8A1C35A0A9773FCA2A8A67E1</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/91F95759B8A1C35A0A9773FCA2A8A67E1.json"/>
+<summary>1 type(s) changed in KB5063878 (11-24H2, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>11-22H2 arm64 10.0.22621.5697 -&gt; KB5063875: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:66685665A2A7950703F6896268A697E91:32314A3ABCF14E71F0A2F8F841E15BE71</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/32314A3ABCF14E71F0A2F8F841E15BE71.json"/>
+<summary>1 type(s) changed in KB5063875 (11-22H2, arm64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>11-22H2 amd64 10.0.22621.5697 -&gt; 10.0.22621.5766: _DIAGNOSTIC_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:950041821FDEF16AD603C25FDD31FE511:364F039B4838A8FBCB31F47E6E4BD4C71</id>
+<updated>2025-08-12T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/364F039B4838A8FBCB31F47E6E4BD4C71.json"/>
+<summary>1 type(s) changed in KB5063875 (11-22H2, amd64)</summary>
+<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
+</entry>
+<entry>
+<title>22H2 amd64 10.0.19041.6033 -&gt; 10.0.19041.6157: _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:B02A5AEC4BF32CBD6F5D31E5AC144E681:BE95F82E6CB52C0AB868F08DAB9D82301</id>
+<updated>2025-07-22T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/BE95F82E6CB52C0AB868F08DAB9D82301.json"/>
+<summary>1 type(s) changed in KB5062649 (22H2, amd64)</summary>
+<content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5064489 -&gt; 10.0.26100.4768: _DELAY_ACK_FO, _ETHREAD, _NONOPAQUE_OPLOCK, _OPLOCK_ACK_TIMEOUT, and 5 more</title>
+<id>urn:ntoffsets:feed:changes:0293E0B12A87BB612517848656C681711:9F503A215825861861792E31F0216EB71</id>
+<updated>2025-07-22T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/9F503A215825861861792E31F0216EB71.json"/>
+<summary>6 type(s) changed in KB5062660 (11-24H2, arm64)</summary>
+<content type="text">_DELAY_ACK_FO: size 0x18 -&gt; 0x30; added: AckTimeout, TelemetryData
+_ETHREAD: size 0x768 -&gt; 0x778; added: MmFaultClusterContext, ProcessFastRef
+_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xb8; added: AckTimeout, TelemetryData
+_OPLOCK_ACK_TIMEOUT: added
+_OPLOCK_TELEMETRY: added
+_RH_OP_CONTEXT: size 0x48 -&gt; 0x60; added: AckTimeout, TelemetryData
+EmptyCVariant_FeatureStaging_KVS: added
+_OPLOCK_TELEMETRY_FLAGS: added
+_SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCountInformation; renumbered: MaxSystemInfoClass 251-&gt;254</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.4656 -&gt; 10.0.26100.4768: _DELAY_ACK_FO, _ETHREAD, _HV_X64_HYPERVISOR_FEATURES, _NONOPAQUE_OPLOCK, and 6 more</title>
+<id>urn:ntoffsets:feed:changes:9360F9C0BD4B7C6C876274B99D8073E11:37037C16F29E2343ED6D79A5C68F87221</id>
+<updated>2025-07-22T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/37037C16F29E2343ED6D79A5C68F87221.json"/>
+<summary>7 type(s) changed in KB5062660 (11-24H2, amd64)</summary>
+<content type="text">_DELAY_ACK_FO: size 0x18 -&gt; 0x30; added: AckTimeout, TelemetryData
+_ETHREAD: size 0x788 -&gt; 0x798; added: MmFaultClusterContext, ProcessFastRef
+_HV_X64_HYPERVISOR_FEATURES: added: GhcbRootMappingAvailable, VpDispatchInterruptInjectionAvailable; bitfields: 1
+_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xb8; added: AckTimeout, TelemetryData
+_OPLOCK_ACK_TIMEOUT: added
+_OPLOCK_TELEMETRY: added
+_RH_OP_CONTEXT: size 0x48 -&gt; 0x60; added: AckTimeout, TelemetryData
+EmptyCVariant_FeatureStaging_KVS: added
+_OPLOCK_TELEMETRY_FLAGS: added
+_SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCountInformation; renumbered: MaxSystemInfoClass 251-&gt;254</content>
+</entry>
+<entry>
+<title>21H2 amd64 10.0.19041.5965 -&gt; 10.0.19041.6093: _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:10EFC2288044B448D2954F042A3396E01:495E39042A6983378CBD822FEB4E91ED1</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/495E39042A6983378CBD822FEB4E91ED1.json"/>
+<summary>1 type(s) changed in KB5062554 (21H2, amd64)</summary>
+<content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+<entry>
+<title>1809 amd64 10.0.17763.7434 -&gt; 10.0.17763.7558: PO_MEMORY_IMAGE, _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:1FE643F07FA91AB0EB843B5B41BC3AA41:70EBB62A57774A0C01C2B776107F42231</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/70EBB62A57774A0C01C2B776107F42231.json"/>
+<summary>2 type(s) changed in KB5062557 (1809, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
+_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+<entry>
+<title>1607 amd64 10.0.14393.8146 -&gt; 10.0.14393.8246: PO_MEMORY_IMAGE, _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:A4B0279934D94867B740CFED2DFE577C1:39C0001161C344BBB7598C13FD96BD9B1</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/39C0001161C344BBB7598C13FD96BD9B1.json"/>
+<summary>2 type(s) changed in KB5062560 (1607, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
+_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+<entry>
+<title>1507 amd64 10.0.10240.21033 -&gt; 10.0.10240.21072: PO_MEMORY_IMAGE, _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:240EF74E930E431896432584CB6946151:B6E4516C9D3D4653ACD67CD60686FA291</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/B6E4516C9D3D4653ACD67CD60686FA291.json"/>
+<summary>2 type(s) changed in KB5062561 (1507, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
+_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5060829 -&gt; 10.0.26100.4652: _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION, _SKSERVICE</title>
+<id>urn:ntoffsets:feed:changes:2F5EDE9CE5DB3A956E002CE117395EF31:0221F2D4E8E0BCCE13BB32530B3CC12D1</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/0221F2D4E8E0BCCE13BB32530B3CC12D1.json"/>
+<summary>2 type(s) changed in KB5062553 (11-24H2, arm64)</summary>
+<content type="text">_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
+_LOADER_PARAMETER_EXTENSION: size 0x10f8 -&gt; 0x1108; added: BootAppSvnInfo
+_SKSERVICE: added: SECURESERVICE_MAKE_KERNEL_NONGLOBAL, SECURESERVICE_SWEEP_PROCESS_ICACHE_RANGE; removed: SECURESERVICE_DEBUG_SWEEP_ICACHE_RANGE; renumbered: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 276-&gt;277, SECURESERVICE_REQUEST_BREAK_IN 275-&gt;276</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.4484 -&gt; 10.0.26100.4652: _KPRCB_BPB_FEATURES, _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION</title>
+<id>urn:ntoffsets:feed:changes:ECDC735E7B90585D3ED73CFF1AA760031:00D01401874F8CC3F5F5DA237013C16A1</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/00D01401874F8CC3F5F5DA237013C16A1.json"/>
+<summary>3 type(s) changed in KB5062553 (11-24H2, amd64)</summary>
+<content type="text">_KPRCB_BPB_FEATURES: added: VerwOnIdle; bitfields: 1
+_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
+_LOADER_PARAMETER_EXTENSION: size 0x1120 -&gt; 0x1130; added: BootAppSvnInfo</content>
+</entry>
+<entry>
+<title>11-22H2 amd64 10.0.22621.5547 -&gt; 10.0.22621.5624: _KPRCB</title>
+<id>urn:ntoffsets:feed:changes:76D055B14FCAD8D233C7D96FC7F52CBC1:6DFBCDD820A41870655EEA0B9EA2F41C1</id>
+<updated>2025-07-08T00:00:00Z</updated>
+<link rel="alternate" href="https://ntoffsets.github.io/ntoffsets/v1/build/6DFBCDD820A41870655EEA0B9EA2F41C1.json"/>
+<summary>1 type(s) changed in KB5062552 (11-22H2, amd64)</summary>
+<content type="text">_KPRCB: added: VerwOnIdle; bitfields: 1</content>
+</entry>
+</feed>
