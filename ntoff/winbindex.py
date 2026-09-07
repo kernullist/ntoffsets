@@ -22,6 +22,9 @@ from __future__ import annotations
 
 import gzip
 import json
+import os
+import time
+import urllib.error
 import urllib.request
 import uuid
 from collections import defaultdict
@@ -147,14 +150,42 @@ def _insider_shard(cache: Path, file_name: str) -> str:
     return shards[file_name]
 
 
-def _get(url: str) -> bytes:
-    # Not the symbol-server user agent: the GitHub API rejects it with a 500.
-    request = urllib.request.Request(
-        url, headers={"User-Agent": "ntoffsets/0.1 (+https://github.com/ntoffsets)",
-                      "Accept": "application/vnd.github+json"}
-    )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return response.read()
+def _get(url: str, *, attempts: int = 4) -> bytes:
+    """Read one GitHub API response, with a token when we have one.
+
+    Anonymous API calls are limited to sixty an hour **per IP**, and a CI
+    runner's address is shared with every other job on the fleet, so the quota
+    is usually gone before we ask. `GITHUB_TOKEN` raises the limit and makes it
+    ours; the first CI run failed here with a 500 on the tree listing while the
+    same call had always worked from a laptop.
+
+    Retried on 5xx for the same reason `msdl.fetch` is: the tree of the Insider
+    repository is tens of thousands of entries and the API sheds load on it.
+    """
+    headers = {
+        # Not the symbol-server user agent: the GitHub API rejects it with a 500.
+        "User-Agent": "ntoffsets/0.1 (+https://github.com/ntoffsets)",
+        "Accept": "application/vnd.github+json",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    delay = 2.0
+    for attempt in range(1, attempts + 1):
+        request = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            if attempt == attempts or error.code < 500:
+                raise
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == attempts:
+                raise
+        time.sleep(delay)
+        delay *= 2
+    raise AssertionError("unreachable")
 
 
 def snapshot_url(cache: Path, dataset: str, file_name: str) -> str:

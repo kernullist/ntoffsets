@@ -98,6 +98,12 @@ jobs:
       # that is exactly the traffic 4.3 exists to prevent. A schema bump is a
       # local operation against the cache, not a CI job.
       - name: Collect
+        # The Insider dataset is sharded 256 ways and the shard map is read
+        # from the GitHub tree API. Anonymous calls there get sixty an hour per
+        # IP, shared with every other job on the runner fleet, which is how the
+        # first run died on a call that had never failed from a laptop.
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python -m ntoff collect --dataset ga --refresh --no-oracle
           python -m ntoff collect --dataset arm64 --refresh --no-oracle
