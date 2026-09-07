@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 # The oracle. Two independent readings of the same PDB, diffed (13-2).
 #
 # Separate from `collect` because DIA is Windows-only COM and the pipeline runs

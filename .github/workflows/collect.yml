@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 # Pick up whatever Microsoft shipped, and publish it.
 #
 # Most days this does nothing. Windows ships kernel updates on the second

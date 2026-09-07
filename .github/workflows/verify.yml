@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 # Prove the published numbers, from the outside.
 #
 # 8.6: a security-adjacent database has to be checkable by someone who does not
