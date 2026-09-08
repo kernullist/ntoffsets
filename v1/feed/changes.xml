@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-09-07T10:16:33Z</updated>
+<updated>2026-09-08T11:28:36Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
