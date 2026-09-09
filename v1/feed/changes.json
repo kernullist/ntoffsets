@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-08T11:28:36Z",
+ "generated": "2026-09-09T11:34:41Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -57,52 +57,52 @@
   {
    "channel": "11-23H2",
    "machine": "amd64",
-   "builds": 14,
-   "transitions": 13,
+   "builds": 15,
+   "transitions": 14,
    "layout_changes": 4,
    "from_version": "10.0.22621.2428",
-   "to_version": "10.0.22621.7517",
+   "to_version": null,
    "from_date": "2023-10-10",
-   "to_date": "2026-08-11",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:9d64893aa80d1ba4a480b55bdc69b14552ec0e829298ff409e69641b1e8f5b29",
    "known_missing_in_channel": 1
   },
   {
    "channel": "11-23H2",
    "machine": "arm64",
-   "builds": 13,
-   "transitions": 12,
+   "builds": 14,
+   "transitions": 13,
    "layout_changes": 2,
    "from_version": null,
    "to_version": null,
    "from_date": "2025-09-23",
-   "to_date": "2026-08-11",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:61aebe2442f6a05df2b2af89dc91edcdf2824861f75d501d693ed1c8406f6df6",
    "known_missing_in_channel": 1
   },
   {
    "channel": "11-24H2",
    "machine": "amd64",
-   "builds": 58,
-   "transitions": 57,
+   "builds": 59,
+   "transitions": 58,
    "layout_changes": 33,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9278",
+   "to_version": "10.0.26100.9444",
    "from_date": null,
-   "to_date": "2026-08-27",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
    "known_missing_in_channel": 5
   },
   {
    "channel": "11-24H2",
    "machine": "arm64",
-   "builds": 53,
-   "transitions": 52,
+   "builds": 54,
+   "transitions": 53,
    "layout_changes": 31,
    "from_version": null,
    "to_version": null,
    "from_date": "2024-06-15",
-   "to_date": "2026-08-27",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
    "known_missing_in_channel": 5
   },
@@ -122,26 +122,26 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 13,
-   "transitions": 12,
+   "builds": 14,
+   "transitions": 13,
    "layout_changes": 8,
    "from_version": "10.0.28000.1575",
-   "to_version": "10.0.28000.2804",
+   "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-08-27",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:1744b439e178f003d903ce39afe6eea6698fb2ffcf802a5ec6ad1468df71452d",
    "known_missing_in_channel": 0
   },
   {
    "channel": "11-26H1",
    "machine": "arm64",
-   "builds": 12,
-   "transitions": 11,
+   "builds": 13,
+   "transitions": 12,
    "layout_changes": 7,
    "from_version": null,
    "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-08-27",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:671ba69c985579fc01c44952f5fceeb5a2e06c9c597c5c29ef52dbe77ec0a111",
    "known_missing_in_channel": 0
   },
@@ -252,13 +252,13 @@
   {
    "channel": "1809",
    "machine": "amd64",
-   "builds": 152,
-   "transitions": 151,
+   "builds": 153,
+   "transitions": 152,
    "layout_changes": 32,
    "from_version": "10.0.17763.1",
-   "to_version": "10.0.17763.9121",
+   "to_version": null,
    "from_date": null,
-   "to_date": "2026-08-11",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:112196f9b87b5d1949dcbc295054e05486c81e95f2234dabb29b3668682efe7c",
    "known_missing_in_channel": 23
   },
@@ -382,26 +382,26 @@
   {
    "channel": "21H2",
    "machine": "amd64",
-   "builds": 43,
-   "transitions": 42,
+   "builds": 44,
+   "transitions": 43,
    "layout_changes": 14,
    "from_version": "10.0.19041.1288",
-   "to_version": "10.0.19041.7663",
+   "to_version": "10.0.19041.7725",
    "from_date": "2021-10-12",
-   "to_date": "2026-08-11",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
    "known_missing_in_channel": 3
   },
   {
    "channel": "21H2",
    "machine": "arm64",
-   "builds": 40,
-   "transitions": 39,
+   "builds": 41,
+   "transitions": 40,
    "layout_changes": 11,
    "from_version": null,
    "to_version": null,
    "from_date": "2023-06-13",
-   "to_date": "2026-08-11",
+   "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:2f1bf4c7b5eacadec1950880b319e1edc6ad1a0c1fefba2154a47b9ab695ba42",
    "known_missing_in_channel": 3
   },
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 60,
-   "transitions": 59,
-   "layout_changes": 25,
+   "builds": 61,
+   "transitions": 60,
+   "layout_changes": 26,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9278",
+   "to_version": "10.0.26100.9354",
    "from_date": null,
-   "to_date": "2026-08-27",
-   "latest_layout": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
+   "to_date": null,
+   "latest_layout": "v2:sha256:211df0dc06441a17a091720f54d130f254c2772b5e44dd3d74cb6bb4e0df354b",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 11,
-   "transitions": 10,
-   "layout_changes": 7,
+   "builds": 12,
+   "transitions": 11,
+   "layout_changes": 8,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9233",
+   "to_version": "10.0.26100.9354",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
+   "latest_layout": "v2:sha256:5d620d61dd4f57dff1ff3b20b01b70f83d0d02e5d4f60c5041074eff3280cf8c",
    "known_missing_in_channel": 0
   },
   {
@@ -988,6 +988,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:9607235e1ebda1873389aa5ee4b4b8a303b63424834668f65738ec066903ce4c",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29661",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29661.1000",
+   "to_version": "10.0.29661.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:121ec177cb9f7a63f5341d4a7233de2791650d3524f50614267b7e003844be6f",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29661",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29661.1000",
+   "to_version": "10.0.29661.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:573c52f229dac1fb66a44ba1b6b12be3ae61988da5d54c0a595e3b3ea026a75a",
    "known_missing_in_channel": 0
   }
  ],
@@ -83343,6 +83369,479 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9233",
+   "to_version": "10.0.26100.9354",
+   "from_key": "7874842F7A32EC43E13EB3A68B3680BC1",
+   "to_key": "E2908508940A4F4567917A40B572884D1",
+   "from_kb": [
+    "08eed889-6932-425b-9daa-5148626e5694"
+   ],
+   "kb": [
+    "361f3e9a-c406-4e84-a450-e77ca55014d0"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
+   "layout_to": "v2:sha256:5d620d61dd4f57dff1ff3b20b01b70f83d0d02e5d4f60c5041074eff3280cf8c",
+   "types_changed": [
+    {
+     "type": "_ENODE",
+     "size_from": 512,
+     "size_to": 512,
+     "members_added": [
+      "SubQueueCount",
+      "SubQueueIndexSeed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2304,
+     "size_to": 2304,
+     "members_added": [
+      "ProcessQosCallbackListEntry"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_PARTITION",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "WorkQueues",
+       "from": "_EX_WORK_QUEUE * * volatile *",
+       "to": "_EX_WORK_QUEUE * volatile *"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "size_from": 736,
+     "size_to": 752,
+     "members_added": [
+      "HealthMetrics",
+      "SubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllThreadsExitedEvent",
+       "from": 728,
+       "to": 736
+      },
+      {
+       "name": "MaxThreads",
+       "from": 720,
+       "to": 724
+      },
+      {
+       "name": "QueueIndex",
+       "from": 724,
+       "to": 728
+      },
+      {
+       "name": "TryFailed",
+       "from": 716,
+       "to": 720
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "TryFailed",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "MinThreads",
+       "from": "0:31",
+       "to": "0:0"
+      },
+      {
+       "name": "TryFailed",
+       "from": "31:1",
+       "to": "0:0"
+      }
+     ],
+     "members_retyped": [
+      {
+       "name": "TryFailed",
+       "from": "volatile unsigned long",
+       "to": "volatile unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE_HEALTH_METRICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_HAL_ARM_ENLIGHTENMENT_INFORMATION",
+     "size_from": 408,
+     "size_to": 416,
+     "members_added": [
+      "EnableFfaSri"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "size_from": 88,
+     "size_to": 96,
+     "members_added": [
+      "InsertTime",
+      "QueueType"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KEMUL_CONTROL_BLOCK",
+     "size_from": 224,
+     "size_to": 240,
+     "members_added": [
+      "SynchronousSuspendBlockListHead"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Bcr",
+       "from": 192,
+       "to": 208
+      },
+      {
+       "name": "Bvr",
+       "from": 128,
+       "to": 144
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 40960,
+     "size_to": 40960,
+     "members_added": [
+      "WorkSubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTLP_HP_HEAP_GLOBALS",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [
+      "SynchronousSuspend"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "size_from": 64,
+     "size_to": 64,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "ObjectTypePolicies",
+       "to": "ObjectTypeMacls",
+       "offset": 56,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "removed"
+    },
+    {
+     "enum": "_SKCALL_FFA_MEMORY_OPERATION",
+     "status": "added"
+    },
+    {
+     "enum": "_SKSERVICE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SECURESERVICE_FFA_MAP_UNMAP_RXTX_BUFFER",
+      "SECURESERVICE_INVOKE_FFA_MEMORY_OPERATION"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE",
+       "from": 278,
+       "to": 280
+      },
+      {
+       "name": "SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT",
+       "from": 280,
+       "to": 282
+      },
+      {
+       "name": "SECURESERVICE_REQUEST_BREAK_IN",
+       "from": 277,
+       "to": 279
+      },
+      {
+       "name": "SECURESERVICE_TERMINATE",
+       "from": 279,
+       "to": 281
+      }
+     ]
+    },
+    {
+     "enum": "_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -89431,6 +89930,425 @@
        "to": 278
       }
      ]
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9278",
+   "to_version": "10.0.26100.9354",
+   "from_key": "822B6DB6E43D1FDF2008C884BC27FCA81",
+   "to_key": "371201493B60AC20F85DA7CA6D93C8D01",
+   "from_kb": [
+    "KB5120998",
+    "c1c737c2-f2d9-4824-bb5b-1af515179099",
+    "d922b79f-142d-4cf8-896b-515abfd01e66",
+    "def45c01-379e-4ded-8b1b-b870faaef6f8"
+   ],
+   "kb": [
+    "f79e9e51-35df-4d29-8ba2-e917ee87e10a"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
+   "layout_to": "v2:sha256:211df0dc06441a17a091720f54d130f254c2772b5e44dd3d74cb6bb4e0df354b",
+   "types_changed": [
+    {
+     "type": "_ENODE",
+     "size_from": 896,
+     "size_to": 896,
+     "members_added": [
+      "SubQueueCount",
+      "SubQueueIndexSeed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2112,
+     "size_to": 2112,
+     "members_added": [
+      "ProcessQosCallbackListEntry"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_PARTITION",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "WorkQueues",
+       "from": "_EX_WORK_QUEUE * * volatile *",
+       "to": "_EX_WORK_QUEUE * volatile *"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "size_from": 736,
+     "size_to": 752,
+     "members_added": [
+      "HealthMetrics",
+      "SubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllThreadsExitedEvent",
+       "from": 728,
+       "to": 736
+      },
+      {
+       "name": "MaxThreads",
+       "from": 720,
+       "to": 724
+      },
+      {
+       "name": "QueueIndex",
+       "from": 724,
+       "to": 728
+      },
+      {
+       "name": "TryFailed",
+       "from": 716,
+       "to": 720
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "TryFailed",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "MinThreads",
+       "from": "0:31",
+       "to": "0:0"
+      },
+      {
+       "name": "TryFailed",
+       "from": "31:1",
+       "to": "0:0"
+      }
+     ],
+     "members_retyped": [
+      {
+       "name": "TryFailed",
+       "from": "volatile unsigned long",
+       "to": "volatile unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE_HEALTH_METRICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "size_from": 88,
+     "size_to": 96,
+     "members_added": [
+      "InsertTime",
+      "QueueType"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [
+      "WorkSubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "PrcbPad92",
+       "from": 33576,
+       "to": 33580
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PrcbPad92",
+       "from": 24,
+       "to": 20
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "PrcbPad92",
+       "from": "unsigned long[6]",
+       "to": "unsigned long[5]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTLP_HP_HEAP_GLOBALS",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [
+      "SynchronousSuspend"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "size_from": 64,
+     "size_to": 64,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "ObjectTypePolicies",
+       "to": "ObjectTypeMacls",
+       "offset": 56,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "removed"
+    },
+    {
+     "enum": "_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
     }
    ]
   },
