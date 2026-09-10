@@ -90,7 +90,7 @@
    "size": 4,
    "bit_position": 3,
    "bit_count": 1,
-   "observations": 25
+   "observations": 27
   },
   {
    "type": "RTLP_HP_LFH_PERF_FLAGS",
@@ -280,7 +280,7 @@
    "size": 24,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 107
+   "observations": 117
   },
   {
    "type": "_DYNAMIC_FUNCTION_TABLE",
@@ -300,7 +300,7 @@
    "size": 4,
    "bit_position": 13,
    "bit_count": 1,
-   "observations": 33
+   "observations": 36
   },
   {
    "type": "_EPROCESS",
@@ -350,7 +350,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 30
+   "observations": 33
   },
   {
    "type": "_ETHREAD",
@@ -370,7 +370,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_GIC3_DATA",
@@ -520,7 +520,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -550,7 +550,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -560,7 +560,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -570,7 +570,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -580,7 +580,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -590,7 +590,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -600,7 +600,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -610,7 +610,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -620,7 +620,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -630,7 +630,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -640,7 +640,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -660,7 +660,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -690,7 +690,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 32
+   "observations": 34
   },
   {
    "type": "_HEAP_COUNTERS",
@@ -700,7 +700,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 103
+   "observations": 106
   },
   {
    "type": "_HEAP_COUNTERS",
@@ -710,7 +710,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 173
+   "observations": 183
   },
   {
    "type": "_HEAP_LFH_BUCKET",
@@ -770,7 +770,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 126
+   "observations": 133
   },
   {
    "type": "_HEAP_VS_AFFINITY_SLOT",
@@ -800,7 +800,7 @@
    "size": 16,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 59
+   "observations": 63
   },
   {
    "type": "_IOMMU_DMA_DOMAIN_CREATION_FLAGS",
@@ -940,7 +940,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 33
+   "observations": 36
   },
   {
    "type": "_KPRCB",
@@ -950,7 +950,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 1,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_KPRCB",
@@ -960,7 +960,7 @@
    "size": 1,
    "bit_position": 2,
    "bit_count": 1,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_KPRCB",
@@ -970,7 +970,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 33
+   "observations": 36
   },
   {
    "type": "_KPRCB",
@@ -980,7 +980,7 @@
    "size": 1,
    "bit_position": 1,
    "bit_count": 1,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_KPRCB",
@@ -1040,7 +1040,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 22
+   "observations": 24
   },
   {
    "type": "_KPRCB",
@@ -2370,7 +2370,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2380,7 +2380,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2400,7 +2400,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2410,7 +2410,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
@@ -2560,7 +2560,7 @@
    "size": 16,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MMINPAGE_SUPPORT",
@@ -2610,7 +2610,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 11
+   "observations": 12
   },
   {
    "type": "_MMPAGING_FILE",
@@ -3150,7 +3150,7 @@
    "size": 4,
    "bit_position": 11,
    "bit_count": 1,
-   "observations": 82
+   "observations": 87
   },
   {
    "type": "_POP_FX_DEVICE_STATUS",
@@ -3200,7 +3200,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 8
+   "observations": 9
   },
   {
    "type": "_PO_HIBER_PERF",
@@ -3460,7 +3460,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 2
+   "observations": 4
   },
   {
    "type": "_SUBSECTION",
@@ -3560,7 +3560,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 103
+   "observations": 113
   },
   {
    "type": "_flags",
@@ -3690,7 +3690,7 @@
    "size": 4,
    "bit_position": 5,
    "bit_count": 2,
-   "observations": 37
+   "observations": 40
   },
   {
    "type": "wil_details_RecordUsageResult",
