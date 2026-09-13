@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-12T10:56:22Z",
+ "generated": "2026-09-13T12:02:47Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -260,7 +260,7 @@
    "from_date": null,
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:112196f9b87b5d1949dcbc295054e05486c81e95f2234dabb29b3668682efe7c",
-   "known_missing_in_channel": 23
+   "known_missing_in_channel": 24
   },
   {
    "channel": "1809",
@@ -273,7 +273,7 @@
    "from_date": "2018-10-09",
    "to_date": "2024-06-11",
    "latest_layout": "v2:sha256:84f67be7a474317651f51965fe269f9d20251eafd0601939df8124f932dbf7c6",
-   "known_missing_in_channel": 23
+   "known_missing_in_channel": 24
   },
   {
    "channel": "1903",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 61,
-   "transitions": 60,
-   "layout_changes": 26,
+   "builds": 62,
+   "transitions": 61,
+   "layout_changes": 27,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9354",
+   "to_version": "10.0.26100.9482",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:211df0dc06441a17a091720f54d130f254c2772b5e44dd3d74cb6bb4e0df354b",
+   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 12,
-   "transitions": 11,
-   "layout_changes": 8,
+   "builds": 13,
+   "transitions": 12,
+   "layout_changes": 9,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9354",
+   "to_version": "10.0.26100.9482",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:5d620d61dd4f57dff1ff3b20b01b70f83d0d02e5d4f60c5041074eff3280cf8c",
+   "latest_layout": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
    "known_missing_in_channel": 0
   },
   {
@@ -1014,6 +1014,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:573c52f229dac1fb66a44ba1b6b12be3ae61988da5d54c0a595e3b3ea026a75a",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29667",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29667.1000",
+   "to_version": "10.0.29667.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:304d93ab3ac1cee5bd43868915c1d9f4a4d8039af87bb3eb79f12651d63d6417",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29667",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29667.1000",
+   "to_version": "10.0.29667.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:0a1296b9ce97d1618b773dcb3685ef66aed72b31a8e68894d3e563310768548c",
    "known_missing_in_channel": 0
   }
  ],
@@ -83842,6 +83868,61 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9354",
+   "to_version": "10.0.26100.9482",
+   "from_key": "E2908508940A4F4567917A40B572884D1",
+   "to_key": "3BFE6B83EE4FD15BC9E3E98C4C5B00E21",
+   "from_kb": [
+    "361f3e9a-c406-4e84-a450-e77ca55014d0"
+   ],
+   "kb": [
+    "a72cc9ed-fc88-4073-bd0f-397f5e925e36"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:5d620d61dd4f57dff1ff3b20b01b70f83d0d02e5d4f60c5041074eff3280cf8c",
+   "layout_to": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "types_changed": [
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Ticket",
+       "from": "_ALPC_WORK_ON_BEHALF_TICKET",
+       "to": "_RTL_WORK_ON_BEHALF_TICKET"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_WOB_INFORMATION_CLASS",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -90348,6 +90429,61 @@
     },
     {
      "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9354",
+   "to_version": "10.0.26100.9482",
+   "from_key": "371201493B60AC20F85DA7CA6D93C8D01",
+   "to_key": "8481BFDA79A0E613EE1946C2C87B8AD81",
+   "from_kb": [
+    "f79e9e51-35df-4d29-8ba2-e917ee87e10a"
+   ],
+   "kb": [
+    "a13c52d6-1b15-419a-a33e-36287bd44639"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:211df0dc06441a17a091720f54d130f254c2772b5e44dd3d74cb6bb4e0df354b",
+   "layout_to": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "types_changed": [
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Ticket",
+       "from": "_ALPC_WORK_ON_BEHALF_TICKET",
+       "to": "_RTL_WORK_ON_BEHALF_TICKET"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_WOB_INFORMATION_CLASS",
      "status": "added"
     }
    ]
