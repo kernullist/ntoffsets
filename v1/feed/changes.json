@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-15T11:54:02Z",
+ "generated": "2026-09-16T11:46:13Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -83,26 +83,26 @@
   {
    "channel": "11-24H2",
    "machine": "amd64",
-   "builds": 59,
-   "transitions": 58,
+   "builds": 60,
+   "transitions": 59,
    "layout_changes": 33,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9444",
+   "to_version": "10.0.26100.9457",
    "from_date": null,
-   "to_date": "2026-09-08",
+   "to_date": "2026-09-14",
    "latest_layout": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
    "known_missing_in_channel": 5
   },
   {
    "channel": "11-24H2",
    "machine": "arm64",
-   "builds": 54,
-   "transitions": 53,
+   "builds": 55,
+   "transitions": 54,
    "layout_changes": 31,
    "from_version": null,
    "to_version": null,
    "from_date": "2024-06-15",
-   "to_date": "2026-09-08",
+   "to_date": "2026-09-14",
    "latest_layout": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
    "known_missing_in_channel": 5
   },
@@ -174,14 +174,14 @@
   {
    "channel": "1607",
    "machine": "amd64",
-   "builds": 171,
-   "transitions": 170,
-   "layout_changes": 36,
+   "builds": 172,
+   "transitions": 171,
+   "layout_changes": 37,
    "from_version": "10.0.14393.0",
-   "to_version": "10.0.14393.9418",
+   "to_version": "10.0.14393.9514",
    "from_date": null,
-   "to_date": "2026-08-11",
-   "latest_layout": "v2:sha256:df3a9c3c4065d4712010cd5189baa01172022b00a1a30dbf75a5ac16033eee20",
+   "to_date": "2026-09-14",
+   "latest_layout": "v2:sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
    "known_missing_in_channel": 3
   },
   {
@@ -1044,6 +1044,7067 @@
   }
  ],
  "changes": [
+  {
+   "channel": "1607",
+   "machine": "amd64",
+   "from_version": "10.0.14393.9418",
+   "to_version": "10.0.14393.9514",
+   "from_key": "FA69FA29B4F64187A5AD63FD89F754261",
+   "to_key": "D9CB86FB897E4F7D9155D80F643944CB1",
+   "from_kb": [
+    "KB5120418"
+   ],
+   "kb": [
+    "KB5129239"
+   ],
+   "date": "2026-09-14",
+   "layout_from": "v2:sha256:df3a9c3c4065d4712010cd5189baa01172022b00a1a30dbf75a5ac16033eee20",
+   "layout_to": "v2:sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "types_changed": [
+    {
+     "type": "BATTERY_REPORTING_SCALE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "CMP_OFFSET_ARRAY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "DOCK_INTERFACE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "LIST_ENTRY32",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "LIST_ENTRY64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "PEPHANDLE__",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "POWER_ACTION_POLICY",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "status": "removed",
+     "size_from": 968,
+     "size_to": null
+    },
+    {
+     "type": "PROCESSOR_IDLESTATE_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "PROCESSOR_IDLESTATE_POLICY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "PROCESSOR_PERFSTATE_POLICY",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "SYSTEM_POWER_CAPABILITIES",
+     "status": "removed",
+     "size_from": 76,
+     "size_to": null
+    },
+    {
+     "type": "SYSTEM_POWER_LEVEL",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "VACB_LEVEL_ALLOCATION_LIST",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ACCESS_REASONS",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_ACCESS_STATE",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_ACL",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ACTIVATION_CONTEXT_STACK",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_AER_BRIDGE_DESCRIPTOR_FLAGS",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_AER_ENDPOINT_DESCRIPTOR_FLAGS",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_AER_ROOTPORT_DESCRIPTOR_FLAGS",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_AGGREGATED_PAYLOAD_FILTER",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMMUNICATION_INFO",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST_HEADER",
+     "status": "removed",
+     "size_from": 384,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST_STATE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMPLETION_PACKET_LOOKASIDE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_COMPLETION_PACKET_LOOKASIDE_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_DISPATCH_CONTEXT",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_HANDLE_ENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_HANDLE_TABLE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_MESSAGE_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_PORT",
+     "status": "removed",
+     "size_from": 472,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_PORT_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_PROCESS_CONTEXT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_AMD64_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_ADD_RESERVED_PARAMETERS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_ALLOCATION_STATE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_ALTERNATIVE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_BOOT_ALLOCATION_PARAMETERS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_CONFLICT_INFO",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_INSTANCE",
+     "status": "removed",
+     "size_from": 336,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_INTERFACE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_ORDERING",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_ORDERING_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_PARAMETERS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_QUERY_ALLOCATED_RESOURCES_PARAMETERS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_QUERY_ARBITRATE_PARAMETERS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_QUERY_CONFLICT_PARAMETERS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_RETEST_ALLOCATION_PARAMETERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ARBITER_TEST_ALLOCATION_PARAMETERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ARM64_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ARMCE_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_ARM_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_AUTHZBASEP_CLAIM_ATTRIBUTES_COLLECTION",
+     "status": "removed",
+     "size_from": 608,
+     "size_to": null
+    },
+    {
+     "type": "_AUTHZBASEP_SECURITY_ATTRIBUTES_INFORMATION",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_AUX_ACCESS_DATA",
+     "status": "removed",
+     "size_from": 224,
+     "size_to": null
+    },
+    {
+     "type": "_BITMAP_RANGE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_BLOB",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_BLOB_COUNTERS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_BLOB_TYPE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_BUS_EXTENSION_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CACHED_CHILD_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CACHED_KSTACK_LIST",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CACHE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_CACHE_MANAGER_CALLBACKS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CACHE_UNINITIALIZE_EVENT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CALL_HASH_ENTRY",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_CALL_PERFORMANCE_DATA",
+     "status": "removed",
+     "size_from": 1032,
+     "size_to": null
+    },
+    {
+     "type": "_CC_ASYNC_READ_CONTEXT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CC_EXTERNAL_CACHE_INFO",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_CELL_DATA",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_CHILD_LIST",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CLIENT_ID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CLIENT_ID32",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CLIENT_ID64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CLS_LSN",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CMHIVE",
+     "status": "removed",
+     "size_from": 6056,
+     "size_to": null
+    },
+    {
+     "type": "_CMP_DISCARD_AND_REPLACE_KCB_CONTEXT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CM_BIG_DATA",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_CACHED_VALUE_INDEX",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_CM_CELL_REMAP_BLOCK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_COMPONENT_HASH",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_CM_DIRTY_VECTOR_LOG",
+     "status": "removed",
+     "size_from": 1160,
+     "size_to": null
+    },
+    {
+     "type": "_CM_DIRTY_VECTOR_LOG_ENTRY",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_CM_FULL_RESOURCE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 36,
+     "size_to": null
+    },
+    {
+     "type": "_CM_INDEX",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_INDEX_HINT_BLOCK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_INTENT_LOCK",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KCB_LAYER_INFO",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KCB_UOW",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_BODY",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_CONTROL_BLOCK",
+     "status": "removed",
+     "size_from": 296,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_HASH",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_HASH_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_INDEX",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_NODE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_REFERENCE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_SECURITY",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_SECURITY_CACHE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_SECURITY_CACHE_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CM_KEY_VALUE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_CM_NAME_CONTROL_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_CM_NAME_HASH",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_CM_NOTIFY_BLOCK",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_CM_PARTIAL_RESOURCE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_CM_PARTIAL_RESOURCE_LIST",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_CM_PATH_HASH",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_CM_RESOURCE_LIST",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_CM_RM",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_CM_TRANS",
+     "status": "removed",
+     "size_from": 176,
+     "size_to": null
+    },
+    {
+     "type": "_CM_TRANS_PTR",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_CM_UOW_KEY_STATE_MODIFICATION",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_CM_UOW_SET_SD_DATA",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CM_UOW_SET_VALUE_KEY_DATA",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CM_UOW_SET_VALUE_LIST_DATA",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_CM_WORKITEM",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_COMPRESSED_DATA_INFO",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_CONTEXT",
+     "status": "removed",
+     "size_from": 1232,
+     "size_to": null
+    },
+    {
+     "type": "_CONTROL_AREA",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_COUNTER_READING",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_CPU_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_CRITICAL_PROCESS_EXCEPTION_DATA",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_CURDIR",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_CVDD",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_ANY_CONTROL_SET",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_BREAKPOINTEX",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_CONTEXT_EX",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_CONTINUE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_CONTINUE2",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_FILL_MEMORY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_CONTEXT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_INTERNAL_BREAKPOINT32",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_INTERNAL_BREAKPOINT64",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_SET_BUS_DATA",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_VERSION32",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_GET_VERSION64",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_LOAD_SYMBOLS32",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_LOAD_SYMBOLS64",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_MANIPULATE_STATE32",
+     "status": "removed",
+     "size_from": 52,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_MANIPULATE_STATE64",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_QUERY_MEMORY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_QUERY_SPECIAL_CALLS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_MEMORY32",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_MEMORY64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO32",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO_EXTENDED32",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO_EXTENDED64",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_MSR",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_RESTORE_BREAKPOINT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SEARCH_MEMORY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SET_CONTEXT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SET_INTERNAL_BREAKPOINT32",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SET_INTERNAL_BREAKPOINT64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SET_SPECIAL_CALL32",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SET_SPECIAL_CALL64",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_SWITCH_PARTITION",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_WRITE_BREAKPOINT32",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_WRITE_BREAKPOINT64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_WRITE_CUSTOM_BREAKPOINT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_WRITE_MEMORY32",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKD_WRITE_MEMORY64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKM_EXCEPTION32",
+     "status": "removed",
+     "size_from": 84,
+     "size_to": null
+    },
+    {
+     "type": "_DBGKM_EXCEPTION64",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_DEFERRED_WRITE",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_DELAY_ACK_FO",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_CAPABILITIES",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_DATA_SET_RANGE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_DESCRIPTION",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_DSM_DEFINITION",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_MANAGE_DATA_SET_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_MANAGE_DATA_SET_ATTRIBUTES_OUTPUT",
+     "status": "removed",
+     "size_from": 36,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_MAP",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_NODE",
+     "status": "removed",
+     "size_from": 720,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_OBJECT",
+     "status": "removed",
+     "size_from": 336,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_OBJECT_POWER_EXTENSION",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_DEVICE_RELATIONS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DEVOBJ_EXTENSION",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_DIAGNOSTIC_BUFFER",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_DIAGNOSTIC_CONTEXT",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_DIRTY_PAGE_STATISTICS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DIRTY_PAGE_THRESHOLDS",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_DISALLOWED_GUIDS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_DISPATCHER_HEADER",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_DRIVER_EXTENSION",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_DRIVER_OBJECT",
+     "status": "removed",
+     "size_from": 336,
+     "size_to": null
+    },
+    {
+     "type": "_DUAL",
+     "status": "removed",
+     "size_from": 632,
+     "size_to": null
+    },
+    {
+     "type": "_DUMMY_FILE_OBJECT",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_DUMP_INITIALIZATION_CONTEXT",
+     "status": "removed",
+     "size_from": 264,
+     "size_to": null
+    },
+    {
+     "type": "_DUMP_STACK_CONTEXT",
+     "status": "removed",
+     "size_from": 376,
+     "size_to": null
+    },
+    {
+     "type": "_DYNAMIC_FUNCTION_TABLE",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_ECP_LIST",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_EJOB",
+     "status": "removed",
+     "size_from": 1544,
+     "size_to": null
+    },
+    {
+     "type": "_ENODE",
+     "status": "removed",
+     "size_from": 2112,
+     "size_to": null
+    },
+    {
+     "type": "_EPROCESS",
+     "status": "removed",
+     "size_from": 2000,
+     "size_to": null
+    },
+    {
+     "type": "_EPROCESS_VALUES",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_ERESOURCE",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_ESERVERSILO_GLOBALS",
+     "status": "removed",
+     "size_from": 1072,
+     "size_to": null
+    },
+    {
+     "type": "_ETHREAD",
+     "status": "removed",
+     "size_from": 2016,
+     "size_to": null
+    },
+    {
+     "type": "_ETIMER",
+     "status": "removed",
+     "size_from": 312,
+     "size_to": null
+    },
+    {
+     "type": "_ETWP_NOTIFICATION_HEADER",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_BUFFER_CONTEXT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_BUFFER_QUEUE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_FILTER_EVENT_NAME_DATA",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_FILTER_HEADER",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_FILTER_PID",
+     "status": "removed",
+     "size_from": 36,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_FILTER_STRING_TOKEN",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_FILTER_STRING_TOKEN_ELEMENT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_GUID_ENTRY",
+     "status": "removed",
+     "size_from": 400,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_HASH_BUCKET",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_LAST_ENABLE_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_LOGGER_HANDLE",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_PAYLOAD_FILTER",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_PERF_COUNTERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_PMC_SUPPORT",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_PROVIDER_TRAITS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_QUEUE_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_REALTIME_CONSUMER",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_REF_CLOCK",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_REG_ENTRY",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_REPLY_QUEUE",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_SESSION_PERF_COUNTERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_SILODRIVERSTATE",
+     "status": "removed",
+     "size_from": 5032,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_SYSTEMTIME",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ETW_WMITRACE_WORK",
+     "status": "removed",
+     "size_from": 240,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_DATA_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_FILTER_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_FILTER_HEADER",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_HEADER",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_HEADER_EXTENDED_DATA_ITEM",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_PAYLOAD_PREDICATE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_EVENT_RECORD",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_EWOW64PROCESS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EXCEPTION_POINTERS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EXCEPTION_RECORD",
+     "status": "removed",
+     "size_from": 152,
+     "size_to": null
+    },
+    {
+     "type": "_EXCEPTION_RECORD32",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_EXCEPTION_RECORD64",
+     "status": "removed",
+     "size_from": 152,
+     "size_to": null
+    },
+    {
+     "type": "_EXCEPTION_REGISTRATION_RECORD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EXHANDLE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_EXT_DELETE_PARAMETERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_EXT_SET_PARAMETERS_V0",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EX_FAST_REF",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_EX_PUSH_LOCK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_EX_PUSH_LOCK_AUTO_EXPAND",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_EX_PUSH_LOCK_AUTO_EXPAND_STATE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_EX_RUNDOWN_REF",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_EX_RUNDOWN_REF_CACHE_AWARE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "status": "removed",
+     "size_from": 720,
+     "size_to": null
+    },
+    {
+     "type": "_FAST_IO_DISPATCH",
+     "status": "removed",
+     "size_from": 224,
+     "size_to": null
+    },
+    {
+     "type": "_FAST_MUTEX",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_FILESYSTEM_DISK_COUNTERS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_BASIC_INFORMATION",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_GET_QUOTA_INFORMATION",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_NETWORK_OPEN_INFORMATION",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_OBJECT",
+     "status": "removed",
+     "size_from": 216,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_SEGMENT_ELEMENT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_FILE_STANDARD_INFORMATION",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_FREE_DISPLAY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_FSRTL_ADVANCED_FCB_HEADER",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_FS_FILTER_CALLBACKS",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_FS_FILTER_CALLBACK_DATA",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_FS_FILTER_PARAMETERS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_FS_FILTER_SECTION_SYNC_OUTPUT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_GDI_TEB_BATCH",
+     "status": "removed",
+     "size_from": 1256,
+     "size_to": null
+    },
+    {
+     "type": "_GDI_TEB_BATCH32",
+     "status": "removed",
+     "size_from": 1248,
+     "size_to": null
+    },
+    {
+     "type": "_GDI_TEB_BATCH64",
+     "status": "removed",
+     "size_from": 1256,
+     "size_to": null
+    },
+    {
+     "type": "_GENERAL_LOOKASIDE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_GENERAL_LOOKASIDE_POOL",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_GENERIC_MAPPING",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_GROUP_AFFINITY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_GUID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HAL_CHANNEL_MEMORY_RANGES",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HAL_NODE_RANGE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_REVOCATION_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TABLE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TABLE_ENTRY_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TABLE_FREE_LIST",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TRACE_DB_ENTRY",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_HANDLE_TRACE_DEBUG_INFO",
+     "status": "removed",
+     "size_from": 240,
+     "size_to": null
+    },
+    {
+     "type": "_HARDWARE_PTE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_HBASE_BLOCK",
+     "status": "removed",
+     "size_from": 4096,
+     "size_to": null
+    },
+    {
+     "type": "_HBIN",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_HCELL",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP",
+     "status": "removed",
+     "size_from": 672,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_COUNTERS",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_ENTRY_EXTRA",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_EXTENDED_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_FREE_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_FREE_ENTRY_EXTRA",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_LIST_LOOKUP",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_LOCK",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_LOOKASIDE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_PSEUDO_TAG_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_SEGMENT",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_STOP_ON_TAG",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_STOP_ON_VALUES",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_TAG_ENTRY",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_TUNING_PARAMETERS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_UCR_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_UNPACKED_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_HEAP_VIRTUAL_ALLOC_ENTRY",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_HHIVE",
+     "status": "removed",
+     "size_from": 2664,
+     "size_to": null
+    },
+    {
+     "type": "_HIVE_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 152,
+     "size_to": null
+    },
+    {
+     "type": "_HIVE_LOAD_FAILURE",
+     "status": "removed",
+     "size_from": 352,
+     "size_to": null
+    },
+    {
+     "type": "_HIVE_WAIT_PACKET",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_HIVE_WRITE_WAIT_QUEUE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_HMAP_DIRECTORY",
+     "status": "removed",
+     "size_from": 8192,
+     "size_to": null
+    },
+    {
+     "type": "_HMAP_ENTRY",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_HMAP_TABLE",
+     "status": "removed",
+     "size_from": 20480,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP",
+     "status": "removed",
+     "size_from": 1200,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP_DIRECTORY",
+     "status": "removed",
+     "size_from": 1024,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP_PIN_LOG",
+     "status": "removed",
+     "size_from": 1160,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP_PIN_LOG_ENTRY",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_HVIEW_MAP_TABLE",
+     "status": "removed",
+     "size_from": 2048,
+     "size_to": null
+    },
+    {
+     "type": "_HV_GET_BIN_CONTEXT",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_HV_GET_CELL_CONTEXT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_HV_PARTITION_PRIVILEGE_MASK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_HV_X64_HYPERVISOR_FEATURES",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IA64_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_DATA_DIRECTORY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_DEBUG_DIRECTORY",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_DOS_HEADER",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_FILE_HEADER",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_NT_HEADERS64",
+     "status": "removed",
+     "size_from": 264,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_OPTIONAL_HEADER64",
+     "status": "removed",
+     "size_from": 240,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_ROM_OPTIONAL_HEADER",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_RUNTIME_FUNCTION_ENTRY",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_SECTION_HEADER",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_IMAGE_SECURITY_CONTEXT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_INITIAL_PRIVILEGE_SET",
+     "status": "removed",
+     "size_from": 44,
+     "size_to": null
+    },
+    {
+     "type": "_INTERFACE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_INTERRUPT_CONNECTION_DATA",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_INTERRUPT_HT_INTR_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_INTERRUPT_REMAPPING_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_INTERRUPT_VECTOR_DATA",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_INVERTED_FUNCTION_TABLE",
+     "status": "removed",
+     "size_from": 6160,
+     "size_to": null
+    },
+    {
+     "type": "_INVERTED_FUNCTION_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_INVPCID_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IOP_FILE_OBJECT_EXTENSION",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_IOP_IRP_EXTENSION",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_IOP_IRP_EXTENSION_STATUS",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_IOP_IRP_STACK_PROFILER",
+     "status": "removed",
+     "size_from": 84,
+     "size_to": null
+    },
+    {
+     "type": "_IOV_FORCED_PENDING_TRACE",
+     "status": "removed",
+     "size_from": 512,
+     "size_to": null
+    },
+    {
+     "type": "_IOV_IRP_TRACE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_IO_CLIENT_EXTENSION",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IO_COMPLETION_CONTEXT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_IO_DRIVER_CREATE_CONTEXT",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_IO_IRP_EXT_TRACK_OFFSET_HEADER",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IO_MINI_COMPLETION_PACKET_USER",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_IO_PRIORITY_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IO_REMOVE_LOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_IO_REMOVE_LOCK_COMMON_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_IO_RESOURCE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_IO_RESOURCE_LIST",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_IO_RESOURCE_REQUIREMENTS_LIST",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_IO_SECURITY_CONTEXT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_IO_STACK_LOCATION",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_IO_STATUS_BLOCK",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_IO_TIMER",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_IRP",
+     "status": "removed",
+     "size_from": 208,
+     "size_to": null
+    },
+    {
+     "type": "_ISRDPCSTATS",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_ISR_THUNK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_JOBOBJECT_WAKE_FILTER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_JOB_RATE_CONTROL_HEADER",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_KAFFINITY_EX",
+     "status": "removed",
+     "size_from": 168,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_DIRECT_EVENT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_HANDLE_DATA",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_MESSAGE",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_MESSAGE_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_REGION",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_RESERVE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_SECTION",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_SECURITY_DATA",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_VIEW",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KAPC",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_KAPC_STATE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KDESCRIPTOR",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KDEVICE_QUEUE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_KDEVICE_QUEUE_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KDPC",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_KDPC_DATA",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_KDPC_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KENLISTMENT",
+     "status": "removed",
+     "size_from": 480,
+     "size_to": null
+    },
+    {
+     "type": "_KENLISTMENT_HISTORY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KENTROPY_TIMING_STATE",
+     "status": "removed",
+     "size_from": 336,
+     "size_to": null
+    },
+    {
+     "type": "_KERNEL_STACK_SEGMENT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KEVENT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KEXCEPTION_FRAME",
+     "status": "removed",
+     "size_from": 320,
+     "size_to": null
+    },
+    {
+     "type": "_KEXECUTE_OPTIONS",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_KFLOATING_SAVE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_KGATE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KGDTENTRY64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KHETERO_PROCESSOR_SET",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KIDTENTRY64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KINTERRUPT",
+     "status": "removed",
+     "size_from": 256,
+     "size_to": null
+    },
+    {
+     "type": "_KIST_BASE_FRAME",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KIST_LINK_FRAME",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KLDR_DATA_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_KLDTENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KLOCK_ENTRY",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_KLOCK_ENTRY_LOCK_STATE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KLOCK_QUEUE_HANDLE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KMUTANT",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_KNODE",
+     "status": "removed",
+     "size_from": 320,
+     "size_to": null
+    },
+    {
+     "type": "_KPCR",
+     "status": "removed",
+     "size_from": 32832,
+     "size_to": null
+    },
+    {
+     "type": "_KPRCB",
+     "status": "removed",
+     "size_from": 32448,
+     "size_to": null
+    },
+    {
+     "type": "_KPRIQUEUE",
+     "status": "removed",
+     "size_from": 688,
+     "size_to": null
+    },
+    {
+     "type": "_KPROCESS",
+     "status": "removed",
+     "size_from": 728,
+     "size_to": null
+    },
+    {
+     "type": "_KPROCESSOR_DESCRIPTOR_AREA",
+     "status": "removed",
+     "size_from": 20480,
+     "size_to": null
+    },
+    {
+     "type": "_KPROCESSOR_STATE",
+     "status": "removed",
+     "size_from": 1456,
+     "size_to": null
+    },
+    {
+     "type": "_KQUEUE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_KREQUEST_PACKET",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KRESOURCEMANAGER",
+     "status": "removed",
+     "size_from": 592,
+     "size_to": null
+    },
+    {
+     "type": "_KRESOURCEMANAGER_COMPLETION_BINDING",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_KSCB",
+     "status": "removed",
+     "size_from": 424,
+     "size_to": null
+    },
+    {
+     "type": "_KSCHEDULING_GROUP",
+     "status": "removed",
+     "size_from": 576,
+     "size_to": null
+    },
+    {
+     "type": "_KSCHEDULING_GROUP_POLICY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KSECONDARY_IDT_ENTRY",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KSEMAPHORE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KSHARED_READY_QUEUE",
+     "status": "removed",
+     "size_from": 608,
+     "size_to": null
+    },
+    {
+     "type": "_KSPECIAL_REGISTERS",
+     "status": "removed",
+     "size_from": 224,
+     "size_to": null
+    },
+    {
+     "type": "_KSPIN_LOCK_QUEUE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KSTACK_CONTROL",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KSTACK_COUNT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_KSYSTEM_TIME",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_KTHREAD",
+     "status": "removed",
+     "size_from": 1504,
+     "size_to": null
+    },
+    {
+     "type": "_KTHREAD_COUNTERS",
+     "status": "removed",
+     "size_from": 424,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER2",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER2_COLLECTION",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER_EXPIRATION_TRACE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER_TABLE",
+     "status": "removed",
+     "size_from": 8704,
+     "size_to": null
+    },
+    {
+     "type": "_KTIMER_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KTM",
+     "status": "removed",
+     "size_from": 960,
+     "size_to": null
+    },
+    {
+     "type": "_KTMOBJECT_NAMESPACE",
+     "status": "removed",
+     "size_from": 168,
+     "size_to": null
+    },
+    {
+     "type": "_KTMOBJECT_NAMESPACE_LINK",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_KTRANSACTION",
+     "status": "removed",
+     "size_from": 728,
+     "size_to": null
+    },
+    {
+     "type": "_KTRANSACTION_HISTORY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KTRANSITION_STACK",
+     "status": "removed",
+     "size_from": 512,
+     "size_to": null
+    },
+    {
+     "type": "_KTRAP_FRAME",
+     "status": "removed",
+     "size_from": 400,
+     "size_to": null
+    },
+    {
+     "type": "_KTSS64",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_KUMS_CONTEXT_HEADER",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_KUSER_SHARED_DATA",
+     "status": "removed",
+     "size_from": 1800,
+     "size_to": null
+    },
+    {
+     "type": "_KWAIT_BLOCK",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_KWAIT_CHAIN",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_KWAIT_CHAIN_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_KWAIT_STATUS_REGISTER",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_LARGE_INTEGER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_LAZY_WRITER",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_LDRP_CSLIST",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_LDR_DATA_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 288,
+     "size_to": null
+    },
+    {
+     "type": "_LDR_DDAG_NODE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_LDR_SERVICE_TAG_RECORD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_LEARNING_MODE_DATA",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_LOCK_HEADER",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_LOCK_TRACKER",
+     "status": "removed",
+     "size_from": 144,
+     "size_to": null
+    },
+    {
+     "type": "_LOGGED_STREAM_CALLBACK_V1",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_LOGGED_STREAM_CALLBACK_V2",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_LOG_HANDLE_CONTEXT",
+     "status": "removed",
+     "size_from": 152,
+     "size_to": null
+    },
+    {
+     "type": "_LOOKASIDE_LIST_EX",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_LPCP_MESSAGE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_LPCP_NONPAGED_PORT_QUEUE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_LPCP_PORT_OBJECT",
+     "status": "removed",
+     "size_from": 256,
+     "size_to": null
+    },
+    {
+     "type": "_LPCP_PORT_QUEUE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_LUID",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_LUID_AND_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_M128A",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MAILSLOT_CREATE_PARAMETERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_MAPPED_FILE_SEGMENT",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_MBCB",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_MCGEN_TRACE_CONTEXT",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_MDL",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_MEMORY_ALLOCATION_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MIPFNBLINK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_ACCESS_LOG_STATE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_MI_ACTIVE_WSLE_LISTHEAD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MI_AVAILABLE_PAGE_WAIT_STATES",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_MI_BAD_MEMORY_EVENT_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MI_CACHED_PTE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_CACHED_PTES",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_MI_CLONE_BLOCK_FLAGS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_COMBINE_PAGE_LISTHEAD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MI_COMBINE_STATE",
+     "status": "removed",
+     "size_from": 416,
+     "size_to": null
+    },
+    {
+     "type": "_MI_COMBINE_WORKITEM",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_COMMON_PAGE_STATE",
+     "status": "removed",
+     "size_from": 168,
+     "size_to": null
+    },
+    {
+     "type": "_MI_CONTROL_AREA_WAIT_BLOCK",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_CROSS_PARTITION_CHARGES",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_DEBUGGER_STATE",
+     "status": "removed",
+     "size_from": 280,
+     "size_to": null
+    },
+    {
+     "type": "_MI_DECAY_TIMER_LINK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_DECAY_TIMER_LINKAGE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_DRIVER_VA",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_DYNAMIC_BITMAP",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MI_ERROR_STATE",
+     "status": "removed",
+     "size_from": 184,
+     "size_to": null
+    },
+    {
+     "type": "_MI_EXTRA_IMAGE_INFORMATION",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MI_FORCED_COMMITS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_HARDWARE_STATE",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_MI_IMAGE_SECURITY_REFERENCE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_MI_IO_CACHE_STATS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_IO_PAGE_STATE",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_MI_LARGEPAGE_IMAGE_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MI_LARGE_PAGE_CANDIDATES",
+     "status": "removed",
+     "size_from": 520,
+     "size_to": null
+    },
+    {
+     "type": "_MI_LDW_WORK_CONTEXT",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MI_MODWRITE_DATA",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_MI_NODE_INFORMATION",
+     "status": "removed",
+     "size_from": 2184,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGEFILE_BITMAPS_CACHE_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGEFILE_TRACES",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGELIST_STATE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGE_COMBINE_STATISTICS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGE_COMBINING_SUPPORT",
+     "status": "removed",
+     "size_from": 392,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGING_FILE_SPACE_BITMAPS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PAGING_IO_STATE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION",
+     "status": "removed",
+     "size_from": 11264,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_COMMIT",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_CORE",
+     "status": "removed",
+     "size_from": 352,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_MODWRITES",
+     "status": "removed",
+     "size_from": 704,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_PAGE_LISTS",
+     "status": "removed",
+     "size_from": 3904,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_SEGMENTS",
+     "status": "removed",
+     "size_from": 512,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_STATE",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "status": "removed",
+     "size_from": 144,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PARTITION_ZEROING",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PER_SESSION_PROTOS",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_MI_POOL_FAILURE_REASONS",
+     "status": "removed",
+     "size_from": 44,
+     "size_to": null
+    },
+    {
+     "type": "_MI_POOL_STATE",
+     "status": "removed",
+     "size_from": 248,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PROBE_RAISE_TRACKER",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PROCESS_STATE",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_MI_PTE_CHAIN_HEAD",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_MI_QUEUED_DEADSTACK_WORKITEM",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_REBUILD_LARGE_PAGE_TIMER",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_RESAVAIL_FAILURES",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_RESERVATION_CLUSTER_INFO",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MI_RESUME_WORKITEM",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MI_REVERSE_VIEW_MAP",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SECTION_IMAGE_INFORMATION",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SECTION_STATE",
+     "status": "removed",
+     "size_from": 640,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SESSION_DRIVER_UNLOAD",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SESSION_STATE",
+     "status": "removed",
+     "size_from": 168,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SHUTDOWN_STATE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SPECIAL_POOL",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MI_STANDBY_STATE",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SUB64K_FREE_RANGES",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_IMAGE_STATE",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_INFORMATION",
+     "status": "removed",
+     "size_from": 7104,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_NODE_INFORMATION",
+     "status": "removed",
+     "size_from": 416,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_PTE_STATE",
+     "status": "removed",
+     "size_from": 448,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_PTE_TYPE",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_TRIM_STATE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_VA_ASSIGNMENT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MI_SYSTEM_VA_STATE",
+     "status": "removed",
+     "size_from": 832,
+     "size_to": null
+    },
+    {
+     "type": "_MI_TRIAGE_DUMP_DATA",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MI_VAD_EVENT_BLOCK",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_MI_VAD_SEQUENTIAL_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_VERIFIER_POOL_HEADER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MI_VISIBLE_PARTITION",
+     "status": "removed",
+     "size_from": 4992,
+     "size_to": null
+    },
+    {
+     "type": "_MI_VISIBLE_STATE",
+     "status": "removed",
+     "size_from": 2112,
+     "size_to": null
+    },
+    {
+     "type": "_MI_ZERO_COST_COUNTS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MMADDRESS_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MMCLONE_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_MMCLONE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MMCLONE_HEADER",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_MMDEREFERENCE_SEGMENT_HEADER",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MMEXTEND_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MMINPAGE_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMINPAGE_SUPPORT",
+     "status": "removed",
+     "size_from": 432,
+     "size_to": null
+    },
+    {
+     "type": "_MMINPAGE_SUPPORT_FLOW_THROUGH",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MMMOD_WRITER_LISTHEAD",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MMMOD_WRITER_MDL_ENTRY",
+     "status": "removed",
+     "size_from": 264,
+     "size_to": null
+    },
+    {
+     "type": "_MMPAGE_FILE_EXPANSION",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_MMPAGE_FILE_EXPANSION_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMPAGING_FILE",
+     "status": "removed",
+     "size_from": 288,
+     "size_to": null
+    },
+    {
+     "type": "_MMPFN",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_MMPFNENTRY1",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_MMPFNENTRY3",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_MMPFNLIST",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_MMPFNLIST_SHORT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_HARDWARE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_LIST",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_PROTOTYPE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_SOFTWARE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_SUBSECTION",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_TIMESTAMP",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMPTE_TRANSITION",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMSECTION_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMSECTION_FLAGS2",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMSECURE_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMSESSION",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUBSECTION_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUPPORT_AGGREGATION",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUPPORT_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUPPORT_FULL",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUPPORT_INSTANCE",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_MMSUPPORT_SHARED",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_MMVAD",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_MMVAD_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMVAD_FLAGS1",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMVAD_FLAGS2",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MMVAD_SHORT",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_MMWORKING_SET_EXPANSION_HEAD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSLE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSLENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSLE_FREE_ENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSLE_HASH",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSLE_NONDIRECT_HASH",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSL_FULL",
+     "status": "removed",
+     "size_from": 512,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSL_INSTANCE",
+     "status": "removed",
+     "size_from": 416,
+     "size_to": null
+    },
+    {
+     "type": "_MMWSL_SHARED",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_MM_DRIVER_VERIFIER_DATA",
+     "status": "removed",
+     "size_from": 176,
+     "size_to": null
+    },
+    {
+     "type": "_MM_PAGED_POOL_INFO",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO_HEADER",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_MM_SESSION_SPACE",
+     "status": "removed",
+     "size_from": 16384,
+     "size_to": null
+    },
+    {
+     "type": "_MM_SESSION_SPACE_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MM_STORE_KEY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_MM_SYSTEM_PAGE_COUNTS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_MODWRITER_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_MSUBSECTION",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_NAMED_PIPE_CREATE_PARAMETERS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_NB10",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_NON_PAGED_DEBUG_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_NPAGED_LOOKASIDE_LIST",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_NT_TIB",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_NT_TIB32",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_NT_TIB64",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_CREATE_INFORMATION",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_DIRECTORY",
+     "status": "removed",
+     "size_from": 352,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_DIRECTORY_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_DUMP_CONTROL",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_FOOTER",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HANDLE_COUNT_DATABASE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HANDLE_COUNT_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HANDLE_INFORMATION",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_AUDIT_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_CREATOR_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_EXTENDED_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_HANDLE_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_NAME_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_PADDING_INFO",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_PROCESS_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_HEADER_QUOTA_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_NAMESPACE_LOOKUPTABLE",
+     "status": "removed",
+     "size_from": 608,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_NAME_INFORMATION",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_REF_INFO",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_REF_STACK_INFO",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_REF_TRACE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_SYMBOLIC_LINK",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_TYPE",
+     "status": "removed",
+     "size_from": 216,
+     "size_to": null
+    },
+    {
+     "type": "_OBJECT_TYPE_INITIALIZER",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_OBP_LOOKUP_CONTEXT",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_OBP_SILODRIVERSTATE",
+     "status": "removed",
+     "size_from": 736,
+     "size_to": null
+    },
+    {
+     "type": "_OBP_SYSTEM_DOS_DEVICE_STATE",
+     "status": "removed",
+     "size_from": 108,
+     "size_to": null
+    },
+    {
+     "type": "_OB_DUPLICATE_OBJECT_STATE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_OB_EXTENDED_PARSE_PARAMETERS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OB_EXTENDED_USER_INFO",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_OPEN_PACKET",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_OWNER_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PAGED_LOOKASIDE_LIST",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_PALPC_PORT_REFERENCE_WAIT_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_CALLBACK_INFORMATION",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_COUNTER_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_COUNTER_INFORMATION",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_DATA",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_MASK_INFORMATION",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_PROCESSOR_INFO",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_PCW_REGISTRATION_INFORMATION",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_PEB",
+     "status": "removed",
+     "size_from": 1952,
+     "size_to": null
+    },
+    {
+     "type": "_PEB32",
+     "status": "removed",
+     "size_from": 1120,
+     "size_to": null
+    },
+    {
+     "type": "_PEB64",
+     "status": "removed",
+     "size_from": 1952,
+     "size_to": null
+    },
+    {
+     "type": "_PEBS_DS_SAVE_AREA",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_PEB_LDR_DATA",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_PENDING_RELATIONS_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_EXTENDED_ADDRESS",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_GPIO_RESOURCE",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_INTERRUPT_RESOURCE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_IO_MEMORY_RESOURCE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_RESOURCE",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_RESOURCE_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_SPB_I2C_RESOURCE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_SPB_RESOURCE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_SPB_SPI_RESOURCE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_ACPI_SPB_UART_RESOURCE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PEP_CRASHDUMP_INFORMATION",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PERFINFO_GROUPMASK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PERFINFO_PPM_STATE_SELECTION",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_PF_KERNEL_GLOBALS",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_PHYSICAL_MEMORY_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PHYSICAL_MEMORY_RUN",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PI_BUS_EXTENSION",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_PI_RESOURCE_ARBITER_ENTRY",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_PLATFORM_IDLE_ACCOUNTING",
+     "status": "removed",
+     "size_from": 1024,
+     "size_to": null
+    },
+    {
+     "type": "_PLATFORM_IDLE_STATE_ACCOUNTING",
+     "status": "removed",
+     "size_from": 1000,
+     "size_to": null
+    },
+    {
+     "type": "_PLUGPLAY_EVENT_BLOCK",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_ASSIGN_RESOURCES_CONTEXT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_DEVICE_ACTION_ENTRY",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_DEVICE_COMPLETION_QUEUE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_DEVICE_COMPLETION_REQUEST",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_DEVICE_EVENT_ENTRY",
+     "status": "removed",
+     "size_from": 184,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_DEVICE_EVENT_LIST",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_REBALANCE_TRACE_CONTEXT",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_RESOURCE_CONFLICT_TRACE_CONTEXT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PNP_RESOURCE_REQUEST",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_POOL_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 4416,
+     "size_to": null
+    },
+    {
+     "type": "_POOL_HEADER",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_POOL_TRACKER_BIG_PAGES",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_POOL_TRACKER_TABLE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_POP_ACTION_TRIGGER",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "status": "removed",
+     "size_from": 144,
+     "size_to": null
+    },
+    {
+     "type": "_POP_CURRENT_BROADCAST",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_POP_DEVICE_SYS_STATE",
+     "status": "removed",
+     "size_from": 464,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_ACCOUNTING",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_COMPONENT",
+     "status": "removed",
+     "size_from": 256,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_COMPONENT_FLAGS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_DEPENDENT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_DEVICE",
+     "status": "removed",
+     "size_from": 632,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_DEVICE_STATUS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_DRIVER_CALLBACKS",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_IDLE_STATE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_PERF_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_PERF_INFO",
+     "status": "removed",
+     "size_from": 160,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_PERF_SET",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_PLUGIN",
+     "status": "removed",
+     "size_from": 184,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_PROVIDER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_WORK_ORDER",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_POP_FX_WORK_ORDER_WATCHDOG_INFO",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_POP_HIBER_CONTEXT",
+     "status": "removed",
+     "size_from": 464,
+     "size_to": null
+    },
+    {
+     "type": "_POP_IO_INFO",
+     "status": "removed",
+     "size_from": 112,
+     "size_to": null
+    },
+    {
+     "type": "_POP_IRP_DATA",
+     "status": "removed",
+     "size_from": 248,
+     "size_to": null
+    },
+    {
+     "type": "_POP_IRP_WORKER_ENTRY",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_POP_PER_PROCESSOR_CONTEXT",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_POP_POLICY_DEVICE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_POP_POWER_ACTION",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_POP_POWER_SETTING_VALUES",
+     "status": "removed",
+     "size_from": 316,
+     "size_to": null
+    },
+    {
+     "type": "_POP_PPM_PROFILE",
+     "status": "removed",
+     "size_from": 2864,
+     "size_to": null
+    },
+    {
+     "type": "_POP_RW_LOCK",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_POP_SHUTDOWN_BUG_CHECK",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_POP_THERMAL_TELEMETRY_TRACKER",
+     "status": "removed",
+     "size_from": 352,
+     "size_to": null
+    },
+    {
+     "type": "_POP_THERMAL_ZONE",
+     "status": "removed",
+     "size_from": 856,
+     "size_to": null
+    },
+    {
+     "type": "_POP_TRIGGER_WAIT",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PORT_MESSAGE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PORT_MESSAGE32",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_POWER_SEQUENCE",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_POWER_STATE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PO_DEVICE_NOTIFY",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_PO_DEVICE_NOTIFY_ORDER",
+     "status": "removed",
+     "size_from": 376,
+     "size_to": null
+    },
+    {
+     "type": "_PO_DIAG_STACK_RECORD",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PO_FX_COMPONENT_PERF_SET",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_PO_FX_PERF_STATE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PO_FX_PERF_STATE_CHANGE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PO_HIBER_PERF",
+     "status": "removed",
+     "size_from": 488,
+     "size_to": null
+    },
+    {
+     "type": "_PO_IRP_MANAGER",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PO_IRP_QUEUE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PO_NOTIFY_ORDER_LEVEL",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_PPC_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_CONCURRENCY_ACCOUNTING",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_COORDINATED_SELECTION",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_COORDINATED_SYNCHRONIZATION",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_ENGINE_SETTINGS",
+     "status": "removed",
+     "size_from": 1392,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_FFH_THROTTLE_STATE_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_IDLE_STATE",
+     "status": "removed",
+     "size_from": 248,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_IDLE_STATES",
+     "status": "removed",
+     "size_from": 1048,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_IDLE_SYNCHRONIZATION_STATE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_PLATFORM_STATE",
+     "status": "removed",
+     "size_from": 384,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_PLATFORM_STATES",
+     "status": "removed",
+     "size_from": 448,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_POLICY_SETTINGS_MASK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_SELECTION_DEPENDENCY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_SELECTION_MENU",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_SELECTION_MENU_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_SELECTION_STATISTICS",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_VETO_ACCOUNTING",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PPM_VETO_ENTRY",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_PP_LOOKASIDE_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PRIVATE_CACHE_MAP",
+     "status": "removed",
+     "size_from": 120,
+     "size_to": null
+    },
+    {
+     "type": "_PRIVATE_CACHE_MAP_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PRIVILEGE_SET",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_IDLE_CONSTRAINTS",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_IDLE_DEPENDENCY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_IDLE_PREPARE_INFO",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_NUMBER",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_PLATFORM_STATE_RESIDENCIES",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_PLATFORM_STATE_RESIDENCY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_POWER_STATE",
+     "status": "removed",
+     "size_from": 464,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESSOR_PROFILE_CONTROL_AREA",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESS_DISK_COUNTERS",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_PROCESS_ENERGY_VALUES",
+     "status": "removed",
+     "size_from": 144,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_FEEDBACK",
+     "status": "removed",
+     "size_from": 144,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_FEEDBACK_COUNTER",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_IDLE_ACCOUNTING",
+     "status": "removed",
+     "size_from": 1032,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_IDLE_POLICY",
+     "status": "removed",
+     "size_from": 6,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_IDLE_SNAP",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_IDLE_STATE_ACCOUNTING",
+     "status": "removed",
+     "size_from": 992,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_IDLE_STATE_BUCKET",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_CHECK",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_CHECK_SNAP",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_CONSTRAINT",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_DOMAIN",
+     "status": "removed",
+     "size_from": 408,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_HISTORY",
+     "status": "removed",
+     "size_from": 36,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_HISTORY_ENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PROC_PERF_LOAD",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_PROVIDER_BINARY_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PS_CLIENT_SECURITY_CONTEXT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PS_IO_CONTROL_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PS_PROPERTY_SET",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PS_PROTECTION",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_ACCESSRIGHTS",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_DATA",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_HEADER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_TYPE",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_CREATE_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_PS_TRUSTLET_TKSESSION_ID",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_PS_WAKE_INFORMATION",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_PTE_TRACKER",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_QUAD",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_RELATION_LIST",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RELATIVE_SYMLINK_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_REMOTE_PORT_VIEW",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_REQUEST_MAILBOX",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_RH_OP_CONTEXT",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_RSDS",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_RTLP_RANGE_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_ACTIVATION_CONTEXT_STACK_FRAME",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_ATOM_TABLE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_ATOM_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_ATOM_TABLE_REFERENCE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_AVL_TABLE",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_AVL_TREE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_BALANCED_LINKS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_BALANCED_NODE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_BITMAP",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_BITMAP_EX",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_CHASH_ENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_CHASH_TABLE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_CRITICAL_SECTION",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_CRITICAL_SECTION_DEBUG",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_DRIVE_LETTER_CURDIR",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_CONTEXT",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_ENTRY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_ENUMERATOR",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_HASH_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_HASH_TABLE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_HASH_TABLE_ITERATOR",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_RANGE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_RANGE_LIST",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_RB_TREE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_RUN_ONCE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_SPLAY_LINKS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_SRWLOCK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_TIME_ZONE_INFORMATION",
+     "status": "removed",
+     "size_from": 172,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_UMS_CONTEXT",
+     "status": "removed",
+     "size_from": 1312,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_USER_PROCESS_PARAMETERS",
+     "status": "removed",
+     "size_from": 1040,
+     "size_to": null
+    },
+    {
+     "type": "_SECTION",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_SECTION_IMAGE_INFORMATION",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_SECTION_OBJECT_POINTERS",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_SECURITY_CLIENT_CONTEXT",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_SECURITY_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_SECURITY_DESCRIPTOR_RELATIVE",
+     "status": "removed",
+     "size_from": 20,
+     "size_to": null
+    },
+    {
+     "type": "_SECURITY_QUALITY_OF_SERVICE",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_SECURITY_SUBJECT_CONTEXT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEGMENT",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_SEGMENT_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_AUDIT_POLICY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LOWBOX_HANDLES_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LOWBOX_HANDLES_TABLE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LOWBOX_NUMBER_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LOWBOX_NUMBER_MAPPING",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_LUID_TO_INDEX_MAP_ENTRY",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_RM_LSA_CONNECTION_STATE",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_SID_VALUES_BLOCK",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_SILOSTATE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_TOKEN_DIAG_TRACK_ENTRY",
+     "status": "removed",
+     "size_from": 288,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_TOKEN_PRIVILEGES",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_SESSION_LOWBOX_MAP",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_SE_AUDIT_PROCESS_CREATION_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_SHARED_CACHE_MAP",
+     "status": "removed",
+     "size_from": 528,
+     "size_to": null
+    },
+    {
+     "type": "_SHARED_CACHE_MAP_LIST_CURSOR",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_SID",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_SID_AND_ATTRIBUTES",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SID_AND_ATTRIBUTES_HASH",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SID_IDENTIFIER_AUTHORITY",
+     "status": "removed",
+     "size_from": 6,
+     "size_to": null
+    },
+    {
+     "type": "_SILO_USER_SHARED_DATA",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SINGLE_LIST_ENTRY",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_SINGLE_LIST_ENTRY32",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_SLIST_ENTRY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SLIST_HEADER",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_STACK_TABLE",
+     "status": "removed",
+     "size_from": 32904,
+     "size_to": null
+    },
+    {
+     "type": "_STRING",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_STRING32",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_STRING64",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SUBSECTION",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_SYNCH_COUNTERS",
+     "status": "removed",
+     "size_from": 184,
+     "size_to": null
+    },
+    {
+     "type": "_SYSPTES_HEADER",
+     "status": "removed",
+     "size_from": 280,
+     "size_to": null
+    },
+    {
+     "type": "_SYSTEM_POWER_POLICY",
+     "status": "removed",
+     "size_from": 232,
+     "size_to": null
+    },
+    {
+     "type": "_SYSTEM_POWER_STATE_CONTEXT",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_TEB",
+     "status": "removed",
+     "size_from": 6200,
+     "size_to": null
+    },
+    {
+     "type": "_TEB32",
+     "status": "removed",
+     "size_from": 4096,
+     "size_to": null
+    },
+    {
+     "type": "_TEB64",
+     "status": "removed",
+     "size_from": 6200,
+     "size_to": null
+    },
+    {
+     "type": "_TEB_ACTIVE_FRAME",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_TEB_ACTIVE_FRAME_CONTEXT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TERMINATION_PORT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_THERMAL_COOLING_INTERFACE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_THERMAL_INFORMATION",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_THERMAL_INFORMATION_EX",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_THERMAL_POLICY",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_THERMAL_ZONE_COUNTERS",
+     "status": "removed",
+     "size_from": 12,
+     "size_to": null
+    },
+    {
+     "type": "_THREAD_ENERGY_VALUES",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_THREAD_PERFORMANCE_DATA",
+     "status": "removed",
+     "size_from": 448,
+     "size_to": null
+    },
+    {
+     "type": "_TIME_FIELDS",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN",
+     "status": "removed",
+     "size_from": 1168,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_ACCESS_INFORMATION",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_AUDIT_POLICY",
+     "status": "removed",
+     "size_from": 31,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_CONTROL",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_MANDATORY_POLICY",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_PRIVILEGES",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TOKEN_SOURCE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TP_CALLBACK_ENVIRON_V3",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_TRACE_ENABLE_INFO",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_TRACE_LOGFILE_HEADER",
+     "status": "removed",
+     "size_from": 280,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_9F_PNP",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_9F_POWER",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_DEVICE_NODE",
+     "status": "removed",
+     "size_from": 88,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_EX_WORK_QUEUE",
+     "status": "removed",
+     "size_from": 688,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_PNP_DEVICE_COMPLETION_QUEUE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_PNP_DEVICE_COMPLETION_REQUEST",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_POP_FX_DEVICE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_TRIAGE_POP_IRP_DATA",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_TRUSTLET_COLLABORATION_ID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TRUSTLET_MAILBOX_KEY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TXN_PARAMETER_BLOCK",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_TlgProviderMetadata_t",
+     "status": "removed",
+     "size_from": 19,
+     "size_to": null
+    },
+    {
+     "type": "_TlgProvider_t",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_TraceLoggingMetadata_t",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_ULARGE_INTEGER",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_UMS_CONTROL_BLOCK",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_UNEXPECTED_INTERRUPT",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_UNICODE_STRING",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VACB",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_VACB_ARRAY_HEADER",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VACB_LEVEL_REFERENCE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_VF_ADDRESS_RANGE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VF_AVL_TABLE",
+     "status": "removed",
+     "size_from": 192,
+     "size_to": null
+    },
+    {
+     "type": "_VF_AVL_TREE",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_VF_AVL_TREE_NODE",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VF_AVL_TREE_NODE_EX",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_VF_DRIVER_IO_CALLBACKS",
+     "status": "removed",
+     "size_from": 256,
+     "size_to": null
+    },
+    {
+     "type": "_VF_KE_CRITICAL_REGION_TRACE",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_VF_POOL_TRACE",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_VF_SUSPECT_DRIVER_ENTRY",
+     "status": "removed",
+     "size_from": 40,
+     "size_to": null
+    },
+    {
+     "type": "_VF_TARGET_ALL_SHARED_EXPORT_THUNKS",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_VF_TARGET_DRIVER",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_VF_TARGET_VERIFIED_DRIVER_DATA",
+     "status": "removed",
+     "size_from": 288,
+     "size_to": null
+    },
+    {
+     "type": "_VF_TRACKER",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VF_TRACKER_STAMP",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_VF_WATCHDOG_IRP",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_VI_DEADLOCK_GLOBALS",
+     "status": "removed",
+     "size_from": 33152,
+     "size_to": null
+    },
+    {
+     "type": "_VI_DEADLOCK_NODE",
+     "status": "removed",
+     "size_from": 208,
+     "size_to": null
+    },
+    {
+     "type": "_VI_DEADLOCK_RESOURCE",
+     "status": "removed",
+     "size_from": 248,
+     "size_to": null
+    },
+    {
+     "type": "_VI_DEADLOCK_THREAD",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_VI_FAULT_TRACE",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_VI_POOL_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_VI_POOL_ENTRY_INUSE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_VI_POOL_PAGE_HEADER",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_VI_TRACK_IRQL",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_VI_VERIFIER_ISSUE",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_VOLUME_CACHE_MAP",
+     "status": "removed",
+     "size_from": 208,
+     "size_to": null
+    },
+    {
+     "type": "_VPB",
+     "status": "removed",
+     "size_from": 96,
+     "size_to": null
+    },
+    {
+     "type": "_WAITING_IRP",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_WAIT_CONTEXT_BLOCK",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_ERROR_RECORD_WRAPPER",
+     "status": "removed",
+     "size_from": 240,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_ERROR_RECORD_WRAPPER_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_ERROR_SOURCE",
+     "status": "removed",
+     "size_from": 1064,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_ERROR_SOURCE_TABLE",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_INFO_BLOCK",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "_WHEAP_WORK_QUEUE",
+     "status": "removed",
+     "size_from": 136,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_AER_BRIDGE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 44,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_AER_ENDPOINT_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_AER_ROOTPORT_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 36,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_PACKET_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_PACKET_V2",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD",
+     "status": "removed",
+     "size_from": 200,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER_VALIDBITS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR_VALIDBITS",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_SOURCE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 972,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_ERROR_STATUS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_GENERIC_ERROR_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 52,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_GENERIC_ERROR_DESCRIPTOR_V2",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_IPF_CMC_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_IPF_CPE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_IPF_MCA_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_MEMORY_ERROR_SECTION",
+     "status": "removed",
+     "size_from": 73,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_MEMORY_ERROR_SECTION_VALIDBITS",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_NOTIFICATION_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_NOTIFICATION_FLAGS",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_PCI_SLOT_NUMBER",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_PERSISTENCE_INFO",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_REVISION",
+     "status": "removed",
+     "size_from": 2,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_TIMESTAMP",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_XPF_CMC_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 932,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_XPF_MCE_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 920,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_XPF_MC_BANK_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 28,
+     "size_to": null
+    },
+    {
+     "type": "_WHEA_XPF_NMI_DESCRIPTOR",
+     "status": "removed",
+     "size_from": 3,
+     "size_to": null
+    },
+    {
+     "type": "_WMI_BUFFER_HEADER",
+     "status": "removed",
+     "size_from": 72,
+     "size_to": null
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "status": "removed",
+     "size_from": 1088,
+     "size_to": null
+    },
+    {
+     "type": "_WNF_LOCK",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WNF_SILODRIVERSTATE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_WNF_STATE_NAME",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_WORK_QUEUE_ENTRY",
+     "status": "removed",
+     "size_from": 128,
+     "size_to": null
+    },
+    {
+     "type": "_WORK_QUEUE_ITEM",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_X86_DBGKD_CONTROL_SET",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_X86_KTRAP_FRAME",
+     "status": "removed",
+     "size_from": 140,
+     "size_to": null
+    },
+    {
+     "type": "_X86_KTRAP_FRAME_BLUE",
+     "status": "removed",
+     "size_from": 140,
+     "size_to": null
+    },
+    {
+     "type": "_XPF_MCE_FLAGS",
+     "status": "removed",
+     "size_from": 4,
+     "size_to": null
+    },
+    {
+     "type": "_XPF_MC_BANK_FLAGS",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_XSAVE_AREA",
+     "status": "removed",
+     "size_from": 576,
+     "size_to": null
+    },
+    {
+     "type": "_XSAVE_AREA_HEADER",
+     "status": "removed",
+     "size_from": 64,
+     "size_to": null
+    },
+    {
+     "type": "_XSAVE_FORMAT",
+     "status": "removed",
+     "size_from": 512,
+     "size_to": null
+    },
+    {
+     "type": "_XSTATE_CONFIGURATION",
+     "status": "removed",
+     "size_from": 816,
+     "size_to": null
+    },
+    {
+     "type": "_XSTATE_CONTEXT",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_XSTATE_FEATURE",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_XSTATE_SAVE",
+     "status": "removed",
+     "size_from": 56,
+     "size_to": null
+    },
+    {
+     "type": "_flags",
+     "status": "removed",
+     "size_from": 1,
+     "size_to": null
+    },
+    {
+     "type": "_iobuf",
+     "status": "removed",
+     "size_from": 48,
+     "size_to": null
+    },
+    {
+     "type": "_u",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    },
+    {
+     "type": "tagSWITCH_CONTEXT",
+     "status": "removed",
+     "size_from": 104,
+     "size_to": null
+    },
+    {
+     "type": "tagSWITCH_CONTEXT_ATTRIBUTE",
+     "status": "removed",
+     "size_from": 24,
+     "size_to": null
+    },
+    {
+     "type": "tagSWITCH_CONTEXT_DATA",
+     "status": "removed",
+     "size_from": 80,
+     "size_to": null
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "<unnamed-enum-KTMOH_CommitTransaction_Result>",
+     "status": "removed"
+    },
+    {
+     "enum": "BUS_QUERY_ID_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "DEVICE_TEXT_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "ETW_COMPRESSION_RESUMPTION_MODE",
+     "status": "removed"
+    },
+    {
+     "enum": "HAL_APIC_DESTINATION_MODE",
+     "status": "removed"
+    },
+    {
+     "enum": "HSTORAGE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "INTERRUPT_CONNECTION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "IRPLOCK",
+     "status": "removed"
+    },
+    {
+     "enum": "JOB_OBJECT_IO_RATE_CONTROL_FLAGS",
+     "status": "removed"
+    },
+    {
+     "enum": "JOB_OBJECT_NET_RATE_CONTROL_FLAGS",
+     "status": "removed"
+    },
+    {
+     "enum": "KTM_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "LSA_FOREST_TRUST_RECORD_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "PDCCLIENTID",
+     "status": "removed"
+    },
+    {
+     "enum": "PDC_ACTIVITY_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "POWER_ACTION",
+     "status": "removed"
+    },
+    {
+     "enum": "POWER_POLICY_DEVICE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "PPM_IDLE_BUCKET_TIME_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "PROFILE_DEPARTURE_STYLE",
+     "status": "removed"
+    },
+    {
+     "enum": "PROFILE_STATUS",
+     "status": "removed"
+    },
+    {
+     "enum": "PS_CREATE_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "ReplacesCorHdrNumericDefines",
+     "status": "removed"
+    },
+    {
+     "enum": "SE_WS_APPX_SIGNATURE_ORIGIN",
+     "status": "removed"
+    },
+    {
+     "enum": "SLEEPSTUDY_SPM_SCENARIO_CS_EXIT",
+     "status": "removed"
+    },
+    {
+     "enum": "SYSTEM_POWER_CONDITION",
+     "status": "removed"
+    },
+    {
+     "enum": "TlgIn_t",
+     "status": "removed"
+    },
+    {
+     "enum": "TlgOut_t",
+     "status": "removed"
+    },
+    {
+     "enum": "UoWActionType",
+     "status": "removed"
+    },
+    {
+     "enum": "_ALTERNATIVE_ARCHITECTURE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ARBITER_ACTION",
+     "status": "removed"
+    },
+    {
+     "enum": "_ARBITER_REQUEST_SOURCE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ARBITER_RESULT",
+     "status": "removed"
+    },
+    {
+     "enum": "_BLOB_ID",
+     "status": "removed"
+    },
+    {
+     "enum": "_CMP_FAILURE_INJECTION_POINT",
+     "status": "removed"
+    },
+    {
+     "enum": "_CM_DIRTY_VECTOR_OPERATION",
+     "status": "removed"
+    },
+    {
+     "enum": "_CM_LOAD_FAILURE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_CM_SHARE_DISPOSITION",
+     "status": "removed"
+    },
+    {
+     "enum": "_CREATE_FILE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ConnectionResourceConsumerDesc",
+     "status": "removed"
+    },
+    {
+     "enum": "_DEVICE_POWER_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_DEVICE_RELATION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_DEVICE_USAGE_NOTIFICATION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_DEVICE_WAKE_DEPTH",
+     "status": "removed"
+    },
+    {
+     "enum": "_DEVPROP_OPERATOR",
+     "status": "removed"
+    },
+    {
+     "enum": "_DMA_SPEED",
+     "status": "removed"
+    },
+    {
+     "enum": "_DMA_WIDTH",
+     "status": "removed"
+    },
+    {
+     "enum": "_DUMP_EVENTS",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_BUFFER_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_GUID_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_HEADER_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_NOTIFICATION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_PERFECT_HASH_FUNCTION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_RT_EVENT_LOSS",
+     "status": "removed"
+    },
+    {
+     "enum": "_ETW_STRING_TOKEN_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_EVENT_INFO_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_EVENT_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_EXCEPTION_DISPOSITION",
+     "status": "removed"
+    },
+    {
+     "enum": "_EXQUEUEINDEX",
+     "status": "removed"
+    },
+    {
+     "enum": "_EX_BALANCE_OBJECT",
+     "status": "removed"
+    },
+    {
+     "enum": "_EX_GEN_RANDOM_DOMAIN",
+     "status": "removed"
+    },
+    {
+     "enum": "_EX_POOL_PRIORITY",
+     "status": "removed"
+    },
+    {
+     "enum": "_FILE_INFORMATION_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_FILE_OBJECT_EXTENSION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_FSINFOCLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_FS_FILTER_SECTION_SYNC_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_FS_FILTER_STREAM_FO_NOTIFICATION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_FUNCTION_TABLE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_GPIO_PIN_CONFIG_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_GPIO_PIN_IORESTRICTION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_HARDWARE_COUNTER_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_HEAP_FAILURE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_INTERFACE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_INTERLOCKED_RESULT",
+     "status": "removed"
+    },
+    {
+     "enum": "_INVPCID_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_IOP_PRIORITY_HINT",
+     "status": "removed"
+    },
+    {
+     "enum": "_IO_ALLOCATION_ACTION",
+     "status": "removed"
+    },
+    {
+     "enum": "_IO_PRIORITY_HINT",
+     "status": "removed"
+    },
+    {
+     "enum": "_IO_RATE_CONTROL_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_IO_SESSION_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_IRQ_PRIORITY",
+     "status": "removed"
+    },
+    {
+     "enum": "_JOBOBJECTINFOCLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_KENLISTMENT_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KERNEL_STACK_LIMITS",
+     "status": "removed"
+    },
+    {
+     "enum": "_KHETERO_CPU_POLICY",
+     "status": "removed"
+    },
+    {
+     "enum": "_KINTERRUPT_MODE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KINTERRUPT_POLARITY",
+     "status": "removed"
+    },
+    {
+     "enum": "_KI_CALLBACK",
+     "status": "removed"
+    },
+    {
+     "enum": "_KOBJECTS",
+     "status": "removed"
+    },
+    {
+     "enum": "_KPROCESS_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KPROFILE_SOURCE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KRESOURCEMANAGER_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KTHREAD_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KTHREAD_TAG",
+     "status": "removed"
+    },
+    {
+     "enum": "_KTIMER2_COLLECTION_INDEX",
+     "status": "removed"
+    },
+    {
+     "enum": "_KTRANSACTION_OUTCOME",
+     "status": "removed"
+    },
+    {
+     "enum": "_KTRANSACTION_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KWAIT_BLOCK_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_KWAIT_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_KWAIT_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_LDR_DDAG_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_LDR_DLL_LOAD_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_LOCK_OPERATION",
+     "status": "removed"
+    },
+    {
+     "enum": "_MEMORY_CACHING_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MEMORY_CACHING_TYPE_ORIG",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_ASSIGNED_REGION_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_AVAILABLE_PAGE_WAIT_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_CFG_BITMAP_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_DYNAMICBASE_BITMAP",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_IO_PFN_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_KSTACK_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_MEMORY_EVENT_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_MEMORY_HIGHLOW",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_MIRROR_BITMAP_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_NODE_NONPAGED_POOL_BITMAP",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_PARTITION_THREAD",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_PFN_CACHE_ATTRIBUTE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_SHARED_USER_PAGE_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_SUBVAD_LISTS",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_SYSTEM_VA_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_VAD_64K_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_VAD_ALLOCATION_CELL_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MI_WORKING_SET_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MMLISTS",
+     "status": "removed"
+    },
+    {
+     "enum": "_MM_PAGE_ACCESS_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_MM_POOL_PRIORITIES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MM_POOL_TYPES",
+     "status": "removed"
+    },
+    {
+     "enum": "_MM_PREEMPTIVE_TRIMS",
+     "status": "removed"
+    },
+    {
+     "enum": "_MODE",
+     "status": "removed"
+    },
+    {
+     "enum": "_NT_PRODUCT_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_OBJECT_INFORMATION_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_OB_OPEN_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_PCW_CALLBACK_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PEP_ACPI_RESOURCE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PERFINFO_KERNELMEMORY_USAGE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PERFINFO_MM_STAT",
+     "status": "removed"
+    },
+    {
+     "enum": "_PERIODIC_FLUSH_FREQUENCY",
+     "status": "removed"
+    },
+    {
+     "enum": "_PF_FILE_ACCESS_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PLUGPLAY_EVENT_CATEGORY",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_DEVICE_ACTION_REQUEST",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_DEVICE_DELETE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_DEVNODE_QUERY_REBALANCE_VETO_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_DEVNODE_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_REBALANCE_FAILURE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_REBALANCE_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_PNP_VETO_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_POLICY_AUDIT_EVENT_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_POOL_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_POP_DEVICE_IDLE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_POP_IO_STATUS",
+     "status": "removed"
+    },
+    {
+     "enum": "_POP_SLEEP_CHECKPOINT",
+     "status": "removed"
+    },
+    {
+     "enum": "_POWER_INFORMATION_LEVEL_INTERNAL",
+     "status": "removed"
+    },
+    {
+     "enum": "_POWER_REQUEST_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_POWER_REQUEST_TYPE_INTERNAL",
+     "status": "removed"
+    },
+    {
+     "enum": "_POWER_STATE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PO_CS_DEVICE_NOTIFICATION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PO_FX_PERF_STATE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PO_FX_PERF_STATE_UNIT",
+     "status": "removed"
+    },
+    {
+     "enum": "_PO_HIBER_FORCE_DISABLE_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_PP_NPAGED_LOOKASIDE_NUMBER",
+     "status": "removed"
+    },
+    {
+     "enum": "_PROCESSOR_CACHE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PROCESS_SECTION_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PROCESS_VA_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PROC_HYPERVISOR_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_ATTRIBUTE_NUM",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_PROTECTED_SIGNER",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_PROTECTED_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_RESOURCE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_STD_HANDLE_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_PS_WAKE_REASON",
+     "status": "removed"
+    },
+    {
+     "enum": "_REG_NOTIFY_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_REQUESTER_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_RTL_GENERIC_COMPARE_RESULTS",
+     "status": "removed"
+    },
+    {
+     "enum": "_SECURITY_IMPERSONATION_LEVEL",
+     "status": "removed"
+    },
+    {
+     "enum": "_SECURITY_OPERATION_CODE",
+     "status": "removed"
+    },
+    {
+     "enum": "_SERVERSILO_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_SYSTEM_POWER_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_TOKEN_INFORMATION_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_TOKEN_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_TP_CALLBACK_PRIORITY",
+     "status": "removed"
+    },
+    {
+     "enum": "_TRACE_INFORMATION_CLASS",
+     "status": "removed"
+    },
+    {
+     "enum": "_TRANSFER_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_TYPE_OF_MEMORY",
+     "status": "removed"
+    },
+    {
+     "enum": "_TlgBlob_t",
+     "status": "removed"
+    },
+    {
+     "enum": "_USER_ACTIVITY_PRESENCE",
+     "status": "removed"
+    },
+    {
+     "enum": "_VI_DEADLOCK_RESOURCE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_WHEA_ERROR_PACKET_DATA_FORMAT",
+     "status": "removed"
+    },
+    {
+     "enum": "_WHEA_ERROR_SEVERITY",
+     "status": "removed"
+    },
+    {
+     "enum": "_WHEA_ERROR_SOURCE_STATE",
+     "status": "removed"
+    },
+    {
+     "enum": "_WHEA_ERROR_SOURCE_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_WHEA_ERROR_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_WORKING_SET_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_WOW64_SHARED_INFORMATION",
+     "status": "removed"
+    }
+   ]
+  },
   {
    "channel": "builds/28000",
    "machine": "amd64",
