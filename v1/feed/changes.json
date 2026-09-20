@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-19T11:09:51Z",
+ "generated": "2026-09-20T11:34:15Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 62,
-   "transitions": 61,
-   "layout_changes": 27,
+   "builds": 63,
+   "transitions": 62,
+   "layout_changes": 28,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9482",
+   "to_version": "10.0.26100.9502",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "latest_layout": "v2:sha256:dc3e956bde7de13ffabda4cda8cb17ddc276e6e04e8a59eeab0d6074eb612d3a",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 13,
-   "transitions": 12,
-   "layout_changes": 9,
+   "builds": 14,
+   "transitions": 13,
+   "layout_changes": 10,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9482",
+   "to_version": "10.0.26100.9502",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "latest_layout": "v2:sha256:64a9b16b5b8835301571f490a804ffcf52d427e31923ca30655fc3143a05eefd",
    "known_missing_in_channel": 0
   },
   {
@@ -1040,6 +1040,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:0a1296b9ce97d1618b773dcb3685ef66aed72b31a8e68894d3e563310768548c",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29671",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29671.1000",
+   "to_version": "10.0.29671.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:290beb7b72169da1f389978927093930aa9ca8e12c1352fb9f1ce72f85a11118",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29671",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29671.1000",
+   "to_version": "10.0.29671.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:d5a48c46e18fc02d5629d63b4971b8f8ef10d60ec50b36316ad7df3552a828dc",
    "known_missing_in_channel": 0
   }
  ],
@@ -90984,6 +91010,60 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9482",
+   "to_version": "10.0.26100.9502",
+   "from_key": "3BFE6B83EE4FD15BC9E3E98C4C5B00E21",
+   "to_key": "8A170D470B28C606D81CAD9C0C59569F1",
+   "from_kb": [
+    "a72cc9ed-fc88-4073-bd0f-397f5e925e36"
+   ],
+   "kb": [
+    "7c004abf-cae7-48dc-8e0a-bab605e19c0f"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "layout_to": "v2:sha256:64a9b16b5b8835301571f490a804ffcf52d427e31923ca30655fc3143a05eefd",
+   "types_changed": [
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "DescriptorLayout"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -97548,6 +97628,60 @@
      "status": "added"
     }
    ]
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9482",
+   "to_version": "10.0.26100.9502",
+   "from_key": "8481BFDA79A0E613EE1946C2C87B8AD81",
+   "to_key": "5393B23658869EA4142984C5D6A64BB61",
+   "from_kb": [
+    "a13c52d6-1b15-419a-a33e-36287bd44639"
+   ],
+   "kb": [
+    "b5b12620-cbd9-4a69-9bb7-195869d6a48a"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "layout_to": "v2:sha256:dc3e956bde7de13ffabda4cda8cb17ddc276e6e04e8a59eeab0d6074eb612d3a",
+   "types_changed": [
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "DescriptorLayout"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
   },
   {
    "channel": "builds/19041",
