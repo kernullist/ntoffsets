@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-22T11:48:37Z",
+ "generated": "2026-09-23T11:48:22Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -83,27 +83,27 @@
   {
    "channel": "11-24H2",
    "machine": "amd64",
-   "builds": 60,
-   "transitions": 59,
-   "layout_changes": 33,
+   "builds": 61,
+   "transitions": 60,
+   "layout_changes": 34,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9457",
+   "to_version": null,
    "from_date": null,
-   "to_date": "2026-09-14",
-   "latest_layout": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
+   "to_date": "2026-09-22",
+   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
    "known_missing_in_channel": 5
   },
   {
    "channel": "11-24H2",
    "machine": "arm64",
-   "builds": 55,
-   "transitions": 54,
-   "layout_changes": 31,
+   "builds": 56,
+   "transitions": 55,
+   "layout_changes": 32,
    "from_version": null,
    "to_version": null,
    "from_date": "2024-06-15",
-   "to_date": "2026-09-14",
-   "latest_layout": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
+   "to_date": "2026-09-22",
+   "latest_layout": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
    "known_missing_in_channel": 5
   },
   {
@@ -122,27 +122,27 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 14,
-   "transitions": 13,
-   "layout_changes": 8,
+   "builds": 15,
+   "transitions": 14,
+   "layout_changes": 9,
    "from_version": "10.0.28000.1575",
    "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:1744b439e178f003d903ce39afe6eea6698fb2ffcf802a5ec6ad1468df71452d",
+   "to_date": "2026-09-22",
+   "latest_layout": "v2:sha256:3d87ebcf97810f3b1e6c8ec894177e8e404e650ff370ff3aef07da6f13f6679a",
    "known_missing_in_channel": 0
   },
   {
    "channel": "11-26H1",
    "machine": "arm64",
-   "builds": 13,
-   "transitions": 12,
-   "layout_changes": 7,
+   "builds": 14,
+   "transitions": 13,
+   "layout_changes": 8,
    "from_version": null,
    "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:671ba69c985579fc01c44952f5fceeb5a2e06c9c597c5c29ef52dbe77ec0a111",
+   "to_date": "2026-09-22",
+   "latest_layout": "v2:sha256:02d72161648f486da7767a1f776f6f0c806ef358ba147957de64cbb845d384aa",
    "known_missing_in_channel": 0
   },
   {
@@ -525,14 +525,14 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 63,
-   "transitions": 62,
-   "layout_changes": 28,
+   "builds": 64,
+   "transitions": 63,
+   "layout_changes": 29,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9502",
+   "to_version": "10.0.26100.9539",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:dc3e956bde7de13ffabda4cda8cb17ddc276e6e04e8a59eeab0d6074eb612d3a",
+   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
    "known_missing_in_channel": 0
   },
   {
@@ -1070,6 +1070,1653 @@
   }
  ],
  "changes": [
+  {
+   "channel": "11-26H1",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "9723C3AF198CA3FD855EB1B0E9E4EA4D1",
+   "to_key": "88962F1FD3F695EEC7EB3A66357C539A1",
+   "from_kb": [
+    "KB5124012"
+   ],
+   "kb": [
+    "KB5124006"
+   ],
+   "date": "2026-09-22",
+   "layout_from": "v2:sha256:671ba69c985579fc01c44952f5fceeb5a2e06c9c597c5c29ef52dbe77ec0a111",
+   "layout_to": "v2:sha256:02d72161648f486da7767a1f776f6f0c806ef358ba147957de64cbb845d384aa",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1272,
+     "size_to": 1272,
+     "members_added": [
+      "Feature_StxTpmFix_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Feature_PlutonMDS_Enabled",
+       "from": "17:1",
+       "to": "18:1"
+      },
+      {
+       "name": "Reserved",
+       "from": "18:14",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2432,
+     "size_to": 2432,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Execution",
+       "from": "_PROCESS_EXECUTION",
+       "to": "volatile _PROCESS_EXECUTION"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "State",
+       "from": "volatile long",
+       "to": "long"
+      },
+      {
+       "name": "Transition",
+       "from": "volatile _PROCESS_EXECUTION_TRANSITION",
+       "to": "_PROCESS_EXECUTION_TRANSITION"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "size_from": 16,
+     "size_to": 16,
+     "members_added": [
+      "IsSidAllocated"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "1:7",
+       "to": "2:6"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "SidType",
+       "to": "EnumSid",
+       "offset": 8,
+       "size": 4
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "size_from": 40,
+     "size_to": 16,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "Entries",
+       "from": 32,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Entries",
+       "from": "_SEP_OBJECT_ANTITAMPER_ENTRY[1]",
+       "to": "_SEP_OBJECT_ANTITAMPER_ENTRY *[1]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_TOKEN",
+     "size_from": 1480,
+     "size_to": 1480,
+     "members_added": [
+      "IsAgentic"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Tessera",
+     "status": "added"
+    },
+    {
+     "enum": "_ACCEL_COMPRESSION_FORMAT",
+     "status": "removed"
+    },
+    {
+     "enum": "_SEP_ANTITAMPER_SID_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "added"
+    },
+    {
+     "enum": "_SKCALL_FFA_MEMORY_OPERATION",
+     "status": "added"
+    },
+    {
+     "enum": "_SKSERVICE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SECURESERVICE_FFA_MAP_UNMAP_RXTX_BUFFER",
+      "SECURESERVICE_INVOKE_FFA_MEMORY_OPERATION"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE",
+       "from": 293,
+       "to": 295
+      },
+      {
+       "name": "SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT",
+       "from": 294,
+       "to": 296
+      },
+      {
+       "name": "SECURESERVICE_REQUEST_BREAK_IN",
+       "from": 292,
+       "to": 294
+      },
+      {
+       "name": "SECURESERVICE_TERMINATE",
+       "from": 295,
+       "to": 297
+      }
+     ]
+    },
+    {
+     "enum": "_STORAGE_ICE_TYPE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "StorageIceTypeReserved"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": []
+    }
+   ]
+  },
+  {
+   "channel": "11-26H1",
+   "machine": "amd64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "4660396C20304C039AF45FC6B15ADF981",
+   "to_key": "62E12FE11896F6ED75F8A51D5F20F0341",
+   "from_kb": [
+    "KB5124012"
+   ],
+   "kb": [
+    "KB5124006"
+   ],
+   "date": "2026-09-22",
+   "layout_from": "v2:sha256:1744b439e178f003d903ce39afe6eea6698fb2ffcf802a5ec6ad1468df71452d",
+   "layout_to": "v2:sha256:3d87ebcf97810f3b1e6c8ec894177e8e404e650ff370ff3aef07da6f13f6679a",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1272,
+     "size_to": 1272,
+     "members_added": [
+      "Feature_StxTpmFix_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Feature_PlutonMDS_Enabled",
+       "from": "17:1",
+       "to": "18:1"
+      },
+      {
+       "name": "Reserved",
+       "from": "18:14",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2112,
+     "size_to": 2112,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Execution",
+       "from": "_PROCESS_EXECUTION",
+       "to": "volatile _PROCESS_EXECUTION"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "State",
+       "from": "volatile long",
+       "to": "long"
+      },
+      {
+       "name": "Transition",
+       "from": "volatile _PROCESS_EXECUTION_TRANSITION",
+       "to": "_PROCESS_EXECUTION_TRANSITION"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "size_from": 16,
+     "size_to": 16,
+     "members_added": [
+      "IsSidAllocated"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "1:7",
+       "to": "2:6"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "SidType",
+       "to": "EnumSid",
+       "offset": 8,
+       "size": 4
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "size_from": 40,
+     "size_to": 16,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "Entries",
+       "from": 32,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Entries",
+       "from": "_SEP_OBJECT_ANTITAMPER_ENTRY[1]",
+       "to": "_SEP_OBJECT_ANTITAMPER_ENTRY *[1]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_TOKEN",
+     "size_from": 1480,
+     "size_to": 1480,
+     "members_added": [
+      "IsAgentic"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Tessera",
+     "status": "added"
+    },
+    {
+     "enum": "_ACCEL_COMPRESSION_FORMAT",
+     "status": "removed"
+    },
+    {
+     "enum": "_SEP_ANTITAMPER_SID_TYPE",
+     "status": "removed"
+    },
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "added"
+    },
+    {
+     "enum": "_STORAGE_ICE_TYPE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "StorageIceTypeReserved"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": []
+    }
+   ]
+  },
+  {
+   "channel": "11-24H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "7A9F162A39E89C67CD02CF2126D51A651",
+   "to_key": "BEE1FF24EE1D38DEB334475042FB9CD51",
+   "from_kb": [
+    "KB5129195"
+   ],
+   "kb": [
+    "KB5124010"
+   ],
+   "date": "2026-09-22",
+   "layout_from": "v2:sha256:84ee8e42a13fb349221bf81a1473c899ab0a517e2d413f05b66da7abefebc12b",
+   "layout_to": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "types_changed": [
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ENODE",
+     "size_from": 512,
+     "size_to": 512,
+     "members_added": [
+      "SubQueueCount",
+      "SubQueueIndexSeed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2304,
+     "size_to": 2304,
+     "members_added": [
+      "ProcessQosCallbackListEntry"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_PARTITION",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "WorkQueues",
+       "from": "_EX_WORK_QUEUE * * volatile *",
+       "to": "_EX_WORK_QUEUE * volatile *"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "size_from": 736,
+     "size_to": 752,
+     "members_added": [
+      "HealthMetrics",
+      "SubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllThreadsExitedEvent",
+       "from": 728,
+       "to": 736
+      },
+      {
+       "name": "MaxThreads",
+       "from": 720,
+       "to": 724
+      },
+      {
+       "name": "QueueIndex",
+       "from": 724,
+       "to": 728
+      },
+      {
+       "name": "TryFailed",
+       "from": 716,
+       "to": 720
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "TryFailed",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "MinThreads",
+       "from": "0:31",
+       "to": "0:0"
+      },
+      {
+       "name": "TryFailed",
+       "from": "31:1",
+       "to": "0:0"
+      }
+     ],
+     "members_retyped": [
+      {
+       "name": "TryFailed",
+       "from": "volatile unsigned long",
+       "to": "volatile unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE_HEALTH_METRICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_HAL_ARM_ENLIGHTENMENT_INFORMATION",
+     "size_from": 408,
+     "size_to": 416,
+     "members_added": [
+      "EnableFfaSri"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "size_from": 88,
+     "size_to": 96,
+     "members_added": [
+      "InsertTime",
+      "QueueType"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Ticket",
+       "from": "_ALPC_WORK_ON_BEHALF_TICKET",
+       "to": "_RTL_WORK_ON_BEHALF_TICKET"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KEMUL_CONTROL_BLOCK",
+     "size_from": 224,
+     "size_to": 240,
+     "members_added": [
+      "SynchronousSuspendBlockListHead"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Bcr",
+       "from": 192,
+       "to": 208
+      },
+      {
+       "name": "Bvr",
+       "from": 128,
+       "to": 144
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 40960,
+     "size_to": 40960,
+     "members_added": [
+      "WorkSubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTLP_HP_HEAP_GLOBALS",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [
+      "SynchronousSuspend"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "size_from": 64,
+     "size_to": 64,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "ObjectTypePolicies",
+       "to": "ObjectTypeMacls",
+       "offset": 56,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "removed"
+    },
+    {
+     "enum": "_SKCALL_FFA_MEMORY_OPERATION",
+     "status": "added"
+    },
+    {
+     "enum": "_SKSERVICE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SECURESERVICE_FFA_MAP_UNMAP_RXTX_BUFFER",
+      "SECURESERVICE_INVOKE_FFA_MEMORY_OPERATION"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE",
+       "from": 278,
+       "to": 280
+      },
+      {
+       "name": "SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT",
+       "from": 280,
+       "to": 282
+      },
+      {
+       "name": "SECURESERVICE_REQUEST_BREAK_IN",
+       "from": 277,
+       "to": 279
+      },
+      {
+       "name": "SECURESERVICE_TERMINATE",
+       "from": 279,
+       "to": 281
+      }
+     ]
+    },
+    {
+     "enum": "_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WOB_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-24H2",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9457",
+   "to_version": null,
+   "from_key": "C29EBFB06B78B3C020DCA66D99713F9E1",
+   "to_key": "0B3439338F40DDCD568A30E465A9576B1",
+   "from_kb": [
+    "KB5129195"
+   ],
+   "kb": [
+    "KB5124010"
+   ],
+   "date": "2026-09-22",
+   "layout_from": "v2:sha256:0d5f8d093c22ce7f2e65a12022d1c457ed20f800ad984cfe7c400f070a4291e8",
+   "layout_to": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "types_changed": [
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_ENODE",
+     "size_from": 896,
+     "size_to": 896,
+     "members_added": [
+      "SubQueueCount",
+      "SubQueueIndexSeed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2112,
+     "size_to": 2112,
+     "members_added": [
+      "ProcessQosCallbackListEntry"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_PARTITION",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "WorkQueues",
+       "from": "_EX_WORK_QUEUE * * volatile *",
+       "to": "_EX_WORK_QUEUE * volatile *"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "size_from": 736,
+     "size_to": 752,
+     "members_added": [
+      "HealthMetrics",
+      "SubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllThreadsExitedEvent",
+       "from": 728,
+       "to": 736
+      },
+      {
+       "name": "MaxThreads",
+       "from": 720,
+       "to": 724
+      },
+      {
+       "name": "QueueIndex",
+       "from": 724,
+       "to": 728
+      },
+      {
+       "name": "TryFailed",
+       "from": 716,
+       "to": 720
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "TryFailed",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "MinThreads",
+       "from": "0:31",
+       "to": "0:0"
+      },
+      {
+       "name": "TryFailed",
+       "from": "31:1",
+       "to": "0:0"
+      }
+     ],
+     "members_retyped": [
+      {
+       "name": "TryFailed",
+       "from": "volatile unsigned long",
+       "to": "volatile unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE_HEALTH_METRICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "size_from": 88,
+     "size_to": 96,
+     "members_added": [
+      "InsertTime",
+      "QueueType"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Ticket",
+       "from": "_ALPC_WORK_ON_BEHALF_TICKET",
+       "to": "_RTL_WORK_ON_BEHALF_TICKET"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [
+      "WorkSubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "PrcbPad92",
+       "from": 33576,
+       "to": 33580
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PrcbPad92",
+       "from": 24,
+       "to": 20
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "PrcbPad92",
+       "from": "unsigned long[6]",
+       "to": "unsigned long[5]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 272,
+     "size_to": 216,
+     "members_added": [
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [
+      "CancelRemoveCompleteEvent",
+      "CancelRemovePending",
+      "CancelRemoveWorkItem",
+      "DeviceObjectValid"
+     ],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "FileObject",
+       "from": 264,
+       "to": 208
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PdoName",
+       "from": 184,
+       "to": 192
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SymbolicLink",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UniqueId",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTLP_HP_HEAP_GLOBALS",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [
+      "SynchronousSuspend"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "size_from": 64,
+     "size_to": 64,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "ObjectTypePolicies",
+       "to": "ObjectTypeMacls",
+       "offset": 56,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "removed"
+    },
+    {
+     "enum": "_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WOB_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
+    }
+   ]
+  },
   {
    "channel": "1607",
    "machine": "amd64",
@@ -97674,6 +99321,62 @@
       "requiresInitGuard"
      ],
      "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9502",
+   "to_version": "10.0.26100.9539",
+   "from_key": "5393B23658869EA4142984C5D6A64BB61",
+   "to_key": "BA9B0278314BFA83B1E0CB880CACFBEE1",
+   "from_kb": [
+    "b5b12620-cbd9-4a69-9bb7-195869d6a48a"
+   ],
+   "kb": [
+    "934aa491-3299-4318-b5f3-3489a1915d83",
+    "95cc0dd5-949f-452e-9115-30f6c5836016",
+    "b0605a8c-92ae-456c-b47c-81d48eae5f47"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:dc3e956bde7de13ffabda4cda8cb17ddc276e6e04e8a59eeab0d6074eb612d3a",
+   "layout_to": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "types_changed": [
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 48,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [
+      "DescriptorLayout"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [],
+     "members_removed": [
+      "requiresInitGuard"
+     ],
      "members_moved": [],
      "members_resized": [],
      "members_rebitted": [],

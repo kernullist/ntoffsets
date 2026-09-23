@@ -1,23 +1,23 @@
 {
- "as_of": "2026-09-22T11:48:31Z",
+ "as_of": "2026-09-23T11:48:14Z",
  "totals": {
   "known": 2154,
-  "resolved": 2019,
-  "accounted_missing": 194,
+  "resolved": 2028,
+  "accounted_missing": 191,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 182,
+  "binary_404": 179,
   "pdb_404": 11,
   "undownloadable": 1
  },
  "defects": 0,
- "no_version_metadata": 702,
+ "no_version_metadata": 710,
  "by_dataset": {
   "arm64/ntoskrnl.exe": {
-   "known": 686,
-   "downloadable": 686,
+   "known": 688,
+   "downloadable": 688,
    "channels": {
     "1709": 55,
     "1803": 56,
@@ -30,14 +30,14 @@
     "11-22H2": 74,
     "22H2": 29,
     "21H2": 44,
-    "11-24H2": 60,
+    "11-24H2": 61,
     "11-23H2": 15,
-    "11-26H1": 15
+    "11-26H1": 16
    }
   },
   "ga/ntoskrnl.exe": {
-   "known": 1143,
-   "downloadable": 1142,
+   "known": 1145,
+   "downloadable": 1144,
    "channels": {
     "1507": 121,
     "1803": 68,
@@ -56,22 +56,22 @@
     "22H2": 30,
     "11-22H2": 75,
     "11-23H2": 16,
-    "11-24H2": 61,
+    "11-24H2": 62,
     "11-25H2": 1,
-    "11-26H1": 15
+    "11-26H1": 16
    }
   },
   "insider/ntoskrnl.exe": {
-   "known": 427,
-   "downloadable": 427,
+   "known": 433,
+   "downloadable": 433,
    "channels": {
-    "builds": 427
+    "builds": 433
    }
   }
  },
  "by_machine": {
-  "amd64": 1235,
-  "arm64": 761,
+  "amd64": 1240,
+  "arm64": 765,
   "x86": 23
  },
  "by_channel": {
@@ -94,8 +94,8 @@
    "unattempted": 1
   },
   "11-24H2": {
-   "resolved": 115,
-   "known": 121,
+   "resolved": 117,
+   "known": 123,
    "missing": 5,
    "unattempted": 1
   },
@@ -106,8 +106,8 @@
    "unattempted": 0
   },
   "11-26H1": {
-   "resolved": 27,
-   "known": 30,
+   "resolved": 29,
+   "known": 32,
    "missing": 0,
    "unattempted": 3
   },
@@ -196,9 +196,9 @@
    "unattempted": 0
   },
   "builds": {
-   "resolved": 371,
-   "known": 427,
-   "missing": 96,
+   "resolved": 376,
+   "known": 433,
+   "missing": 93,
    "unattempted": 0
   }
  }

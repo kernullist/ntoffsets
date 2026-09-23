@@ -2,10 +2,118 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-09-22T11:48:37Z</updated>
+<updated>2026-09-23T11:48:22Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>11-26H1 arm64 KB5124012 -&gt; KB5124006: PO_MEMORY_IMAGE, _EPROCESS, _POP_COOLING_EXTENSION, _PROCESS_EXECUTION, and 11 more</title>
+<id>urn:ntoffsets:feed:changes:9723C3AF198CA3FD855EB1B0E9E4EA4D1:88962F1FD3F695EEC7EB3A66357C539A1</id>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/88962F1FD3F695EEC7EB3A66357C539A1.json"/>
+<summary>8 type(s) changed in KB5124006 (11-26H1, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_StxTpmFix_Enabled; bitfields: 2
+_EPROCESS: retyped: 1
+_POP_COOLING_EXTENSION: size 0x110 -&gt; 0xd8; added: UpdatePropogationLock; removed: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid; moved: 13
+_PROCESS_EXECUTION: added: RequestedJobObject, RequestedProcess; moved: 2; resized: 1; retyped: 2
+_PROCESS_EXECUTION_TRANSITION: size 0x2 -&gt; 0x1; resized: 3; retyped: 3
+_SEP_OBJECT_ANTITAMPER_SID: added: IsSidAllocated; bitfields: 1; renamed: SidType -&gt; EnumSid
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: size 0x28 -&gt; 0x10; resized: 1; retyped: 1
+_TOKEN: added: IsAgentic
+EmptyCVariant_FeatureStaging_Tessera: added
+_ACCEL_COMPRESSION_FORMAT: removed
+_SEP_ANTITAMPER_SID_TYPE: removed
+_SE_ANTITAMPER_ENUM_SID: added
+_SKCALL_FFA_MEMORY_OPERATION: added
+_SKSERVICE: added: SECURESERVICE_FFA_MAP_UNMAP_RXTX_BUFFER, SECURESERVICE_INVOKE_FFA_MEMORY_OPERATION; renumbered: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 293-&gt;295, SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 294-&gt;296, SECURESERVICE_REQUEST_BREAK_IN 292-&gt;294, SECURESERVICE_TERMINATE 295-&gt;297
+_STORAGE_ICE_TYPE: added: StorageIceTypeReserved</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 KB5124012 -&gt; KB5124006: PO_MEMORY_IMAGE, _EPROCESS, _POP_COOLING_EXTENSION, _PROCESS_EXECUTION, and 9 more</title>
+<id>urn:ntoffsets:feed:changes:4660396C20304C039AF45FC6B15ADF981:62E12FE11896F6ED75F8A51D5F20F0341</id>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/62E12FE11896F6ED75F8A51D5F20F0341.json"/>
+<summary>8 type(s) changed in KB5124006 (11-26H1, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_StxTpmFix_Enabled; bitfields: 2
+_EPROCESS: retyped: 1
+_POP_COOLING_EXTENSION: size 0x110 -&gt; 0xd8; added: UpdatePropogationLock; removed: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid; moved: 13
+_PROCESS_EXECUTION: added: RequestedJobObject, RequestedProcess; moved: 2; resized: 1; retyped: 2
+_PROCESS_EXECUTION_TRANSITION: size 0x2 -&gt; 0x1; resized: 3; retyped: 3
+_SEP_OBJECT_ANTITAMPER_SID: added: IsSidAllocated; bitfields: 1; renamed: SidType -&gt; EnumSid
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: size 0x28 -&gt; 0x10; resized: 1; retyped: 1
+_TOKEN: added: IsAgentic
+EmptyCVariant_FeatureStaging_Tessera: added
+_ACCEL_COMPRESSION_FORMAT: removed
+_SEP_ANTITAMPER_SID_TYPE: removed
+_SE_ANTITAMPER_ENUM_SID: added
+_STORAGE_ICE_TYPE: added: StorageIceTypeReserved</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5129195 -&gt; KB5124010: _ALPC_WORK_ON_BEHALF_TICKET, _ENODE, _EPROCESS, _EX_PARTITION, and 24 more</title>
+<id>urn:ntoffsets:feed:changes:7A9F162A39E89C67CD02CF2126D51A651:BEE1FF24EE1D38DEB334475042FB9CD51</id>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BEE1FF24EE1D38DEB334475042FB9CD51.json"/>
+<summary>22 type(s) changed in KB5124010 (11-24H2, arm64)</summary>
+<content type="text">_ALPC_WORK_ON_BEHALF_TICKET: removed
+_ENODE: added: SubQueueCount, SubQueueIndexSeed
+_EPROCESS: added: ProcessQosCallbackListEntry
+_EX_PARTITION: retyped: 1
+_EX_WORK_QUEUE: size 0x2e0 -&gt; 0x2f0; added: HealthMetrics, SubQueueIndex; moved: 4; resized: 1; bitfields: 2; retyped: 1
+_EX_WORK_QUEUE_HEALTH_METRICS: added
+_HAL_ARM_ENLIGHTENMENT_INFORMATION: size 0x198 -&gt; 0x1a0; added: EnableFfaSri
+_IO_WORKITEM: size 0x58 -&gt; 0x60; added: InsertTime, QueueType
+_KALPC_WORK_ON_BEHALF_DATA: retyped: 1
+_KEMUL_CONTROL_BLOCK: size 0xe0 -&gt; 0xf0; added: SynchronousSuspendBlockListHead; moved: 2
+_KPRCB: added: WorkSubQueueIndex
+_POP_COOLING_EXTENSION: size 0x110 -&gt; 0xd8; added: UpdatePropogationLock; removed: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid; moved: 13
+_PROCESS_EXECUTION: added: RequestedJobObject, RequestedProcess; moved: 2; resized: 1
+_PROCESS_EXECUTION_TRANSITION: size 0x2 -&gt; 0x1; resized: 3; retyped: 3
+_RTLP_HP_HEAP_GLOBALS: added: SynchronousSuspend
+_RTL_WORK_ON_BEHALF_TICKET: added
+_SEP_ANTITAMPER_ENTRY: renamed: ObjectTypePolicies -&gt; ObjectTypeMacls
+_SEP_OBJECT_ANTITAMPER_ENTRY: removed
+_SEP_OBJECT_ANTITAMPER_SID: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_MACL: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: removed
+_SE_ANTITAMPER_ENUM_SID: removed
+_SKCALL_FFA_MEMORY_OPERATION: added
+_SKSERVICE: added: SECURESERVICE_FFA_MAP_UNMAP_RXTX_BUFFER, SECURESERVICE_INVOKE_FFA_MEMORY_OPERATION; renumbered: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 278-&gt;280, SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT 280-&gt;282, SECURESERVICE_REQUEST_BREAK_IN 277-&gt;279, SECURESERVICE_TERMINATE 279-&gt;281
+_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE: added
+_WOB_INFORMATION_CLASS: added
+_WORK_QUEUE_TYPE: added</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.9457 -&gt; KB5124010: _ALPC_WORK_ON_BEHALF_TICKET, _ENODE, _EPROCESS, _EX_PARTITION, and 20 more</title>
+<id>urn:ntoffsets:feed:changes:C29EBFB06B78B3C020DCA66D99713F9E1:0B3439338F40DDCD568A30E465A9576B1</id>
+<updated>2026-09-22T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0B3439338F40DDCD568A30E465A9576B1.json"/>
+<summary>20 type(s) changed in KB5124010 (11-24H2, amd64)</summary>
+<content type="text">_ALPC_WORK_ON_BEHALF_TICKET: removed
+_ENODE: added: SubQueueCount, SubQueueIndexSeed
+_EPROCESS: added: ProcessQosCallbackListEntry
+_EX_PARTITION: retyped: 1
+_EX_WORK_QUEUE: size 0x2e0 -&gt; 0x2f0; added: HealthMetrics, SubQueueIndex; moved: 4; resized: 1; bitfields: 2; retyped: 1
+_EX_WORK_QUEUE_HEALTH_METRICS: added
+_IO_WORKITEM: size 0x58 -&gt; 0x60; added: InsertTime, QueueType
+_KALPC_WORK_ON_BEHALF_DATA: retyped: 1
+_KPRCB: added: WorkSubQueueIndex; moved: 1; resized: 1; retyped: 1
+_POP_COOLING_EXTENSION: size 0x110 -&gt; 0xd8; added: UpdatePropogationLock; removed: CancelRemoveCompleteEvent, CancelRemovePending, CancelRemoveWorkItem, DeviceObjectValid; moved: 13
+_PROCESS_EXECUTION: added: RequestedJobObject, RequestedProcess; moved: 2; resized: 1
+_PROCESS_EXECUTION_TRANSITION: size 0x2 -&gt; 0x1; resized: 3; retyped: 3
+_RTLP_HP_HEAP_GLOBALS: added: SynchronousSuspend
+_RTL_WORK_ON_BEHALF_TICKET: added
+_SEP_ANTITAMPER_ENTRY: renamed: ObjectTypePolicies -&gt; ObjectTypeMacls
+_SEP_OBJECT_ANTITAMPER_ENTRY: removed
+_SEP_OBJECT_ANTITAMPER_SID: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_MACL: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: removed
+_SE_ANTITAMPER_ENUM_SID: removed
+_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE: added
+_WOB_INFORMATION_CLASS: added
+_WORK_QUEUE_TYPE: added</content>
+</entry>
 <entry>
 <title>1607 amd64 10.0.14393.9418 -&gt; 10.0.14393.9514: BATTERY_REPORTING_SCALE, CMP_OFFSET_ARRAY, DOCK_INTERFACE, LIST_ENTRY32, and 1233 more</title>
 <id>urn:ntoffsets:feed:changes:FA69FA29B4F64187A5AD63FD89F754261:D9CB86FB897E4F7D9155D80F643944CB1</id>
@@ -2839,43 +2947,5 @@ _SYSTEM_INFORMATION_CLASS: added: SystemBasicProcessInformation, SystemHandleCou
 <summary>2 type(s) changed in KB5062557 (1809, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
 _KPRCB: added: VerwOnIdle; bitfields: 1</content>
-</entry>
-<entry>
-<title>1607 amd64 10.0.14393.8146 -&gt; 10.0.14393.8246: PO_MEMORY_IMAGE, _KPRCB</title>
-<id>urn:ntoffsets:feed:changes:A4B0279934D94867B740CFED2DFE577C1:39C0001161C344BBB7598C13FD96BD9B1</id>
-<updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/39C0001161C344BBB7598C13FD96BD9B1.json"/>
-<summary>2 type(s) changed in KB5062560 (1607, amd64)</summary>
-<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
-_KPRCB: added: VerwOnIdle; bitfields: 1</content>
-</entry>
-<entry>
-<title>1507 amd64 10.0.10240.21033 -&gt; 10.0.10240.21072: PO_MEMORY_IMAGE, _KPRCB</title>
-<id>urn:ntoffsets:feed:changes:240EF74E930E431896432584CB6946151:B6E4516C9D3D4653ACD67CD60686FA291</id>
-<updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B6E4516C9D3D4653ACD67CD60686FA291.json"/>
-<summary>2 type(s) changed in KB5062561 (1507, amd64)</summary>
-<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
-_KPRCB: added: VerwOnIdle; bitfields: 1</content>
-</entry>
-<entry>
-<title>11-24H2 arm64 KB5060829 -&gt; 10.0.26100.4652: _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION, _SKSERVICE</title>
-<id>urn:ntoffsets:feed:changes:2F5EDE9CE5DB3A956E002CE117395EF31:0221F2D4E8E0BCCE13BB32530B3CC12D1</id>
-<updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/0221F2D4E8E0BCCE13BB32530B3CC12D1.json"/>
-<summary>2 type(s) changed in KB5062553 (11-24H2, arm64)</summary>
-<content type="text">_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
-_LOADER_PARAMETER_EXTENSION: size 0x10f8 -&gt; 0x1108; added: BootAppSvnInfo
-_SKSERVICE: added: SECURESERVICE_MAKE_KERNEL_NONGLOBAL, SECURESERVICE_SWEEP_PROCESS_ICACHE_RANGE; removed: SECURESERVICE_DEBUG_SWEEP_ICACHE_RANGE; renumbered: SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 276-&gt;277, SECURESERVICE_REQUEST_BREAK_IN 275-&gt;276</content>
-</entry>
-<entry>
-<title>11-24H2 amd64 10.0.26100.4484 -&gt; 10.0.26100.4652: _KPRCB_BPB_FEATURES, _LOADER_BOOT_APPLICATION_SVN_INFORMATION, _LOADER_PARAMETER_EXTENSION</title>
-<id>urn:ntoffsets:feed:changes:ECDC735E7B90585D3ED73CFF1AA760031:00D01401874F8CC3F5F5DA237013C16A1</id>
-<updated>2025-07-08T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/00D01401874F8CC3F5F5DA237013C16A1.json"/>
-<summary>3 type(s) changed in KB5062553 (11-24H2, amd64)</summary>
-<content type="text">_KPRCB_BPB_FEATURES: added: VerwOnIdle; bitfields: 1
-_LOADER_BOOT_APPLICATION_SVN_INFORMATION: added
-_LOADER_PARAMETER_EXTENSION: size 0x1120 -&gt; 0x1130; added: BootAppSvnInfo</content>
 </entry>
 </feed>
