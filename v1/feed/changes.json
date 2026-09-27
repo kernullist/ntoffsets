@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-09-26T11:33:49Z",
+ "generated": "2026-09-27T12:12:25Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 64,
-   "transitions": 63,
-   "layout_changes": 29,
+   "builds": 65,
+   "transitions": 64,
+   "layout_changes": 30,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9539",
+   "to_version": "10.0.26100.9577",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "latest_layout": "v2:sha256:88f1c2050dacd00bcc714d2154c4bc958c1818e0c1fdb7c2f0a25770b4a0dff4",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 14,
-   "transitions": 13,
-   "layout_changes": 10,
+   "builds": 15,
+   "transitions": 14,
+   "layout_changes": 11,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9502",
+   "to_version": "10.0.26100.9577",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:64a9b16b5b8835301571f490a804ffcf52d427e31923ca30655fc3143a05eefd",
+   "latest_layout": "v2:sha256:a04b7491b33c0a9ba5162fe8abdaae11c3a347dc4ae2feec55a9a5baec14032e",
    "known_missing_in_channel": 0
   },
   {
@@ -92711,6 +92711,44 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9502",
+   "to_version": "10.0.26100.9577",
+   "from_key": "8A170D470B28C606D81CAD9C0C59569F1",
+   "to_key": "AC0160218E34166891BF87B2FBF010791",
+   "from_kb": [
+    "7c004abf-cae7-48dc-8e0a-bab605e19c0f"
+   ],
+   "kb": [
+    "a4c8faa1-0968-4dea-a818-66666533b4c0"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:64a9b16b5b8835301571f490a804ffcf52d427e31923ca30655fc3143a05eefd",
+   "layout_to": "v2:sha256:a04b7491b33c0a9ba5162fe8abdaae11c3a347dc4ae2feec55a9a5baec14032e",
+   "types_changed": [
+    {
+     "type": "_POP_IRP_DATA",
+     "size_from": 312,
+     "size_to": 312,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "System",
+       "from": 16,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -99377,6 +99415,80 @@
      "members_removed": [
       "requiresInitGuard"
      ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9539",
+   "to_version": "10.0.26100.9577",
+   "from_key": "BA9B0278314BFA83B1E0CB880CACFBEE1",
+   "to_key": "1D6A708C8F3259F96ABA42AB4B4EA8A11",
+   "from_kb": [
+    "934aa491-3299-4318-b5f3-3489a1915d83",
+    "95cc0dd5-949f-452e-9115-30f6c5836016",
+    "b0605a8c-92ae-456c-b47c-81d48eae5f47"
+   ],
+   "kb": [
+    "dd9661d6-dcf0-42b3-b6ea-8ac2dfd99bd8"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "layout_to": "v2:sha256:88f1c2050dacd00bcc714d2154c4bc958c1818e0c1fdb7c2f0a25770b4a0dff4",
+   "types_changed": [
+    {
+     "type": "_POP_IRP_DATA",
+     "size_from": 312,
+     "size_to": 312,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "System",
+       "from": 16,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "DescriptorLayout"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
      "members_moved": [],
      "members_resized": [],
      "members_rebitted": [],
