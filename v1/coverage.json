@@ -1,5 +1,5 @@
 {
- "as_of": "2026-09-30T12:44:33Z",
+ "as_of": "2026-10-01T13:27:56Z",
  "totals": {
   "known": 2154,
   "resolved": 2035,
@@ -62,10 +62,10 @@
    }
   },
   "insider/ntoskrnl.exe": {
-   "known": 434,
-   "downloadable": 434,
+   "known": 435,
+   "downloadable": 435,
    "channels": {
-    "builds": 434
+    "builds": 435
    }
   }
  },
@@ -197,7 +197,7 @@
   },
   "builds": {
    "resolved": 383,
-   "known": 434,
+   "known": 435,
    "missing": 94,
    "unattempted": 0
   }
