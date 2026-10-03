@@ -6,7 +6,7 @@
   "candidates": []
  },
  "not_a_rename": {
-  "count": 27,
+  "count": 28,
   "note": "one side is reserved or padding, so the meaning changed rather than the label; an alias here would mislead",
   "candidates": [
    {
@@ -52,6 +52,17 @@
     "bit_count": 2,
     "kind": "repurposed",
     "observations": 4
+   },
+   {
+    "type": "_ETHREAD",
+    "from": "UpdateTebSpareByte2",
+    "to": "EtwThreadStackRundownPriorityFloorCount",
+    "offset": 1907,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
    },
    {
     "type": "_ETHREAD",

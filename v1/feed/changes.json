@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-02T12:46:40Z",
+ "generated": "2026-10-03T11:48:31Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,14 +525,14 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 65,
-   "transitions": 64,
-   "layout_changes": 30,
+   "builds": 66,
+   "transitions": 65,
+   "layout_changes": 31,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9577",
+   "to_version": "10.0.26100.9596",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:88f1c2050dacd00bcc714d2154c4bc958c1818e0c1fdb7c2f0a25770b4a0dff4",
+   "latest_layout": "v2:sha256:bcd0c4b81900f20d651fc1ab17616ed76d9cb93fcbc091ebc10db5274e36d8ba",
    "known_missing_in_channel": 0
   },
   {
@@ -99494,6 +99494,45 @@
      "members_rebitted": [],
      "members_retyped": [],
      "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9577",
+   "to_version": "10.0.26100.9596",
+   "from_key": "1D6A708C8F3259F96ABA42AB4B4EA8A11",
+   "to_key": "2E09CF9762B10E0CBCF374307BE06EEF1",
+   "from_kb": [
+    "dd9661d6-dcf0-42b3-b6ea-8ac2dfd99bd8"
+   ],
+   "kb": [
+    "2fd276a6-a727-40b6-b642-d71660dfe30c"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:88f1c2050dacd00bcc714d2154c4bc958c1818e0c1fdb7c2f0a25770b4a0dff4",
+   "layout_to": "v2:sha256:bcd0c4b81900f20d651fc1ab17616ed76d9cb93fcbc091ebc10db5274e36d8ba",
+   "types_changed": [
+    {
+     "type": "_ETHREAD",
+     "size_from": 1944,
+     "size_to": 1944,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "UpdateTebSpareByte2",
+       "to": "EtwThreadStackRundownPriorityFloorCount",
+       "offset": 1907,
+       "size": 1
+      }
+     ]
     }
    ],
    "enums_changed": []
