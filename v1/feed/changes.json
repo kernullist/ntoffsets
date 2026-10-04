@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-03T11:48:31Z",
+ "generated": "2026-10-04T12:31:15Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -538,14 +538,14 @@
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 15,
-   "transitions": 14,
-   "layout_changes": 11,
+   "builds": 16,
+   "transitions": 15,
+   "layout_changes": 12,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9577",
+   "to_version": "10.0.26100.9596",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:a04b7491b33c0a9ba5162fe8abdaae11c3a347dc4ae2feec55a9a5baec14032e",
+   "latest_layout": "v2:sha256:e609cebf6d510b9f15322fe2277490c74e006f5c1f13b567d145fbb8eaeceda2",
    "known_missing_in_channel": 0
   },
   {
@@ -92743,6 +92743,45 @@
      "members_rebitted": [],
      "members_retyped": [],
      "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9577",
+   "to_version": "10.0.26100.9596",
+   "from_key": "AC0160218E34166891BF87B2FBF010791",
+   "to_key": "4ACADF8BD81A722AE84238EEBDDCB7EC1",
+   "from_kb": [
+    "a4c8faa1-0968-4dea-a818-66666533b4c0"
+   ],
+   "kb": [
+    "b064b3cf-1fa9-4ad9-bf10-e215722ab2ec"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:a04b7491b33c0a9ba5162fe8abdaae11c3a347dc4ae2feec55a9a5baec14032e",
+   "layout_to": "v2:sha256:e609cebf6d510b9f15322fe2277490c74e006f5c1f13b567d145fbb8eaeceda2",
+   "types_changed": [
+    {
+     "type": "_ETHREAD",
+     "size_from": 1912,
+     "size_to": 1912,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "UpdateTebSpareByte2",
+       "to": "EtwThreadStackRundownPriorityFloorCount",
+       "offset": 1875,
+       "size": 1
+      }
+     ]
     }
    ],
    "enums_changed": []

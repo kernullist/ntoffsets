@@ -1,19 +1,19 @@
 {
- "as_of": "2026-10-03T11:48:26Z",
+ "as_of": "2026-10-04T12:31:11Z",
  "totals": {
   "known": 2154,
-  "resolved": 2041,
-  "accounted_missing": 194,
+  "resolved": 2045,
+  "accounted_missing": 195,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 182,
+  "binary_404": 183,
   "pdb_404": 11,
   "undownloadable": 1
  },
  "defects": 0,
- "no_version_metadata": 720,
+ "no_version_metadata": 723,
  "by_dataset": {
   "arm64/ntoskrnl.exe": {
    "known": 688,
@@ -62,16 +62,16 @@
    }
   },
   "insider/ntoskrnl.exe": {
-   "known": 445,
-   "downloadable": 445,
+   "known": 438,
+   "downloadable": 438,
    "channels": {
-    "builds": 445
+    "builds": 438
    }
   }
  },
  "by_machine": {
-  "amd64": 1246,
-  "arm64": 772,
+  "amd64": 1247,
+  "arm64": 775,
   "x86": 23
  },
  "by_channel": {
@@ -196,9 +196,9 @@
    "unattempted": 0
   },
   "builds": {
-   "resolved": 389,
-   "known": 445,
-   "missing": 96,
+   "resolved": 393,
+   "known": 438,
+   "missing": 97,
    "unattempted": 0
   }
  }
