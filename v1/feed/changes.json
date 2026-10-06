@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-05T14:56:47Z",
+ "generated": "2026-10-06T13:27:02Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -1066,6 +1066,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:d5a48c46e18fc02d5629d63b4971b8f8ef10d60ec50b36316ad7df3552a828dc",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29680",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29680.1000",
+   "to_version": "10.0.29680.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:55e631a7eb01e70afe5bd1f17635ae4d537aeac7ce9b32468e8ed5e86482e468",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29680",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29680.1000",
+   "to_version": "10.0.29680.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:835f16839f74841792172737e468ca6582b2749fdaa1bf5f4eba4145b4fda542",
    "known_missing_in_channel": 0
   }
  ],
