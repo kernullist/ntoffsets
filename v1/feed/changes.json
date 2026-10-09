@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-08T13:44:28Z",
+ "generated": "2026-10-09T13:27:55Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 66,
-   "transitions": 65,
-   "layout_changes": 31,
+   "builds": 67,
+   "transitions": 66,
+   "layout_changes": 32,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9596",
+   "to_version": "10.0.26100.9616",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:bcd0c4b81900f20d651fc1ab17616ed76d9cb93fcbc091ebc10db5274e36d8ba",
+   "latest_layout": "v2:sha256:1ba86eb608a380e0c4585881302900ca4207c58fc76965c291c99a6b5fc7c6c0",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 16,
-   "transitions": 15,
-   "layout_changes": 12,
+   "builds": 17,
+   "transitions": 16,
+   "layout_changes": 13,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9596",
+   "to_version": "10.0.26100.9616",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:e609cebf6d510b9f15322fe2277490c74e006f5c1f13b567d145fbb8eaeceda2",
+   "latest_layout": "v2:sha256:52d883466f3399bc6f35cb25d5b32e662e92fa647e4a26ae19a0743b970a1e60",
    "known_missing_in_channel": 0
   },
   {
@@ -1092,6 +1092,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:835f16839f74841792172737e468ca6582b2749fdaa1bf5f4eba4145b4fda542",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29683",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29683.1000",
+   "to_version": "10.0.29683.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:e812d822c9bc1f129017789d09bbba94d822bc54c7e768a34455454fdce6e93a",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29683",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29683.1000",
+   "to_version": "10.0.29683.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:78014a99de44e113c8ed2fc0ca7f57b1ae2fd1ef233a9525ed0db9447a988151",
    "known_missing_in_channel": 0
   }
  ],
@@ -92814,6 +92840,77 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9596",
+   "to_version": "10.0.26100.9616",
+   "from_key": "4ACADF8BD81A722AE84238EEBDDCB7EC1",
+   "to_key": "68BE2FC1DE04C33758E232BF07278EF51",
+   "from_kb": [
+    "b064b3cf-1fa9-4ad9-bf10-e215722ab2ec"
+   ],
+   "kb": [
+    "867f9e66-a053-49bb-b240-1020fff72753"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:e609cebf6d510b9f15322fe2277490c74e006f5c1f13b567d145fbb8eaeceda2",
+   "layout_to": "v2:sha256:52d883466f3399bc6f35cb25d5b32e662e92fa647e4a26ae19a0743b970a1e60",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_IntelDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "18:13",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "size_from": 528,
+     "size_to": 528,
+     "members_added": [
+      "DecompressionOverIoPatternDuringInswap"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": "unsigned long",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "CVariant_MemoryCompressionHCAtLowPriority",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -99601,6 +99698,77 @@
     }
    ],
    "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9596",
+   "to_version": "10.0.26100.9616",
+   "from_key": "2E09CF9762B10E0CBCF374307BE06EEF1",
+   "to_key": "5D102104F1E19CB01EA1E777E9DF43FB1",
+   "from_kb": [
+    "2fd276a6-a727-40b6-b642-d71660dfe30c"
+   ],
+   "kb": [
+    "398e3bc2-9c3f-4d87-b40b-e54a46826056"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:bcd0c4b81900f20d651fc1ab17616ed76d9cb93fcbc091ebc10db5274e36d8ba",
+   "layout_to": "v2:sha256:1ba86eb608a380e0c4585881302900ca4207c58fc76965c291c99a6b5fc7c6c0",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_IntelDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "18:13",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "size_from": 528,
+     "size_to": 528,
+     "members_added": [
+      "DecompressionOverIoPatternDuringInswap"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": "unsigned long",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "CVariant_MemoryCompressionHCAtLowPriority",
+     "status": "added"
+    }
+   ]
   },
   {
    "channel": "builds/19041",
