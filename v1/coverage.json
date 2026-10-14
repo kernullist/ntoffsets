@@ -1,23 +1,23 @@
 {
- "as_of": "2026-10-13T14:21:42Z",
+ "as_of": "2026-10-14T12:03:40Z",
  "totals": {
   "known": 2154,
-  "resolved": 2057,
-  "accounted_missing": 193,
+  "resolved": 2064,
+  "accounted_missing": 196,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 181,
+  "binary_404": 184,
   "pdb_404": 11,
   "undownloadable": 1
  },
  "defects": 0,
- "no_version_metadata": 729,
+ "no_version_metadata": 734,
  "by_dataset": {
   "arm64/ntoskrnl.exe": {
-   "known": 688,
-   "downloadable": 688,
+   "known": 692,
+   "downloadable": 692,
    "channels": {
     "1709": 55,
     "1803": 56,
@@ -29,21 +29,21 @@
     "20H2": 35,
     "11-22H2": 74,
     "22H2": 29,
-    "21H2": 44,
-    "11-24H2": 61,
-    "11-23H2": 15,
-    "11-26H1": 16
+    "21H2": 45,
+    "11-24H2": 62,
+    "11-23H2": 16,
+    "11-26H1": 17
    }
   },
   "ga/ntoskrnl.exe": {
-   "known": 1145,
-   "downloadable": 1144,
+   "known": 1151,
+   "downloadable": 1150,
    "channels": {
     "1507": 121,
     "1803": 68,
     "1709": 68,
-    "1607": 175,
-    "1809": 162,
+    "1607": 176,
+    "1809": 163,
     "1903": 42,
     "1703": 78,
     "1511": 22,
@@ -52,26 +52,26 @@
     "20H2": 35,
     "21H1": 1,
     "11-21H2": 61,
-    "21H2": 45,
+    "21H2": 46,
     "22H2": 30,
     "11-22H2": 75,
-    "11-23H2": 16,
-    "11-24H2": 62,
+    "11-23H2": 17,
+    "11-24H2": 63,
     "11-25H2": 1,
-    "11-26H1": 16
+    "11-26H1": 17
    }
   },
   "insider/ntoskrnl.exe": {
-   "known": 440,
-   "downloadable": 440,
+   "known": 443,
+   "downloadable": 443,
    "channels": {
-    "builds": 440
+    "builds": 443
    }
   }
  },
  "by_machine": {
-  "amd64": 1253,
-  "arm64": 781,
+  "amd64": 1257,
+  "arm64": 784,
   "x86": 23
  },
  "by_channel": {
@@ -88,14 +88,14 @@
    "unattempted": 0
   },
   "11-23H2": {
-   "resolved": 29,
-   "known": 31,
-   "missing": 1,
+   "resolved": 30,
+   "known": 33,
+   "missing": 2,
    "unattempted": 1
   },
   "11-24H2": {
-   "resolved": 117,
-   "known": 123,
+   "resolved": 119,
+   "known": 125,
    "missing": 5,
    "unattempted": 1
   },
@@ -106,8 +106,8 @@
    "unattempted": 0
   },
   "11-26H1": {
-   "resolved": 29,
-   "known": 32,
+   "resolved": 31,
+   "known": 34,
    "missing": 0,
    "unattempted": 3
   },
@@ -124,8 +124,8 @@
    "unattempted": 0
   },
   "1607": {
-   "resolved": 172,
-   "known": 175,
+   "resolved": 173,
+   "known": 176,
    "missing": 3,
    "unattempted": 0
   },
@@ -148,8 +148,8 @@
    "unattempted": 0
   },
   "1809": {
-   "resolved": 267,
-   "known": 291,
+   "resolved": 268,
+   "known": 292,
    "missing": 24,
    "unattempted": 0
   },
@@ -185,8 +185,8 @@
   },
   "21H2": {
    "resolved": 85,
-   "known": 89,
-   "missing": 3,
+   "known": 91,
+   "missing": 5,
    "unattempted": 1
   },
   "22H2": {
@@ -197,7 +197,7 @@
   },
   "builds": {
    "resolved": 405,
-   "known": 440,
+   "known": 443,
    "missing": 95,
    "unattempted": 0
   }

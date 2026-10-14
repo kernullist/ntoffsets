@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-13T14:21:48Z",
+ "generated": "2026-10-14T12:03:46Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -65,45 +65,45 @@
    "from_date": "2023-10-10",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:9d64893aa80d1ba4a480b55bdc69b14552ec0e829298ff409e69641b1e8f5b29",
-   "known_missing_in_channel": 1
+   "known_missing_in_channel": 2
   },
   {
    "channel": "11-23H2",
    "machine": "arm64",
-   "builds": 14,
-   "transitions": 13,
-   "layout_changes": 2,
+   "builds": 15,
+   "transitions": 14,
+   "layout_changes": 3,
    "from_version": null,
    "to_version": null,
    "from_date": "2025-09-23",
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:61aebe2442f6a05df2b2af89dc91edcdf2824861f75d501d693ed1c8406f6df6",
-   "known_missing_in_channel": 1
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:e6b3c8ee9c051b059000083c70a28d58a9c4b0e6093f143fed16eeca56793040",
+   "known_missing_in_channel": 2
   },
   {
    "channel": "11-24H2",
    "machine": "amd64",
-   "builds": 61,
-   "transitions": 60,
-   "layout_changes": 34,
+   "builds": 62,
+   "transitions": 61,
+   "layout_changes": 35,
    "from_version": "10.0.26100.1",
-   "to_version": null,
+   "to_version": "10.0.26100.9711",
    "from_date": null,
-   "to_date": "2026-09-22",
-   "latest_layout": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:9f74783bb93722fdb70bed9922c8ef2d4b2c4fb7d87bf0816f6c3029e378c133",
    "known_missing_in_channel": 5
   },
   {
    "channel": "11-24H2",
    "machine": "arm64",
-   "builds": 56,
-   "transitions": 55,
-   "layout_changes": 32,
+   "builds": 57,
+   "transitions": 56,
+   "layout_changes": 33,
    "from_version": null,
    "to_version": null,
    "from_date": "2024-06-15",
-   "to_date": "2026-09-22",
-   "latest_layout": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:1a2d4b8f9c359d05a42d02affe528abc90d9678655ea13f2e39173092154327b",
    "known_missing_in_channel": 5
   },
   {
@@ -122,27 +122,27 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 15,
-   "transitions": 14,
-   "layout_changes": 9,
+   "builds": 16,
+   "transitions": 15,
+   "layout_changes": 10,
    "from_version": "10.0.28000.1575",
    "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-09-22",
-   "latest_layout": "v2:sha256:3d87ebcf97810f3b1e6c8ec894177e8e404e650ff370ff3aef07da6f13f6679a",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:75def3bc04b793a632e8dafd1251a534e824741690b922681940ef9b1c8bc010",
    "known_missing_in_channel": 0
   },
   {
    "channel": "11-26H1",
    "machine": "arm64",
-   "builds": 14,
-   "transitions": 13,
-   "layout_changes": 8,
+   "builds": 15,
+   "transitions": 14,
+   "layout_changes": 9,
    "from_version": null,
    "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-09-22",
-   "latest_layout": "v2:sha256:02d72161648f486da7767a1f776f6f0c806ef358ba147957de64cbb845d384aa",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:edaba6ab0d9729a87dd941574a6a0d1d89850fc1cbe37b1bda26847cf805ca6b",
    "known_missing_in_channel": 0
   },
   {
@@ -174,14 +174,14 @@
   {
    "channel": "1607",
    "machine": "amd64",
-   "builds": 172,
-   "transitions": 171,
-   "layout_changes": 37,
+   "builds": 173,
+   "transitions": 172,
+   "layout_changes": 38,
    "from_version": "10.0.14393.0",
-   "to_version": "10.0.14393.9514",
+   "to_version": "10.0.14393.9611",
    "from_date": null,
-   "to_date": "2026-09-14",
-   "latest_layout": "v2:sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:61dc31f53b5bf6020c47cec51d7d4e2a0e5884cbc2b717f1cfa8230ff5df4fa6",
    "known_missing_in_channel": 3
   },
   {
@@ -252,14 +252,14 @@
   {
    "channel": "1809",
    "machine": "amd64",
-   "builds": 153,
-   "transitions": 152,
-   "layout_changes": 32,
+   "builds": 154,
+   "transitions": 153,
+   "layout_changes": 33,
    "from_version": "10.0.17763.1",
    "to_version": null,
    "from_date": null,
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:112196f9b87b5d1949dcbc295054e05486c81e95f2234dabb29b3668682efe7c",
+   "to_date": "2026-10-13",
+   "latest_layout": "v2:sha256:3137c491203a3aef9cca5e70a5c02a9d391c8323c130c13ff9a9b1eab2c6413b",
    "known_missing_in_channel": 24
   },
   {
@@ -390,7 +390,7 @@
    "from_date": "2021-10-12",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
-   "known_missing_in_channel": 3
+   "known_missing_in_channel": 5
   },
   {
    "channel": "21H2",
@@ -403,7 +403,7 @@
    "from_date": "2023-06-13",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:2f1bf4c7b5eacadec1950880b319e1edc6ad1a0c1fefba2154a47b9ab695ba42",
-   "known_missing_in_channel": 3
+   "known_missing_in_channel": 5
   },
   {
    "channel": "22H2",
@@ -1122,6 +1122,7876 @@
   }
  ],
  "changes": [
+  {
+   "channel": "1809",
+   "machine": "amd64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "1053B6FEB35F633383250DE072DE8A9F1",
+   "to_key": "A85DD17960E99C5CA34F30C8B0E4DF591",
+   "from_kb": [
+    "KB5122876"
+   ],
+   "kb": [
+    "KB5126651"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:112196f9b87b5d1949dcbc295054e05486c81e95f2234dabb29b3668682efe7c",
+   "layout_to": "v2:sha256:3137c491203a3aef9cca5e70a5c02a9d391c8323c130c13ff9a9b1eab2c6413b",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 160,
+     "size_to": 168,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_QUERY_REGISTRY_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1280,
+     "size_to": 1312,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1256,
+       "to": 1280
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1248,
+       "to": 1272
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1272,
+       "to": 1296
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1176,
+       "to": 1200
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1240,
+       "to": 1264
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1264,
+       "to": 1288
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "reg_FeatureDescriptor",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "REGISTRY_FEATURE_ENABLED_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "reg_FeatureEnabledState",
+     "status": "added"
+    },
+    {
+     "enum": "reg_FeatureStage",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "1607",
+   "machine": "amd64",
+   "from_version": "10.0.14393.9514",
+   "to_version": "10.0.14393.9611",
+   "from_key": "D9CB86FB897E4F7D9155D80F643944CB1",
+   "to_key": "85AA96B5991D467BB1DD9744EAD4E0111",
+   "from_kb": [
+    "KB5129239"
+   ],
+   "kb": [
+    "KB5126868"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "layout_to": "v2:sha256:61dc31f53b5bf6020c47cec51d7d4e2a0e5884cbc2b717f1cfa8230ff5df4fa6",
+   "types_changed": [
+    {
+     "type": "BATTERY_REPORTING_SCALE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "CMP_OFFSET_ARRAY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "DOCK_INTERFACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "LIST_ENTRY32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "LIST_ENTRY64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "PEPHANDLE__",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "POWER_ACTION_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 968
+    },
+    {
+     "type": "PROCESSOR_IDLESTATE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "PROCESSOR_IDLESTATE_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "PROCESSOR_PERFSTATE_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "SYSTEM_POWER_CAPABILITIES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 76
+    },
+    {
+     "type": "SYSTEM_POWER_LEVEL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "VACB_LEVEL_ALLOCATION_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ACCESS_REASONS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_ACCESS_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_ACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ACTIVATION_CONTEXT_STACK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_AER_BRIDGE_DESCRIPTOR_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_AER_ENDPOINT_DESCRIPTOR_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_AER_ROOTPORT_DESCRIPTOR_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_AGGREGATED_PAYLOAD_FILTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_ALPC_COMMUNICATION_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 384
+    },
+    {
+     "type": "_ALPC_COMPLETION_LIST_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ALPC_COMPLETION_PACKET_LOOKASIDE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_ALPC_COMPLETION_PACKET_LOOKASIDE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ALPC_DISPATCH_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_ALPC_HANDLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ALPC_HANDLE_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ALPC_MESSAGE_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ALPC_PORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 472
+    },
+    {
+     "type": "_ALPC_PORT_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_ALPC_PROCESS_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_AMD64_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_ARBITER_ADD_RESERVED_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ARBITER_ALLOCATION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_ARBITER_ALTERNATIVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_ARBITER_BOOT_ALLOCATION_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ARBITER_CONFLICT_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ARBITER_INSTANCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 336
+    },
+    {
+     "type": "_ARBITER_INTERFACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_ARBITER_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_ARBITER_ORDERING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ARBITER_ORDERING_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ARBITER_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ARBITER_QUERY_ALLOCATED_RESOURCES_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ARBITER_QUERY_ARBITRATE_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ARBITER_QUERY_CONFLICT_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ARBITER_RETEST_ALLOCATION_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ARBITER_TEST_ALLOCATION_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ARM64_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ARMCE_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_ARM_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_AUTHZBASEP_CLAIM_ATTRIBUTES_COLLECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 608
+    },
+    {
+     "type": "_AUTHZBASEP_SECURITY_ATTRIBUTES_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_AUX_ACCESS_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 224
+    },
+    {
+     "type": "_BITMAP_RANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_BLOB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_BLOB_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_BLOB_TYPE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_BUS_EXTENSION_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CACHED_CHILD_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CACHED_KSTACK_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CACHE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_CACHE_MANAGER_CALLBACKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CACHE_UNINITIALIZE_EVENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CALL_HASH_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_CALL_PERFORMANCE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1032
+    },
+    {
+     "type": "_CC_ASYNC_READ_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CC_EXTERNAL_CACHE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_CELL_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_CHILD_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CLIENT_ID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CLIENT_ID32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CLIENT_ID64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CLS_LSN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CMHIVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6056
+    },
+    {
+     "type": "_CMP_DISCARD_AND_REPLACE_KCB_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CM_BIG_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_CACHED_VALUE_INDEX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_CM_CELL_REMAP_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_COMPONENT_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_CM_DIRTY_VECTOR_LOG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1160
+    },
+    {
+     "type": "_CM_DIRTY_VECTOR_LOG_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_CM_FULL_RESOURCE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 36
+    },
+    {
+     "type": "_CM_INDEX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_INDEX_HINT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_INTENT_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CM_KCB_LAYER_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_CM_KCB_UOW",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_CM_KEY_BODY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_CM_KEY_CONTROL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 296
+    },
+    {
+     "type": "_CM_KEY_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CM_KEY_HASH_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_CM_KEY_INDEX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_KEY_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_CM_KEY_REFERENCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CM_KEY_SECURITY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_CM_KEY_SECURITY_CACHE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_CM_KEY_SECURITY_CACHE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CM_KEY_VALUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_CM_NAME_CONTROL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_CM_NAME_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_CM_NOTIFY_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_CM_PARTIAL_RESOURCE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_CM_PARTIAL_RESOURCE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_CM_PATH_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_CM_RESOURCE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_CM_RM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_CM_TRANS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 176
+    },
+    {
+     "type": "_CM_TRANS_PTR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_CM_UOW_KEY_STATE_MODIFICATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_CM_UOW_SET_SD_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CM_UOW_SET_VALUE_KEY_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CM_UOW_SET_VALUE_LIST_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_CM_WORKITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_COMPRESSED_DATA_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1232
+    },
+    {
+     "type": "_CONTROL_AREA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_COUNTER_READING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_CPU_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_CRITICAL_PROCESS_EXCEPTION_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_CURDIR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_CVDD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_DBGKD_ANY_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_DBGKD_BREAKPOINTEX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_DBGKD_CONTEXT_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_DBGKD_CONTINUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_CONTINUE2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_DBGKD_FILL_MEMORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKD_GET_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_GET_INTERNAL_BREAKPOINT32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_DBGKD_GET_INTERNAL_BREAKPOINT64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_DBGKD_GET_SET_BUS_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_DBGKD_GET_VERSION32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_DBGKD_GET_VERSION64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_DBGKD_LOAD_SYMBOLS32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DBGKD_LOAD_SYMBOLS64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_DBGKD_MANIPULATE_STATE32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 52
+    },
+    {
+     "type": "_DBGKD_MANIPULATE_STATE64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_DBGKD_QUERY_MEMORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DBGKD_QUERY_SPECIAL_CALLS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_READ_MEMORY32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_DBGKD_READ_MEMORY64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO_EXTENDED32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_IO_EXTENDED64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_DBGKD_READ_WRITE_MSR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_DBGKD_RESTORE_BREAKPOINT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_SEARCH_MEMORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DBGKD_SET_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_SET_INTERNAL_BREAKPOINT32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_DBGKD_SET_INTERNAL_BREAKPOINT64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKD_SET_SPECIAL_CALL32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_SET_SPECIAL_CALL64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_DBGKD_SWITCH_PARTITION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_DBGKD_WRITE_BREAKPOINT32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_DBGKD_WRITE_BREAKPOINT64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKD_WRITE_CUSTOM_BREAKPOINT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DBGKD_WRITE_MEMORY32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_DBGKD_WRITE_MEMORY64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DBGKM_EXCEPTION32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 84
+    },
+    {
+     "type": "_DBGKM_EXCEPTION64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_DEFERRED_WRITE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_DELAY_ACK_FO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DEVICE_CAPABILITIES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_DEVICE_DATA_SET_RANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DEVICE_DESCRIPTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_DEVICE_DSM_DEFINITION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_DEVICE_MANAGE_DATA_SET_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_DEVICE_MANAGE_DATA_SET_ATTRIBUTES_OUTPUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 36
+    },
+    {
+     "type": "_DEVICE_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_DEVICE_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 720
+    },
+    {
+     "type": "_DEVICE_OBJECT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 336
+    },
+    {
+     "type": "_DEVICE_OBJECT_POWER_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_DEVICE_RELATIONS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DEVOBJ_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_DIAGNOSTIC_BUFFER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_DIAGNOSTIC_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_DIRTY_PAGE_STATISTICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DIRTY_PAGE_THRESHOLDS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_DISALLOWED_GUIDS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_DISPATCHER_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_DRIVER_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_DRIVER_OBJECT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 336
+    },
+    {
+     "type": "_DUAL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 632
+    },
+    {
+     "type": "_DUMMY_FILE_OBJECT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_DUMP_INITIALIZATION_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 264
+    },
+    {
+     "type": "_DUMP_STACK_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 376
+    },
+    {
+     "type": "_DYNAMIC_FUNCTION_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_ECP_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_EJOB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1544
+    },
+    {
+     "type": "_ENODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2112
+    },
+    {
+     "type": "_EPROCESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2000
+    },
+    {
+     "type": "_EPROCESS_VALUES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_ERESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_ESERVERSILO_GLOBALS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1072
+    },
+    {
+     "type": "_ETHREAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2016
+    },
+    {
+     "type": "_ETIMER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 312
+    },
+    {
+     "type": "_ETWP_NOTIFICATION_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_ETW_BUFFER_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_ETW_BUFFER_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ETW_FILTER_EVENT_NAME_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_ETW_FILTER_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_ETW_FILTER_PID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 36
+    },
+    {
+     "type": "_ETW_FILTER_STRING_TOKEN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ETW_FILTER_STRING_TOKEN_ELEMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ETW_GUID_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 400
+    },
+    {
+     "type": "_ETW_HASH_BUCKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_ETW_LAST_ENABLE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ETW_LOGGER_HANDLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_ETW_PAYLOAD_FILTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_ETW_PERF_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ETW_PMC_SUPPORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_ETW_PROVIDER_TRAITS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_ETW_QUEUE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_ETW_REALTIME_CONSUMER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_ETW_REF_CLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ETW_REG_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_ETW_REPLY_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_ETW_SESSION_PERF_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_ETW_SILODRIVERSTATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 5032
+    },
+    {
+     "type": "_ETW_SYSTEMTIME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ETW_WMITRACE_WORK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 240
+    },
+    {
+     "type": "_EVENT_DATA_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EVENT_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EVENT_FILTER_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EVENT_FILTER_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_EVENT_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_EVENT_HEADER_EXTENDED_DATA_ITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EVENT_PAYLOAD_PREDICATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_EVENT_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_EWOW64PROCESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EXCEPTION_POINTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EXCEPTION_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 152
+    },
+    {
+     "type": "_EXCEPTION_RECORD32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_EXCEPTION_RECORD64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 152
+    },
+    {
+     "type": "_EXCEPTION_REGISTRATION_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EXHANDLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_EXT_DELETE_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_EXT_SET_PARAMETERS_V0",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EX_FAST_REF",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_EX_PUSH_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_EX_PUSH_LOCK_AUTO_EXPAND",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_EX_PUSH_LOCK_AUTO_EXPAND_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_EX_RUNDOWN_REF",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_EX_RUNDOWN_REF_CACHE_AWARE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 720
+    },
+    {
+     "type": "_FAST_IO_DISPATCH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 224
+    },
+    {
+     "type": "_FAST_MUTEX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_FILESYSTEM_DISK_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_FILE_BASIC_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_FILE_GET_QUOTA_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_FILE_NETWORK_OPEN_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_FILE_OBJECT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 216
+    },
+    {
+     "type": "_FILE_SEGMENT_ELEMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_FILE_STANDARD_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_FREE_DISPLAY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_FSRTL_ADVANCED_FCB_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_FS_FILTER_CALLBACKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_FS_FILTER_CALLBACK_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_FS_FILTER_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_FS_FILTER_SECTION_SYNC_OUTPUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_GDI_TEB_BATCH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1256
+    },
+    {
+     "type": "_GDI_TEB_BATCH32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1248
+    },
+    {
+     "type": "_GDI_TEB_BATCH64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1256
+    },
+    {
+     "type": "_GENERAL_LOOKASIDE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_GENERAL_LOOKASIDE_POOL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_GENERIC_MAPPING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_GROUP_AFFINITY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_GUID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HAL_CHANNEL_MEMORY_RANGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HAL_NODE_RANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HANDLE_REVOCATION_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_HANDLE_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_HANDLE_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HANDLE_TABLE_ENTRY_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_HANDLE_TABLE_FREE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_HANDLE_TRACE_DB_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_HANDLE_TRACE_DEBUG_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 240
+    },
+    {
+     "type": "_HARDWARE_PTE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_HBASE_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4096
+    },
+    {
+     "type": "_HBIN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_HCELL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_HEAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 672
+    },
+    {
+     "type": "_HEAP_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_HEAP_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_ENTRY_EXTRA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_EXTENDED_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_FREE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_HEAP_FREE_ENTRY_EXTRA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_HEAP_LIST_LOOKUP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_HEAP_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_HEAP_LOOKASIDE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_HEAP_PSEUDO_TAG_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_SEGMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_HEAP_STOP_ON_TAG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_HEAP_STOP_ON_VALUES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_HEAP_TAG_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_HEAP_TUNING_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_UCR_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_HEAP_UNPACKED_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_HEAP_VIRTUAL_ALLOC_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_HHIVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2664
+    },
+    {
+     "type": "_HIVE_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 152
+    },
+    {
+     "type": "_HIVE_LOAD_FAILURE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 352
+    },
+    {
+     "type": "_HIVE_WAIT_PACKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_HIVE_WRITE_WAIT_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_HMAP_DIRECTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8192
+    },
+    {
+     "type": "_HMAP_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_HMAP_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20480
+    },
+    {
+     "type": "_HVIEW_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1200
+    },
+    {
+     "type": "_HVIEW_MAP_DIRECTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1024
+    },
+    {
+     "type": "_HVIEW_MAP_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_HVIEW_MAP_PIN_LOG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1160
+    },
+    {
+     "type": "_HVIEW_MAP_PIN_LOG_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_HVIEW_MAP_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2048
+    },
+    {
+     "type": "_HV_GET_BIN_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_HV_GET_CELL_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_HV_PARTITION_PRIVILEGE_MASK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_HV_X64_HYPERVISOR_FEATURES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IA64_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_IMAGE_DATA_DIRECTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_IMAGE_DEBUG_DIRECTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_IMAGE_DOS_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_IMAGE_FILE_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_IMAGE_NT_HEADERS64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 264
+    },
+    {
+     "type": "_IMAGE_OPTIONAL_HEADER64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 240
+    },
+    {
+     "type": "_IMAGE_ROM_OPTIONAL_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_IMAGE_RUNTIME_FUNCTION_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_IMAGE_SECTION_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_IMAGE_SECURITY_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_INITIAL_PRIVILEGE_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 44
+    },
+    {
+     "type": "_INTERFACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_INTERRUPT_CONNECTION_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_INTERRUPT_HT_INTR_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_INTERRUPT_REMAPPING_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_INTERRUPT_VECTOR_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_INVERTED_FUNCTION_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6160
+    },
+    {
+     "type": "_INVERTED_FUNCTION_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_INVPCID_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IOP_FILE_OBJECT_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_IOP_IRP_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_IOP_IRP_EXTENSION_STATUS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_IOP_IRP_STACK_PROFILER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 84
+    },
+    {
+     "type": "_IOV_FORCED_PENDING_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 512
+    },
+    {
+     "type": "_IOV_IRP_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_IO_CLIENT_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IO_COMPLETION_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_IO_DRIVER_CREATE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_IO_IRP_EXT_TRACK_OFFSET_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IO_MINI_COMPLETION_PACKET_USER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_IO_PRIORITY_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IO_REMOVE_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_IO_REMOVE_LOCK_COMMON_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_IO_RESOURCE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_IO_RESOURCE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_IO_RESOURCE_REQUIREMENTS_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_IO_SECURITY_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_IO_STACK_LOCATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_IO_STATUS_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_IO_TIMER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_IRP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 208
+    },
+    {
+     "type": "_ISRDPCSTATS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_ISR_THUNK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_JOBOBJECT_WAKE_FILTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_JOB_RATE_CONTROL_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_KAFFINITY_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 168
+    },
+    {
+     "type": "_KALPC_DIRECT_EVENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KALPC_HANDLE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KALPC_MESSAGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_KALPC_MESSAGE_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_KALPC_REGION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_KALPC_RESERVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KALPC_SECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_KALPC_SECURITY_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_KALPC_VIEW",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KAPC",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_KAPC_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KDESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KDEVICE_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_KDEVICE_QUEUE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KDPC",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_KDPC_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_KDPC_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KENLISTMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 480
+    },
+    {
+     "type": "_KENLISTMENT_HISTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KENTROPY_TIMING_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 336
+    },
+    {
+     "type": "_KERNEL_STACK_SEGMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KEVENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KEXCEPTION_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 320
+    },
+    {
+     "type": "_KEXECUTE_OPTIONS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_KFLOATING_SAVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_KGATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KGDTENTRY64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KHETERO_PROCESSOR_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KIDTENTRY64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KINTERRUPT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 256
+    },
+    {
+     "type": "_KIST_BASE_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KIST_LINK_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KLDR_DATA_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_KLDTENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KLOCK_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_KLOCK_ENTRY_LOCK_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KLOCK_QUEUE_HANDLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KMUTANT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_KNODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 320
+    },
+    {
+     "type": "_KPCR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32832
+    },
+    {
+     "type": "_KPRCB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32448
+    },
+    {
+     "type": "_KPRIQUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 688
+    },
+    {
+     "type": "_KPROCESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 728
+    },
+    {
+     "type": "_KPROCESSOR_DESCRIPTOR_AREA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20480
+    },
+    {
+     "type": "_KPROCESSOR_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1456
+    },
+    {
+     "type": "_KQUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_KREQUEST_PACKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KRESOURCEMANAGER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 592
+    },
+    {
+     "type": "_KRESOURCEMANAGER_COMPLETION_BINDING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_KSCB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 424
+    },
+    {
+     "type": "_KSCHEDULING_GROUP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 576
+    },
+    {
+     "type": "_KSCHEDULING_GROUP_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KSECONDARY_IDT_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KSEMAPHORE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KSHARED_READY_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 608
+    },
+    {
+     "type": "_KSPECIAL_REGISTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 224
+    },
+    {
+     "type": "_KSPIN_LOCK_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KSTACK_CONTROL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KSTACK_COUNT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_KSYSTEM_TIME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_KTHREAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1504
+    },
+    {
+     "type": "_KTHREAD_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 424
+    },
+    {
+     "type": "_KTIMER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_KTIMER2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_KTIMER2_COLLECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KTIMER_EXPIRATION_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_KTIMER_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8704
+    },
+    {
+     "type": "_KTIMER_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KTM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 960
+    },
+    {
+     "type": "_KTMOBJECT_NAMESPACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 168
+    },
+    {
+     "type": "_KTMOBJECT_NAMESPACE_LINK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_KTRANSACTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 728
+    },
+    {
+     "type": "_KTRANSACTION_HISTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KTRANSITION_STACK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 512
+    },
+    {
+     "type": "_KTRAP_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 400
+    },
+    {
+     "type": "_KTSS64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_KUMS_CONTEXT_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_KUSER_SHARED_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1800
+    },
+    {
+     "type": "_KWAIT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_KWAIT_CHAIN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_KWAIT_CHAIN_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_KWAIT_STATUS_REGISTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_LARGE_INTEGER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_LAZY_WRITER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_LDRP_CSLIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_LDR_DATA_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 288
+    },
+    {
+     "type": "_LDR_DDAG_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_LDR_SERVICE_TAG_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_LEARNING_MODE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_LOCK_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_LOCK_TRACKER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 144
+    },
+    {
+     "type": "_LOGGED_STREAM_CALLBACK_V1",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_LOGGED_STREAM_CALLBACK_V2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_LOG_HANDLE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 152
+    },
+    {
+     "type": "_LOOKASIDE_LIST_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_LPCP_MESSAGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_LPCP_NONPAGED_PORT_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_LPCP_PORT_OBJECT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 256
+    },
+    {
+     "type": "_LPCP_PORT_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_LUID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_LUID_AND_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_M128A",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MAILSLOT_CREATE_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_MAPPED_FILE_SEGMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_MBCB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_MCGEN_TRACE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_MDL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_MEMORY_ALLOCATION_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MIPFNBLINK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_ACCESS_LOG_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_MI_ACTIVE_WSLE_LISTHEAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MI_AVAILABLE_PAGE_WAIT_STATES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_MI_BAD_MEMORY_EVENT_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MI_CACHED_PTE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_CACHED_PTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_MI_CLONE_BLOCK_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_COMBINE_PAGE_LISTHEAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MI_COMBINE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 416
+    },
+    {
+     "type": "_MI_COMBINE_WORKITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_COMMON_PAGE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 168
+    },
+    {
+     "type": "_MI_CONTROL_AREA_WAIT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_CROSS_PARTITION_CHARGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_DEBUGGER_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 280
+    },
+    {
+     "type": "_MI_DECAY_TIMER_LINK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_DECAY_TIMER_LINKAGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_DRIVER_VA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_DYNAMIC_BITMAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MI_ERROR_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 184
+    },
+    {
+     "type": "_MI_EXTRA_IMAGE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MI_FORCED_COMMITS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_HARDWARE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_MI_IMAGE_SECURITY_REFERENCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_MI_IO_CACHE_STATS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_IO_PAGE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_MI_LARGEPAGE_IMAGE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MI_LARGE_PAGE_CANDIDATES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 520
+    },
+    {
+     "type": "_MI_LDW_WORK_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MI_MODWRITE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_MI_NODE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2184
+    },
+    {
+     "type": "_MI_PAGEFILE_BITMAPS_CACHE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MI_PAGEFILE_TRACES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_MI_PAGELIST_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MI_PAGE_COMBINE_STATISTICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_PAGE_COMBINING_SUPPORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 392
+    },
+    {
+     "type": "_MI_PAGING_FILE_SPACE_BITMAPS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_PAGING_IO_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MI_PARTITION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 11264
+    },
+    {
+     "type": "_MI_PARTITION_COMMIT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_MI_PARTITION_CORE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 352
+    },
+    {
+     "type": "_MI_PARTITION_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MI_PARTITION_MODWRITES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 704
+    },
+    {
+     "type": "_MI_PARTITION_PAGE_LISTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 3904
+    },
+    {
+     "type": "_MI_PARTITION_SEGMENTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 512
+    },
+    {
+     "type": "_MI_PARTITION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 144
+    },
+    {
+     "type": "_MI_PARTITION_ZEROING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_MI_PER_SESSION_PROTOS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_MI_POOL_FAILURE_REASONS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 44
+    },
+    {
+     "type": "_MI_POOL_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 248
+    },
+    {
+     "type": "_MI_PROBE_RAISE_TRACKER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_MI_PROCESS_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_MI_PTE_CHAIN_HEAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_MI_QUEUED_DEADSTACK_WORKITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_REBUILD_LARGE_PAGE_TIMER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_RESAVAIL_FAILURES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_RESERVATION_CLUSTER_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MI_RESUME_WORKITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MI_REVERSE_VIEW_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MI_SECTION_IMAGE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_MI_SECTION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 640
+    },
+    {
+     "type": "_MI_SESSION_DRIVER_UNLOAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_SESSION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 168
+    },
+    {
+     "type": "_MI_SHUTDOWN_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_MI_SPECIAL_POOL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MI_STANDBY_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_MI_SUB64K_FREE_RANGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_MI_SYSTEM_IMAGE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_MI_SYSTEM_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 7104
+    },
+    {
+     "type": "_MI_SYSTEM_NODE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 416
+    },
+    {
+     "type": "_MI_SYSTEM_PTE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 448
+    },
+    {
+     "type": "_MI_SYSTEM_PTE_TYPE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_MI_SYSTEM_TRIM_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_MI_SYSTEM_VA_ASSIGNMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MI_SYSTEM_VA_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 832
+    },
+    {
+     "type": "_MI_TRIAGE_DUMP_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MI_VAD_EVENT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_MI_VAD_SEQUENTIAL_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_VERIFIER_POOL_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MI_VISIBLE_PARTITION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4992
+    },
+    {
+     "type": "_MI_VISIBLE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2112
+    },
+    {
+     "type": "_MI_ZERO_COST_COUNTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MMADDRESS_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MMCLONE_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_MMCLONE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MMCLONE_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_MMDEREFERENCE_SEGMENT_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MMEXTEND_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MMINPAGE_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMINPAGE_SUPPORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 432
+    },
+    {
+     "type": "_MMINPAGE_SUPPORT_FLOW_THROUGH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MMMOD_WRITER_LISTHEAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MMMOD_WRITER_MDL_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 264
+    },
+    {
+     "type": "_MMPAGE_FILE_EXPANSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_MMPAGE_FILE_EXPANSION_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMPAGING_FILE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 288
+    },
+    {
+     "type": "_MMPFN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_MMPFNENTRY1",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_MMPFNENTRY3",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_MMPFNLIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_MMPFNLIST_SHORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_MMPTE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_HARDWARE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_PROTOTYPE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_SOFTWARE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_SUBSECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_TIMESTAMP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMPTE_TRANSITION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMSECTION_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMSECTION_FLAGS2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMSECURE_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMSESSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_MMSUBSECTION_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMSUPPORT_AGGREGATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_MMSUPPORT_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMSUPPORT_FULL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_MMSUPPORT_INSTANCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_MMSUPPORT_SHARED",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_MMVAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_MMVAD_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMVAD_FLAGS1",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMVAD_FLAGS2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MMVAD_SHORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_MMWORKING_SET_EXPANSION_HEAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MMWSLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMWSLENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMWSLE_FREE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMWSLE_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MMWSLE_NONDIRECT_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MMWSL_FULL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 512
+    },
+    {
+     "type": "_MMWSL_INSTANCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 416
+    },
+    {
+     "type": "_MMWSL_SHARED",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_MM_DRIVER_VERIFIER_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 176
+    },
+    {
+     "type": "_MM_PAGED_POOL_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MM_PAGE_ACCESS_INFO_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_MM_SESSION_SPACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16384
+    },
+    {
+     "type": "_MM_SESSION_SPACE_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MM_STORE_KEY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_MM_SYSTEM_PAGE_COUNTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_MODWRITER_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_MSUBSECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_NAMED_PIPE_CREATE_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_NB10",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 168
+    },
+    {
+     "type": "_NON_PAGED_DEBUG_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_NPAGED_LOOKASIDE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_NT_TIB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_NT_TIB32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_NT_TIB64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_OBJECT_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_OBJECT_CREATE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_OBJECT_DIRECTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 352
+    },
+    {
+     "type": "_OBJECT_DIRECTORY_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_OBJECT_DUMP_CONTROL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_FOOTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_OBJECT_HANDLE_COUNT_DATABASE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_OBJECT_HANDLE_COUNT_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_HANDLE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_OBJECT_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_OBJECT_HEADER_AUDIT_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_HEADER_CREATOR_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_OBJECT_HEADER_EXTENDED_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_HEADER_HANDLE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_HEADER_NAME_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_OBJECT_HEADER_PADDING_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_OBJECT_HEADER_PROCESS_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_HEADER_QUOTA_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_OBJECT_NAMESPACE_LOOKUPTABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 608
+    },
+    {
+     "type": "_OBJECT_NAME_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OBJECT_REF_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_OBJECT_REF_STACK_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_OBJECT_REF_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_OBJECT_SYMBOLIC_LINK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_OBJECT_TYPE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 216
+    },
+    {
+     "type": "_OBJECT_TYPE_INITIALIZER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_OBP_LOOKUP_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_OBP_SILODRIVERSTATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 736
+    },
+    {
+     "type": "_OBP_SYSTEM_DOS_DEVICE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 108
+    },
+    {
+     "type": "_OB_DUPLICATE_OBJECT_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_OB_EXTENDED_PARSE_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OB_EXTENDED_USER_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_OPEN_PACKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_OWNER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PAGED_LOOKASIDE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_PALPC_PORT_REFERENCE_WAIT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PCW_CALLBACK_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PCW_COUNTER_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PCW_COUNTER_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PCW_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PCW_MASK_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PCW_PROCESSOR_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_PCW_REGISTRATION_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_PEB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1952
+    },
+    {
+     "type": "_PEB32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1120
+    },
+    {
+     "type": "_PEB64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1952
+    },
+    {
+     "type": "_PEBS_DS_SAVE_AREA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_PEB_LDR_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_PENDING_RELATIONS_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_PEP_ACPI_EXTENDED_ADDRESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_PEP_ACPI_GPIO_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_PEP_ACPI_INTERRUPT_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PEP_ACPI_IO_MEMORY_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PEP_ACPI_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_PEP_ACPI_RESOURCE_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PEP_ACPI_SPB_I2C_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_PEP_ACPI_SPB_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PEP_ACPI_SPB_SPI_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PEP_ACPI_SPB_UART_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PEP_CRASHDUMP_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PERFINFO_GROUPMASK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PERFINFO_PPM_STATE_SELECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_PF_KERNEL_GLOBALS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_PHYSICAL_MEMORY_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PHYSICAL_MEMORY_RUN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PI_BUS_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_PI_RESOURCE_ARBITER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_PLATFORM_IDLE_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1024
+    },
+    {
+     "type": "_PLATFORM_IDLE_STATE_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1000
+    },
+    {
+     "type": "_PLUGPLAY_EVENT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_PNP_ASSIGN_RESOURCES_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PNP_DEVICE_ACTION_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_PNP_DEVICE_COMPLETION_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_PNP_DEVICE_COMPLETION_REQUEST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_PNP_DEVICE_EVENT_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 184
+    },
+    {
+     "type": "_PNP_DEVICE_EVENT_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_PNP_REBALANCE_TRACE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_PNP_RESOURCE_CONFLICT_TRACE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PNP_RESOURCE_REQUEST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_POOL_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4416
+    },
+    {
+     "type": "_POOL_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_POOL_TRACKER_BIG_PAGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_POOL_TRACKER_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_POP_ACTION_TRIGGER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 144
+    },
+    {
+     "type": "_POP_CURRENT_BROADCAST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_POP_DEVICE_SYS_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 464
+    },
+    {
+     "type": "_POP_FX_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_POP_FX_COMPONENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 256
+    },
+    {
+     "type": "_POP_FX_COMPONENT_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_POP_FX_DEPENDENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_POP_FX_DEVICE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 632
+    },
+    {
+     "type": "_POP_FX_DEVICE_STATUS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_POP_FX_DRIVER_CALLBACKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_POP_FX_IDLE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_POP_FX_PERF_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_POP_FX_PERF_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 160
+    },
+    {
+     "type": "_POP_FX_PERF_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_POP_FX_PLUGIN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 184
+    },
+    {
+     "type": "_POP_FX_PROVIDER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_POP_FX_WORK_ORDER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_POP_FX_WORK_ORDER_WATCHDOG_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_POP_HIBER_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 464
+    },
+    {
+     "type": "_POP_IO_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 112
+    },
+    {
+     "type": "_POP_IRP_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 248
+    },
+    {
+     "type": "_POP_IRP_WORKER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_POP_PER_PROCESSOR_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_POP_POLICY_DEVICE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_POP_POWER_ACTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_POP_POWER_SETTING_VALUES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 316
+    },
+    {
+     "type": "_POP_PPM_PROFILE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2864
+    },
+    {
+     "type": "_POP_RW_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_POP_SHUTDOWN_BUG_CHECK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_POP_THERMAL_TELEMETRY_TRACKER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 352
+    },
+    {
+     "type": "_POP_THERMAL_ZONE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 856
+    },
+    {
+     "type": "_POP_TRIGGER_WAIT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PORT_MESSAGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PORT_MESSAGE32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_POWER_SEQUENCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_POWER_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PO_DEVICE_NOTIFY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_PO_DEVICE_NOTIFY_ORDER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 376
+    },
+    {
+     "type": "_PO_DIAG_STACK_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PO_FX_COMPONENT_PERF_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_PO_FX_PERF_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PO_FX_PERF_STATE_CHANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PO_HIBER_PERF",
+     "status": "added",
+     "size_from": null,
+     "size_to": 488
+    },
+    {
+     "type": "_PO_IRP_MANAGER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PO_IRP_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PO_NOTIFY_ORDER_LEVEL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_PPC_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_PPM_CONCURRENCY_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PPM_COORDINATED_SELECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PPM_COORDINATED_SYNCHRONIZATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PPM_ENGINE_SETTINGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1392
+    },
+    {
+     "type": "_PPM_FFH_THROTTLE_STATE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PPM_IDLE_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 248
+    },
+    {
+     "type": "_PPM_IDLE_STATES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1048
+    },
+    {
+     "type": "_PPM_IDLE_SYNCHRONIZATION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PPM_PLATFORM_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 384
+    },
+    {
+     "type": "_PPM_PLATFORM_STATES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 448
+    },
+    {
+     "type": "_PPM_POLICY_SETTINGS_MASK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PPM_SELECTION_DEPENDENCY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PPM_SELECTION_MENU",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PPM_SELECTION_MENU_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PPM_SELECTION_STATISTICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_PPM_VETO_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PPM_VETO_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_PP_LOOKASIDE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PRIVATE_CACHE_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 120
+    },
+    {
+     "type": "_PRIVATE_CACHE_MAP_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PRIVILEGE_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_PROCESSOR_IDLE_CONSTRAINTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_PROCESSOR_IDLE_DEPENDENCY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PROCESSOR_IDLE_PREPARE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_PROCESSOR_NUMBER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PROCESSOR_PLATFORM_STATE_RESIDENCIES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PROCESSOR_PLATFORM_STATE_RESIDENCY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PROCESSOR_POWER_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 464
+    },
+    {
+     "type": "_PROCESSOR_PROFILE_CONTROL_AREA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_PROCESS_DISK_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_PROCESS_ENERGY_VALUES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 144
+    },
+    {
+     "type": "_PROC_FEEDBACK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 144
+    },
+    {
+     "type": "_PROC_FEEDBACK_COUNTER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_PROC_IDLE_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1032
+    },
+    {
+     "type": "_PROC_IDLE_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6
+    },
+    {
+     "type": "_PROC_IDLE_SNAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PROC_IDLE_STATE_ACCOUNTING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 992
+    },
+    {
+     "type": "_PROC_IDLE_STATE_BUCKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PROC_PERF_CHECK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_PROC_PERF_CHECK_SNAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_PROC_PERF_CONSTRAINT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_PROC_PERF_DOMAIN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 408
+    },
+    {
+     "type": "_PROC_PERF_HISTORY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 36
+    },
+    {
+     "type": "_PROC_PERF_HISTORY_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PROC_PERF_LOAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_PROVIDER_BINARY_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PS_CLIENT_SECURITY_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PS_IO_CONTROL_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PS_PROPERTY_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PS_PROTECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_ACCESSRIGHTS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_PS_TRUSTLET_ATTRIBUTE_TYPE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_PS_TRUSTLET_CREATE_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_PS_TRUSTLET_TKSESSION_ID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_PS_WAKE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_PTE_TRACKER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_QUAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_RELATION_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RELATIVE_SYMLINK_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_REMOTE_PORT_VIEW",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_REQUEST_MAILBOX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_RH_OP_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_RSDS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_RTLP_RANGE_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_RTL_ACTIVATION_CONTEXT_STACK_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_ATOM_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_RTL_ATOM_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_RTL_ATOM_TABLE_REFERENCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_AVL_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "_RTL_AVL_TREE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_RTL_BALANCED_LINKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_RTL_BALANCED_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_BITMAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_BITMAP_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_CHASH_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_RTL_CHASH_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_CRITICAL_SECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_RTL_CRITICAL_SECTION_DEBUG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_RTL_DRIVE_LETTER_CURDIR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_DYNAMIC_HASH_TABLE_ENUMERATOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_RTL_HASH_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_HASH_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_HASH_TABLE_ITERATOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_QUERY_REGISTRY_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_RTL_RANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_RTL_RANGE_LIST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_RTL_RB_TREE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_RUN_ONCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_RTL_SPLAY_LINKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_RTL_SRWLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_RTL_TIME_ZONE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 172
+    },
+    {
+     "type": "_RTL_UMS_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1312
+    },
+    {
+     "type": "_RTL_USER_PROCESS_PARAMETERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1040
+    },
+    {
+     "type": "_SECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_SECTION_IMAGE_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_SECTION_OBJECT_POINTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_SECURITY_CLIENT_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_SECURITY_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_SECURITY_DESCRIPTOR_RELATIVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 20
+    },
+    {
+     "type": "_SECURITY_QUALITY_OF_SERVICE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_SECURITY_SUBJECT_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SEGMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_SEGMENT_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SEP_AUDIT_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_SEP_LOWBOX_HANDLES_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_SEP_LOWBOX_HANDLES_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SEP_LOWBOX_NUMBER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_SEP_LOWBOX_NUMBER_MAPPING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_SEP_LUID_TO_INDEX_MAP_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_SEP_RM_LSA_CONNECTION_STATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_SEP_SID_VALUES_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SEP_SILOSTATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SEP_TOKEN_DIAG_TRACK_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 288
+    },
+    {
+     "type": "_SEP_TOKEN_PRIVILEGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_SESSION_LOWBOX_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_SE_AUDIT_PROCESS_CREATION_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SHARED_CACHE_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 528
+    },
+    {
+     "type": "_SHARED_CACHE_MAP_LIST_CURSOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_SID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_SID_AND_ATTRIBUTES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SID_AND_ATTRIBUTES_HASH",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SID_IDENTIFIER_AUTHORITY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6
+    },
+    {
+     "type": "_SILO_USER_SHARED_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SINGLE_LIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SINGLE_LIST_ENTRY32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SLIST_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SLIST_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_STACK_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32904
+    },
+    {
+     "type": "_STRING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_STRING32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_STRING64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SUBSECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_SYNCH_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 184
+    },
+    {
+     "type": "_SYSPTES_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 280
+    },
+    {
+     "type": "_SYSTEM_POWER_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 232
+    },
+    {
+     "type": "_SYSTEM_POWER_STATE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_TEB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6200
+    },
+    {
+     "type": "_TEB32",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4096
+    },
+    {
+     "type": "_TEB64",
+     "status": "added",
+     "size_from": null,
+     "size_to": 6200
+    },
+    {
+     "type": "_TEB_ACTIVE_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_TEB_ACTIVE_FRAME_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TERMINATION_PORT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_THERMAL_COOLING_INTERFACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_THERMAL_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_THERMAL_INFORMATION_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_THERMAL_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_THERMAL_ZONE_COUNTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 12
+    },
+    {
+     "type": "_THREAD_ENERGY_VALUES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_THREAD_PERFORMANCE_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 448
+    },
+    {
+     "type": "_TIME_FIELDS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TOKEN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1168
+    },
+    {
+     "type": "_TOKEN_ACCESS_INFORMATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_TOKEN_AUDIT_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 31
+    },
+    {
+     "type": "_TOKEN_CONTROL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_TOKEN_MANDATORY_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_TOKEN_PRIVILEGES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TOKEN_SOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TP_CALLBACK_ENVIRON_V3",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_TRACE_ENABLE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_TRACE_LOGFILE_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 280
+    },
+    {
+     "type": "_TRIAGE_9F_PNP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_TRIAGE_9F_POWER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_TRIAGE_DEVICE_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 88
+    },
+    {
+     "type": "_TRIAGE_EX_WORK_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 688
+    },
+    {
+     "type": "_TRIAGE_PNP_DEVICE_COMPLETION_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TRIAGE_PNP_DEVICE_COMPLETION_REQUEST",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_TRIAGE_POP_FX_DEVICE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_TRIAGE_POP_IRP_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_TRUSTLET_COLLABORATION_ID",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TRUSTLET_MAILBOX_KEY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TXN_PARAMETER_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_TlgProviderMetadata_t",
+     "status": "added",
+     "size_from": null,
+     "size_to": 19
+    },
+    {
+     "type": "_TlgProvider_t",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_TraceLoggingMetadata_t",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_ULARGE_INTEGER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_UMS_CONTROL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_UNEXPECTED_INTERRUPT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_UNICODE_STRING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VACB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_VACB_ARRAY_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VACB_LEVEL_REFERENCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_VF_ADDRESS_RANGE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VF_AVL_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 192
+    },
+    {
+     "type": "_VF_AVL_TREE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_VF_AVL_TREE_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VF_AVL_TREE_NODE_EX",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_VF_DRIVER_IO_CALLBACKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 256
+    },
+    {
+     "type": "_VF_KE_CRITICAL_REGION_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_VF_POOL_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_VF_SUSPECT_DRIVER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "_VF_TARGET_ALL_SHARED_EXPORT_THUNKS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_VF_TARGET_DRIVER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_VF_TARGET_VERIFIED_DRIVER_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 288
+    },
+    {
+     "type": "_VF_TRACKER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VF_TRACKER_STAMP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_VF_WATCHDOG_IRP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_VI_DEADLOCK_GLOBALS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 33152
+    },
+    {
+     "type": "_VI_DEADLOCK_NODE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 208
+    },
+    {
+     "type": "_VI_DEADLOCK_RESOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 248
+    },
+    {
+     "type": "_VI_DEADLOCK_THREAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_VI_FAULT_TRACE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_VI_POOL_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_VI_POOL_ENTRY_INUSE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_VI_POOL_PAGE_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_VI_TRACK_IRQL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_VI_VERIFIER_ISSUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_VOLUME_CACHE_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 208
+    },
+    {
+     "type": "_VPB",
+     "status": "added",
+     "size_from": null,
+     "size_to": 96
+    },
+    {
+     "type": "_WAITING_IRP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_WAIT_CONTEXT_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_WHEAP_ERROR_RECORD_WRAPPER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 240
+    },
+    {
+     "type": "_WHEAP_ERROR_RECORD_WRAPPER_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEAP_ERROR_SOURCE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1064
+    },
+    {
+     "type": "_WHEAP_ERROR_SOURCE_TABLE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_WHEAP_INFO_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_WHEAP_WORK_QUEUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 136
+    },
+    {
+     "type": "_WHEA_AER_BRIDGE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 44
+    },
+    {
+     "type": "_WHEA_AER_ENDPOINT_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_WHEA_AER_ROOTPORT_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 36
+    },
+    {
+     "type": "_WHEA_ERROR_PACKET_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_ERROR_PACKET_V2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 200
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_HEADER_VALIDBITS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_ERROR_RECORD_SECTION_DESCRIPTOR_VALIDBITS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_WHEA_ERROR_SOURCE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 972
+    },
+    {
+     "type": "_WHEA_ERROR_STATUS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WHEA_GENERIC_ERROR_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 52
+    },
+    {
+     "type": "_WHEA_GENERIC_ERROR_DESCRIPTOR_V2",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "_WHEA_IPF_CMC_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_IPF_CPE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_IPF_MCA_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_MEMORY_ERROR_SECTION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 73
+    },
+    {
+     "type": "_WHEA_MEMORY_ERROR_SECTION_VALIDBITS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WHEA_NOTIFICATION_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_WHEA_NOTIFICATION_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_WHEA_PCI_SLOT_NUMBER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_WHEA_PERSISTENCE_INFO",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WHEA_REVISION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 2
+    },
+    {
+     "type": "_WHEA_TIMESTAMP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WHEA_XPF_CMC_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 932
+    },
+    {
+     "type": "_WHEA_XPF_MCE_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 920
+    },
+    {
+     "type": "_WHEA_XPF_MC_BANK_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 28
+    },
+    {
+     "type": "_WHEA_XPF_NMI_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 3
+    },
+    {
+     "type": "_WMI_BUFFER_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 72
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1120
+    },
+    {
+     "type": "_WNF_LOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WNF_SILODRIVERSTATE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_WNF_STATE_NAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_WORK_QUEUE_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_WORK_QUEUE_ITEM",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_X86_DBGKD_CONTROL_SET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_X86_KTRAP_FRAME",
+     "status": "added",
+     "size_from": null,
+     "size_to": 140
+    },
+    {
+     "type": "_X86_KTRAP_FRAME_BLUE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 140
+    },
+    {
+     "type": "_XPF_MCE_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_XPF_MC_BANK_FLAGS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_XSAVE_AREA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 576
+    },
+    {
+     "type": "_XSAVE_AREA_HEADER",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_XSAVE_FORMAT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 512
+    },
+    {
+     "type": "_XSTATE_CONFIGURATION",
+     "status": "added",
+     "size_from": null,
+     "size_to": 816
+    },
+    {
+     "type": "_XSTATE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_XSTATE_FEATURE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_XSTATE_SAVE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 56
+    },
+    {
+     "type": "_flags",
+     "status": "added",
+     "size_from": null,
+     "size_to": 1
+    },
+    {
+     "type": "_iobuf",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_u",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    },
+    {
+     "type": "reg_FeatureDescriptor",
+     "status": "added",
+     "size_from": null,
+     "size_to": 40
+    },
+    {
+     "type": "tagSWITCH_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 104
+    },
+    {
+     "type": "tagSWITCH_CONTEXT_ATTRIBUTE",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "tagSWITCH_CONTEXT_DATA",
+     "status": "added",
+     "size_from": null,
+     "size_to": 80
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "<unnamed-enum-KTMOH_CommitTransaction_Result>",
+     "status": "added"
+    },
+    {
+     "enum": "BUS_QUERY_ID_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "DEVICE_TEXT_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "ETW_COMPRESSION_RESUMPTION_MODE",
+     "status": "added"
+    },
+    {
+     "enum": "HAL_APIC_DESTINATION_MODE",
+     "status": "added"
+    },
+    {
+     "enum": "HSTORAGE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "INTERRUPT_CONNECTION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "IRPLOCK",
+     "status": "added"
+    },
+    {
+     "enum": "JOB_OBJECT_IO_RATE_CONTROL_FLAGS",
+     "status": "added"
+    },
+    {
+     "enum": "JOB_OBJECT_NET_RATE_CONTROL_FLAGS",
+     "status": "added"
+    },
+    {
+     "enum": "KTM_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "LSA_FOREST_TRUST_RECORD_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "PDCCLIENTID",
+     "status": "added"
+    },
+    {
+     "enum": "PDC_ACTIVITY_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "POWER_ACTION",
+     "status": "added"
+    },
+    {
+     "enum": "POWER_POLICY_DEVICE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "PPM_IDLE_BUCKET_TIME_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "PROFILE_DEPARTURE_STYLE",
+     "status": "added"
+    },
+    {
+     "enum": "PROFILE_STATUS",
+     "status": "added"
+    },
+    {
+     "enum": "PS_CREATE_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "REGISTRY_FEATURE_ENABLED_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "ReplacesCorHdrNumericDefines",
+     "status": "added"
+    },
+    {
+     "enum": "SE_WS_APPX_SIGNATURE_ORIGIN",
+     "status": "added"
+    },
+    {
+     "enum": "SLEEPSTUDY_SPM_SCENARIO_CS_EXIT",
+     "status": "added"
+    },
+    {
+     "enum": "SYSTEM_POWER_CONDITION",
+     "status": "added"
+    },
+    {
+     "enum": "TlgIn_t",
+     "status": "added"
+    },
+    {
+     "enum": "TlgOut_t",
+     "status": "added"
+    },
+    {
+     "enum": "UoWActionType",
+     "status": "added"
+    },
+    {
+     "enum": "_ALTERNATIVE_ARCHITECTURE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ARBITER_ACTION",
+     "status": "added"
+    },
+    {
+     "enum": "_ARBITER_REQUEST_SOURCE",
+     "status": "added"
+    },
+    {
+     "enum": "_ARBITER_RESULT",
+     "status": "added"
+    },
+    {
+     "enum": "_BLOB_ID",
+     "status": "added"
+    },
+    {
+     "enum": "_CMP_FAILURE_INJECTION_POINT",
+     "status": "added"
+    },
+    {
+     "enum": "_CM_DIRTY_VECTOR_OPERATION",
+     "status": "added"
+    },
+    {
+     "enum": "_CM_LOAD_FAILURE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_CM_SHARE_DISPOSITION",
+     "status": "added"
+    },
+    {
+     "enum": "_CREATE_FILE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ConnectionResourceConsumerDesc",
+     "status": "added"
+    },
+    {
+     "enum": "_DEVICE_POWER_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_DEVICE_RELATION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_DEVICE_USAGE_NOTIFICATION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_DEVICE_WAKE_DEPTH",
+     "status": "added"
+    },
+    {
+     "enum": "_DEVPROP_OPERATOR",
+     "status": "added"
+    },
+    {
+     "enum": "_DMA_SPEED",
+     "status": "added"
+    },
+    {
+     "enum": "_DMA_WIDTH",
+     "status": "added"
+    },
+    {
+     "enum": "_DUMP_EVENTS",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_BUFFER_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_GUID_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_HEADER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_NOTIFICATION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_PERFECT_HASH_FUNCTION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_RT_EVENT_LOSS",
+     "status": "added"
+    },
+    {
+     "enum": "_ETW_STRING_TOKEN_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_EVENT_INFO_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_EVENT_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_EXCEPTION_DISPOSITION",
+     "status": "added"
+    },
+    {
+     "enum": "_EXQUEUEINDEX",
+     "status": "added"
+    },
+    {
+     "enum": "_EX_BALANCE_OBJECT",
+     "status": "added"
+    },
+    {
+     "enum": "_EX_GEN_RANDOM_DOMAIN",
+     "status": "added"
+    },
+    {
+     "enum": "_EX_POOL_PRIORITY",
+     "status": "added"
+    },
+    {
+     "enum": "_FILE_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_FILE_OBJECT_EXTENSION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_FSINFOCLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_FS_FILTER_SECTION_SYNC_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_FS_FILTER_STREAM_FO_NOTIFICATION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_FUNCTION_TABLE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_GPIO_PIN_CONFIG_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_GPIO_PIN_IORESTRICTION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_HARDWARE_COUNTER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_HEAP_FAILURE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_INTERFACE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_INTERLOCKED_RESULT",
+     "status": "added"
+    },
+    {
+     "enum": "_INVPCID_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_IOP_PRIORITY_HINT",
+     "status": "added"
+    },
+    {
+     "enum": "_IO_ALLOCATION_ACTION",
+     "status": "added"
+    },
+    {
+     "enum": "_IO_PRIORITY_HINT",
+     "status": "added"
+    },
+    {
+     "enum": "_IO_RATE_CONTROL_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_IO_SESSION_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_IRQ_PRIORITY",
+     "status": "added"
+    },
+    {
+     "enum": "_JOBOBJECTINFOCLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_KENLISTMENT_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KERNEL_STACK_LIMITS",
+     "status": "added"
+    },
+    {
+     "enum": "_KHETERO_CPU_POLICY",
+     "status": "added"
+    },
+    {
+     "enum": "_KINTERRUPT_MODE",
+     "status": "added"
+    },
+    {
+     "enum": "_KINTERRUPT_POLARITY",
+     "status": "added"
+    },
+    {
+     "enum": "_KI_CALLBACK",
+     "status": "added"
+    },
+    {
+     "enum": "_KOBJECTS",
+     "status": "added"
+    },
+    {
+     "enum": "_KPROCESS_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KPROFILE_SOURCE",
+     "status": "added"
+    },
+    {
+     "enum": "_KRESOURCEMANAGER_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KTHREAD_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KTHREAD_TAG",
+     "status": "added"
+    },
+    {
+     "enum": "_KTIMER2_COLLECTION_INDEX",
+     "status": "added"
+    },
+    {
+     "enum": "_KTRANSACTION_OUTCOME",
+     "status": "added"
+    },
+    {
+     "enum": "_KTRANSACTION_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KWAIT_BLOCK_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_KWAIT_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_KWAIT_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_LDR_DDAG_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_LDR_DLL_LOAD_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_LOCK_OPERATION",
+     "status": "added"
+    },
+    {
+     "enum": "_MEMORY_CACHING_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MEMORY_CACHING_TYPE_ORIG",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_ASSIGNED_REGION_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_AVAILABLE_PAGE_WAIT_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_CFG_BITMAP_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_DYNAMICBASE_BITMAP",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_IO_PFN_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_KSTACK_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_MEMORY_EVENT_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_MEMORY_HIGHLOW",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_MIRROR_BITMAP_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_NODE_NONPAGED_POOL_BITMAP",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_PARTITION_THREAD",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_PFN_CACHE_ATTRIBUTE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_SHARED_USER_PAGE_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_SUBVAD_LISTS",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_SYSTEM_VA_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_VAD_64K_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_VAD_ALLOCATION_CELL_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MI_WORKING_SET_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MMLISTS",
+     "status": "added"
+    },
+    {
+     "enum": "_MM_PAGE_ACCESS_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_MM_POOL_PRIORITIES",
+     "status": "added"
+    },
+    {
+     "enum": "_MM_POOL_TYPES",
+     "status": "added"
+    },
+    {
+     "enum": "_MM_PREEMPTIVE_TRIMS",
+     "status": "added"
+    },
+    {
+     "enum": "_MODE",
+     "status": "added"
+    },
+    {
+     "enum": "_NT_PRODUCT_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_OBJECT_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_OB_OPEN_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_PCW_CALLBACK_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PEP_ACPI_RESOURCE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PERFINFO_KERNELMEMORY_USAGE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PERFINFO_MM_STAT",
+     "status": "added"
+    },
+    {
+     "enum": "_PERIODIC_FLUSH_FREQUENCY",
+     "status": "added"
+    },
+    {
+     "enum": "_PF_FILE_ACCESS_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PLUGPLAY_EVENT_CATEGORY",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_DEVICE_ACTION_REQUEST",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_DEVICE_DELETE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_DEVNODE_QUERY_REBALANCE_VETO_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_DEVNODE_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_REBALANCE_FAILURE",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_REBALANCE_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_PNP_VETO_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_POLICY_AUDIT_EVENT_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_POOL_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_POP_DEVICE_IDLE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_POP_IO_STATUS",
+     "status": "added"
+    },
+    {
+     "enum": "_POP_SLEEP_CHECKPOINT",
+     "status": "added"
+    },
+    {
+     "enum": "_POWER_INFORMATION_LEVEL_INTERNAL",
+     "status": "added"
+    },
+    {
+     "enum": "_POWER_REQUEST_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_POWER_REQUEST_TYPE_INTERNAL",
+     "status": "added"
+    },
+    {
+     "enum": "_POWER_STATE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PO_CS_DEVICE_NOTIFICATION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PO_FX_PERF_STATE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PO_FX_PERF_STATE_UNIT",
+     "status": "added"
+    },
+    {
+     "enum": "_PO_HIBER_FORCE_DISABLE_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_PP_NPAGED_LOOKASIDE_NUMBER",
+     "status": "added"
+    },
+    {
+     "enum": "_PROCESSOR_CACHE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PROCESS_SECTION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PROCESS_VA_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PROC_HYPERVISOR_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_ATTRIBUTE_NUM",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_PROTECTED_SIGNER",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_PROTECTED_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_RESOURCE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_STD_HANDLE_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_PS_WAKE_REASON",
+     "status": "added"
+    },
+    {
+     "enum": "_REG_NOTIFY_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_REQUESTER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_RTL_GENERIC_COMPARE_RESULTS",
+     "status": "added"
+    },
+    {
+     "enum": "_SECURITY_IMPERSONATION_LEVEL",
+     "status": "added"
+    },
+    {
+     "enum": "_SECURITY_OPERATION_CODE",
+     "status": "added"
+    },
+    {
+     "enum": "_SERVERSILO_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_SYSTEM_POWER_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_TOKEN_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_TOKEN_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_TP_CALLBACK_PRIORITY",
+     "status": "added"
+    },
+    {
+     "enum": "_TRACE_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_TRANSFER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_TYPE_OF_MEMORY",
+     "status": "added"
+    },
+    {
+     "enum": "_TlgBlob_t",
+     "status": "added"
+    },
+    {
+     "enum": "_USER_ACTIVITY_PRESENCE",
+     "status": "added"
+    },
+    {
+     "enum": "_VI_DEADLOCK_RESOURCE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WHEA_ERROR_PACKET_DATA_FORMAT",
+     "status": "added"
+    },
+    {
+     "enum": "_WHEA_ERROR_SEVERITY",
+     "status": "added"
+    },
+    {
+     "enum": "_WHEA_ERROR_SOURCE_STATE",
+     "status": "added"
+    },
+    {
+     "enum": "_WHEA_ERROR_SOURCE_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WHEA_ERROR_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WORKING_SET_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_WOW64_SHARED_INFORMATION",
+     "status": "added"
+    },
+    {
+     "enum": "reg_FeatureEnabledState",
+     "status": "added"
+    },
+    {
+     "enum": "reg_FeatureStage",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-26H1",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "88962F1FD3F695EEC7EB3A66357C539A1",
+   "to_key": "21D1E17589DB480AF70592C92DF3173C1",
+   "from_kb": [
+    "KB5124006"
+   ],
+   "kb": [
+    "KB5127646"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:02d72161648f486da7767a1f776f6f0c806ef358ba147957de64cbb845d384aa",
+   "layout_to": "v2:sha256:edaba6ab0d9729a87dd941574a6a0d1d89850fc1cbe37b1bda26847cf805ca6b",
+   "types_changed": [
+    {
+     "type": "_EPROCESS_QUOTA_BLOCK",
+     "size_from": 1152,
+     "size_to": 1152,
+     "members_added": [
+      "Flags",
+      "HasSid"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 184,
+     "size_to": 192,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AckTimeout",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "TelemetryData",
+       "from": 160,
+       "to": 168
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1616,
+     "size_to": 1632,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1536,
+       "to": 1552
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1592,
+       "to": 1608
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1528,
+       "to": 1544
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1552,
+       "to": 1568
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1456,
+       "to": 1472
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1576,
+       "to": 1592
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1520,
+       "to": 1536
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1560,
+       "to": 1576
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1584,
+       "to": 1600
+      },
+      {
+       "name": "PfnArray",
+       "from": 1600,
+       "to": 1616
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1544,
+       "to": 1560
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-26H1",
+   "machine": "amd64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "62E12FE11896F6ED75F8A51D5F20F0341",
+   "to_key": "29542158DC36B6D41D7F2DD8CB7CE68A1",
+   "from_kb": [
+    "KB5124006"
+   ],
+   "kb": [
+    "KB5127646"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:3d87ebcf97810f3b1e6c8ec894177e8e404e650ff370ff3aef07da6f13f6679a",
+   "layout_to": "v2:sha256:75def3bc04b793a632e8dafd1251a534e824741690b922681940ef9b1c8bc010",
+   "types_changed": [
+    {
+     "type": "_EPROCESS_QUOTA_BLOCK",
+     "size_from": 576,
+     "size_to": 576,
+     "members_added": [
+      "Flags",
+      "HasSid"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 184,
+     "size_to": 192,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AckTimeout",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "TelemetryData",
+       "from": 160,
+       "to": 168
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1616,
+     "size_to": 1632,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1536,
+       "to": 1552
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1592,
+       "to": 1608
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1528,
+       "to": 1544
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1552,
+       "to": 1568
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1456,
+       "to": 1472
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1576,
+       "to": 1592
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1520,
+       "to": 1536
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1560,
+       "to": 1576
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1584,
+       "to": 1600
+      },
+      {
+       "name": "PfnArray",
+       "from": 1600,
+       "to": 1616
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1544,
+       "to": 1560
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-24H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "BEE1FF24EE1D38DEB334475042FB9CD51",
+   "to_key": "287D4F3D731DE7A3AA2DC7DD8F8AEF761",
+   "from_kb": [
+    "KB5124010"
+   ],
+   "kb": [
+    "KB5127648"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:2ea27a91aca36265455c22006f2c8e99f4a239d87a341de56629b4e8162215b2",
+   "layout_to": "v2:sha256:1a2d4b8f9c359d05a42d02affe528abc90d9678655ea13f2e39173092154327b",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 184,
+     "size_to": 192,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AckTimeout",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "TelemetryData",
+       "from": 160,
+       "to": 168
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1616,
+     "size_to": 1632,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1536,
+       "to": 1552
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1592,
+       "to": 1608
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1528,
+       "to": 1544
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1552,
+       "to": 1568
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1456,
+       "to": 1472
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1576,
+       "to": 1592
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1520,
+       "to": 1536
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1560,
+       "to": 1576
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1584,
+       "to": 1600
+      },
+      {
+       "name": "PfnArray",
+       "from": 1600,
+       "to": 1616
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1544,
+       "to": 1560
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-24H2",
+   "machine": "amd64",
+   "from_version": null,
+   "to_version": "10.0.26100.9711",
+   "from_key": "0B3439338F40DDCD568A30E465A9576B1",
+   "to_key": "B661C6FE72991D160FE37C48B8BC54701",
+   "from_kb": [
+    "KB5124010"
+   ],
+   "kb": [
+    "KB5127648"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:c5149beb084b734102610619a12acf53e175602a462d9f97cf523d4ab8ef5735",
+   "layout_to": "v2:sha256:9f74783bb93722fdb70bed9922c8ef2d4b2c4fb7d87bf0816f6c3029e378c133",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 184,
+     "size_to": 192,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AckTimeout",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "TelemetryData",
+       "from": 160,
+       "to": 168
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1616,
+     "size_to": 1632,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1536,
+       "to": 1552
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1592,
+       "to": 1608
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1528,
+       "to": 1544
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1552,
+       "to": 1568
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1456,
+       "to": 1472
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1576,
+       "to": 1592
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1520,
+       "to": 1536
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1560,
+       "to": 1576
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1584,
+       "to": 1600
+      },
+      {
+       "name": "PfnArray",
+       "from": 1600,
+       "to": 1616
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1544,
+       "to": 1560
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "11-23H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "B8E1F4FA650472DC2456FD07218888EF1",
+   "to_key": "C945E55EBAF1061D7B3064DBF8640EAE1",
+   "from_kb": [
+    "KB5122880"
+   ],
+   "kb": [
+    "KB5126653"
+   ],
+   "date": "2026-10-13",
+   "layout_from": "v2:sha256:61aebe2442f6a05df2b2af89dc91edcdf2824861f75d501d693ed1c8406f6df6",
+   "layout_to": "v2:sha256:e6b3c8ee9c051b059000083c70a28d58a9c4b0e6093f143fed16eeca56793040",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 160,
+     "size_to": 168,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1344,
+     "size_to": 1360,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1272,
+       "to": 1296
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1328,
+       "to": 1352
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1264,
+       "to": 1288
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1288,
+       "to": 1312
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1192,
+       "to": 1216
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1304,
+       "to": 1328
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1312,
+       "to": 1336
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1256,
+       "to": 1280
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1296,
+       "to": 1320
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1320,
+       "to": 1344
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1280,
+       "to": 1304
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    }
+   ]
+  },
   {
    "channel": "11-26H1",
    "machine": "arm64",
