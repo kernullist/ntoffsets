@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-14T12:03:46Z",
+ "generated": "2026-10-15T11:40:17Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -65,7 +65,7 @@
    "from_date": "2023-10-10",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:9d64893aa80d1ba4a480b55bdc69b14552ec0e829298ff409e69641b1e8f5b29",
-   "known_missing_in_channel": 2
+   "known_missing_in_channel": 1
   },
   {
    "channel": "11-23H2",
@@ -78,7 +78,7 @@
    "from_date": "2025-09-23",
    "to_date": "2026-10-13",
    "latest_layout": "v2:sha256:e6b3c8ee9c051b059000083c70a28d58a9c4b0e6093f143fed16eeca56793040",
-   "known_missing_in_channel": 2
+   "known_missing_in_channel": 1
   },
   {
    "channel": "11-24H2",
@@ -390,7 +390,7 @@
    "from_date": "2021-10-12",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
-   "known_missing_in_channel": 5
+   "known_missing_in_channel": 3
   },
   {
    "channel": "21H2",
@@ -403,7 +403,7 @@
    "from_date": "2023-06-13",
    "to_date": "2026-09-08",
    "latest_layout": "v2:sha256:2f1bf4c7b5eacadec1950880b319e1edc6ad1a0c1fefba2154a47b9ab695ba42",
-   "known_missing_in_channel": 5
+   "known_missing_in_channel": 3
   },
   {
    "channel": "22H2",
