@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-15T11:40:17Z",
+ "generated": "2026-10-16T11:34:58Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -460,14 +460,14 @@
   {
    "channel": "builds/19041",
    "machine": "amd64",
-   "builds": 7,
-   "transitions": 6,
-   "layout_changes": 1,
+   "builds": 8,
+   "transitions": 7,
+   "layout_changes": 2,
    "from_version": "10.0.19041.1",
-   "to_version": "10.0.19041.7663",
+   "to_version": "10.0.19041.7802",
    "from_date": null,
-   "to_date": "2026-08-11",
-   "latest_layout": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
+   "to_date": null,
+   "latest_layout": "v2:sha256:b6b9c759566df28786fb90227d18b2b9ebb2cfa44ab913fa6d4d20c6fb70859b",
    "known_missing_in_channel": 0
   },
   {
@@ -109611,6 +109611,120 @@
      "constants_renumbered": []
     }
    ]
+  },
+  {
+   "channel": "builds/19041",
+   "machine": "amd64",
+   "from_version": "10.0.19041.7663",
+   "to_version": "10.0.19041.7802",
+   "from_key": "C647466F42B0DF967125FB428EFB2FA11",
+   "to_key": "91A0697CBDF1F6C1B8D282E109E671E61",
+   "from_kb": [
+    "17b469fd-c1c2-4e14-b090-1f7dbfa1a2af",
+    "572f7a1e-b42b-415b-84b5-ab500c9093f2",
+    "KB5120249",
+    "bad2be40-10fb-4c85-9604-108e3131e6f9"
+   ],
+   "kb": [
+    "473c51b9-0b12-4444-86d0-75c557072b57",
+    "a1cc2d84-9a8e-41eb-bf5a-b95045621fc0"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
+   "layout_to": "v2:sha256:b6b9c759566df28786fb90227d18b2b9ebb2cfa44ab913fa6d4d20c6fb70859b",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 160,
+     "size_to": 168,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1328,
+     "size_to": 1344,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1256,
+       "to": 1280
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1312,
+       "to": 1336
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1248,
+       "to": 1272
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1272,
+       "to": 1296
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1176,
+       "to": 1200
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1288,
+       "to": 1312
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1296,
+       "to": 1320
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1240,
+       "to": 1264
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1280,
+       "to": 1304
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1304,
+       "to": 1328
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1264,
+       "to": 1288
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
   }
  ]
 }
