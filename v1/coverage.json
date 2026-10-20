@@ -1,19 +1,19 @@
 {
- "as_of": "2026-10-19T13:29:26Z",
+ "as_of": "2026-10-20T11:48:27Z",
  "totals": {
   "known": 2154,
-  "resolved": 2081,
-  "accounted_missing": 200,
+  "resolved": 2082,
+  "accounted_missing": 199,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 188,
+  "binary_404": 187,
   "pdb_404": 11,
   "undownloadable": 1
  },
  "defects": 0,
- "no_version_metadata": 748,
+ "no_version_metadata": 749,
  "by_dataset": {
   "arm64/ntoskrnl.exe": {
    "known": 692,
@@ -70,7 +70,7 @@
   }
  },
  "by_machine": {
-  "amd64": 1264,
+  "amd64": 1265,
   "arm64": 790,
   "x86": 27
  },
@@ -196,9 +196,9 @@
    "unattempted": 0
   },
   "builds": {
-   "resolved": 422,
+   "resolved": 423,
    "known": 434,
-   "missing": 102,
+   "missing": 101,
    "unattempted": 0
   }
  }
