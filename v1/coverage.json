@@ -1,5 +1,5 @@
 {
- "as_of": "2026-10-23T11:49:48Z",
+ "as_of": "2026-10-24T11:12:01Z",
  "totals": {
   "known": 2154,
   "resolved": 2082,
@@ -8,8 +8,7 @@
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 186,
-  "fetch_error": 1,
+  "binary_404": 187,
   "pdb_404": 11,
   "undownloadable": 1
  },
