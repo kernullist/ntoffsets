@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-27T12:25:08Z",
+ "generated": "2026-10-28T13:06:25Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -382,27 +382,27 @@
   {
    "channel": "21H2",
    "machine": "amd64",
-   "builds": 44,
-   "transitions": 43,
-   "layout_changes": 14,
+   "builds": 45,
+   "transitions": 44,
+   "layout_changes": 15,
    "from_version": "10.0.19041.1288",
-   "to_version": "10.0.19041.7725",
+   "to_version": null,
    "from_date": "2021-10-12",
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
+   "to_date": "2026-10-26",
+   "latest_layout": "v2:sha256:b6b9c759566df28786fb90227d18b2b9ebb2cfa44ab913fa6d4d20c6fb70859b",
    "known_missing_in_channel": 3
   },
   {
    "channel": "21H2",
    "machine": "arm64",
-   "builds": 41,
-   "transitions": 40,
-   "layout_changes": 11,
+   "builds": 42,
+   "transitions": 41,
+   "layout_changes": 12,
    "from_version": null,
    "to_version": null,
    "from_date": "2023-06-13",
-   "to_date": "2026-09-08",
-   "latest_layout": "v2:sha256:2f1bf4c7b5eacadec1950880b319e1edc6ad1a0c1fefba2154a47b9ab695ba42",
+   "to_date": "2026-10-26",
+   "latest_layout": "v2:sha256:806ba536baa929029a118a72f06d60c069a7e0463241737c805e8007ebcfc913",
    "known_missing_in_channel": 3
   },
   {
@@ -1148,6 +1148,226 @@
   }
  ],
  "changes": [
+  {
+   "channel": "21H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "B79245AC8A7F363BC71C98AF57FCA7D01",
+   "to_key": "6AA7C11EF7DF5303AD418E2A4322CDBF1",
+   "from_kb": [
+    "KB5122878"
+   ],
+   "kb": [
+    "KB5134125"
+   ],
+   "date": "2026-10-26",
+   "layout_from": "v2:sha256:2f1bf4c7b5eacadec1950880b319e1edc6ad1a0c1fefba2154a47b9ab695ba42",
+   "layout_to": "v2:sha256:806ba536baa929029a118a72f06d60c069a7e0463241737c805e8007ebcfc913",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 160,
+     "size_to": 168,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1328,
+     "size_to": 1344,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1256,
+       "to": 1280
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1312,
+       "to": 1336
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1248,
+       "to": 1272
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1272,
+       "to": 1296
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1176,
+       "to": 1200
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1288,
+       "to": 1312
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1296,
+       "to": 1320
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1240,
+       "to": 1264
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1280,
+       "to": 1304
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1304,
+       "to": 1328
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1264,
+       "to": 1288
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "21H2",
+   "machine": "amd64",
+   "from_version": "10.0.19041.7725",
+   "to_version": null,
+   "from_key": "63950D2473620017E1FC214544590A771",
+   "to_key": "4D5683AD56125F6EAA72A12CFA4E35001",
+   "from_kb": [
+    "KB5122878"
+   ],
+   "kb": [
+    "KB5134125"
+   ],
+   "date": "2026-10-26",
+   "layout_from": "v2:sha256:587ceda73c02d7f3a88dee86fb18c06e1ef52b668984fce310e13005f02ac8ea",
+   "layout_to": "v2:sha256:b6b9c759566df28786fb90227d18b2b9ebb2cfa44ab913fa6d4d20c6fb70859b",
+   "types_changed": [
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 160,
+     "size_to": 168,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1328,
+     "size_to": 1344,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1256,
+       "to": 1280
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1312,
+       "to": 1336
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1248,
+       "to": 1272
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1272,
+       "to": 1296
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1176,
+       "to": 1200
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1288,
+       "to": 1312
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1296,
+       "to": 1320
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1240,
+       "to": 1264
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1280,
+       "to": 1304
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1304,
+       "to": 1328
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1264,
+       "to": 1288
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
   {
    "channel": "1809",
    "machine": "amd64",

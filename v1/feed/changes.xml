@@ -2,10 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-10-27T12:25:08Z</updated>
+<updated>2026-10-28T13:06:26Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>21H2 arm64 KB5122878 -&gt; KB5134125: _NONOPAQUE_OPLOCK, _OPLOCK_CANCEL_BLOCK, _WMI_LOGGER_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:B79245AC8A7F363BC71C98AF57FCA7D01:6AA7C11EF7DF5303AD418E2A4322CDBF1</id>
+<updated>2026-10-26T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/6AA7C11EF7DF5303AD418E2A4322CDBF1.json"/>
+<summary>3 type(s) changed in KB5134125 (21H2, arm64)</summary>
+<content type="text">_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xa8; added: CancelBlock
+_OPLOCK_CANCEL_BLOCK: added
+_WMI_LOGGER_CONTEXT: size 0x530 -&gt; 0x540; added: PlaceholderSList; moved: 11</content>
+</entry>
+<entry>
+<title>21H2 amd64 10.0.19041.7725 -&gt; KB5134125: _NONOPAQUE_OPLOCK, _OPLOCK_CANCEL_BLOCK, _WMI_LOGGER_CONTEXT</title>
+<id>urn:ntoffsets:feed:changes:63950D2473620017E1FC214544590A771:4D5683AD56125F6EAA72A12CFA4E35001</id>
+<updated>2026-10-26T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/4D5683AD56125F6EAA72A12CFA4E35001.json"/>
+<summary>3 type(s) changed in KB5134125 (21H2, amd64)</summary>
+<content type="text">_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xa8; added: CancelBlock
+_OPLOCK_CANCEL_BLOCK: added
+_WMI_LOGGER_CONTEXT: size 0x530 -&gt; 0x540; added: PlaceholderSList; moved: 11</content>
+</entry>
 <entry>
 <title>1809 amd64 KB5122876 -&gt; KB5126651: _NONOPAQUE_OPLOCK, _OPLOCK_CANCEL_BLOCK, _RTL_QUERY_REGISTRY_TABLE, _WMI_LOGGER_CONTEXT, and 4 more</title>
 <id>urn:ntoffsets:feed:changes:1053B6FEB35F633383250DE072DE8A9F1:A85DD17960E99C5CA34F30C8B0E4DF591</id>
@@ -4178,22 +4198,6 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <updated>2025-08-12T00:00:00Z</updated>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FDB171B3F4AC4454AE76962B21D672001.json"/>
 <summary>1 type(s) changed in KB5063889 (1507, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>11-24H2 arm64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:9F503A215825861861792E31F0216EB71:1500F00FEAEE8413C67EA13F8373B3811</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1500F00FEAEE8413C67EA13F8373B3811.json"/>
-<summary>1 type(s) changed in KB5063878 (11-24H2, arm64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>11-24H2 amd64 10.0.26100.4768 -&gt; 10.0.26100.4946: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:37037C16F29E2343ED6D79A5C68F87221:91F95759B8A1C35A0A9773FCA2A8A67E1</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/91F95759B8A1C35A0A9773FCA2A8A67E1.json"/>
-<summary>1 type(s) changed in KB5063878 (11-24H2, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
 </feed>
