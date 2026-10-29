@@ -1,23 +1,24 @@
 {
- "as_of": "2026-10-28T13:06:18Z",
+ "as_of": "2026-10-29T13:18:37Z",
  "totals": {
   "known": 2154,
-  "resolved": 2093,
-  "accounted_missing": 201,
+  "resolved": 2095,
+  "accounted_missing": 207,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 189,
+  "binary_404": 187,
+  "fetch_error": 8,
   "pdb_404": 11,
   "undownloadable": 1
  },
  "defects": 0,
- "no_version_metadata": 756,
+ "no_version_metadata": 758,
  "by_dataset": {
   "arm64/ntoskrnl.exe": {
-   "known": 693,
-   "downloadable": 693,
+   "known": 695,
+   "downloadable": 695,
    "channels": {
     "1709": 55,
     "1803": 56,
@@ -32,12 +33,13 @@
     "21H2": 46,
     "11-24H2": 62,
     "11-23H2": 16,
-    "11-26H1": 17
+    "11-26H1": 18,
+    "11-25H2": 1
    }
   },
   "ga/ntoskrnl.exe": {
-   "known": 1152,
-   "downloadable": 1151,
+   "known": 1154,
+   "downloadable": 1153,
    "channels": {
     "1507": 121,
     "1803": 68,
@@ -57,22 +59,22 @@
     "11-22H2": 75,
     "11-23H2": 17,
     "11-24H2": 63,
-    "11-25H2": 1,
-    "11-26H1": 17
+    "11-25H2": 2,
+    "11-26H1": 18
    }
   },
   "insider/ntoskrnl.exe": {
-   "known": 439,
-   "downloadable": 439,
+   "known": 447,
+   "downloadable": 447,
    "channels": {
-    "builds": 439
+    "builds": 447
    }
   }
  },
  "by_machine": {
-  "amd64": 1270,
+  "amd64": 1271,
   "arm64": 796,
-  "x86": 27
+  "x86": 28
  },
  "by_channel": {
   "11-21H2": {
@@ -100,16 +102,16 @@
    "unattempted": 1
   },
   "11-25H2": {
-   "resolved": 1,
-   "known": 1,
+   "resolved": 2,
+   "known": 3,
    "missing": 0,
-   "unattempted": 0
+   "unattempted": 1
   },
   "11-26H1": {
    "resolved": 31,
-   "known": 34,
+   "known": 36,
    "missing": 0,
-   "unattempted": 3
+   "unattempted": 5
   },
   "1507": {
    "resolved": 119,
@@ -196,9 +198,9 @@
    "unattempted": 0
   },
   "builds": {
-   "resolved": 432,
-   "known": 439,
-   "missing": 103,
+   "resolved": 433,
+   "known": 447,
+   "missing": 109,
    "unattempted": 0
   }
  }

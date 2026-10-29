@@ -40,7 +40,7 @@
     "bit_position": 0,
     "bit_count": 0,
     "kind": "repurposed",
-    "observations": 4
+    "observations": 5
    },
    {
     "type": "_EPROCESS",
@@ -62,7 +62,7 @@
     "bit_position": 0,
     "bit_count": 0,
     "kind": "repurposed",
-    "observations": 2
+    "observations": 3
    },
    {
     "type": "_ETHREAD",
@@ -227,7 +227,7 @@
     "bit_position": 0,
     "bit_count": 0,
     "kind": "repurposed",
-    "observations": 4
+    "observations": 5
    },
    {
     "type": "_KSHARED_READY_QUEUE",

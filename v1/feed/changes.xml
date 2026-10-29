@@ -2,10 +2,100 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-10-28T13:06:26Z</updated>
+<updated>2026-10-29T13:18:43Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>11-25H2 amd64 10.0.26100.6584 -&gt; KB5127936: PO_MEMORY_IMAGE, _ALPC_WORK_ON_BEHALF_TICKET, _AMD64_DR7_REG, _ARM64_BCR_REG, and 79 more</title>
+<id>urn:ntoffsets:feed:changes:E6426A07C26E66F8EB8594621A7B273B1:983AD639682E5BD1EFAC90D9275002E21</id>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/983AD639682E5BD1EFAC90D9275002E21.json"/>
+<summary>66 type(s) changed in KB5127936 (11-25H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: size 0x4d8 -&gt; 0x4f0; added: DevControlInitialized, Feature_IntelDynamicUpgrade_Enabled, Feature_PlutonDynamicUpgrade_Enabled, Feature_PlutonMDS_Enabled, Feature_PlutonNVDynamicUpgrade_Enabled, Feature_PlutonNvidiaDriver_Enabled ...; removed: Feature_HibernateRelaxVBSPolicy_Enabled; moved: 34; resized: 1; bitfields: 1
+_ALPC_WORK_ON_BEHALF_TICKET: removed
+_AMD64_DR7_REG: added
+_ARM64_BCR_REG: added
+_EJOB: added: JobSystemUILimits
+_ENODE: added: SubQueueCount, SubQueueIndexSeed
+_EPROCESS: added: BamPpmPolicy, PpmPolicyLock, ProcessQosCallbackListEntry; renamed: NumberOfLockedPages -&gt; MmReserved2
+_ETHREAD: renamed: UpdateTebSpareByte2 -&gt; EtwThreadStackRundownPriorityFloorCount
+_ETW_GUID_ENTRY: size 0x1a8 -&gt; 0x2a8; moved: 5; resized: 1; retyped: 1
+_ETW_REG_ENTRY: size 0x70 -&gt; 0x78; moved: 4; resized: 4; retyped: 4
+_ETW_SILODRIVERSTATE: size 0x1238 -&gt; 0x1348; moved: 24; resized: 3; retyped: 2
+_EX_PARTITION: retyped: 1
+_EX_WORK_QUEUE: size 0x2e0 -&gt; 0x2f0; added: HealthMetrics, SubQueueIndex; moved: 4; resized: 1; bitfields: 2; retyped: 1
+_EX_WORK_QUEUE_HEALTH_METRICS: added
+_HALP_DMA_MASTER_ADAPTER_OBJECT: size 0xe0 -&gt; 0xe8; added: QueueLock; moved: 8
+_HEAP: size 0x2c0 -&gt; 0x2c8; moved: 1; resized: 1
+_HEAP_COUNTERS: size 0x78 -&gt; 0x80; added: TotalMemoryCommittedInVirtualBlocks; moved: 19; renamed: TotalSizeInVirtualBlocks -&gt; TotalMemoryReservedInVirtualBlocks
+_HEAP_VS_AFFINITY_SLOT: renamed: VsContext -&gt; VsContextOffset
+_IOMMU_DMA_DEVICE: size 0x1a0 -&gt; 0x1a8; added: InterfaceCallbackRecordLock
+_IO_WORKITEM: size 0x58 -&gt; 0x60; added: InsertTime, QueueType
+_KALPC_WORK_ON_BEHALF_DATA: retyped: 1
+_KNODE: moved: 2; resized: 1; retyped: 1
+_KPRCB: added: CompactionMaskInit, ComplexId, ComplexProcessorSet, LogicalProcessorsPerComplex, PrcbPad101, PrcbPad139b ...; moved: 4; resized: 5; retyped: 5
+_KSCHEDULER_SUBNODE: removed: IdleModuleSet, NonPairedSmtSet; moved: 2; resized: 1; retyped: 1; renamed: SubNodeLock -&gt; Spare0
+_LOADER_PARAMETER_CI_EXTENSION: size 0x78 -&gt; 0x90; added: CustomKernelSignerPolicyPresent, SecureBootKEKOffset, SecureBootKEKSize, SecureBootPKOffset, SecureBootPKSize, SmbiosInfoOffset ...; moved: 2; bitfields: 2
+_MI_PARTITION_SEGMENTS: added: ListWalkers; moved: 32
+_MI_PARTITION_STORES: added: AvoidTrimmingStoreProcess, DecompressionOverIoPatternDuringInswap; moved: 1
+_MI_SHUTDOWN_STATE: size 0x80 -&gt; 0x88; added: CrashDumpPteCount
+_MI_SYSTEM_INFORMATION: moved: 2; resized: 1
+_MI_VAD_EVENT_BLOCK: removed: BitMap
+_NONOPAQUE_OPLOCK: size 0xb8 -&gt; 0xc0; added: CancelBlock; moved: 2
+_OPLOCK_CANCEL_BLOCK: added
+_PEB: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_PEB32: size 0x488 -&gt; 0x490; added: Win32ClientProcInfo
+_PEB64: size 0x7d0 -&gt; 0x7d8; added: Win32ClientProcInfo
+_POP_COOLING_EXTENSION: size 0x90 -&gt; 0xd8; added: FileObject, PdoName, SymbolicLink, UniqueId, UpdatePropogationLock; moved: 9
+_POP_FX_DEVICE_STATUS: renamed: BlockFastResume -&gt; PendSIrpCompletion
+_POP_HIBER_CONTEXT: added: EnableVpciHibernationCallbacks, Feature_Servicing_ARM64_LLVMHibernate_Enabled, HardwareConfigurationSignatureValid; moved: 6
+_POP_IRP_DATA: resized: 1
+_PO_HIBER_PERF: size 0x2e8 -&gt; 0x300; added: ResumeSecureDecompressTicks, ResumeSecureDecryptTicks, ResumeSecureIoTicks; moved: 67
+_PROCESS_EXECUTION: added: RequestedJobObject, RequestedProcess; moved: 2; resized: 1
+_PROCESS_EXECUTION_TRANSITION: size 0x2 -&gt; 0x1; resized: 3; retyped: 3
+_RTLP_HP_HEAP_GLOBALS: added: SynchronousSuspend
+_RTL_FEATURE_DESCRIPTOR_LAYOUT: added
+_RTL_FEATURE_USAGE_CONTEXT: added
+_RTL_USER_PROCESS_PARAMETERS: size 0x448 -&gt; 0x450; added: AttributeList
+_RTL_WORK_ON_BEHALF_TICKET: added
+_SECURITY_ANTITAMPER_ENTITLEMENT: added
+_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS: added
+_SECURITY_ANTITAMPER_POLICY_PROCESS: added
+_SECURITY_ISOLATION_CONFIGURATION_UI: added
+_SEP_ANTITAMPER_ENTRY: added
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xc8; added: ShadowBuddyLogonId; moved: 14
+_SEP_OBJECT_TYPE_ANTITAMPER_MACL: added
+_SE_ANTITAMPER_POLICY: added
+_SE_ANTITAMPER_POLICY_DEBUG: added
+_SE_ANTITAMPER_POLICY_GENERAL: added
+_SE_ANTITAMPER_POLICY_OBJECT_TYPES: added
+_SE_ANTITAMPER_POLICY_SIGNING: added
+_SE_ANTITAMPER_POLICY_THREAD: added
+_SE_ANTITAMPER_POLICY_TOKEN: added
+_SE_ISOLATION_POLICY_OPTIONS_MAP: added
+_TOKEN: size 0x498 -&gt; 0x5c8; added: AntiTamperEntry, AntiTamperSidCount, AntiTamperSidHash, AntiTamperSids, IsAgentic, IsInstaller ...; moved: 1
+_WMI_LOGGER_CONTEXT: size 0x650 -&gt; 0x660; added: PlaceholderSList; moved: 12
+wil_details_FeatureStateCache: added: wasUsed; bitfields: 1
+wil_details_RecordedState: added: recordedProcessUsage; bitfields: 1
+CVariant_MemoryCompressionHCAtLowPriority: added
+EmptyCVariant_FeatureStaging_Feature_MSRC130888: added
+EmptyCVariant_FeatureStaging_diagnostics: added
+PDCCLIENTID: added: PDC_UMPO_CLIENT; renumbered: PDC_NUMBER_OF_CLIENTS 124-&gt;125
+_EVENT_INFO_CLASS: added: EventProviderSetReserved2; renumbered: MaxEventInfo 4-&gt;5
+_KTOPOLOGY_LEVEL: added: KTopologyLevelComplex, KTopologyLevelCountV1; renumbered: KTopologyLevelCount 5-&gt;6
+_POWER_INFORMATION_LEVEL_INTERNAL: added: PowerInternalNotifyWin32kSessionConnect, PowerInternalQueryVelocityFeatureEnablement, PowerInternalSetBatteryTestExempt; renumbered: PowerInformationInternalMaximum 97-&gt;100
+_PS_ATTRIBUTE_NUM: added: PsAttributeContainmentConfiguration, PsAttributeHeapFeatures, PsAttributeIsolationConfiguration, PsAttributeReserved0; renumbered: PsAttributeMax 33-&gt;37
+_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem, FeatureConfigurationPriorityServiceGuard; removed: FeatureConfigurationPriorityReserved11
+_RTL_HP_FEATURE_ENABLEMENT: added
+_SE_ANTITAMPER_PROTECTION_TYPE: added
+_SE_ISOLATION_POLICY_OPTION: added
+_SKSERVICE: added: SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT, SECURESERVICE_QUERY_TSC_ADJUSTMENT, SECURESERVICE_TERMINATE; renumbered: SECURESERVICE_ACCESS_PCI_DEVICE 268-&gt;269, SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE 276-&gt;277, SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP 273-&gt;274, SECURESERVICE_KSR_CALL 271-&gt;272
+_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE: added
+_SYSTEM_INFORMATION_CLASS: added: SystemCodeIntegrityEndpointSecurityInformation, SystemRuntimeAttestationReport; renumbered: MaxSystemInfoClass 254-&gt;257
+_WOB_INFORMATION_CLASS: added
+_WORK_QUEUE_TYPE: added</content>
+</entry>
 <entry>
 <title>21H2 arm64 KB5122878 -&gt; KB5134125: _NONOPAQUE_OPLOCK, _OPLOCK_CANCEL_BLOCK, _WMI_LOGGER_CONTEXT</title>
 <id>urn:ntoffsets:feed:changes:B79245AC8A7F363BC71C98AF57FCA7D01:6AA7C11EF7DF5303AD418E2A4322CDBF1</id>
@@ -4190,14 +4280,6 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <updated>2025-08-12T00:00:00Z</updated>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/CD646780614C4E5F85A988A5925BB7AF1.json"/>
 <summary>1 type(s) changed in KB5063871 (1607, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>1507 amd64 10.0.10240.21072 -&gt; 10.0.10240.21100: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:B6E4516C9D3D4653ACD67CD60686FA291:FDB171B3F4AC4454AE76962B21D672001</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FDB171B3F4AC4454AE76962B21D672001.json"/>
-<summary>1 type(s) changed in KB5063889 (1507, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
 </feed>

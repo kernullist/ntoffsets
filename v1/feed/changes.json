@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-28T13:06:25Z",
+ "generated": "2026-10-29T13:18:43Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -109,14 +109,14 @@
   {
    "channel": "11-25H2",
    "machine": "amd64",
-   "builds": 1,
-   "transitions": 0,
-   "layout_changes": 0,
+   "builds": 2,
+   "transitions": 1,
+   "layout_changes": 1,
    "from_version": "10.0.26100.6584",
-   "to_version": "10.0.26100.6584",
+   "to_version": null,
    "from_date": "2025-09-09",
-   "to_date": "2025-09-09",
-   "latest_layout": "v2:sha256:8e39ecd45e684f7bef80d086b5089744af72064a15a2fad0e7ea273552ddf669",
+   "to_date": "2026-10-28",
+   "latest_layout": "v2:sha256:f3e271270697e1ababe7cb3b7bccbfcd1126f43159b119265a4e7c06fbe8a1b4",
    "known_missing_in_channel": 0
   },
   {
@@ -1148,6 +1148,2649 @@
   }
  ],
  "changes": [
+  {
+   "channel": "11-25H2",
+   "machine": "amd64",
+   "from_version": "10.0.26100.6584",
+   "to_version": null,
+   "from_key": "E6426A07C26E66F8EB8594621A7B273B1",
+   "to_key": "983AD639682E5BD1EFAC90D9275002E21",
+   "from_kb": [
+    "KB5065426",
+    "KB5068221"
+   ],
+   "kb": [
+    "KB5127936"
+   ],
+   "date": "2026-10-28",
+   "layout_from": "v2:sha256:8e39ecd45e684f7bef80d086b5089744af72064a15a2fad0e7ea273552ddf669",
+   "layout_to": "v2:sha256:f3e271270697e1ababe7cb3b7bccbfcd1126f43159b119265a4e7c06fbe8a1b4",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1240,
+     "size_to": 1264,
+     "members_added": [
+      "DevControlInitialized",
+      "Feature_IntelDynamicUpgrade_Enabled",
+      "Feature_PlutonDynamicUpgrade_Enabled",
+      "Feature_PlutonMDS_Enabled",
+      "Feature_PlutonNVDynamicUpgrade_Enabled",
+      "Feature_PlutonNvidiaDriver_Enabled",
+      "Feature_PlutonNvidiaN1c_Enabled",
+      "Feature_StxTpmFix_Enabled",
+      "HardwareSignatureValid",
+      "RootPartition"
+     ],
+     "members_removed": [
+      "Feature_HibernateRelaxVBSPolicy_Enabled"
+     ],
+     "members_moved": [
+      {
+       "name": "BitlockerKeyPfns",
+       "from": 1184,
+       "to": 1208
+      },
+      {
+       "name": "BootFlags",
+       "from": 1160,
+       "to": 1184
+      },
+      {
+       "name": "BootLoaderLogPages",
+       "from": 920,
+       "to": 944
+      },
+      {
+       "name": "Fasr",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "FirmwareRuntimeInformation",
+       "from": 888,
+       "to": 912
+      },
+      {
+       "name": "FirmwareRuntimeInformationPages",
+       "from": 880,
+       "to": 904
+      },
+      {
+       "name": "HardwareSignature",
+       "from": 1216,
+       "to": 1240
+      },
+      {
+       "name": "HiberResumeXhciHandoffSkip",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "Hiberboot",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "HighestPhysicalPage",
+       "from": 1176,
+       "to": 1200
+      },
+      {
+       "name": "HvEntryPoint",
+       "from": 1136,
+       "to": 1160
+      },
+      {
+       "name": "HvPageTableRoot",
+       "from": 1128,
+       "to": 1152
+      },
+      {
+       "name": "HvReservedTransitionAddress",
+       "from": 1144,
+       "to": 1168
+      },
+      {
+       "name": "HvReservedTransitionAddressSize",
+       "from": 1152,
+       "to": 1176
+      },
+      {
+       "name": "InitializeUSBCore",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "IumFirmwareRuntimeInformationPageCount",
+       "from": 896,
+       "to": 920
+      },
+      {
+       "name": "IumFirmwareRuntimeInformationPfnBase",
+       "from": 904,
+       "to": 928
+      },
+      {
+       "name": "NoBootLoaderLogPages",
+       "from": 916,
+       "to": 940
+      },
+      {
+       "name": "NotUsed",
+       "from": 1112,
+       "to": 1136
+      },
+      {
+       "name": "Reserved",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "RestoreProcessorStateRoutine",
+       "from": 1168,
+       "to": 1192
+      },
+      {
+       "name": "ResumeContextCheck",
+       "from": 1116,
+       "to": 1140
+      },
+      {
+       "name": "ResumeContextPages",
+       "from": 1120,
+       "to": 1144
+      },
+      {
+       "name": "SMBiosMajorVersion",
+       "from": 1236,
+       "to": 1260
+      },
+      {
+       "name": "SMBiosMinorVersion",
+       "from": 1237,
+       "to": 1261
+      },
+      {
+       "name": "SMBiosTableLength",
+       "from": 1232,
+       "to": 1256
+      },
+      {
+       "name": "SMBiosTablePhysicalAddress",
+       "from": 1224,
+       "to": 1248
+      },
+      {
+       "name": "SecureBoot",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "SecureLaunched",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "SkipMemoryMapValidation",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "SpareUlong",
+       "from": 912,
+       "to": 936
+      },
+      {
+       "name": "SuppressResumePrompt",
+       "from": 1124,
+       "to": 1148
+      },
+      {
+       "name": "USBCoreId",
+       "from": 1238,
+       "to": 1262
+      },
+      {
+       "name": "ValidUSBCoreId",
+       "from": 1124,
+       "to": 1148
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PerfInfo",
+       "from": 744,
+       "to": 768
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "9:23",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_ALPC_WORK_ON_BEHALF_TICKET",
+     "status": "removed",
+     "size_from": 8,
+     "size_to": null
+    },
+    {
+     "type": "_AMD64_DR7_REG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_ARM64_BCR_REG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_EJOB",
+     "size_from": 1832,
+     "size_to": 1832,
+     "members_added": [
+      "JobSystemUILimits"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_ENODE",
+     "size_from": 896,
+     "size_to": 896,
+     "members_added": [
+      "SubQueueCount",
+      "SubQueueIndexSeed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EPROCESS",
+     "size_from": 2112,
+     "size_to": 2112,
+     "members_added": [
+      "BamPpmPolicy",
+      "PpmPolicyLock",
+      "ProcessQosCallbackListEntry"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "NumberOfLockedPages",
+       "to": "MmReserved2",
+       "offset": 656,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_ETHREAD",
+     "size_from": 1944,
+     "size_to": 1944,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "UpdateTebSpareByte2",
+       "to": "EtwThreadStackRundownPriorityFloorCount",
+       "offset": 1907,
+       "size": 1
+      }
+     ]
+    },
+    {
+     "type": "_ETW_GUID_ENTRY",
+     "size_from": 424,
+     "size_to": 680,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "FilterData",
+       "from": 384,
+       "to": 640
+      },
+      {
+       "name": "HostEntry",
+       "from": 400,
+       "to": 656
+      },
+      {
+       "name": "Lock",
+       "from": 408,
+       "to": 664
+      },
+      {
+       "name": "LockOwner",
+       "from": 416,
+       "to": 672
+      },
+      {
+       "name": "SiloState",
+       "from": 392,
+       "to": 648
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "EnableInfo",
+       "from": 256,
+       "to": 512
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "EnableInfo",
+       "from": "_TRACE_ENABLE_INFO[8]",
+       "to": "_TRACE_ENABLE_INFO[16]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_ETW_REG_ENTRY",
+     "size_from": 112,
+     "size_to": 120,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "GroupEnableMask",
+       "from": 101,
+       "to": 102
+      },
+      {
+       "name": "HostEnableMask",
+       "from": 102,
+       "to": 104
+      },
+      {
+       "name": "HostGroupEnableMask",
+       "from": 103,
+       "to": 106
+      },
+      {
+       "name": "Traits",
+       "from": 104,
+       "to": 112
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "EnableMask",
+       "from": 1,
+       "to": 2
+      },
+      {
+       "name": "GroupEnableMask",
+       "from": 1,
+       "to": 2
+      },
+      {
+       "name": "HostEnableMask",
+       "from": 1,
+       "to": 2
+      },
+      {
+       "name": "HostGroupEnableMask",
+       "from": 1,
+       "to": 2
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "EnableMask",
+       "from": "unsigned char",
+       "to": "unsigned short"
+      },
+      {
+       "name": "GroupEnableMask",
+       "from": "unsigned char",
+       "to": "unsigned short"
+      },
+      {
+       "name": "HostEnableMask",
+       "from": "unsigned char",
+       "to": "unsigned short"
+      },
+      {
+       "name": "HostGroupEnableMask",
+       "from": "unsigned char",
+       "to": "unsigned short"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_ETW_SILODRIVERSTATE",
+     "size_from": 4664,
+     "size_to": 4936,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ContainerStateWnfCallbackCalled",
+       "from": 4160,
+       "to": 4432
+      },
+      {
+       "name": "ContainerStateWnfSubscription",
+       "from": 4152,
+       "to": 4424
+      },
+      {
+       "name": "EtwpCounters",
+       "from": 4120,
+       "to": 4392
+      },
+      {
+       "name": "EtwpGuidHashTable",
+       "from": 464,
+       "to": 720
+      },
+      {
+       "name": "EtwpLoggerContext",
+       "from": 456,
+       "to": 712
+      },
+      {
+       "name": "EtwpLoggerRundown",
+       "from": 448,
+       "to": 704
+      },
+      {
+       "name": "EtwpSecurityLoggers",
+       "from": 4048,
+       "to": 4304
+      },
+      {
+       "name": "EtwpSecurityProviderEnableMask",
+       "from": 4064,
+       "to": 4336
+      },
+      {
+       "name": "EtwpSecurityProviderPID",
+       "from": 4072,
+       "to": 4344
+      },
+      {
+       "name": "EtwpShutdownInProgress",
+       "from": 4068,
+       "to": 4340
+      },
+      {
+       "name": "EtwpStartTraceMutex",
+       "from": 4608,
+       "to": 4880
+      },
+      {
+       "name": "LogfileBytesWritten",
+       "from": 4136,
+       "to": 4408
+      },
+      {
+       "name": "ParentId",
+       "from": 4192,
+       "to": 4464
+      },
+      {
+       "name": "PartitionId",
+       "from": 4176,
+       "to": 4448
+      },
+      {
+       "name": "PartitionName",
+       "from": 4216,
+       "to": 4488
+      },
+      {
+       "name": "PartitionNameSize",
+       "from": 4224,
+       "to": 4496
+      },
+      {
+       "name": "PartitionType",
+       "from": 4228,
+       "to": 4500
+      },
+      {
+       "name": "PrivHandleDemuxTable",
+       "from": 4080,
+       "to": 4352
+      },
+      {
+       "name": "ProcessorBlocks",
+       "from": 4144,
+       "to": 4416
+      },
+      {
+       "name": "QpcOffsetFromRoot",
+       "from": 4208,
+       "to": 4480
+      },
+      {
+       "name": "RTBacklogFileRoot",
+       "from": 4112,
+       "to": 4384
+      },
+      {
+       "name": "SystemLoggerSettings",
+       "from": 4232,
+       "to": 4504
+      },
+      {
+       "name": "UnsubscribeWorkItem",
+       "from": 4168,
+       "to": 4440
+      },
+      {
+       "name": "UnusedPadding",
+       "from": 4226,
+       "to": 4498
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "EtwpSecurityLoggers",
+       "from": 16,
+       "to": 32
+      },
+      {
+       "name": "EtwpSecurityProviderEnableMask",
+       "from": 1,
+       "to": 2
+      },
+      {
+       "name": "EtwpSecurityProviderGuidEntry",
+       "from": 424,
+       "to": 680
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "EtwpSecurityLoggers",
+       "from": "unsigned short[8]",
+       "to": "unsigned short[16]"
+      },
+      {
+       "name": "EtwpSecurityProviderEnableMask",
+       "from": "unsigned char",
+       "to": "unsigned short"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_PARTITION",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "WorkQueues",
+       "from": "_EX_WORK_QUEUE * * volatile *",
+       "to": "_EX_WORK_QUEUE * volatile *"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE",
+     "size_from": 736,
+     "size_to": 752,
+     "members_added": [
+      "HealthMetrics",
+      "SubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllThreadsExitedEvent",
+       "from": 728,
+       "to": 736
+      },
+      {
+       "name": "MaxThreads",
+       "from": 720,
+       "to": 724
+      },
+      {
+       "name": "QueueIndex",
+       "from": 724,
+       "to": 728
+      },
+      {
+       "name": "TryFailed",
+       "from": 716,
+       "to": 720
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "TryFailed",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [
+      {
+       "name": "MinThreads",
+       "from": "0:31",
+       "to": "0:0"
+      },
+      {
+       "name": "TryFailed",
+       "from": "31:1",
+       "to": "0:0"
+      }
+     ],
+     "members_retyped": [
+      {
+       "name": "TryFailed",
+       "from": "volatile unsigned long",
+       "to": "volatile unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_EX_WORK_QUEUE_HEALTH_METRICS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_HALP_DMA_MASTER_ADAPTER_OBJECT",
+     "size_from": 224,
+     "size_to": 232,
+     "members_added": [
+      "QueueLock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ContiguousAdapterQueue",
+       "from": 160,
+       "to": 168
+      },
+      {
+       "name": "ContiguousPageCount",
+       "from": 208,
+       "to": 216
+      },
+      {
+       "name": "ContiguousPageLimit",
+       "from": 212,
+       "to": 220
+      },
+      {
+       "name": "MapBufferPhysicalAddress",
+       "from": 200,
+       "to": 208
+      },
+      {
+       "name": "MapBufferSize",
+       "from": 192,
+       "to": 200
+      },
+      {
+       "name": "ScatterAdapterQueue",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "ScatterPageCount",
+       "from": 216,
+       "to": 224
+      },
+      {
+       "name": "ScatterPageLimit",
+       "from": 220,
+       "to": 228
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP",
+     "size_from": 704,
+     "size_to": 712,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "TuningParameters",
+       "from": 688,
+       "to": 696
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Counters",
+       "from": 120,
+       "to": 128
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_COUNTERS",
+     "size_from": 120,
+     "size_to": 128,
+     "members_added": [
+      "TotalMemoryCommittedInVirtualBlocks"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AllocAndFreeOps",
+       "from": 84,
+       "to": 92
+      },
+      {
+       "name": "AllocationIndicesActive",
+       "from": 88,
+       "to": 96
+      },
+      {
+       "name": "CommitFailures",
+       "from": 64,
+       "to": 72
+      },
+      {
+       "name": "CommitRate",
+       "from": 56,
+       "to": 64
+      },
+      {
+       "name": "CommittOps",
+       "from": 40,
+       "to": 48
+      },
+      {
+       "name": "DeCommitOps",
+       "from": 44,
+       "to": 52
+      },
+      {
+       "name": "DecommitsSinceLastCheck",
+       "from": 76,
+       "to": 84
+      },
+      {
+       "name": "DecommittRate",
+       "from": 60,
+       "to": 68
+      },
+      {
+       "name": "HeapPollInterval",
+       "from": 80,
+       "to": 88
+      },
+      {
+       "name": "HighWatermarkSize",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "name": "InBlockCommitFailures",
+       "from": 68,
+       "to": 76
+      },
+      {
+       "name": "InBlockDeccomitSize",
+       "from": 96,
+       "to": 104
+      },
+      {
+       "name": "InBlockDeccommits",
+       "from": 92,
+       "to": 100
+      },
+      {
+       "name": "LastPolledSize",
+       "from": 112,
+       "to": 120
+      },
+      {
+       "name": "LockAcquires",
+       "from": 48,
+       "to": 56
+      },
+      {
+       "name": "LockCollisions",
+       "from": 52,
+       "to": 60
+      },
+      {
+       "name": "PollIntervalCounter",
+       "from": 72,
+       "to": 80
+      },
+      {
+       "name": "TotalSegments",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "name": "TotalUCRs",
+       "from": 36,
+       "to": 44
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "TotalSizeInVirtualBlocks",
+       "to": "TotalMemoryReservedInVirtualBlocks",
+       "offset": 24,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_HEAP_VS_AFFINITY_SLOT",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "VsContext",
+       "to": "VsContextOffset",
+       "offset": 0,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_IOMMU_DMA_DEVICE",
+     "size_from": 416,
+     "size_to": 424,
+     "members_added": [
+      "InterfaceCallbackRecordLock"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_IO_WORKITEM",
+     "size_from": 88,
+     "size_to": 96,
+     "members_added": [
+      "InsertTime",
+      "QueueType"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KALPC_WORK_ON_BEHALF_DATA",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Ticket",
+       "from": "_ALPC_WORK_ON_BEHALF_TICKET",
+       "to": "_RTL_WORK_ON_BEHALF_TICKET"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KNODE",
+     "size_from": 824,
+     "size_to": 824,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "EfficiencySearchRanks",
+       "from": 564,
+       "to": 568
+      },
+      {
+       "name": "PerformanceSearchRanks",
+       "from": 308,
+       "to": 312
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "ActiveTopologyElements",
+       "from": 20,
+       "to": 24
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "ActiveTopologyElements",
+       "from": "unsigned long[5]",
+       "to": "unsigned long[6]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [
+      "CompactionMaskInit",
+      "ComplexId",
+      "ComplexProcessorSet",
+      "LogicalProcessorsPerComplex",
+      "PrcbPad101",
+      "PrcbPad139b",
+      "PrcbPad139c",
+      "WorkSubQueueIndex"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "NodeRelativeTopologyIndex",
+       "from": 36396,
+       "to": 47400
+      },
+      {
+       "name": "PrcbPad140",
+       "from": 47400,
+       "to": 47952
+      },
+      {
+       "name": "PrcbPad84",
+       "from": 34576,
+       "to": 34584
+      },
+      {
+       "name": "PrcbPad92",
+       "from": 33576,
+       "to": 33580
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "NodeRelativeTopologyIndex",
+       "from": 20,
+       "to": 24
+      },
+      {
+       "name": "PrcbPad140",
+       "from": 1368,
+       "to": 816
+      },
+      {
+       "name": "PrcbPad84",
+       "from": 32,
+       "to": 24
+      },
+      {
+       "name": "PrcbPad92",
+       "from": 24,
+       "to": 20
+      },
+      {
+       "name": "TopologyId",
+       "from": 20,
+       "to": 24
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "NodeRelativeTopologyIndex",
+       "from": "unsigned long[5]",
+       "to": "unsigned long[6]"
+      },
+      {
+       "name": "PrcbPad140",
+       "from": "unsigned __int64[171]",
+       "to": "unsigned __int64[102]"
+      },
+      {
+       "name": "PrcbPad84",
+       "from": "unsigned long[8]",
+       "to": "unsigned long[6]"
+      },
+      {
+       "name": "PrcbPad92",
+       "from": "unsigned long[6]",
+       "to": "unsigned long[5]"
+      },
+      {
+       "name": "TopologyId",
+       "from": "unsigned long[5]",
+       "to": "unsigned long[6]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KSCHEDULER_SUBNODE",
+     "size_from": 768,
+     "size_to": 768,
+     "members_added": [],
+     "members_removed": [
+      "IdleModuleSet",
+      "NonPairedSmtSet"
+     ],
+     "members_moved": [
+      {
+       "name": "Spare1",
+       "from": 56,
+       "to": 40
+      },
+      {
+       "name": "ThreadQosGroupingSet",
+       "from": 48,
+       "to": 32
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Spare1",
+       "from": 8,
+       "to": 24
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "Spare1",
+       "from": "unsigned __int64[1]",
+       "to": "unsigned __int64[3]"
+      }
+     ],
+     "members_renamed": [
+      {
+       "from": "SubNodeLock",
+       "to": "Spare0",
+       "offset": 0,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_LOADER_PARAMETER_CI_EXTENSION",
+     "size_from": 120,
+     "size_to": 144,
+     "members_added": [
+      "CustomKernelSignerPolicyPresent",
+      "SecureBootKEKOffset",
+      "SecureBootKEKSize",
+      "SecureBootPKOffset",
+      "SecureBootPKSize",
+      "SmbiosInfoOffset",
+      "SmbiosInfoSize"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Reserved2",
+       "from": 108,
+       "to": 132
+      },
+      {
+       "name": "SerializedData",
+       "from": 112,
+       "to": 136
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "4:28",
+       "to": "5:27"
+      },
+      {
+       "name": "StateSeparationEnabled",
+       "from": "3:1",
+       "to": "4:1"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_SEGMENTS",
+     "size_from": 1152,
+     "size_to": 1152,
+     "members_added": [
+      "ListWalkers"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "CloneDereferenceEvent",
+       "from": 624,
+       "to": 640
+      },
+      {
+       "name": "CloneHeaderDrainEvent",
+       "from": 1048,
+       "to": 1064
+      },
+      {
+       "name": "CloneProtosSListHead",
+       "from": 656,
+       "to": 672
+      },
+      {
+       "name": "ControlAreaDeleteEvent",
+       "from": 400,
+       "to": 416
+      },
+      {
+       "name": "ControlAreaDeleteList",
+       "from": 424,
+       "to": 440
+      },
+      {
+       "name": "ControlAreasDrainEvent",
+       "from": 1040,
+       "to": 1056
+      },
+      {
+       "name": "DeleteOnCloseList",
+       "from": 248,
+       "to": 264
+      },
+      {
+       "name": "DeleteOnCloseSubsectionList",
+       "from": 264,
+       "to": 280
+      },
+      {
+       "name": "DeleteOnCloseTimer",
+       "from": 280,
+       "to": 296
+      },
+      {
+       "name": "DeleteOnCloseTimerActive",
+       "from": 344,
+       "to": 360
+      },
+      {
+       "name": "DeleteSubsectionList",
+       "from": 384,
+       "to": 400
+      },
+      {
+       "name": "FreeSystemCacheVa",
+       "from": 688,
+       "to": 704
+      },
+      {
+       "name": "FreedSystemCachePdesReady",
+       "from": 592,
+       "to": 608
+      },
+      {
+       "name": "FreedSystemCacheViews",
+       "from": 432,
+       "to": 448
+      },
+      {
+       "name": "FreedSystemCacheViewsReady",
+       "from": 560,
+       "to": 576
+      },
+      {
+       "name": "NumberSegmentDereferenceThreads",
+       "from": 1112,
+       "to": 1128
+      },
+      {
+       "name": "OptimalNumberSegmentDereferenceThreadsComputed",
+       "from": 1116,
+       "to": 1132
+      },
+      {
+       "name": "PagefileExtensionRequests",
+       "from": 716,
+       "to": 732
+      },
+      {
+       "name": "PagefileExtensionWaitEvent",
+       "from": 720,
+       "to": 736
+      },
+      {
+       "name": "PagefileExtensionWaiters",
+       "from": 712,
+       "to": 728
+      },
+      {
+       "name": "ProbeRundownReference",
+       "from": 1056,
+       "to": 1072
+      },
+      {
+       "name": "RemoveUnusedSegmentsCommitNeeded",
+       "from": 1064,
+       "to": 1080
+      },
+      {
+       "name": "SegmentDereferenceCalibration",
+       "from": 1080,
+       "to": 1096
+      },
+      {
+       "name": "SegmentDereferenceCalibrationActive",
+       "from": 1072,
+       "to": 1088
+      },
+      {
+       "name": "SegmentDereferenceMailboxHeader",
+       "from": 352,
+       "to": 368
+      },
+      {
+       "name": "SegmentDereferenceThreadExists",
+       "from": 345,
+       "to": 361
+      },
+      {
+       "name": "SharedCharges",
+       "from": 744,
+       "to": 760
+      },
+      {
+       "name": "SharedChargesDrainEvent",
+       "from": 1032,
+       "to": 1048
+      },
+      {
+       "name": "SystemCacheInitLock",
+       "from": 672,
+       "to": 688
+      },
+      {
+       "name": "SystemCacheViewPageTables",
+       "from": 680,
+       "to": 696
+      },
+      {
+       "name": "UnusedSegmentList",
+       "from": 368,
+       "to": 384
+      },
+      {
+       "name": "UnusedSegmentPagedPool",
+       "from": 360,
+       "to": 376
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "size_from": 528,
+     "size_to": 528,
+     "members_added": [
+      "AvoidTrimmingStoreProcess",
+      "DecompressionOverIoPatternDuringInswap"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "DiscardedPoisonedPages",
+       "from": 512,
+       "to": 516
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_SHUTDOWN_STATE",
+     "size_from": 128,
+     "size_to": 136,
+     "members_added": [
+      "CrashDumpPteCount"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_SYSTEM_INFORMATION",
+     "size_from": 49600,
+     "size_to": 49600,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Debugger",
+       "from": 14208,
+       "to": 14216
+      },
+      {
+       "name": "Errors",
+       "from": 13952,
+       "to": 13960
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Shutdowns",
+       "from": 128,
+       "to": 136
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_VAD_EVENT_BLOCK",
+     "size_from": 88,
+     "size_to": 88,
+     "members_added": [],
+     "members_removed": [
+      "BitMap"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_NONOPAQUE_OPLOCK",
+     "size_from": 184,
+     "size_to": 192,
+     "members_added": [
+      "CancelBlock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AckTimeout",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "TelemetryData",
+       "from": 160,
+       "to": 168
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OPLOCK_CANCEL_BLOCK",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_PEB",
+     "size_from": 2000,
+     "size_to": 2008,
+     "members_added": [
+      "Win32ClientProcInfo"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PEB32",
+     "size_from": 1160,
+     "size_to": 1168,
+     "members_added": [
+      "Win32ClientProcInfo"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PEB64",
+     "size_from": 2000,
+     "size_to": 2008,
+     "members_added": [
+      "Win32ClientProcInfo"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_COOLING_EXTENSION",
+     "size_from": 144,
+     "size_to": 216,
+     "members_added": [
+      "FileObject",
+      "PdoName",
+      "SymbolicLink",
+      "UniqueId",
+      "UpdatePropogationLock"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ActiveEngaged",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "name": "DeviceObject",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Enabled",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "name": "Interface",
+       "from": 88,
+       "to": 104
+      },
+      {
+       "name": "NotificationEntry",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "PnpFlushEvent",
+       "from": 80,
+       "to": 96
+      },
+      {
+       "name": "RemovalFlushEvent",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "ThrottleLimit",
+       "from": 66,
+       "to": 82
+      },
+      {
+       "name": "UpdatingToCurrent",
+       "from": 67,
+       "to": 83
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_FX_DEVICE_STATUS",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "BlockFastResume",
+       "to": "PendSIrpCompletion",
+       "offset": 0,
+       "size": 4
+      }
+     ]
+    },
+    {
+     "type": "_POP_HIBER_CONTEXT",
+     "size_from": 496,
+     "size_to": 496,
+     "members_added": [
+      "EnableVpciHibernationCallbacks",
+      "Feature_Servicing_ARM64_LLVMHibernate_Enabled",
+      "HardwareConfigurationSignatureValid"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "DisableCompressionCallbacks",
+       "from": 486,
+       "to": 490
+      },
+      {
+       "name": "HardwareConfigurationSignature",
+       "from": 480,
+       "to": 484
+      },
+      {
+       "name": "IumEnabled",
+       "from": 484,
+       "to": 488
+      },
+      {
+       "name": "LZ4BootPhaseEnabled",
+       "from": 487,
+       "to": 491
+      },
+      {
+       "name": "LZ4KernelPhaseEnabled",
+       "from": 488,
+       "to": 492
+      },
+      {
+       "name": "SecureBoot",
+       "from": 485,
+       "to": 489
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_IRP_DATA",
+     "size_from": 312,
+     "size_to": 312,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "System",
+       "from": 16,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PO_HIBER_PERF",
+     "size_from": 744,
+     "size_to": 768,
+     "members_added": [
+      "ResumeSecureDecompressTicks",
+      "ResumeSecureDecryptTicks",
+      "ResumeSecureIoTicks"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AdjustedTotalResumeTime",
+       "from": 496,
+       "to": 520
+      },
+      {
+       "name": "AnimationStart",
+       "from": 392,
+       "to": 416
+      },
+      {
+       "name": "AnimationStop",
+       "from": 400,
+       "to": 424
+      },
+      {
+       "name": "BootBytesWritten",
+       "from": 440,
+       "to": 464
+      },
+      {
+       "name": "BootPagesProcessed",
+       "from": 424,
+       "to": 448
+      },
+      {
+       "name": "BootPagesWritten",
+       "from": 456,
+       "to": 480
+      },
+      {
+       "name": "BootPhaseBlockCountByMethod",
+       "from": 616,
+       "to": 640
+      },
+      {
+       "name": "BootPhaseSuspendWallTicks",
+       "from": 720,
+       "to": 744
+      },
+      {
+       "name": "BootPhaseWriteIoTicks",
+       "from": 696,
+       "to": 720
+      },
+      {
+       "name": "BytesWritten",
+       "from": 472,
+       "to": 496
+      },
+      {
+       "name": "CyclesPerMs",
+       "from": 224,
+       "to": 248
+      },
+      {
+       "name": "DecryptVsmPagesPhase0Cycles",
+       "from": 568,
+       "to": 592
+      },
+      {
+       "name": "DecryptVsmPagesPhase1Cycles",
+       "from": 576,
+       "to": 600
+      },
+      {
+       "name": "DecryptVsmPagesPhase2Cycles",
+       "from": 584,
+       "to": 608
+      },
+      {
+       "name": "DeviceResumeTime",
+       "from": 408,
+       "to": 432
+      },
+      {
+       "name": "FileRuns",
+       "from": 484,
+       "to": 508
+      },
+      {
+       "name": "HighestPhysicalPage",
+       "from": 256,
+       "to": 280
+      },
+      {
+       "name": "IoBoundedness",
+       "from": 296,
+       "to": 320
+      },
+      {
+       "name": "KernelAnimationTicks",
+       "from": 368,
+       "to": 392
+      },
+      {
+       "name": "KernelBytesWritten",
+       "from": 448,
+       "to": 472
+      },
+      {
+       "name": "KernelChecksumIoTicks",
+       "from": 384,
+       "to": 408
+      },
+      {
+       "name": "KernelChecksumTicks",
+       "from": 376,
+       "to": 400
+      },
+      {
+       "name": "KernelCopyTicks",
+       "from": 320,
+       "to": 344
+      },
+      {
+       "name": "KernelDecompressTicks",
+       "from": 304,
+       "to": 328
+      },
+      {
+       "name": "KernelInitTicks",
+       "from": 336,
+       "to": 360
+      },
+      {
+       "name": "KernelIoCpuTicks",
+       "from": 352,
+       "to": 376
+      },
+      {
+       "name": "KernelIoTicks",
+       "from": 312,
+       "to": 336
+      },
+      {
+       "name": "KernelPagesProcessed",
+       "from": 432,
+       "to": 456
+      },
+      {
+       "name": "KernelPagesWritten",
+       "from": 464,
+       "to": 488
+      },
+      {
+       "name": "KernelPhaseBlockCountByMethod",
+       "from": 656,
+       "to": 680
+      },
+      {
+       "name": "KernelPhaseResumeWallTicks",
+       "from": 736,
+       "to": 760
+      },
+      {
+       "name": "KernelPhaseSuspendWallTicks",
+       "from": 728,
+       "to": 752
+      },
+      {
+       "name": "KernelPhaseWriteIoTicks",
+       "from": 704,
+       "to": 728
+      },
+      {
+       "name": "KernelResumeHiberFileTicks",
+       "from": 344,
+       "to": 368
+      },
+      {
+       "name": "KernelReturnFromHandler",
+       "from": 240,
+       "to": 264
+      },
+      {
+       "name": "KernelReturnSystemPowerStateTimestamp",
+       "from": 288,
+       "to": 312
+      },
+      {
+       "name": "KernelSharedBufferTicks",
+       "from": 360,
+       "to": 384
+      },
+      {
+       "name": "MaxHuffRatio",
+       "from": 492,
+       "to": 516
+      },
+      {
+       "name": "NoMultiStageResumeReason",
+       "from": 488,
+       "to": 512
+      },
+      {
+       "name": "PagesWritten",
+       "from": 480,
+       "to": 504
+      },
+      {
+       "name": "PostCmosUpdateTimestamp",
+       "from": 280,
+       "to": 304
+      },
+      {
+       "name": "ProcessorCount",
+       "from": 264,
+       "to": 288
+      },
+      {
+       "name": "ReadCheckCount",
+       "from": 328,
+       "to": 352
+      },
+      {
+       "name": "RemappedPageLookupCycles",
+       "from": 536,
+       "to": 560
+      },
+      {
+       "name": "Reserved",
+       "from": 268,
+       "to": 292
+      },
+      {
+       "name": "ResumeAllocateTicks",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "ResumeChecksumIoTicks",
+       "from": 208,
+       "to": 232
+      },
+      {
+       "name": "ResumeChecksumTicks",
+       "from": 200,
+       "to": 224
+      },
+      {
+       "name": "ResumeCompleteTimestamp",
+       "from": 504,
+       "to": 528
+      },
+      {
+       "name": "ResumeKernelSwitchTimestamp",
+       "from": 216,
+       "to": 240
+      },
+      {
+       "name": "ResumeMapTicks",
+       "from": 184,
+       "to": 208
+      },
+      {
+       "name": "ResumeUnmapTicks",
+       "from": 192,
+       "to": 216
+      },
+      {
+       "name": "ResumeUserInOutTicks",
+       "from": 176,
+       "to": 200
+      },
+      {
+       "name": "SecurePagesProcessed",
+       "from": 416,
+       "to": 440
+      },
+      {
+       "name": "SecurePhaseWriteIoTicks",
+       "from": 712,
+       "to": 736
+      },
+      {
+       "name": "SleeperThreadEnd",
+       "from": 272,
+       "to": 296
+      },
+      {
+       "name": "TcbLaunchPrepareCycles",
+       "from": 544,
+       "to": 568
+      },
+      {
+       "name": "TcbLaunchPrepareDataCycles",
+       "from": 552,
+       "to": 576
+      },
+      {
+       "name": "TcbLoaderAuthenticateCycles",
+       "from": 592,
+       "to": 616
+      },
+      {
+       "name": "TcbLoaderDecryptCycles",
+       "from": 600,
+       "to": 624
+      },
+      {
+       "name": "TcbLoaderEndTimestamp",
+       "from": 528,
+       "to": 552
+      },
+      {
+       "name": "TcbLoaderStartTimestamp",
+       "from": 520,
+       "to": 544
+      },
+      {
+       "name": "TcbLoaderValidateCycles",
+       "from": 608,
+       "to": 632
+      },
+      {
+       "name": "TcbRestoreStateCycles",
+       "from": 560,
+       "to": 584
+      },
+      {
+       "name": "TimeStampCounterAtSwitchTime",
+       "from": 248,
+       "to": 272
+      },
+      {
+       "name": "WinresumeExitTimestamp",
+       "from": 512,
+       "to": 536
+      },
+      {
+       "name": "WriteLogDataTimestamp",
+       "from": 232,
+       "to": 256
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "RequestedJobObject",
+      "RequestedProcess"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Current",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Requested",
+       "from": 3,
+       "to": 2
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Transition",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESS_EXECUTION_TRANSITION",
+     "size_from": 2,
+     "size_to": 1,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "InProgress",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "Reserved",
+       "from": 2,
+       "to": 1
+      },
+      {
+       "name": "TransitionState",
+       "from": 2,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "InProgress",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "Reserved",
+       "from": "unsigned short",
+       "to": "unsigned char"
+      },
+      {
+       "name": "TransitionState",
+       "from": "volatile short",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTLP_HP_HEAP_GLOBALS",
+     "size_from": 128,
+     "size_to": 128,
+     "members_added": [
+      "SynchronousSuspend"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 48
+    },
+    {
+     "type": "_RTL_USER_PROCESS_PARAMETERS",
+     "size_from": 1096,
+     "size_to": 1104,
+     "members_added": [
+      "AttributeList"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_WORK_ON_BEHALF_TICKET",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SECURITY_ANTITAMPER_ENTITLEMENT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SECURITY_ANTITAMPER_POLICY_CROSS_INSTANCE_ACCESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SECURITY_ANTITAMPER_POLICY_PROCESS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SECURITY_ISOLATION_CONFIGURATION_UI",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 192,
+     "size_to": 200,
+     "members_added": [
+      "ShadowBuddyLogonId"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AccountName",
+       "from": 56,
+       "to": 64
+      },
+      {
+       "name": "AuthorityName",
+       "from": 72,
+       "to": 80
+      },
+      {
+       "name": "CachedHandlesTable",
+       "from": 88,
+       "to": 96
+      },
+      {
+       "name": "Flags",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "name": "ReferenceCount",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "name": "RevocationBlock",
+       "from": 128,
+       "to": 136
+      },
+      {
+       "name": "ServerSilo",
+       "from": 160,
+       "to": 168
+      },
+      {
+       "name": "SharedClaimAttributes",
+       "from": 112,
+       "to": 120
+      },
+      {
+       "name": "SharedDataLock",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "name": "SharedSidValues",
+       "from": 120,
+       "to": 128
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 168,
+       "to": 176
+      },
+      {
+       "name": "Token",
+       "from": 48,
+       "to": 56
+      },
+      {
+       "name": "TokenList",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "name": "pDeviceMap",
+       "from": 40,
+       "to": 48
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY",
+     "status": "added",
+     "size_from": null,
+     "size_to": 64
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_DEBUG",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_GENERAL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_OBJECT_TYPES",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_SIGNING",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_THREAD",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SE_ANTITAMPER_POLICY_TOKEN",
+     "status": "added",
+     "size_from": null,
+     "size_to": 4
+    },
+    {
+     "type": "_SE_ISOLATION_POLICY_OPTIONS_MAP",
+     "status": "added",
+     "size_from": null,
+     "size_to": 8
+    },
+    {
+     "type": "_TOKEN",
+     "size_from": 1176,
+     "size_to": 1480,
+     "members_added": [
+      "AntiTamperEntry",
+      "AntiTamperSidCount",
+      "AntiTamperSidHash",
+      "AntiTamperSids",
+      "IsAgentic",
+      "IsInstaller",
+      "TokenFlags2"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "VariablePart",
+       "from": 1168,
+       "to": 1472
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_WMI_LOGGER_CONTEXT",
+     "size_from": 1616,
+     "size_to": 1632,
+     "members_added": [
+      "PlaceholderSList"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BufferCompressDuration",
+       "from": 1536,
+       "to": 1552
+      },
+      {
+       "name": "BufferMdl",
+       "from": 1592,
+       "to": 1608
+      },
+      {
+       "name": "BufferWriteDuration",
+       "from": 1528,
+       "to": 1544
+      },
+      {
+       "name": "CallbackContext",
+       "from": 1552,
+       "to": 1568
+      },
+      {
+       "name": "CompressionDpc",
+       "from": 1456,
+       "to": 1472
+      },
+      {
+       "name": "FlushingLastDroppedTime",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "name": "FlushingSequenceNumber",
+       "from": 1576,
+       "to": 1592
+      },
+      {
+       "name": "LastBufferSwitchTime",
+       "from": 1520,
+       "to": 1536
+      },
+      {
+       "name": "LastDroppedTime",
+       "from": 1560,
+       "to": 1576
+      },
+      {
+       "name": "PartitionContext",
+       "from": 1584,
+       "to": 1600
+      },
+      {
+       "name": "PfnArray",
+       "from": 1600,
+       "to": 1616
+      },
+      {
+       "name": "ReferenceQpcDelta",
+       "from": 1544,
+       "to": 1560
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureStateCache",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [
+      "wasUsed"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "unused",
+       "from": "18:14",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_RecordedState",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "recordedProcessUsage"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "unused",
+       "from": "11:21",
+       "to": "12:20"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "CVariant_MemoryCompressionHCAtLowPriority",
+     "status": "added"
+    },
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC130888",
+     "status": "added"
+    },
+    {
+     "enum": "EmptyCVariant_FeatureStaging_diagnostics",
+     "status": "added"
+    },
+    {
+     "enum": "PDCCLIENTID",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "PDC_UMPO_CLIENT"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "PDC_NUMBER_OF_CLIENTS",
+       "from": 124,
+       "to": 125
+      }
+     ]
+    },
+    {
+     "enum": "_EVENT_INFO_CLASS",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "EventProviderSetReserved2"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "MaxEventInfo",
+       "from": 4,
+       "to": 5
+      }
+     ]
+    },
+    {
+     "enum": "_KTOPOLOGY_LEVEL",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "KTopologyLevelComplex",
+      "KTopologyLevelCountV1"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "KTopologyLevelCount",
+       "from": 5,
+       "to": 6
+      }
+     ]
+    },
+    {
+     "enum": "_POWER_INFORMATION_LEVEL_INTERNAL",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "PowerInternalNotifyWin32kSessionConnect",
+      "PowerInternalQueryVelocityFeatureEnablement",
+      "PowerInternalSetBatteryTestExempt"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "PowerInformationInternalMaximum",
+       "from": 97,
+       "to": 100
+      }
+     ]
+    },
+    {
+     "enum": "_PS_ATTRIBUTE_NUM",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "PsAttributeContainmentConfiguration",
+      "PsAttributeHeapFeatures",
+      "PsAttributeIsolationConfiguration",
+      "PsAttributeReserved0"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "PsAttributeMax",
+       "from": 33,
+       "to": 37
+      }
+     ]
+    },
+    {
+     "enum": "_RTL_FEATURE_CONFIGURATION_PRIORITY",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "FeatureConfigurationPriorityConfigurationSystem",
+      "FeatureConfigurationPriorityServiceGuard"
+     ],
+     "constants_removed": [
+      "FeatureConfigurationPriorityReserved11"
+     ],
+     "constants_renumbered": []
+    },
+    {
+     "enum": "_RTL_HP_FEATURE_ENABLEMENT",
+     "status": "added"
+    },
+    {
+     "enum": "_SE_ANTITAMPER_PROTECTION_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_SE_ISOLATION_POLICY_OPTION",
+     "status": "added"
+    },
+    {
+     "enum": "_SKSERVICE",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SECURESERVICE_QUERY_RUNTIME_ATTESTATION_REPORT",
+      "SECURESERVICE_QUERY_TSC_ADJUSTMENT",
+      "SECURESERVICE_TERMINATE"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "SECURESERVICE_ACCESS_PCI_DEVICE",
+       "from": 268,
+       "to": 269
+      },
+      {
+       "name": "SECURESERVICE_CONFIGURE_SECURE_ATS_DEVICE",
+       "from": 276,
+       "to": 277
+      },
+      {
+       "name": "SECURESERVICE_DRIVER_PROXY_ENDPOINT_SWAP",
+       "from": 273,
+       "to": 274
+      },
+      {
+       "name": "SECURESERVICE_KSR_CALL",
+       "from": 271,
+       "to": 272
+      },
+      {
+       "name": "SECURESERVICE_QUERY_SECURE_PCI_BOOT_CONFIG",
+       "from": 269,
+       "to": 270
+      },
+      {
+       "name": "SECURESERVICE_QUERY_SECURE_PCI_INFO",
+       "from": 267,
+       "to": 268
+      },
+      {
+       "name": "SECURESERVICE_REINITIALIZE_DEBUGGER_TRANSPORT",
+       "from": 270,
+       "to": 271
+      },
+      {
+       "name": "SECURESERVICE_REQUEST_BREAK_IN",
+       "from": 275,
+       "to": 276
+      },
+      {
+       "name": "SECURESERVICE_SHADOW_STACK_ASSIST",
+       "from": 274,
+       "to": 275
+      },
+      {
+       "name": "SECURESERVICE_SHUTDOWN",
+       "from": 266,
+       "to": 267
+      },
+      {
+       "name": "SECURESERVICE_SVC_CALL",
+       "from": 272,
+       "to": 273
+      }
+     ]
+    },
+    {
+     "enum": "_SUSPEND_THREAD_EXTENDED_PARAMETER_TYPE",
+     "status": "added"
+    },
+    {
+     "enum": "_SYSTEM_INFORMATION_CLASS",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SystemCodeIntegrityEndpointSecurityInformation",
+      "SystemRuntimeAttestationReport"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "MaxSystemInfoClass",
+       "from": 254,
+       "to": 257
+      }
+     ]
+    },
+    {
+     "enum": "_WOB_INFORMATION_CLASS",
+     "status": "added"
+    },
+    {
+     "enum": "_WORK_QUEUE_TYPE",
+     "status": "added"
+    }
+   ]
+  },
   {
    "channel": "21H2",
    "machine": "arm64",
