@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-10-30T13:09:36Z",
+ "generated": "2026-10-31T12:44:16Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,14 +525,14 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 69,
-   "transitions": 68,
-   "layout_changes": 34,
+   "builds": 70,
+   "transitions": 69,
+   "layout_changes": 35,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9767",
+   "to_version": "10.0.26100.9807",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:3cc4cedfe5e2a2aff19d70c9b345c65b59142b757abd4bf4d698a49a3b6197ad",
+   "latest_layout": "v2:sha256:f3e271270697e1ababe7cb3b7bccbfcd1126f43159b119265a4e7c06fbe8a1b4",
    "known_missing_in_channel": 0
   },
   {
@@ -111208,6 +111208,208 @@
        "name": "FunctionTableExtended",
        "from": 184,
        "to": 176
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9767",
+   "to_version": "10.0.26100.9807",
+   "from_key": "30676CB780DB451B557B33837D6D74821",
+   "to_key": "71D031FA2D0CCF41F8D68E46D41B9C271",
+   "from_kb": [
+    "d63ae637-0511-4ee2-a034-5ee555b16788"
+   ],
+   "kb": [
+    "5b5d01bf-77cf-41fd-800b-db0821ebc30b",
+    "687d1ced-aab1-4cd5-ad05-705189769731",
+    "b761d9de-8997-4056-ac72-25aefbe93548",
+    "cca4d904-a4ca-476a-8c67-d99ecd18f231"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:3cc4cedfe5e2a2aff19d70c9b345c65b59142b757abd4bf4d698a49a3b6197ad",
+   "layout_to": "v2:sha256:f3e271270697e1ababe7cb3b7bccbfcd1126f43159b119265a4e7c06fbe8a1b4",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_PlutonDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [
+      "Feature_PlutonKSP_Enabled"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "DevControlInitialized",
+       "from": "11:1",
+       "to": "12:1"
+      },
+      {
+       "name": "Feature_PlutonMDS_Enabled",
+       "from": "16:1",
+       "to": "17:1"
+      },
+      {
+       "name": "Feature_PlutonNVDynamicUpgrade_Enabled",
+       "from": "12:1",
+       "to": "13:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaDriver_Enabled",
+       "from": "14:1",
+       "to": "15:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaN1c_Enabled",
+       "from": "13:1",
+       "to": "14:1"
+      },
+      {
+       "name": "Feature_StxTpmFix_Enabled",
+       "from": "15:1",
+       "to": "16:1"
+      },
+      {
+       "name": "Reserved",
+       "from": "19:12",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_EXT_IOMMU_FUNCTION_TABLE_EXTENDED",
+     "size_from": 176,
+     "size_to": 184,
+     "members_added": [
+      "SetDeviceSvmCapabilitiesLegacy"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_HIBER_CONTEXT",
+     "size_from": 496,
+     "size_to": 496,
+     "members_added": [
+      "Feature_Servicing_ARM64_LLVMHibernate_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_REGISTERED_IOMMU",
+     "size_from": 536,
+     "size_to": 544,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "Capabilities",
+       "from": 464,
+       "to": 472
+      },
+      {
+       "name": "DomainIdBitmap",
+       "from": 448,
+       "to": 456
+      },
+      {
+       "name": "DomainIdBitmapLock",
+       "from": 440,
+       "to": 448
+      },
+      {
+       "name": "Flags",
+       "from": 384,
+       "to": 392
+      },
+      {
+       "name": "Identifier",
+       "from": 508,
+       "to": 516
+      },
+      {
+       "name": "KnownType",
+       "from": 468,
+       "to": 476
+      },
+      {
+       "name": "MaximumAsids",
+       "from": 504,
+       "to": 512
+      },
+      {
+       "name": "MaximumDomainIds",
+       "from": 432,
+       "to": 440
+      },
+      {
+       "name": "MsiAddress",
+       "from": 488,
+       "to": 496
+      },
+      {
+       "name": "MsiData",
+       "from": 496,
+       "to": 504
+      },
+      {
+       "name": "PageHandling",
+       "from": 392,
+       "to": 400
+      },
+      {
+       "name": "PciBus",
+       "from": 476,
+       "to": 484
+      },
+      {
+       "name": "PciSegment",
+       "from": 472,
+       "to": 480
+      },
+      {
+       "name": "PciSlot",
+       "from": 480,
+       "to": 488
+      },
+      {
+       "name": "ReservedDevices",
+       "from": 528,
+       "to": 536
+      },
+      {
+       "name": "ResourceId",
+       "from": 512,
+       "to": 520
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "FunctionTableExtended",
+       "from": 176,
+       "to": 184
       }
      ],
      "members_rebitted": [],
