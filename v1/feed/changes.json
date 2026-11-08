@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-07T13:13:51Z",
+ "generated": "2026-11-08T13:35:36Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 71,
-   "transitions": 70,
-   "layout_changes": 36,
+   "builds": 72,
+   "transitions": 71,
+   "layout_changes": 37,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9843",
+   "to_version": "10.0.26100.9882",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:18658f3a4161496d8455a4e5cd6f74a6984453e06437dd463f6700974fb78373",
+   "latest_layout": "v2:sha256:f14f363fd2fc1a880f1d113a44464d954447bf379443fb0f6bb5753121c2aab9",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 20,
-   "transitions": 19,
-   "layout_changes": 16,
+   "builds": 21,
+   "transitions": 20,
+   "layout_changes": 17,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9843",
+   "to_version": "10.0.26100.9882",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:76c20ef51a6f45bb10bd372c667073bafb0f0dffdfa425897a2c8add10338ca5",
+   "latest_layout": "v2:sha256:de03160ba2af6a8bc9d04ad9f56c2e1dd4fd97c58626901cdfda33a9791f9de8",
    "known_missing_in_channel": 0
   },
   {
@@ -1157,6 +1157,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:ea554cd7e2771c22ddad8194856a2f173ef1fb74e77d2831c2ef0290147b1448",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29704",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29704.1000",
+   "to_version": "10.0.29704.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:3286fedc2ba6a9541f67924c29311458e2882e4d155a74358b3d9ba44130c1d8",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29704",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29704.1000",
+   "to_version": "10.0.29704.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:673e2a3513308f018141b5c683260b9f5bfca838790c9774514a75e7d6ff9175",
    "known_missing_in_channel": 0
   }
  ],
@@ -104059,6 +104085,70 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.9843",
+   "to_version": "10.0.26100.9882",
+   "from_key": "9F9AEC1F99538395FEACFA99F0891C171",
+   "to_key": "9FAF7C0FF126F4243975DEB9E73E8ABF1",
+   "from_kb": [
+    "ea1b655b-a2a6-458c-a686-56734572d99c"
+   ],
+   "kb": [
+    "9e1ca263-6656-4cd9-ac64-8595cb4f5284"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:76c20ef51a6f45bb10bd372c667073bafb0f0dffdfa425897a2c8add10338ca5",
+   "layout_to": "v2:sha256:de03160ba2af6a8bc9d04ad9f56c2e1dd4fd97c58626901cdfda33a9791f9de8",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_PlutonAmdDynamicUpgrade_Enabled",
+      "Feature_PlutonDynamicUpgradeStxTpmEnabledFix_Enabled",
+      "Feature_PlutonIntelDynamicUpgrade_Enabled",
+      "Feature_PlutonMdsMeasurement_Enabled",
+      "Feature_PlutonQcDynamicUpgradeFailureTelemetry_Enabled",
+      "Feature_PlutonQualcommDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [
+      "Feature_IntelDynamicUpgrade_Enabled",
+      "Feature_PlutonMDS_Enabled",
+      "Feature_StxTpmFix_Enabled"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Feature_PlutonKSP_Enabled",
+       "from": "17:1",
+       "to": "18:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaDriver_Enabled",
+       "from": "14:1",
+       "to": "16:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaN1c_Enabled",
+       "from": "13:1",
+       "to": "15:1"
+      },
+      {
+       "name": "Reserved",
+       "from": "19:12",
+       "to": "22:10"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -111678,6 +111768,70 @@
      "constants_renumbered": []
     }
    ]
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9843",
+   "to_version": "10.0.26100.9882",
+   "from_key": "B1E19414C81FE30123D71FDB4516D1191",
+   "to_key": "A7EFEEC342CAE4CB37346409FADF4C6A1",
+   "from_kb": [
+    "6848e148-e484-4f7e-a9be-7b00db0f2013"
+   ],
+   "kb": [
+    "80338691-87c9-4f05-af86-d45e0cf883e0"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:18658f3a4161496d8455a4e5cd6f74a6984453e06437dd463f6700974fb78373",
+   "layout_to": "v2:sha256:f14f363fd2fc1a880f1d113a44464d954447bf379443fb0f6bb5753121c2aab9",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_PlutonAmdDynamicUpgrade_Enabled",
+      "Feature_PlutonDynamicUpgradeStxTpmEnabledFix_Enabled",
+      "Feature_PlutonIntelDynamicUpgrade_Enabled",
+      "Feature_PlutonMdsMeasurement_Enabled",
+      "Feature_PlutonQcDynamicUpgradeFailureTelemetry_Enabled",
+      "Feature_PlutonQualcommDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [
+      "Feature_IntelDynamicUpgrade_Enabled",
+      "Feature_PlutonMDS_Enabled",
+      "Feature_StxTpmFix_Enabled"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Feature_PlutonKSP_Enabled",
+       "from": "17:1",
+       "to": "18:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaDriver_Enabled",
+       "from": "14:1",
+       "to": "16:1"
+      },
+      {
+       "name": "Feature_PlutonNvidiaN1c_Enabled",
+       "from": "13:1",
+       "to": "15:1"
+      },
+      {
+       "name": "Reserved",
+       "from": "19:12",
+       "to": "22:10"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
   },
   {
    "channel": "builds/19041",
