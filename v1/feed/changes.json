@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-08T13:35:36Z",
+ "generated": "2026-11-09T16:33:09Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -122,14 +122,14 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 16,
-   "transitions": 15,
-   "layout_changes": 10,
+   "builds": 17,
+   "transitions": 16,
+   "layout_changes": 11,
    "from_version": "10.0.28000.1575",
-   "to_version": null,
+   "to_version": "10.0.28000.3365",
    "from_date": "2026-02-10",
-   "to_date": "2026-10-13",
-   "latest_layout": "v2:sha256:75def3bc04b793a632e8dafd1251a534e824741690b922681940ef9b1c8bc010",
+   "to_date": "2026-10-28",
+   "latest_layout": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
    "known_missing_in_channel": 1
   },
   {
@@ -1187,6 +1187,2179 @@
   }
  ],
  "changes": [
+  {
+   "channel": "11-26H1",
+   "machine": "amd64",
+   "from_version": null,
+   "to_version": "10.0.28000.3365",
+   "from_key": "29542158DC36B6D41D7F2DD8CB7CE68A1",
+   "to_key": "238C901F42C19C9291DBE4744A4854581",
+   "from_kb": [
+    "KB5127646"
+   ],
+   "kb": [
+    "KB5127653"
+   ],
+   "date": "2026-10-28",
+   "layout_from": "v2:sha256:75def3bc04b793a632e8dafd1251a534e824741690b922681940ef9b1c8bc010",
+   "layout_to": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
+   "types_changed": [
+    {
+     "type": "RTLP_HP_LFH_PERF_FLAGS",
+     "size_from": 4,
+     "size_to": 4,
+     "members_added": [
+      "PgDelayFreeAmountHigh"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Spare",
+       "from": "18:6",
+       "to": "19:5"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_ETHREAD",
+     "size_from": 1944,
+     "size_to": 1944,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "UpdateTebSpareByte2",
+       "to": "EtwThreadStackRundownPriorityFloorCount",
+       "offset": 1907,
+       "size": 1
+      }
+     ]
+    },
+    {
+     "type": "_HEAP_LFH_CONTEXT",
+     "size_from": 1728,
+     "size_to": 1728,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AffinityModArray",
+       "from": 64,
+       "to": 56
+      },
+      {
+       "name": "Config",
+       "from": 76,
+       "to": 68
+      },
+      {
+       "name": "EncodeKey",
+       "from": 88,
+       "to": 80
+      },
+      {
+       "name": "LockType",
+       "from": 73,
+       "to": 65
+      },
+      {
+       "name": "MaxAffinity",
+       "from": 72,
+       "to": 64
+      },
+      {
+       "name": "MemStatsOffset",
+       "from": 74,
+       "to": 66
+      },
+      {
+       "name": "TlsSlotIndex",
+       "from": 84,
+       "to": 76
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Callbacks",
+       "from": 56,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_PAGE_RANGE_DESCRIPTOR",
+     "size_from": 32,
+     "size_to": 32,
+     "members_added": [],
+     "members_removed": [
+      "ListEntry"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "SuballocatorState",
+       "to": "Spare",
+       "offset": 27,
+       "size": 1
+      }
+     ]
+    },
+    {
+     "type": "_HEAP_PG_CONTEXT",
+     "size_from": 88,
+     "size_to": 144,
+     "members_added": [
+      "BusyDescriptorCount",
+      "BusyDescriptors",
+      "DelayFreeCommitPageLimit",
+      "DelayFreedDescriptorCount",
+      "DelayFreedDescriptors",
+      "EnvHandle",
+      "Flags",
+      "Lock",
+      "LockType"
+     ],
+     "members_removed": [
+      "UseFillPatternOnly"
+     ],
+     "members_moved": [
+      {
+       "name": "Config",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "name": "FillPatternKey",
+       "from": 84,
+       "to": 89
+      },
+      {
+       "name": "HeapForLogging",
+       "from": 64,
+       "to": 56
+      },
+      {
+       "name": "MaxAllocationSize",
+       "from": 72,
+       "to": 80
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Callbacks",
+       "from": 56,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_SEG_CONTEXT",
+     "size_from": 192,
+     "size_to": 192,
+     "members_added": [],
+     "members_removed": [
+      "DelayFreePageRanges"
+     ],
+     "members_moved": [
+      {
+       "name": "FreeSegmentList",
+       "from": 128,
+       "to": 120
+      },
+      {
+       "name": "FreeSegmentListLock",
+       "from": 120,
+       "to": 112
+      },
+      {
+       "name": "PgContext",
+       "from": 144,
+       "to": 136
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_SUBALLOCATOR_CALLBACKS",
+     "size_from": 56,
+     "size_to": 48,
+     "members_added": [],
+     "members_removed": [
+      "AccessState"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_VS_CONTEXT",
+     "size_from": 104,
+     "size_to": 96,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AffinityMgr",
+       "from": 72,
+       "to": 64
+      },
+      {
+       "name": "FreeCommittedUnits",
+       "from": 96,
+       "to": 88
+      },
+      {
+       "name": "TotalCommittedUnits",
+       "from": 88,
+       "to": 80
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Callbacks",
+       "from": 56,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KERNEL_CET_CONTEXT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 24
+    },
+    {
+     "type": "_KEXCEPTION_FRAME",
+     "size_from": 320,
+     "size_to": 320,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "Spare1",
+       "to": "R30",
+       "offset": 40,
+       "size": 8
+      },
+      {
+       "from": "Spare2",
+       "to": "R31",
+       "offset": 232,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [
+      "ContextApxFState",
+      "ContextKernelCet",
+      "ContextXStateHeader"
+     ],
+     "members_removed": [
+      "PrcbPad84"
+     ],
+     "members_moved": [
+      {
+       "name": "AbDpc",
+       "from": 37312,
+       "to": 37440
+      },
+      {
+       "name": "AbPropagateBoostsList",
+       "from": 37304,
+       "to": 37432
+      },
+      {
+       "name": "AbSelfIoBoostsList",
+       "from": 37296,
+       "to": 37424
+      },
+      {
+       "name": "ActiveScbList",
+       "from": 35544,
+       "to": 35672
+      },
+      {
+       "name": "AdjustDpcThreshold",
+       "from": 34388,
+       "to": 34516
+      },
+      {
+       "name": "AffinitizedCycles",
+       "from": 34472,
+       "to": 34600
+      },
+      {
+       "name": "AffinitizedSelectionMask",
+       "from": 33756,
+       "to": 33884
+      },
+      {
+       "name": "ApicBackingPage",
+       "from": 35880,
+       "to": 36008
+      },
+      {
+       "name": "AvailableTime",
+       "from": 34412,
+       "to": 34540
+      },
+      {
+       "name": "BpbCurrentSpecCtrl",
+       "from": 1830,
+       "to": 1958
+      },
+      {
+       "name": "BpbFeatures",
+       "from": 1820,
+       "to": 1948
+      },
+      {
+       "name": "BpbKernelSpecCtrl",
+       "from": 1832,
+       "to": 1960
+      },
+      {
+       "name": "BpbNmiSpecCtrl",
+       "from": 1834,
+       "to": 1962
+      },
+      {
+       "name": "BpbRetpolineExitSpecCtrl",
+       "from": 1826,
+       "to": 1954
+      },
+      {
+       "name": "BpbRetpolineState",
+       "from": 1822,
+       "to": 1950
+      },
+      {
+       "name": "BpbRetpolineStateOverflow",
+       "from": 1823,
+       "to": 1951
+      },
+      {
+       "name": "BpbState",
+       "from": 1816,
+       "to": 1944
+      },
+      {
+       "name": "BpbTrappedBpbState",
+       "from": 1818,
+       "to": 1946
+      },
+      {
+       "name": "BpbTrappedRetpolineExitSpecCtrl",
+       "from": 1828,
+       "to": 1956
+      },
+      {
+       "name": "BpbUserSpecCtrl",
+       "from": 1836,
+       "to": 1964
+      },
+      {
+       "name": "Cache",
+       "from": 35736,
+       "to": 35864
+      },
+      {
+       "name": "CacheCount",
+       "from": 35796,
+       "to": 35924
+      },
+      {
+       "name": "CachedCommit",
+       "from": 35800,
+       "to": 35928
+      },
+      {
+       "name": "CachedPtes",
+       "from": 33720,
+       "to": 33848
+      },
+      {
+       "name": "CachedResidentAvailable",
+       "from": 35804,
+       "to": 35932
+      },
+      {
+       "name": "CachedStacks",
+       "from": 34608,
+       "to": 34736
+      },
+      {
+       "name": "CallDpc",
+       "from": 33632,
+       "to": 33760
+      },
+      {
+       "name": "CcCopyReadNoWait",
+       "from": 11600,
+       "to": 11728
+      },
+      {
+       "name": "CcCopyReadNoWaitMiss",
+       "from": 11608,
+       "to": 11736
+      },
+      {
+       "name": "CcCopyReadWait",
+       "from": 11604,
+       "to": 11732
+      },
+      {
+       "name": "CcCopyReadWaitMiss",
+       "from": 34820,
+       "to": 34948
+      },
+      {
+       "name": "CcDataFlushes",
+       "from": 34804,
+       "to": 34932
+      },
+      {
+       "name": "CcDataPages",
+       "from": 34808,
+       "to": 34936
+      },
+      {
+       "name": "CcFastMdlReadNoWait",
+       "from": 34752,
+       "to": 34880
+      },
+      {
+       "name": "CcFastMdlReadNotPossible",
+       "from": 34760,
+       "to": 34888
+      },
+      {
+       "name": "CcFastMdlReadResourceMiss",
+       "from": 34824,
+       "to": 34952
+      },
+      {
+       "name": "CcFastMdlReadWait",
+       "from": 34756,
+       "to": 34884
+      },
+      {
+       "name": "CcFastReadNoWait",
+       "from": 11588,
+       "to": 11716
+      },
+      {
+       "name": "CcFastReadNotPossible",
+       "from": 11596,
+       "to": 11724
+      },
+      {
+       "name": "CcFastReadResourceMiss",
+       "from": 34816,
+       "to": 34944
+      },
+      {
+       "name": "CcFastReadWait",
+       "from": 11592,
+       "to": 11720
+      },
+      {
+       "name": "CcLazyWriteHotSpots",
+       "from": 34792,
+       "to": 34920
+      },
+      {
+       "name": "CcLazyWriteIos",
+       "from": 34796,
+       "to": 34924
+      },
+      {
+       "name": "CcLazyWritePages",
+       "from": 34800,
+       "to": 34928
+      },
+      {
+       "name": "CcLostDelayedWrites",
+       "from": 34812,
+       "to": 34940
+      },
+      {
+       "name": "CcMapDataNoWait",
+       "from": 34764,
+       "to": 34892
+      },
+      {
+       "name": "CcMapDataNoWaitMiss",
+       "from": 34828,
+       "to": 34956
+      },
+      {
+       "name": "CcMapDataWait",
+       "from": 34768,
+       "to": 34896
+      },
+      {
+       "name": "CcMapDataWaitMiss",
+       "from": 34832,
+       "to": 34960
+      },
+      {
+       "name": "CcMdlReadNoWait",
+       "from": 34784,
+       "to": 34912
+      },
+      {
+       "name": "CcMdlReadNoWaitMiss",
+       "from": 34844,
+       "to": 34972
+      },
+      {
+       "name": "CcMdlReadWait",
+       "from": 34788,
+       "to": 34916
+      },
+      {
+       "name": "CcMdlReadWaitMiss",
+       "from": 34848,
+       "to": 34976
+      },
+      {
+       "name": "CcPinMappedDataCount",
+       "from": 34772,
+       "to": 34900
+      },
+      {
+       "name": "CcPinReadNoWait",
+       "from": 34776,
+       "to": 34904
+      },
+      {
+       "name": "CcPinReadNoWaitMiss",
+       "from": 34836,
+       "to": 34964
+      },
+      {
+       "name": "CcPinReadWait",
+       "from": 34780,
+       "to": 34908
+      },
+      {
+       "name": "CcPinReadWaitMiss",
+       "from": 34840,
+       "to": 34968
+      },
+      {
+       "name": "CcReadAheadIos",
+       "from": 34852,
+       "to": 34980
+      },
+      {
+       "name": "ClockInterrupts",
+       "from": 14532,
+       "to": 14660
+      },
+      {
+       "name": "ClockKeepAlive",
+       "from": 33696,
+       "to": 33824
+      },
+      {
+       "name": "ClockTimerState",
+       "from": 38336,
+       "to": 38464
+      },
+      {
+       "name": "CombinedNmiMceActive",
+       "from": 33702,
+       "to": 33830
+      },
+      {
+       "name": "CompactionMaskInit",
+       "from": 34576,
+       "to": 34704
+      },
+      {
+       "name": "ComplexId",
+       "from": 36460,
+       "to": 36588
+      },
+      {
+       "name": "Context",
+       "from": 36864,
+       "to": 36992
+      },
+      {
+       "name": "ContextFlagsInit",
+       "from": 36872,
+       "to": 37000
+      },
+      {
+       "name": "CoreControlBlock",
+       "from": 36504,
+       "to": 36632
+      },
+      {
+       "name": "CoreId",
+       "from": 36444,
+       "to": 36572
+      },
+      {
+       "name": "CoreProcessorSet",
+       "from": 36512,
+       "to": 36640
+      },
+      {
+       "name": "CoresPerPhysicalDie",
+       "from": 40712,
+       "to": 40840
+      },
+      {
+       "name": "CpuCycleScalingFactor",
+       "from": 34488,
+       "to": 34616
+      },
+      {
+       "name": "CpuPartition",
+       "from": 14320,
+       "to": 14448
+      },
+      {
+       "name": "CumulativeDpcSoftTimeLimitTicks",
+       "from": 14552,
+       "to": 14680
+      },
+      {
+       "name": "CurrentDpcRoutine",
+       "from": 14368,
+       "to": 14496
+      },
+      {
+       "name": "CurrentDpcRuntimeHistoryCached",
+       "from": 14376,
+       "to": 14504
+      },
+      {
+       "name": "CurrentDpcStartTime",
+       "from": 14384,
+       "to": 14512
+      },
+      {
+       "name": "CycleAccumulationInitialized",
+       "from": 34524,
+       "to": 34652
+      },
+      {
+       "name": "CycleTime",
+       "from": 34680,
+       "to": 34808
+      },
+      {
+       "name": "CycleTimeQpc",
+       "from": 34560,
+       "to": 34688
+      },
+      {
+       "name": "Cycles",
+       "from": 34688,
+       "to": 34816
+      },
+      {
+       "name": "CyclesByThreadType",
+       "from": 34480,
+       "to": 34608
+      },
+      {
+       "name": "DebuggerSavedIRQL",
+       "from": 34392,
+       "to": 34520
+      },
+      {
+       "name": "DeepSleep",
+       "from": 34394,
+       "to": 34522
+      },
+      {
+       "name": "DeferredDispatchInterrupts",
+       "from": 13784,
+       "to": 13912
+      },
+      {
+       "name": "DeferredReadyListHead",
+       "from": 11528,
+       "to": 11656
+      },
+      {
+       "name": "DeviceInterrupts",
+       "from": 11672,
+       "to": 11800
+      },
+      {
+       "name": "DieId",
+       "from": 36452,
+       "to": 36580
+      },
+      {
+       "name": "DieProcessorSet",
+       "from": 40192,
+       "to": 40320
+      },
+      {
+       "name": "DispatcherReadyListHead",
+       "from": 33856,
+       "to": 33984
+      },
+      {
+       "name": "DpcData",
+       "from": 14400,
+       "to": 14528
+      },
+      {
+       "name": "DpcDelegateThread",
+       "from": 14392,
+       "to": 14520
+      },
+      {
+       "name": "DpcGate",
+       "from": 33600,
+       "to": 33728
+      },
+      {
+       "name": "DpcLastCount",
+       "from": 14516,
+       "to": 14644
+      },
+      {
+       "name": "DpcLog",
+       "from": 33560,
+       "to": 33688
+      },
+      {
+       "name": "DpcLogBufferSize",
+       "from": 33572,
+       "to": 33700
+      },
+      {
+       "name": "DpcLogIndex",
+       "from": 33568,
+       "to": 33696
+      },
+      {
+       "name": "DpcNormalDpcPresent",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalLocalInterrupt",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalPriorityAntiStarvation",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalProcessingActive",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalProcessingRequested",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalSpare",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalSwapToDpcDelegate",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalThreadSignal",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcNormalTimerExpiration",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcRequestRate",
+       "from": 14508,
+       "to": 14636
+      },
+      {
+       "name": "DpcRequestSlot",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcRequestSummary",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcRoutineActive",
+       "from": 14522,
+       "to": 14650
+      },
+      {
+       "name": "DpcRuntimeHistoryCleanupTime",
+       "from": 14360,
+       "to": 14488
+      },
+      {
+       "name": "DpcRuntimeHistoryHashTable",
+       "from": 14352,
+       "to": 14480
+      },
+      {
+       "name": "DpcStack",
+       "from": 14496,
+       "to": 14624
+      },
+      {
+       "name": "DpcThreadActive",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcThreadRequested",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcThreadSpare",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "DpcTime",
+       "from": 34380,
+       "to": 34508
+      },
+      {
+       "name": "DpcTimeCount",
+       "from": 34396,
+       "to": 34524
+      },
+      {
+       "name": "DpcTimeLimitTicks",
+       "from": 34400,
+       "to": 34528
+      },
+      {
+       "name": "DpcWatchdogCount",
+       "from": 33708,
+       "to": 33836
+      },
+      {
+       "name": "DpcWatchdogDpc",
+       "from": 35624,
+       "to": 35752
+      },
+      {
+       "name": "DpcWatchdogPeriodTicks",
+       "from": 33704,
+       "to": 33832
+      },
+      {
+       "name": "DpcWatchdogProfile",
+       "from": 36584,
+       "to": 36712
+      },
+      {
+       "name": "DpcWatchdogProfileBufferSize",
+       "from": 14556,
+       "to": 14684
+      },
+      {
+       "name": "DpcWatchdogProfileCumulativeDpcThresholdTicks",
+       "from": 33716,
+       "to": 33844
+      },
+      {
+       "name": "DpcWatchdogProfileCurrentEmptyCapture",
+       "from": 36592,
+       "to": 36720
+      },
+      {
+       "name": "DpcWatchdogProfileSingleDpcThresholdTicks",
+       "from": 34624,
+       "to": 34752
+      },
+      {
+       "name": "DpcWatchdogSequenceNumber",
+       "from": 33772,
+       "to": 33900
+      },
+      {
+       "name": "EfficiencyScoreByClass",
+       "from": 34508,
+       "to": 34636
+      },
+      {
+       "name": "EntropyTimingState",
+       "from": 36896,
+       "to": 37024
+      },
+      {
+       "name": "EtwSupport",
+       "from": 35816,
+       "to": 35944
+      },
+      {
+       "name": "ExSaPageArray",
+       "from": 35824,
+       "to": 35952
+      },
+      {
+       "name": "ExceptionStack",
+       "from": 34664,
+       "to": 34792
+      },
+      {
+       "name": "ExceptionStackActive",
+       "from": 34662,
+       "to": 34790
+      },
+      {
+       "name": "ExtendedState",
+       "from": 36880,
+       "to": 37008
+      },
+      {
+       "name": "ExtendedSupervisorState",
+       "from": 1792,
+       "to": 1920
+      },
+      {
+       "name": "FeatureBits",
+       "from": 36832,
+       "to": 36960
+      },
+      {
+       "name": "ForceIdleDpc",
+       "from": 35560,
+       "to": 35688
+      },
+      {
+       "name": "ForceParkDutyCycleData",
+       "from": 34544,
+       "to": 34672
+      },
+      {
+       "name": "FreezeForRecoveryDpc",
+       "from": 40720,
+       "to": 40848
+      },
+      {
+       "name": "FsCounters",
+       "from": 36800,
+       "to": 36928
+      },
+      {
+       "name": "GenerationTarget",
+       "from": 35864,
+       "to": 35992
+      },
+      {
+       "name": "Ghcb",
+       "from": 35888,
+       "to": 36016
+      },
+      {
+       "name": "GroupModuleProcessorSet",
+       "from": 36536,
+       "to": 36664
+      },
+      {
+       "name": "GroupSchedulingOverQuota",
+       "from": 34393,
+       "to": 34521
+      },
+      {
+       "name": "HiberSwapShadowStackBases",
+       "from": 39968,
+       "to": 40096
+      },
+      {
+       "name": "HiberSwapShadowStacks",
+       "from": 39928,
+       "to": 40056
+      },
+      {
+       "name": "HypercallCachedPages",
+       "from": 35904,
+       "to": 36032
+      },
+      {
+       "name": "HypercallPageList",
+       "from": 35840,
+       "to": 35968
+      },
+      {
+       "name": "IdleSchedule",
+       "from": 14523,
+       "to": 14651
+      },
+      {
+       "name": "InterruptCount",
+       "from": 34368,
+       "to": 34496
+      },
+      {
+       "name": "InterruptLastCount",
+       "from": 11680,
+       "to": 11808
+      },
+      {
+       "name": "InterruptObject",
+       "from": 14592,
+       "to": 14720
+      },
+      {
+       "name": "InterruptObjectPool",
+       "from": 14336,
+       "to": 14464
+      },
+      {
+       "name": "InterruptRate",
+       "from": 11684,
+       "to": 11812
+      },
+      {
+       "name": "InterruptTime",
+       "from": 34384,
+       "to": 34512
+      },
+      {
+       "name": "IoIrpStackProfilerCurrent",
+       "from": 37760,
+       "to": 37888
+      },
+      {
+       "name": "IoIrpStackProfilerPrevious",
+       "from": 37844,
+       "to": 37972
+      },
+      {
+       "name": "IoOtherOperationCount",
+       "from": 11620,
+       "to": 11748
+      },
+      {
+       "name": "IoOtherTransferCount",
+       "from": 11640,
+       "to": 11768
+      },
+      {
+       "name": "IoReadOperationCount",
+       "from": 11612,
+       "to": 11740
+      },
+      {
+       "name": "IoReadTransferCount",
+       "from": 11624,
+       "to": 11752
+      },
+      {
+       "name": "IoWriteOperationCount",
+       "from": 11616,
+       "to": 11744
+      },
+      {
+       "name": "IoWriteTransferCount",
+       "from": 11632,
+       "to": 11760
+      },
+      {
+       "name": "IpiFrame",
+       "from": 39640,
+       "to": 39768
+      },
+      {
+       "name": "IpiFrozen",
+       "from": 11656,
+       "to": 11784
+      },
+      {
+       "name": "IsrDpcStats",
+       "from": 11664,
+       "to": 11792
+      },
+      {
+       "name": "IsrStack",
+       "from": 36888,
+       "to": 37016
+      },
+      {
+       "name": "IsrStackNesting",
+       "from": 41504,
+       "to": 41632
+      },
+      {
+       "name": "IstShadowStacksTable",
+       "from": 39920,
+       "to": 40048
+      },
+      {
+       "name": "KeAlignmentFixupCount",
+       "from": 35832,
+       "to": 35960
+      },
+      {
+       "name": "KeContextSwitches",
+       "from": 11580,
+       "to": 11708
+      },
+      {
+       "name": "KeExceptionDispatchCount",
+       "from": 34416,
+       "to": 34544
+      },
+      {
+       "name": "KeSpinLockOrdering",
+       "from": 33712,
+       "to": 33840
+      },
+      {
+       "name": "KeSystemCalls",
+       "from": 11576,
+       "to": 11704
+      },
+      {
+       "name": "KernelShadowStackInitial",
+       "from": 39912,
+       "to": 40040
+      },
+      {
+       "name": "KernelTime",
+       "from": 34372,
+       "to": 34500
+      },
+      {
+       "name": "KstackFreeDpc",
+       "from": 41360,
+       "to": 41488
+      },
+      {
+       "name": "KstackFreeList",
+       "from": 41488,
+       "to": 41616
+      },
+      {
+       "name": "LLCMask",
+       "from": 36528,
+       "to": 36656
+      },
+      {
+       "name": "LastTick",
+       "from": 14528,
+       "to": 14656
+      },
+      {
+       "name": "LocalCoreControlBlock",
+       "from": 41304,
+       "to": 41432
+      },
+      {
+       "name": "LocalSearchContexts",
+       "from": 37960,
+       "to": 38088
+      },
+      {
+       "name": "LocalSharedReadyQueue",
+       "from": 37952,
+       "to": 38080
+      },
+      {
+       "name": "LockQueue",
+       "from": 1840,
+       "to": 1968
+      },
+      {
+       "name": "LogicalProcessorsPerModule",
+       "from": 40716,
+       "to": 40844
+      },
+      {
+       "name": "LookasideIrpFloat",
+       "from": 11676,
+       "to": 11804
+      },
+      {
+       "name": "Mailbox",
+       "from": 39680,
+       "to": 39808
+      },
+      {
+       "name": "MaximumDpcQueueDepth",
+       "from": 14504,
+       "to": 14632
+      },
+      {
+       "name": "MceActive",
+       "from": 33703,
+       "to": 33831
+      },
+      {
+       "name": "MceRecoveryContext",
+       "from": 34528,
+       "to": 34656
+      },
+      {
+       "name": "McheckContext",
+       "from": 39744,
+       "to": 39872
+      },
+      {
+       "name": "MinimumDpcRate",
+       "from": 14512,
+       "to": 14640
+      },
+      {
+       "name": "MmCacheIoCount",
+       "from": 34864,
+       "to": 34992
+      },
+      {
+       "name": "MmCacheReadCount",
+       "from": 34860,
+       "to": 34988
+      },
+      {
+       "name": "MmCacheTransitionCount",
+       "from": 34856,
+       "to": 34984
+      },
+      {
+       "name": "MmCopyOnWriteCount",
+       "from": 11540,
+       "to": 11668
+      },
+      {
+       "name": "MmDemandZeroCount",
+       "from": 11548,
+       "to": 11676
+      },
+      {
+       "name": "MmDirtyPagesWriteCount",
+       "from": 11560,
+       "to": 11688
+      },
+      {
+       "name": "MmDirtyWriteIoCount",
+       "from": 11564,
+       "to": 11692
+      },
+      {
+       "name": "MmFaultCompletionInfo",
+       "from": 40008,
+       "to": 40136
+      },
+      {
+       "name": "MmInternal",
+       "from": 34872,
+       "to": 35000
+      },
+      {
+       "name": "MmMappedPagesWriteCount",
+       "from": 11568,
+       "to": 11696
+      },
+      {
+       "name": "MmMappedWriteIoCount",
+       "from": 11572,
+       "to": 11700
+      },
+      {
+       "name": "MmPageFaultCount",
+       "from": 11536,
+       "to": 11664
+      },
+      {
+       "name": "MmPageReadCount",
+       "from": 11552,
+       "to": 11680
+      },
+      {
+       "name": "MmPageReadIoCount",
+       "from": 11556,
+       "to": 11684
+      },
+      {
+       "name": "MmSpinLockOrdering",
+       "from": 34672,
+       "to": 34800
+      },
+      {
+       "name": "MmTransitionCount",
+       "from": 11544,
+       "to": 11672
+      },
+      {
+       "name": "ModuleId",
+       "from": 36448,
+       "to": 36576
+      },
+      {
+       "name": "ModuleProcessorSet",
+       "from": 40784,
+       "to": 40912
+      },
+      {
+       "name": "MsrIa32TsxCtrl",
+       "from": 11520,
+       "to": 11648
+      },
+      {
+       "name": "NmiActive",
+       "from": 33702,
+       "to": 33830
+      },
+      {
+       "name": "NodeColor",
+       "from": 34644,
+       "to": 34772
+      },
+      {
+       "name": "NormalDpcState",
+       "from": 14524,
+       "to": 14652
+      },
+      {
+       "name": "NormalPriorityQueueIndex",
+       "from": 33764,
+       "to": 33892
+      },
+      {
+       "name": "NormalPriorityReadyScanTick",
+       "from": 33768,
+       "to": 33896
+      },
+      {
+       "name": "NumberOfSecureFaults",
+       "from": 34568,
+       "to": 34696
+      },
+      {
+       "name": "PPLookasideList",
+       "from": 2112,
+       "to": 2240
+      },
+      {
+       "name": "PackageId",
+       "from": 36456,
+       "to": 36584
+      },
+      {
+       "name": "PackageProcessorSet",
+       "from": 35920,
+       "to": 36048
+      },
+      {
+       "name": "PacketBarrier",
+       "from": 11648,
+       "to": 11776
+      },
+      {
+       "name": "PageColor",
+       "from": 34640,
+       "to": 34768
+      },
+      {
+       "name": "PairPrcb",
+       "from": 11696,
+       "to": 11824
+      },
+      {
+       "name": "PairRegister",
+       "from": 1824,
+       "to": 1952
+      },
+      {
+       "name": "PerformanceScoreByClass",
+       "from": 34492,
+       "to": 34620
+      },
+      {
+       "name": "PeriodicBias",
+       "from": 34408,
+       "to": 34536
+      },
+      {
+       "name": "PeriodicCount",
+       "from": 34404,
+       "to": 34532
+      },
+      {
+       "name": "PowerState",
+       "from": 34880,
+       "to": 35008
+      },
+      {
+       "name": "PrcbPad100",
+       "from": 36829,
+       "to": 36957
+      },
+      {
+       "name": "PrcbPad101",
+       "from": 36464,
+       "to": 36592
+      },
+      {
+       "name": "PrcbPad105",
+       "from": 36860,
+       "to": 36988
+      },
+      {
+       "name": "PrcbPad115",
+       "from": 36876,
+       "to": 37004
+      },
+      {
+       "name": "PrcbPad125",
+       "from": 38008,
+       "to": 38136
+      },
+      {
+       "name": "PrcbPad127",
+       "from": 38020,
+       "to": 38148
+      },
+      {
+       "name": "PrcbPad128",
+       "from": 38280,
+       "to": 38408
+      },
+      {
+       "name": "PrcbPad129",
+       "from": 39648,
+       "to": 39776
+      },
+      {
+       "name": "PrcbPad12a",
+       "from": 1808,
+       "to": 1936
+      },
+      {
+       "name": "PrcbPad12b",
+       "from": 1821,
+       "to": 1949
+      },
+      {
+       "name": "PrcbPad12c",
+       "from": 1838,
+       "to": 1966
+      },
+      {
+       "name": "PrcbPad13",
+       "from": 2368,
+       "to": 2496
+      },
+      {
+       "name": "PrcbPad130",
+       "from": 39688,
+       "to": 39816
+      },
+      {
+       "name": "PrcbPad132",
+       "from": 40016,
+       "to": 40144
+      },
+      {
+       "name": "PrcbPad134b",
+       "from": 40160,
+       "to": 40288
+      },
+      {
+       "name": "PrcbPad135",
+       "from": 40456,
+       "to": 40584
+      },
+      {
+       "name": "PrcbPad136",
+       "from": 41048,
+       "to": 41176
+      },
+      {
+       "name": "PrcbPad137a",
+       "from": 41352,
+       "to": 41480
+      },
+      {
+       "name": "PrcbPad138",
+       "from": 41508,
+       "to": 41636
+      },
+      {
+       "name": "PrcbPad30",
+       "from": 11660,
+       "to": 11788
+      },
+      {
+       "name": "PrcbPad31",
+       "from": 11688,
+       "to": 11816
+      },
+      {
+       "name": "PrcbPad35",
+       "from": 14328,
+       "to": 14456
+      },
+      {
+       "name": "PrcbPad40",
+       "from": 11584,
+       "to": 11712
+      },
+      {
+       "name": "PrcbPad52",
+       "from": 33624,
+       "to": 33752
+      },
+      {
+       "name": "PrcbPad60",
+       "from": 33700,
+       "to": 33828
+      },
+      {
+       "name": "PrcbPad80",
+       "from": 34395,
+       "to": 34523
+      },
+      {
+       "name": "PrcbPad81",
+       "from": 34656,
+       "to": 34784
+      },
+      {
+       "name": "PrcbPad82",
+       "from": 34628,
+       "to": 34756
+      },
+      {
+       "name": "PrcbPad83",
+       "from": 34525,
+       "to": 34653
+      },
+      {
+       "name": "PrcbPad85",
+       "from": 35896,
+       "to": 36024
+      },
+      {
+       "name": "PrcbPad86",
+       "from": 36184,
+       "to": 36312
+      },
+      {
+       "name": "PrcbPad87",
+       "from": 34648,
+       "to": 34776
+      },
+      {
+       "name": "PrcbPad90",
+       "from": 35520,
+       "to": 35648
+      },
+      {
+       "name": "PrcbPad91",
+       "from": 34868,
+       "to": 34996
+      },
+      {
+       "name": "PrcbPad92",
+       "from": 33580,
+       "to": 33708
+      },
+      {
+       "name": "PrcbPad94",
+       "from": 36792,
+       "to": 36920
+      },
+      {
+       "name": "PrcbPad95",
+       "from": 35836,
+       "to": 35964
+      },
+      {
+       "name": "PrcbPad96",
+       "from": 35496,
+       "to": 35624
+      },
+      {
+       "name": "PrcbPad97",
+       "from": 36552,
+       "to": 36680
+      },
+      {
+       "name": "PrcbPad98",
+       "from": 35688,
+       "to": 35816
+      },
+      {
+       "name": "ProcessorFlags",
+       "from": 1804,
+       "to": 1932
+      },
+      {
+       "name": "ProcessorId",
+       "from": 36440,
+       "to": 36568
+      },
+      {
+       "name": "ProcessorProfileControlArea",
+       "from": 36568,
+       "to": 36696
+      },
+      {
+       "name": "ProcessorSignature",
+       "from": 1800,
+       "to": 1928
+      },
+      {
+       "name": "ProcessorStateReserved",
+       "from": 1760,
+       "to": 1888
+      },
+      {
+       "name": "ProfileEventIndexAddress",
+       "from": 36576,
+       "to": 36704
+      },
+      {
+       "name": "PteBitCache",
+       "from": 36848,
+       "to": 36976
+      },
+      {
+       "name": "PteBitOffset",
+       "from": 36856,
+       "to": 36984
+      },
+      {
+       "name": "QuantumEnd",
+       "from": 14521,
+       "to": 14649
+      },
+      {
+       "name": "QueueIndex",
+       "from": 33760,
+       "to": 33888
+      },
+      {
+       "name": "RcuData",
+       "from": 14560,
+       "to": 14688
+      },
+      {
+       "name": "ReadyQueueExpectedRunTime",
+       "from": 34424,
+       "to": 34552
+      },
+      {
+       "name": "ReadyScanTick",
+       "from": 14536,
+       "to": 14664
+      },
+      {
+       "name": "ReadySummary",
+       "from": 33752,
+       "to": 33880
+      },
+      {
+       "name": "ReadyThreadCount",
+       "from": 34420,
+       "to": 34548
+      },
+      {
+       "name": "ScanSiblingIndex",
+       "from": 36500,
+       "to": 36628
+      },
+      {
+       "name": "ScanSiblingMask",
+       "from": 36520,
+       "to": 36648
+      },
+      {
+       "name": "ScbList",
+       "from": 35528,
+       "to": 35656
+      },
+      {
+       "name": "ScbQueue",
+       "from": 33840,
+       "to": 33968
+      },
+      {
+       "name": "SchedulerAssist",
+       "from": 36600,
+       "to": 36728
+      },
+      {
+       "name": "SearchContexts",
+       "from": 37976,
+       "to": 38104
+      },
+      {
+       "name": "SearchGenerations",
+       "from": 37992,
+       "to": 38120
+      },
+      {
+       "name": "SecureFault",
+       "from": 37928,
+       "to": 38056
+      },
+      {
+       "name": "SelfmapLockHandle",
+       "from": 40064,
+       "to": 40192
+      },
+      {
+       "name": "SharedQueueScanOwner",
+       "from": 36496,
+       "to": 36624
+      },
+      {
+       "name": "SharedReadyQueue",
+       "from": 36488,
+       "to": 36616
+      },
+      {
+       "name": "SharedReadyQueueMask",
+       "from": 36480,
+       "to": 36608
+      },
+      {
+       "name": "SingleDpcSoftTimeLimitTicks",
+       "from": 14540,
+       "to": 14668
+      },
+      {
+       "name": "SingleDpcSoftTimeoutEventInfo",
+       "from": 14544,
+       "to": 14672
+      },
+      {
+       "name": "SlistRollbackDpc",
+       "from": 41424,
+       "to": 41552
+      },
+      {
+       "name": "SmtIsolationThread",
+       "from": 36544,
+       "to": 36672
+      },
+      {
+       "name": "StartCycles",
+       "from": 34432,
+       "to": 34560
+      },
+      {
+       "name": "StartCyclesQpc",
+       "from": 34552,
+       "to": 34680
+      },
+      {
+       "name": "StaticAffinity",
+       "from": 11704,
+       "to": 11832
+      },
+      {
+       "name": "StaticRescheduleContext",
+       "from": 14312,
+       "to": 14440
+      },
+      {
+       "name": "StatisticsPage",
+       "from": 35856,
+       "to": 35984
+      },
+      {
+       "name": "StibpPairingTrace",
+       "from": 37240,
+       "to": 37368
+      },
+      {
+       "name": "SymCryptEntropyAccumulatorState",
+       "from": 37376,
+       "to": 37504
+      },
+      {
+       "name": "SynchCounters",
+       "from": 36608,
+       "to": 36736
+      },
+      {
+       "name": "SystemWorkKickInProgress",
+       "from": 34661,
+       "to": 34789
+      },
+      {
+       "name": "TaggedCycles",
+       "from": 34440,
+       "to": 34568
+      },
+      {
+       "name": "TargetCount",
+       "from": 11652,
+       "to": 11780
+      },
+      {
+       "name": "TbFlushListActive",
+       "from": 34663,
+       "to": 34791
+      },
+      {
+       "name": "ThreadDpcEnable",
+       "from": 14520,
+       "to": 14648
+      },
+      {
+       "name": "ThreadDpcState",
+       "from": 14526,
+       "to": 14654
+      },
+      {
+       "name": "TimerExpirationDpc",
+       "from": 33776,
+       "to": 33904
+      },
+      {
+       "name": "TimerExpirationTrace",
+       "from": 38024,
+       "to": 38152
+      },
+      {
+       "name": "TimerExpirationTraceCount",
+       "from": 38016,
+       "to": 38144
+      },
+      {
+       "name": "TimerTable",
+       "from": 16640,
+       "to": 16768
+      },
+      {
+       "name": "TopologyId",
+       "from": 36440,
+       "to": 36568
+      },
+      {
+       "name": "TransitionShadowStack",
+       "from": 39904,
+       "to": 40032
+      },
+      {
+       "name": "TrappedSecurityDomain",
+       "from": 1808,
+       "to": 1936
+      },
+      {
+       "name": "UpdateSignature",
+       "from": 36840,
+       "to": 36968
+      },
+      {
+       "name": "UserTime",
+       "from": 34376,
+       "to": 34504
+      },
+      {
+       "name": "VendorString",
+       "from": 36816,
+       "to": 36944
+      },
+      {
+       "name": "VirtualApicAssist",
+       "from": 35912,
+       "to": 36040
+      },
+      {
+       "name": "VirtualApicAssistPage",
+       "from": 35872,
+       "to": 36000
+      },
+      {
+       "name": "VmInternal",
+       "from": 35728,
+       "to": 35856
+      },
+      {
+       "name": "WaitListHead",
+       "from": 33728,
+       "to": 33856
+      },
+      {
+       "name": "WaitLock",
+       "from": 33744,
+       "to": 33872
+      },
+      {
+       "name": "WheaInfo",
+       "from": 35808,
+       "to": 35936
+      },
+      {
+       "name": "WorkSubQueueIndex",
+       "from": 33576,
+       "to": 33704
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PrcbPad138",
+       "from": 3164,
+       "to": 3036
+      },
+      {
+       "name": "ProcessorState",
+       "from": 1504,
+       "to": 1632
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "PrcbPad138",
+       "from": "unsigned char[3164]",
+       "to": "unsigned char[3036]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPROCESSOR_APX_REGISTERS",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "_KPROCESSOR_STATE",
+     "size_from": 1504,
+     "size_to": 1632,
+     "members_added": [
+      "ApxRegisters"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "DescriptorLayout"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_HP_PG_CONFIG",
+     "size_from": 1,
+     "size_to": 1,
+     "members_added": [
+      "Spare"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEGMENT_HEAP",
+     "size_from": 2624,
+     "size_to": 2688,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "LfhContext",
+       "from": 896,
+       "to": 960
+      },
+      {
+       "name": "PgContext",
+       "from": 808,
+       "to": 800
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PgContext",
+       "from": 88,
+       "to": 144
+      },
+      {
+       "name": "VsContext",
+       "from": 104,
+       "to": 96
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_ANTITAMPER_ENTRY",
+     "size_from": 64,
+     "size_to": 64,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "ObjectTypePolicies",
+       "to": "ObjectTypeMacls",
+       "offset": 56,
+       "size": 8
+      }
+     ]
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_ENTRY",
+     "status": "removed",
+     "size_from": 32,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_ANTITAMPER_SID",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_MACL",
+     "status": "added",
+     "size_from": null,
+     "size_to": 272
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES",
+     "status": "removed",
+     "size_from": 272,
+     "size_to": null
+    },
+    {
+     "type": "_SEP_OBJECT_TYPE_ANTITAMPER_POLICY",
+     "status": "removed",
+     "size_from": 16,
+     "size_to": null
+    },
+    {
+     "type": "_XSAVE_APX_F_FORMAT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 128
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_NTOS",
+     "status": "removed"
+    },
+    {
+     "enum": "_RTL_CONTEXT_OPERATION_FLAGS",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "RTL_CONTEXT_OPERATION_DEFAULT"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": []
+    },
+    {
+     "enum": "_SE_ANTITAMPER_ENUM_SID",
+     "status": "removed"
+    },
+    {
+     "enum": "_VRF_RULE_CLASS_ID",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "DifPluginMemTracking"
+     ],
+     "constants_removed": [
+      "ReservedForDVRF57"
+     ],
+     "constants_renumbered": []
+    }
+   ]
+  },
   {
    "channel": "11-25H2",
    "machine": "amd64",

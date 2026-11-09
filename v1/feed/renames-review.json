@@ -6,7 +6,7 @@
   "candidates": []
  },
  "not_a_rename": {
-  "count": 28,
+  "count": 31,
   "note": "one side is reserved or padding, so the meaning changed rather than the label; an alias here would mislead",
   "candidates": [
    {
@@ -62,7 +62,7 @@
     "bit_position": 0,
     "bit_count": 0,
     "kind": "repurposed",
-    "observations": 3
+    "observations": 4
    },
    {
     "type": "_ETHREAD",
@@ -87,6 +87,17 @@
     "observations": 4
    },
    {
+    "type": "_HEAP_PAGE_RANGE_DESCRIPTOR",
+    "from": "SuballocatorState",
+    "to": "Spare",
+    "offset": 27,
+    "size": 1,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
     "type": "_HV_X64_HYPERVISOR_FEATURES",
     "from": "SvmFeaturesAvailable",
     "to": "PasidFeaturesAvailable",
@@ -107,6 +118,28 @@
     "bit_count": 0,
     "kind": "repurposed",
     "observations": 7
+   },
+   {
+    "type": "_KEXCEPTION_FRAME",
+    "from": "Spare1",
+    "to": "R30",
+    "offset": 40,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
+   },
+   {
+    "type": "_KEXCEPTION_FRAME",
+    "from": "Spare2",
+    "to": "R31",
+    "offset": 232,
+    "size": 8,
+    "bit_position": 0,
+    "bit_count": 0,
+    "kind": "repurposed",
+    "observations": 1
    },
    {
     "type": "_KPRCB",

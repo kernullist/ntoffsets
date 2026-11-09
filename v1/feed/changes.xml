@@ -2,10 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-08T13:35:36Z</updated>
+<updated>2026-11-09T16:33:09Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>11-26H1 amd64 KB5127646 -&gt; 10.0.28000.3365: RTLP_HP_LFH_PERF_FLAGS, _ETHREAD, _HEAP_LFH_CONTEXT, _HEAP_PAGE_RANGE_DESCRIPTOR, and 25 more</title>
+<id>urn:ntoffsets:feed:changes:29542158DC36B6D41D7F2DD8CB7CE68A1:238C901F42C19C9291DBE4744A4854581</id>
+<updated>2026-10-28T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/238C901F42C19C9291DBE4744A4854581.json"/>
+<summary>25 type(s) changed in KB5127653 (11-26H1, amd64)</summary>
+<content type="text">RTLP_HP_LFH_PERF_FLAGS: added: PgDelayFreeAmountHigh; bitfields: 1
+_ETHREAD: renamed: UpdateTebSpareByte2 -&gt; EtwThreadStackRundownPriorityFloorCount
+_HEAP_LFH_CONTEXT: moved: 7; resized: 1
+_HEAP_PAGE_RANGE_DESCRIPTOR: removed: ListEntry; renamed: SuballocatorState -&gt; Spare
+_HEAP_PG_CONTEXT: size 0x58 -&gt; 0x90; added: BusyDescriptorCount, BusyDescriptors, DelayFreeCommitPageLimit, DelayFreedDescriptorCount, DelayFreedDescriptors, EnvHandle ...; removed: UseFillPatternOnly; moved: 4; resized: 1
+_HEAP_SEG_CONTEXT: removed: DelayFreePageRanges; moved: 3
+_HEAP_SUBALLOCATOR_CALLBACKS: size 0x38 -&gt; 0x30; removed: AccessState
+_HEAP_VS_CONTEXT: size 0x68 -&gt; 0x60; moved: 3; resized: 1
+_KERNEL_CET_CONTEXT: added
+_KEXCEPTION_FRAME: renamed: Spare1 -&gt; R30, Spare2 -&gt; R31
+_KPRCB: added: ContextApxFState, ContextKernelCet, ContextXStateHeader; removed: PrcbPad84; moved: 331; resized: 2; retyped: 1
+_KPROCESSOR_APX_REGISTERS: added
+_KPROCESSOR_STATE: size 0x5e0 -&gt; 0x660; added: ApxRegisters
+_RTL_FEATURE_DESCRIPTOR_LAYOUT: added
+_RTL_FEATURE_USAGE_CONTEXT: size 0x20 -&gt; 0x30; added: DescriptorLayout
+_RTL_HP_PG_CONFIG: added: Spare
+_SEGMENT_HEAP: size 0xa40 -&gt; 0xa80; moved: 2; resized: 2
+_SEP_ANTITAMPER_ENTRY: renamed: ObjectTypePolicies -&gt; ObjectTypeMacls
+_SEP_OBJECT_ANTITAMPER_ENTRY: removed
+_SEP_OBJECT_ANTITAMPER_SID: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_MACL: added
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICIES: removed
+_SEP_OBJECT_TYPE_ANTITAMPER_POLICY: removed
+_XSAVE_APX_F_FORMAT: added
+wil_details_FeatureDescriptor: added: requiresInitGuard
+EmptyCVariant_FeatureStaging_NTOS: removed
+_RTL_CONTEXT_OPERATION_FLAGS: added: RTL_CONTEXT_OPERATION_DEFAULT
+_SE_ANTITAMPER_ENUM_SID: removed
+_VRF_RULE_CLASS_ID: added: DifPluginMemTracking; removed: ReservedForDVRF57</content>
+</entry>
 <entry>
 <title>11-25H2 amd64 10.0.26100.6584 -&gt; KB5127936: PO_MEMORY_IMAGE, _ALPC_WORK_ON_BEHALF_TICKET, _AMD64_DR7_REG, _ARM64_BCR_REG, and 79 more</title>
 <id>urn:ntoffsets:feed:changes:E6426A07C26E66F8EB8594621A7B273B1:983AD639682E5BD1EFAC90D9275002E21</id>
@@ -4272,14 +4308,6 @@ _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 <updated>2025-08-12T00:00:00Z</updated>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C4C42156D35ADC5B96994FD42A6EC7B61.json"/>
 <summary>1 type(s) changed in KB5063877 (1809, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>1607 amd64 10.0.14393.8246 -&gt; 10.0.14393.8330: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:39C0001161C344BBB7598C13FD96BD9B1:CD646780614C4E5F85A988A5925BB7AF1</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/CD646780614C4E5F85A988A5925BB7AF1.json"/>
-<summary>1 type(s) changed in KB5063871 (1607, amd64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
 </feed>
