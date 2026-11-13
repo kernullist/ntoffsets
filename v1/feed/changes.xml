@@ -2,10 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-12T15:25:39Z</updated>
+<updated>2026-11-13T14:44:11Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>21H2 amd64 KB5134125 -&gt; 10.0.19041.7844: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:4D5683AD56125F6EAA72A12CFA4E35001:E2672D6A639304ECAF7D417B71DC4D0B1</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/E2672D6A639304ECAF7D417B71DC4D0B1.json"/>
+<summary>2 type(s) changed in KB5131096 (21H2, amd64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>1809 amd64 KB5126651 -&gt; 10.0.17763.9479: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:A85DD17960E99C5CA34F30C8B0E4DF591:D2C0AB39DE6CF045A4EBF3543155674E1</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/D2C0AB39DE6CF045A4EBF3543155674E1.json"/>
+<summary>2 type(s) changed in KB5131085 (1809, amd64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>11-23H2 amd64 KB5122880 -&gt; 10.0.22621.7711: _NONOPAQUE_OPLOCK, _OB_HANDLE_REVOCATION_BLOCK, _OPLOCK_CANCEL_BLOCK, _SEP_LOGON_SESSION_REFERENCES, and 3 more</title>
+<id>urn:ntoffsets:feed:changes:16E70ED23FFB03A11A5E8E0669E373BE1:BD9B260378F38D224E35690AB75D51A61</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/BD9B260378F38D224E35690AB75D51A61.json"/>
+<summary>5 type(s) changed in KB5131087 (11-23H2, amd64)</summary>
+<content type="text">_NONOPAQUE_OPLOCK: size 0xa0 -&gt; 0xa8; added: CancelBlock
+_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_OPLOCK_CANCEL_BLOCK: added
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1
+_WMI_LOGGER_CONTEXT: size 0x540 -&gt; 0x550; added: PlaceholderSList; moved: 11
+EmptyCVariant_FeatureStaging_Feature_MSRC130888: added
+EmptyCVariant_FeatureStaging_Feature_MSRC139537: added</content>
+</entry>
 <entry>
 <title>11-26H1 amd64 KB5127646 -&gt; 10.0.28000.3365: RTLP_HP_LFH_PERF_FLAGS, _ETHREAD, _HEAP_LFH_CONTEXT, _HEAP_PAGE_RANGE_DESCRIPTOR, and 25 more</title>
 <id>urn:ntoffsets:feed:changes:29542158DC36B6D41D7F2DD8CB7CE68A1:238C901F42C19C9291DBE4744A4854581</id>
@@ -4285,29 +4317,5 @@ FEATURE_CHANGE_TIME: added: FEATURE_CHANGE_TIME_EXTERNAL_FLAG, FEATURE_CHANGE_TI
 UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
 _EXT_IOMMU_DEVICE_TYPE: removed: EXT_IOMMU_DEVICE_TYPE_GIC; renumbered: EXT_IOMMU_DEVICE_TYPE_MAX 7-&gt;6, EXT_IOMMU_DEVICE_TYPE_TEST 6-&gt;5
 _HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
-</entry>
-<entry>
-<title>21H2 arm64 KB5062554 -&gt; KB5063709: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:D448047E3794298DCE0871A8129647181:3013771A4EE49D33D73217D6E6DF90971</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/3013771A4EE49D33D73217D6E6DF90971.json"/>
-<summary>1 type(s) changed in KB5063709 (21H2, arm64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>21H2 amd64 10.0.19041.6093 -&gt; 10.0.19041.6216: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:495E39042A6983378CBD822FEB4E91ED1:B6121DA15DDCF625C8C7273C0D85EB101</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/B6121DA15DDCF625C8C7273C0D85EB101.json"/>
-<summary>1 type(s) changed in KB5063709 (21H2, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>1809 amd64 10.0.17763.7558 -&gt; 10.0.17763.7671: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:70EBB62A57774A0C01C2B776107F42231:C4C42156D35ADC5B96994FD42A6EC7B61</id>
-<updated>2025-08-12T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C4C42156D35ADC5B96994FD42A6EC7B61.json"/>
-<summary>1 type(s) changed in KB5063877 (1809, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
 </feed>

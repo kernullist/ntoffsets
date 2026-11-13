@@ -1,7 +1,27 @@
 {
  "schema": 1,
- "count": 372,
+ "count": 374,
  "aliases": [
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "Feature_PlutonIntelDynamicUpgrade_Enabled",
+   "to": "Feature_PlutonMDS_Enabled",
+   "offset": 1148,
+   "size": 4,
+   "bit_position": 17,
+   "bit_count": 1,
+   "observations": 1
+  },
+  {
+   "type": "PO_MEMORY_IMAGE",
+   "from": "Feature_PlutonKSP_Enabled",
+   "to": "Feature_IntelDynamicUpgrade_Enabled",
+   "offset": 1148,
+   "size": 4,
+   "bit_position": 18,
+   "bit_count": 1,
+   "observations": 1
+  },
   {
    "type": "PO_MEMORY_IMAGE",
    "from": "FreeMapCheck",
@@ -90,7 +110,7 @@
    "size": 4,
    "bit_position": 3,
    "bit_count": 1,
-   "observations": 153
+   "observations": 155
   },
   {
    "type": "RTLP_HP_LFH_PERF_FLAGS",
@@ -280,7 +300,7 @@
    "size": 24,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 747
+   "observations": 757
   },
   {
    "type": "_DYNAMIC_FUNCTION_TABLE",
@@ -300,7 +320,7 @@
    "size": 4,
    "bit_position": 13,
    "bit_count": 1,
-   "observations": 225
+   "observations": 228
   },
   {
    "type": "_EPROCESS",
@@ -350,7 +370,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 222
+   "observations": 225
   },
   {
    "type": "_ETHREAD",
@@ -370,7 +390,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_GIC3_DATA",
@@ -520,7 +540,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -550,7 +570,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -560,7 +580,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -570,7 +590,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -580,7 +600,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -590,7 +610,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -600,7 +620,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -610,7 +630,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -620,7 +640,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -630,7 +650,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -640,7 +660,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -660,7 +680,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HAL_INTEL_ENLIGHTENMENT_INFORMATION",
@@ -690,7 +710,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 160
+   "observations": 162
   },
   {
    "type": "_HEAP_COUNTERS",
@@ -700,7 +720,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 295
+   "observations": 298
   },
   {
    "type": "_HEAP_COUNTERS",
@@ -710,7 +730,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 828
+   "observations": 839
   },
   {
    "type": "_HEAP_LFH_BUCKET",
@@ -770,7 +790,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 589
+   "observations": 597
   },
   {
    "type": "_HEAP_VS_AFFINITY_SLOT",
@@ -800,7 +820,7 @@
    "size": 16,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 315
+   "observations": 319
   },
   {
    "type": "_IOMMU_DMA_DOMAIN_CREATION_FLAGS",
@@ -940,7 +960,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 225
+   "observations": 228
   },
   {
    "type": "_KPRCB",
@@ -950,7 +970,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 1,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_KPRCB",
@@ -960,7 +980,7 @@
    "size": 1,
    "bit_position": 2,
    "bit_count": 1,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_KPRCB",
@@ -970,7 +990,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 225
+   "observations": 228
   },
   {
    "type": "_KPRCB",
@@ -980,7 +1000,7 @@
    "size": 1,
    "bit_position": 1,
    "bit_count": 1,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_KPRCB",
@@ -1040,7 +1060,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 150
+   "observations": 152
   },
   {
    "type": "_KPRCB",
@@ -2370,7 +2390,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2380,7 +2400,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2400,7 +2420,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MI_SECTION_STATE",
@@ -2410,7 +2430,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MI_SLAB_ALLOCATOR_CONTEXT",
@@ -2560,7 +2580,7 @@
    "size": 16,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MMINPAGE_SUPPORT",
@@ -2610,7 +2630,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 75
+   "observations": 76
   },
   {
    "type": "_MMPAGING_FILE",
@@ -3150,7 +3170,7 @@
    "size": 4,
    "bit_position": 11,
    "bit_count": 1,
-   "observations": 417
+   "observations": 423
   },
   {
    "type": "_POP_FX_DEVICE_STATUS",
@@ -3200,7 +3220,7 @@
    "size": 1,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 72
+   "observations": 73
   },
   {
    "type": "_PO_HIBER_PERF",
@@ -3460,7 +3480,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 236
+   "observations": 241
   },
   {
    "type": "_SEP_OBJECT_ANTITAMPER_SID",
@@ -3470,7 +3490,7 @@
    "size": 4,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 102
+   "observations": 104
   },
   {
    "type": "_SUBSECTION",
@@ -3570,7 +3590,7 @@
    "size": 8,
    "bit_position": 0,
    "bit_count": 0,
-   "observations": 743
+   "observations": 753
   },
   {
    "type": "_flags",
@@ -3700,7 +3720,7 @@
    "size": 4,
    "bit_position": 5,
    "bit_count": 2,
-   "observations": 229
+   "observations": 232
   },
   {
    "type": "wil_details_RecordUsageResult",
