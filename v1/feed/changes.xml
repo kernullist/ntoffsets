@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-13T14:44:11Z</updated>
+<updated>2026-11-14T13:41:51Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
@@ -23,6 +23,34 @@ _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; 
 <summary>2 type(s) changed in KB5131085 (1809, amd64)</summary>
 <content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
 _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>1607 amd64 10.0.14393.9611 -&gt; 10.0.14393.9685: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:85AA96B5991D467BB1DD9744EAD4E0111:9B69B2D714744029B72FF4E52040986C1</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/9B69B2D714744029B72FF4E52040986C1.json"/>
+<summary>2 type(s) changed in KB5131291 (1607, amd64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>11-24H2 amd64 10.0.26100.9711 -&gt; 10.0.26100.9974: PO_MEMORY_IMAGE, _ETHREAD, _MI_PARTITION_STORES, _OB_HANDLE_REVOCATION_BLOCK, and 8 more</title>
+<id>urn:ntoffsets:feed:changes:B661C6FE72991D160FE37C48B8BC54701:CE884F70F5A9025D53DB35D8BE8BFF791</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/CE884F70F5A9025D53DB35D8BE8BFF791.json"/>
+<summary>10 type(s) changed in KB5132061 (11-24H2, amd64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_IntelDynamicUpgrade_Enabled; bitfields: 1
+_ETHREAD: renamed: UpdateTebSpareByte2 -&gt; EtwThreadStackRundownPriorityFloorCount
+_MI_PARTITION_STORES: added: DecompressionOverIoPatternDuringInswap; resized: 1; retyped: 1
+_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_POP_IRP_DATA: resized: 1
+_RTL_FEATURE_DESCRIPTOR_LAYOUT: added
+_RTL_FEATURE_USAGE_CONTEXT: size 0x20 -&gt; 0x30; added: DescriptorLayout
+_SEP_AGENT_ID_DESCRIPTOR: added
+_SEP_LOGON_SESSION_REFERENCES: size 0xc8 -&gt; 0xe0; added: RevocationBlockPtr; moved: 3; resized: 1
+_TOKEN: size 0x5c8 -&gt; 0x5d0; added: AgentIdDescriptor, AgentIdInitializationComplete; moved: 3
+CVariant_MemoryCompressionHCAtLowPriority: added
+EmptyCVariant_FeatureStaging_Feature_MSRC139537: added</content>
 </entry>
 <entry>
 <title>11-23H2 amd64 KB5122880 -&gt; 10.0.22621.7711: _NONOPAQUE_OPLOCK, _OB_HANDLE_REVOCATION_BLOCK, _OPLOCK_CANCEL_BLOCK, _SEP_LOGON_SESSION_REFERENCES, and 3 more</title>
@@ -4270,52 +4298,5 @@ _SHARED_CACHE_MAP: retyped: 1</content>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/10E394B8DD4EC97D5E088112F967FA941.json"/>
 <summary>1 type(s) changed in KB5063842 (22H2, arm64)</summary>
 <content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>22H2 amd64 10.0.19041.6157 -&gt; 10.0.19041.6280: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:BE95F82E6CB52C0AB868F08DAB9D82301:1901E56231EB3DD3C6BF8E90DCC8F6931</id>
-<updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/1901E56231EB3DD3C6BF8E90DCC8F6931.json"/>
-<summary>1 type(s) changed in KB5063842 (22H2, amd64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
-</entry>
-<entry>
-<title>11-23H2 amd64 10.0.22621.2428 -&gt; 10.0.22621.5840: PO_MEMORY_IMAGE, _CM_KCB_UOW, _CM_KEY_BODY, _DIAGNOSTIC_CONTEXT, and 28 more</title>
-<id>urn:ntoffsets:feed:changes:CF32DE2E4A334C7C06FB63FCB6FAFB5C1:E0B1FD29169051BA56A10979635A026A1</id>
-<updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/E0B1FD29169051BA56A10979635A026A1.json"/>
-<summary>28 type(s) changed in KB5064080 (11-23H2, amd64)</summary>
-<content type="text">PO_MEMORY_IMAGE: added: Feature_HibernateRelaxVBSPolicy_Enabled
-_CM_KCB_UOW: added: UpdateEntireSecurity
-_CM_KEY_BODY: added: AccessCheckedLayerHeight
-_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2
-_EJOB: size 0x710 -&gt; 0x718; added: EffectiveGraphicsFreezeCount, JobGraphicsFreezeOptimized; moved: 105
-_EPROCESS: added: Execution, Flags2Available2; removed: ProcessStateChangeInProgress, ProcessStateChangeRequest; renamed: ProcessExecutionState -&gt; Flags2Available1
-_ETHREAD: size 0x900 -&gt; 0x910; added: LastSoftParkElectionGroupAffinity
-_EXT_IOMMU_DEVICE_ID: removed: Gic
-_EXT_IOMMU_DEVICE_ID_GIC: removed
-_KPRCB: added: BhbFlushSequence, BpbDivideOnReturn, BpbTrappedBpbStateReserved2, FlushBhbOnTrap, NumberOfSecureFaults, PrcbPad12d ...; removed: BpbStateReserved; moved: 36; resized: 25; bitfields: 1; retyped: 25; renamed: PrcbPad12 -&gt; PrcbPad12c
-_KSHARED_READY_QUEUE: size 0x680 -&gt; 0x698; added: SoftParkElectionAffinityStats, SoftParkElectionLock, SoftParkElectionThreadCount, Spare3; moved: 6; resized: 1; retyped: 2; renamed: Spare1 -&gt; Group
-_KSHARED_READY_QUEUE_AFFINITY_STATISTICS: added
-_KTRAP_FRAME: added: NmiPreviousSpecCtrl, NmiPreviousSpecCtrlPad
-_LOADER_FEATURE_CONFIGURATION_INFORMATION2: added
-_LOADER_PARAMETER_EXTENSION: size 0xf20 -&gt; 0xf28; added: FeatureConfigurationInformation2
-_PPM_ENGINE_SETTINGS: added: LatencyHintEpp; moved: 1
-_PPM_POLICY_SETTINGS_MASK: added: LatencyHintEpp; bitfields: 1
-_PROCESS_EXECUTION: added
-_PROCESS_EXECUTION_STATE: added
-_PROCESS_EXECUTION_TRANSITION: added
-_PROC_FEEDBACK_COUNTER: moved: 1; resized: 1; retyped: 1
-_PROC_PERF_QOS_CLASS_POLICY: added: LatencyHintEpp; moved: 1
-_SEP_AUDIT_POLICY: size 0x1f -&gt; 0x20; moved: 1; resized: 1
-_TOKEN: resized: 1
-_TOKEN_AUDIT_POLICY: size 0x1e -&gt; 0x1f; resized: 1; retyped: 1
-wil_details_FeatureDescriptor: size 0x30 -&gt; 0x38; added: featureLoggedTraits; moved: 9
-wil_details_FeatureDescriptorMapping: added
-wil_details_FeatureStateCache: added: deviceOpportunityFastPathEnabled, deviceUsageFastPathEnabled; bitfields: 11
-FEATURE_CHANGE_TIME: added: FEATURE_CHANGE_TIME_EXTERNAL_FLAG, FEATURE_CHANGE_TIME_TEST_READY_FLAG
-UoWActionType: added: UoWRecreateKey; renumbered: UoWInvalid 14-&gt;15
-_EXT_IOMMU_DEVICE_TYPE: removed: EXT_IOMMU_DEVICE_TYPE_GIC; renumbered: EXT_IOMMU_DEVICE_TYPE_MAX 7-&gt;6, EXT_IOMMU_DEVICE_TYPE_TEST 6-&gt;5
-_HV_SUBNODE_TYPE: added: HvSubnodeCluster; removed: HvSubnodeAmdNode</content>
 </entry>
 </feed>

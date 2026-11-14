@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-13T14:44:10Z",
+ "generated": "2026-11-14T13:41:51Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -83,14 +83,14 @@
   {
    "channel": "11-24H2",
    "machine": "amd64",
-   "builds": 62,
-   "transitions": 61,
-   "layout_changes": 35,
+   "builds": 63,
+   "transitions": 62,
+   "layout_changes": 36,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.9711",
+   "to_version": "10.0.26100.9974",
    "from_date": null,
-   "to_date": "2026-10-13",
-   "latest_layout": "v2:sha256:9f74783bb93722fdb70bed9922c8ef2d4b2c4fb7d87bf0816f6c3029e378c133",
+   "to_date": "2026-11-10",
+   "latest_layout": "v2:sha256:d9ee8bb50406fdaaa4477e5afa266b7bdf51478d9148c79d37cb78394af5d1e7",
    "known_missing_in_channel": 5
   },
   {
@@ -174,15 +174,15 @@
   {
    "channel": "1607",
    "machine": "amd64",
-   "builds": 173,
-   "transitions": 172,
-   "layout_changes": 38,
+   "builds": 174,
+   "transitions": 173,
+   "layout_changes": 39,
    "from_version": "10.0.14393.0",
-   "to_version": "10.0.14393.9611",
+   "to_version": "10.0.14393.9685",
    "from_date": null,
-   "to_date": "2026-10-13",
-   "latest_layout": "v2:sha256:61dc31f53b5bf6020c47cec51d7d4e2a0e5884cbc2b717f1cfa8230ff5df4fa6",
-   "known_missing_in_channel": 4
+   "to_date": "2026-11-10",
+   "latest_layout": "v2:sha256:82eb24939e6ab6bf1d148b8983c775d48c8532c9c917f40df5b29e4640ec1fa2",
+   "known_missing_in_channel": 3
   },
   {
    "channel": "1703",
@@ -1328,6 +1328,297 @@
     }
    ],
    "enums_changed": []
+  },
+  {
+   "channel": "1607",
+   "machine": "amd64",
+   "from_version": "10.0.14393.9611",
+   "to_version": "10.0.14393.9685",
+   "from_key": "85AA96B5991D467BB1DD9744EAD4E0111",
+   "to_key": "9B69B2D714744029B72FF4E52040986C1",
+   "from_kb": [
+    "KB5126868"
+   ],
+   "kb": [
+    "KB5131291"
+   ],
+   "date": "2026-11-10",
+   "layout_from": "v2:sha256:61dc31f53b5bf6020c47cec51d7d4e2a0e5884cbc2b717f1cfa8230ff5df4fa6",
+   "layout_to": "v2:sha256:82eb24939e6ab6bf1d148b8983c775d48c8532c9c917f40df5b29e4640ec1fa2",
+   "types_changed": [
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 192,
+     "size_to": 216,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 160,
+       "to": 184
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "TokenList",
+       "from": 176,
+       "to": 200
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "11-24H2",
+   "machine": "amd64",
+   "from_version": "10.0.26100.9711",
+   "to_version": "10.0.26100.9974",
+   "from_key": "B661C6FE72991D160FE37C48B8BC54701",
+   "to_key": "CE884F70F5A9025D53DB35D8BE8BFF791",
+   "from_kb": [
+    "KB5127648"
+   ],
+   "kb": [
+    "KB5132061"
+   ],
+   "date": "2026-11-10",
+   "layout_from": "v2:sha256:9f74783bb93722fdb70bed9922c8ef2d4b2c4fb7d87bf0816f6c3029e378c133",
+   "layout_to": "v2:sha256:d9ee8bb50406fdaaa4477e5afa266b7bdf51478d9148c79d37cb78394af5d1e7",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1264,
+     "size_to": 1264,
+     "members_added": [
+      "Feature_IntelDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "18:13",
+       "to": "19:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_ETHREAD",
+     "size_from": 1944,
+     "size_to": 1944,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": [
+      {
+       "from": "UpdateTebSpareByte2",
+       "to": "EtwThreadStackRundownPriorityFloorCount",
+       "offset": 1907,
+       "size": 1
+      }
+     ]
+    },
+    {
+     "type": "_MI_PARTITION_STORES",
+     "size_from": 528,
+     "size_to": 528,
+     "members_added": [
+      "DecompressionOverIoPatternDuringInswap"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": 4,
+       "to": 1
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "AvoidTrimmingStoreProcess",
+       "from": "unsigned long",
+       "to": "unsigned char"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_IRP_DATA",
+     "size_from": 312,
+     "size_to": 312,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "System",
+       "from": 16,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_RTL_FEATURE_DESCRIPTOR_LAYOUT",
+     "status": "added",
+     "size_from": null,
+     "size_to": 16
+    },
+    {
+     "type": "_RTL_FEATURE_USAGE_CONTEXT",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "DescriptorLayout"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_AGENT_ID_DESCRIPTOR",
+     "status": "added",
+     "size_from": null,
+     "size_to": 32
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 200,
+     "size_to": 224,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 176,
+       "to": 200
+      },
+      {
+       "name": "TokenList",
+       "from": 184,
+       "to": 208
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_TOKEN",
+     "size_from": 1480,
+     "size_to": 1488,
+     "members_added": [
+      "AgentIdDescriptor",
+      "AgentIdInitializationComplete"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "AntiTamperEntry",
+       "from": 1464,
+       "to": 1472
+      },
+      {
+       "name": "AntiTamperSidHash",
+       "from": 1192,
+       "to": 1200
+      },
+      {
+       "name": "VariablePart",
+       "from": 1472,
+       "to": 1480
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "CVariant_MemoryCompressionHCAtLowPriority",
+     "status": "added"
+    },
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC139537",
+     "status": "added"
+    }
+   ]
   },
   {
    "channel": "11-23H2",
