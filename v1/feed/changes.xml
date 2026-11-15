@@ -2,10 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-14T13:41:51Z</updated>
+<updated>2026-11-15T14:05:44Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
+<entry>
+<title>21H2 arm64 KB5134125 -&gt; KB5136493: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES</title>
+<id>urn:ntoffsets:feed:changes:6AA7C11EF7DF5303AD418E2A4322CDBF1:332A98D5A9FBB995C0CDC6F56C35924B1</id>
+<updated>2026-11-13T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/332A98D5A9FBB995C0CDC6F56C35924B1.json"/>
+<summary>2 type(s) changed in KB5136493 (21H2, arm64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>11-23H2 arm64 KB5126653 -&gt; KB5136483: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES, EmptyCVariant_FeatureStaging_Feature_MSRC139537</title>
+<id>urn:ntoffsets:feed:changes:C945E55EBAF1061D7B3064DBF8640EAE1:14EA68B6D0AEB7F7BE25501D576A01021</id>
+<updated>2026-11-13T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/14EA68B6D0AEB7F7BE25501D576A01021.json"/>
+<summary>2 type(s) changed in KB5136483 (11-23H2, arm64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1
+EmptyCVariant_FeatureStaging_Feature_MSRC139537: added</content>
+</entry>
 <entry>
 <title>21H2 amd64 KB5134125 -&gt; 10.0.19041.7844: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES</title>
 <id>urn:ntoffsets:feed:changes:4D5683AD56125F6EAA72A12CFA4E35001:E2672D6A639304ECAF7D417B71DC4D0B1</id>
@@ -4278,25 +4297,5 @@ _CHPEV2_CPUAREA_INFO: added: Pad1, Pad2; moved: 1; resized: 1; retyped: 1
 _ETW_APC_POOL: retyped: 2
 _PRIVATE_CACHE_MAP_FLAGS: added: EntireField
 _SHARED_CACHE_MAP: retyped: 1</content>
-</entry>
-<entry>
-<title>11-24H2 amd64 10.0.26100.4946 -&gt; 10.0.26100.5074: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _ETW_APC_POOL, _PRIVATE_CACHE_MAP_FLAGS, and 1 more</title>
-<id>urn:ntoffsets:feed:changes:91F95759B8A1C35A0A9773FCA2A8A67E1:6765ABB4477B954A2F537F8F741EC02E1</id>
-<updated>2025-08-29T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/6765ABB4477B954A2F537F8F741EC02E1.json"/>
-<summary>5 type(s) changed in KB5064081 (11-24H2, amd64)</summary>
-<content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
-_CC_NUMA_NODE: retyped: 2
-_ETW_APC_POOL: retyped: 2
-_PRIVATE_CACHE_MAP_FLAGS: added: EntireField
-_SHARED_CACHE_MAP: retyped: 1</content>
-</entry>
-<entry>
-<title>22H2 arm64 KB5062649 -&gt; KB5063842: _DIAGNOSTIC_CONTEXT</title>
-<id>urn:ntoffsets:feed:changes:2B9803F3F586270EF0DA14642FD23AED1:10E394B8DD4EC97D5E088112F967FA941</id>
-<updated>2025-08-26T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/10E394B8DD4EC97D5E088112F967FA941.json"/>
-<summary>1 type(s) changed in KB5063842 (22H2, arm64)</summary>
-<content type="text">_DIAGNOSTIC_CONTEXT: size 0x20 -&gt; 0x38; added: ProcessId, ProcessImageName, SessionId; moved: 2</content>
 </entry>
 </feed>

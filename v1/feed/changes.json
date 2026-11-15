@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-14T13:41:51Z",
+ "generated": "2026-11-15T14:05:44Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -57,27 +57,27 @@
   {
    "channel": "11-23H2",
    "machine": "amd64",
-   "builds": 16,
-   "transitions": 15,
+   "builds": 17,
+   "transitions": 16,
    "layout_changes": 5,
    "from_version": "10.0.22621.2428",
-   "to_version": "10.0.22621.7711",
+   "to_version": null,
    "from_date": "2023-10-10",
-   "to_date": "2026-11-10",
+   "to_date": "2026-11-13",
    "latest_layout": "v2:sha256:be81f8a7ff7a726ba8086d545e57777ed1ee30c08e06dc21a4e8b82a2fd3961b",
    "known_missing_in_channel": 1
   },
   {
    "channel": "11-23H2",
    "machine": "arm64",
-   "builds": 15,
-   "transitions": 14,
-   "layout_changes": 3,
+   "builds": 16,
+   "transitions": 15,
+   "layout_changes": 4,
    "from_version": null,
    "to_version": null,
    "from_date": "2025-09-23",
-   "to_date": "2026-10-13",
-   "latest_layout": "v2:sha256:e6b3c8ee9c051b059000083c70a28d58a9c4b0e6093f143fed16eeca56793040",
+   "to_date": "2026-11-13",
+   "latest_layout": "v2:sha256:1d85c1695498e807972e3ae8a9e3f5d13067f052f3b04aee38ef744ff074c38c",
    "known_missing_in_channel": 1
   },
   {
@@ -252,13 +252,13 @@
   {
    "channel": "1809",
    "machine": "amd64",
-   "builds": 155,
-   "transitions": 154,
+   "builds": 156,
+   "transitions": 155,
    "layout_changes": 34,
    "from_version": "10.0.17763.1",
-   "to_version": "10.0.17763.9479",
+   "to_version": null,
    "from_date": null,
-   "to_date": "2026-11-10",
+   "to_date": "2026-11-13",
    "latest_layout": "v2:sha256:57430fded580542450df3728d9a90161b38b2488e803c391524ba2dec59e4f02",
    "known_missing_in_channel": 24
   },
@@ -382,27 +382,27 @@
   {
    "channel": "21H2",
    "machine": "amd64",
-   "builds": 46,
-   "transitions": 45,
+   "builds": 47,
+   "transitions": 46,
    "layout_changes": 16,
    "from_version": "10.0.19041.1288",
-   "to_version": "10.0.19041.7844",
+   "to_version": null,
    "from_date": "2021-10-12",
-   "to_date": "2026-11-10",
+   "to_date": "2026-11-13",
    "latest_layout": "v2:sha256:b05c15e1b559d5738d935ac7c45ebe567955d11b4e0eae47955b4fe221319231",
    "known_missing_in_channel": 3
   },
   {
    "channel": "21H2",
    "machine": "arm64",
-   "builds": 42,
-   "transitions": 41,
-   "layout_changes": 12,
+   "builds": 43,
+   "transitions": 42,
+   "layout_changes": 13,
    "from_version": null,
    "to_version": null,
    "from_date": "2023-06-13",
-   "to_date": "2026-10-26",
-   "latest_layout": "v2:sha256:806ba536baa929029a118a72f06d60c069a7e0463241737c805e8007ebcfc913",
+   "to_date": "2026-11-13",
+   "latest_layout": "v2:sha256:7f5fdcc4b0a34ea15592cce565659f111ec3f00212153bbd79f7f21de0f3c87b",
    "known_missing_in_channel": 3
   },
   {
@@ -1184,9 +1184,182 @@
    "to_date": null,
    "latest_layout": "v2:sha256:673e2a3513308f018141b5c683260b9f5bfca838790c9774514a75e7d6ff9175",
    "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29708",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29708.1003",
+   "to_version": "10.0.29708.1003",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:1da6c454798b4546aad664cd7c734ef91e275920824bd424c9aa16a9270af372",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29708",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29708.1003",
+   "to_version": "10.0.29708.1003",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:b863f0306e15fb576a3685f3b59663964547b5d369f57d8fdbf45ed80355a948",
+   "known_missing_in_channel": 0
   }
  ],
  "changes": [
+  {
+   "channel": "21H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "6AA7C11EF7DF5303AD418E2A4322CDBF1",
+   "to_key": "332A98D5A9FBB995C0CDC6F56C35924B1",
+   "from_kb": [
+    "KB5134125"
+   ],
+   "kb": [
+    "KB5136493"
+   ],
+   "date": "2026-11-13",
+   "layout_from": "v2:sha256:806ba536baa929029a118a72f06d60c069a7e0463241737c805e8007ebcfc913",
+   "layout_to": "v2:sha256:7f5fdcc4b0a34ea15592cce565659f111ec3f00212153bbd79f7f21de0f3c87b",
+   "types_changed": [
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 192,
+     "size_to": 216,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 160,
+       "to": 184
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "TokenList",
+       "from": 176,
+       "to": 200
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": []
+  },
+  {
+   "channel": "11-23H2",
+   "machine": "arm64",
+   "from_version": null,
+   "to_version": null,
+   "from_key": "C945E55EBAF1061D7B3064DBF8640EAE1",
+   "to_key": "14EA68B6D0AEB7F7BE25501D576A01021",
+   "from_kb": [
+    "KB5126653"
+   ],
+   "kb": [
+    "KB5136483"
+   ],
+   "date": "2026-11-13",
+   "layout_from": "v2:sha256:e6b3c8ee9c051b059000083c70a28d58a9c4b0e6093f143fed16eeca56793040",
+   "layout_to": "v2:sha256:1d85c1695498e807972e3ae8a9e3f5d13067f052f3b04aee38ef744ff074c38c",
+   "types_changed": [
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 192,
+     "size_to": 216,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 160,
+       "to": 184
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "TokenList",
+       "from": 176,
+       "to": 200
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC139537",
+     "status": "added"
+    }
+   ]
+  },
   {
    "channel": "21H2",
    "machine": "amd64",
