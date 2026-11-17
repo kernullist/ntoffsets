@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-16T15:58:34Z</updated>
+<updated>2026-11-17T16:11:06Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
@@ -51,6 +51,25 @@ _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; 
 <summary>2 type(s) changed in KB5131291 (1607, amd64)</summary>
 <content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
 _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>11-24H2 arm64 KB5127648 -&gt; 10.0.26100.9974: PO_MEMORY_IMAGE, _ETHREAD, _MI_PARTITION_STORES, _OB_HANDLE_REVOCATION_BLOCK, and 8 more</title>
+<id>urn:ntoffsets:feed:changes:287D4F3D731DE7A3AA2DC7DD8F8AEF761:C88DB4308AC30EFB39144EB14B6C63301</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C88DB4308AC30EFB39144EB14B6C63301.json"/>
+<summary>10 type(s) changed in KB5132061 (11-24H2, arm64)</summary>
+<content type="text">PO_MEMORY_IMAGE: added: Feature_IntelDynamicUpgrade_Enabled; bitfields: 1
+_ETHREAD: renamed: UpdateTebSpareByte2 -&gt; EtwThreadStackRundownPriorityFloorCount
+_MI_PARTITION_STORES: added: DecompressionOverIoPatternDuringInswap; resized: 1; retyped: 1
+_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_POP_IRP_DATA: resized: 1
+_RTL_FEATURE_DESCRIPTOR_LAYOUT: added
+_RTL_FEATURE_USAGE_CONTEXT: size 0x20 -&gt; 0x30; added: DescriptorLayout
+_SEP_AGENT_ID_DESCRIPTOR: added
+_SEP_LOGON_SESSION_REFERENCES: size 0xc8 -&gt; 0xe0; added: RevocationBlockPtr; moved: 3; resized: 1
+_TOKEN: size 0x5c8 -&gt; 0x5d0; added: AgentIdDescriptor, AgentIdInitializationComplete; moved: 3
+CVariant_MemoryCompressionHCAtLowPriority: added
+EmptyCVariant_FeatureStaging_Feature_MSRC139537: added</content>
 </entry>
 <entry>
 <title>11-24H2 amd64 10.0.26100.9711 -&gt; 10.0.26100.9974: PO_MEMORY_IMAGE, _ETHREAD, _MI_PARTITION_STORES, _OB_HANDLE_REVOCATION_BLOCK, and 8 more</title>
@@ -4284,18 +4303,5 @@ _RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigur
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/32D8CFDFD04CBE46300A815F9ADD60FF1.json"/>
 <summary>1 type(s) changed in KB5065790 (11-23H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
-</entry>
-<entry>
-<title>11-24H2 arm64 10.0.26100.4946 -&gt; KB5064081: RTLP_HP_LFH_PERF_FLAGS, _CC_NUMA_NODE, _CHPEV2_CPUAREA_INFO, _ETW_APC_POOL, and 2 more</title>
-<id>urn:ntoffsets:feed:changes:1500F00FEAEE8413C67EA13F8373B3811:58191FE7944A5BDE0CF8D795B453064A1</id>
-<updated>2025-08-29T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/58191FE7944A5BDE0CF8D795B453064A1.json"/>
-<summary>6 type(s) changed in KB5064081 (11-24H2, arm64)</summary>
-<content type="text">RTLP_HP_LFH_PERF_FLAGS: removed: EnableGarbageCollection; bitfields: 2
-_CC_NUMA_NODE: retyped: 2
-_CHPEV2_CPUAREA_INFO: added: Pad1, Pad2; moved: 1; resized: 1; retyped: 1
-_ETW_APC_POOL: retyped: 2
-_PRIVATE_CACHE_MAP_FLAGS: added: EntireField
-_SHARED_CACHE_MAP: retyped: 1</content>
 </entry>
 </feed>
