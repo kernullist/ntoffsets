@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-19T15:53:39Z",
+ "generated": "2026-11-20T15:37:34Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -122,14 +122,14 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 17,
-   "transitions": 16,
-   "layout_changes": 11,
+   "builds": 18,
+   "transitions": 17,
+   "layout_changes": 12,
    "from_version": "10.0.28000.1575",
-   "to_version": "10.0.28000.3365",
+   "to_version": null,
    "from_date": "2026-02-10",
-   "to_date": "2026-10-28",
-   "latest_layout": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
+   "to_date": "2026-11-19",
+   "latest_layout": "v2:sha256:148972173fa7a86f564f660a5b915ab724601990d4d4759d14d625fc00886eb6",
    "known_missing_in_channel": 1
   },
   {
@@ -525,8 +525,8 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 74,
-   "transitions": 73,
+   "builds": 75,
+   "transitions": 74,
    "layout_changes": 39,
    "from_version": "10.0.26100.1",
    "to_version": "10.0.26100.10013",
@@ -1213,6 +1213,534 @@
   }
  ],
  "changes": [
+  {
+   "channel": "11-26H1",
+   "machine": "amd64",
+   "from_version": "10.0.28000.3365",
+   "to_version": null,
+   "from_key": "238C901F42C19C9291DBE4744A4854581",
+   "to_key": "727CCEC0D7555847C4444DE4A55320F01",
+   "from_kb": [
+    "KB5127653"
+   ],
+   "kb": [
+    "KB5132265"
+   ],
+   "date": "2026-11-19",
+   "layout_from": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
+   "layout_to": "v2:sha256:148972173fa7a86f564f660a5b915ab724601990d4d4759d14d625fc00886eb6",
+   "types_changed": [
+    {
+     "type": "PO_MEMORY_IMAGE",
+     "size_from": 1272,
+     "size_to": 1280,
+     "members_added": [
+      "Feature_IntelDynamicUpgrade_Enabled"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "BitlockerKeyPfns",
+       "from": 1208,
+       "to": 1216
+      },
+      {
+       "name": "BootFlags",
+       "from": 1184,
+       "to": 1192
+      },
+      {
+       "name": "DevControlPciLocation",
+       "from": 1264,
+       "to": 1272
+      },
+      {
+       "name": "Feature_HibernateRelaxVBSPolicy_Enabled",
+       "from": 1263,
+       "to": 1271
+      },
+      {
+       "name": "HardwareSignature",
+       "from": 1240,
+       "to": 1248
+      },
+      {
+       "name": "HighestPhysicalPage",
+       "from": 1200,
+       "to": 1208
+      },
+      {
+       "name": "HvEntryPoint",
+       "from": 1160,
+       "to": 1168
+      },
+      {
+       "name": "HvPageTableRoot",
+       "from": 1152,
+       "to": 1160
+      },
+      {
+       "name": "HvReservedTransitionAddress",
+       "from": 1168,
+       "to": 1176
+      },
+      {
+       "name": "HvReservedTransitionAddressSize",
+       "from": 1176,
+       "to": 1184
+      },
+      {
+       "name": "Reserved",
+       "from": 1148,
+       "to": 1152
+      },
+      {
+       "name": "RestoreProcessorStateRoutine",
+       "from": 1192,
+       "to": 1200
+      },
+      {
+       "name": "SMBiosMajorVersion",
+       "from": 1260,
+       "to": 1268
+      },
+      {
+       "name": "SMBiosMinorVersion",
+       "from": 1261,
+       "to": 1269
+      },
+      {
+       "name": "SMBiosTableLength",
+       "from": 1256,
+       "to": 1264
+      },
+      {
+       "name": "SMBiosTablePhysicalAddress",
+       "from": 1248,
+       "to": 1256
+      },
+      {
+       "name": "USBCoreId",
+       "from": 1262,
+       "to": 1270
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Reserved",
+       "from": "19:13",
+       "to": "0:13"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_HEAP_PG_CONTEXT",
+     "size_from": 144,
+     "size_to": 144,
+     "members_added": [
+      "DelayFreeMemoryLimit"
+     ],
+     "members_removed": [
+      "DelayFreeCommitPageLimit"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "PrcbPad96",
+       "from": 35624,
+       "to": 35632
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "PowerState",
+       "from": 616,
+       "to": 624
+      },
+      {
+       "name": "PrcbPad96",
+       "from": 24,
+       "to": 16
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [
+      {
+       "name": "PrcbPad96",
+       "from": "unsigned __int64[3]",
+       "to": "unsigned __int64[2]"
+      }
+     ],
+     "members_renamed": []
+    },
+    {
+     "type": "_LOADER_PARAMETER_EXTENSION",
+     "size_from": 4432,
+     "size_to": 4432,
+     "members_added": [
+      "ApxPolicyEnabled",
+      "ApxRecoveryEnabled"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "Unused2",
+       "from": "4:4",
+       "to": "6:2"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_HIBER_CONTEXT",
+     "size_from": 496,
+     "size_to": 496,
+     "members_added": [],
+     "members_removed": [
+      "Feature_Servicing_ARM64_LLVMHibernate_Enabled"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_POP_IRP_DATA",
+     "size_from": 312,
+     "size_to": 312,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [
+      {
+       "name": "System",
+       "from": 16,
+       "to": 8
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROCESSOR_POWER_STATE",
+     "size_from": 616,
+     "size_to": 624,
+     "members_added": [
+      "Reserved2"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ActiveTime",
+       "from": 488,
+       "to": 496
+      },
+      {
+       "name": "ArchitecturalEfficiencyClass",
+       "from": 472,
+       "to": 480
+      },
+      {
+       "name": "ClassConcurrency",
+       "from": 464,
+       "to": 472
+      },
+      {
+       "name": "Concurrency",
+       "from": 456,
+       "to": 464
+      },
+      {
+       "name": "ContainmentGroupType",
+       "from": 568,
+       "to": 576
+      },
+      {
+       "name": "ContainmentZoneMask",
+       "from": 584,
+       "to": 592
+      },
+      {
+       "name": "EeCyclesWorkloadClassList",
+       "from": 552,
+       "to": 560
+      },
+      {
+       "name": "EfficiencySchedulingClass",
+       "from": 474,
+       "to": 482
+      },
+      {
+       "name": "EnergyConsumed",
+       "from": 480,
+       "to": 488
+      },
+      {
+       "name": "FrequencyBucketThresholds",
+       "from": 588,
+       "to": 596
+      },
+      {
+       "name": "FxDevice",
+       "from": 504,
+       "to": 512
+      },
+      {
+       "name": "HwFeedbackClassList",
+       "from": 544,
+       "to": 552
+      },
+      {
+       "name": "HwFeedbackParkHint",
+       "from": 540,
+       "to": 548
+      },
+      {
+       "name": "HwFeedbackTableIndex",
+       "from": 542,
+       "to": 550
+      },
+      {
+       "name": "HwFeedbackTableOffset",
+       "from": 538,
+       "to": 546
+      },
+      {
+       "name": "HwParkingTable",
+       "from": 576,
+       "to": 584
+      },
+      {
+       "name": "HwParkingTableOffset",
+       "from": 570,
+       "to": 578
+      },
+      {
+       "name": "IdleLog",
+       "from": 600,
+       "to": 608
+      },
+      {
+       "name": "IdleLogCounter",
+       "from": 608,
+       "to": 616
+      },
+      {
+       "name": "LastQosTransitionTime",
+       "from": 512,
+       "to": 520
+      },
+      {
+       "name": "LongPriorQosPeriod",
+       "from": 478,
+       "to": 486
+      },
+      {
+       "name": "Parked",
+       "from": 476,
+       "to": 484
+      },
+      {
+       "name": "PerfCyclesWorkloadClassList",
+       "from": 560,
+       "to": 568
+      },
+      {
+       "name": "PerformanceSchedulingClass",
+       "from": 473,
+       "to": 481
+      },
+      {
+       "name": "QosEquivalencyMask",
+       "from": 536,
+       "to": 544
+      },
+      {
+       "name": "QosTransitionHysteresis",
+       "from": 520,
+       "to": 528
+      },
+      {
+       "name": "RequestedQosClass",
+       "from": 528,
+       "to": 536
+      },
+      {
+       "name": "Reserved",
+       "from": 475,
+       "to": 483
+      },
+      {
+       "name": "Reserved1",
+       "from": 541,
+       "to": 549
+      },
+      {
+       "name": "ResolvedQosClass",
+       "from": 532,
+       "to": 540
+      },
+      {
+       "name": "SnapTimeLast",
+       "from": 480,
+       "to": 488
+      },
+      {
+       "name": "SoftParked",
+       "from": 477,
+       "to": 485
+      },
+      {
+       "name": "TotalTime",
+       "from": 496,
+       "to": 504
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "CheckContext",
+       "from": 72,
+       "to": 80
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_PROC_PERF_CHECK_CONTEXT",
+     "size_from": 72,
+     "size_to": 80,
+     "members_added": [
+      "UtilityCapabilityScale"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "NtProcessor",
+       "from": 68,
+       "to": 72
+      },
+      {
+       "name": "RelativePerformance",
+       "from": 64,
+       "to": 68
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 200,
+     "size_to": 224,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 176,
+       "to": 200
+      },
+      {
+       "name": "TokenList",
+       "from": 184,
+       "to": 208
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [],
+     "members_removed": [
+      "requiresInitGuard"
+     ],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC139537",
+     "status": "added"
+    },
+    {
+     "enum": "_SYSTEM_INFORMATION_CLASS",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "SystemCanonicalizeSystemDlls",
+      "SystemZombieProcessInformation"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "MaxSystemInfoClass",
+       "from": 259,
+       "to": 261
+      }
+     ]
+    }
+   ]
+  },
   {
    "channel": "21H2",
    "machine": "arm64",
@@ -115614,16 +116142,16 @@
    "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.9968",
-   "to_version": "10.0.26100.10013",
+   "to_version": "10.0.26100.10003",
    "from_key": "C4D4DA7D744EE64ECBA54DBB809774B81",
-   "to_key": "CAC9795D3FFFE399C7E94B9FD19A3A281",
+   "to_key": "03BEF41BE070F2D87984C67F5881E0691",
    "from_kb": [
     "aa272a56-7dbf-4349-b410-10ae6defc750",
     "e67f397c-56e7-44a2-9566-0f1af5c01841",
     "fb0a90c6-cc17-4a55-832d-f23495f93aa3"
    ],
    "kb": [
-    "c3e98026-e31c-4082-98e8-b5a7ef6b4cf7"
+    "5f5dba53-64ac-4815-bbdd-0e63ce84ab27"
    ],
    "date": null,
    "layout_from": "v2:sha256:d9ee8bb50406fdaaa4477e5afa266b7bdf51478d9148c79d37cb78394af5d1e7",
