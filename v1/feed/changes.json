@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-21T14:47:53Z",
+ "generated": "2026-11-22T14:44:53Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -525,27 +525,27 @@
   {
    "channel": "builds/26100",
    "machine": "amd64",
-   "builds": 75,
-   "transitions": 74,
-   "layout_changes": 39,
+   "builds": 77,
+   "transitions": 76,
+   "layout_changes": 40,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.10013",
+   "to_version": "10.0.26100.10032",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:c826e09af468c6c80ed91244af2e22901db4608baa20fa562beac9f29c2a5c6f",
+   "latest_layout": "v2:sha256:3db82f6990146590af6ac1f16b150bd0e9e14cc288115a3a70d98fc51cded1de",
    "known_missing_in_channel": 0
   },
   {
    "channel": "builds/26100",
    "machine": "arm64",
-   "builds": 22,
-   "transitions": 21,
-   "layout_changes": 18,
+   "builds": 24,
+   "transitions": 23,
+   "layout_changes": 19,
    "from_version": "10.0.26100.1",
-   "to_version": "10.0.26100.10013",
+   "to_version": "10.0.26100.10032",
    "from_date": null,
    "to_date": null,
-   "latest_layout": "v2:sha256:8b9a8eeb96377ced81aba843884f495e1505b66bb3ccc8d4da66578f24f69d8c",
+   "latest_layout": "v2:sha256:bc18c4d8153100f017f0da6696475ace9ee09589fb5a3e93623afe7cc696dbfb",
    "known_missing_in_channel": 0
   },
   {
@@ -1209,6 +1209,32 @@
    "from_date": null,
    "to_date": null,
    "latest_layout": "v2:sha256:b863f0306e15fb576a3685f3b59663964547b5d369f57d8fdbf45ed80355a948",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29712",
+   "machine": "amd64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29712.1000",
+   "to_version": "10.0.29712.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:bd69795bbfa4f4b600f5e6ea2f78e3d06ea8c77d10ce1f64d0cdef7ee29ad458",
+   "known_missing_in_channel": 0
+  },
+  {
+   "channel": "builds/29712",
+   "machine": "arm64",
+   "builds": 1,
+   "transitions": 0,
+   "layout_changes": 0,
+   "from_version": "10.0.29712.1000",
+   "to_version": "10.0.29712.1000",
+   "from_date": null,
+   "to_date": null,
+   "latest_layout": "v2:sha256:b0e824e7c732e5179ce2bac306e1ed4072265cdf3dd5bc339a8d34b39578c67d",
    "known_missing_in_channel": 0
   }
  ],
@@ -108529,6 +108555,211 @@
   },
   {
    "channel": "builds/26100",
+   "machine": "arm64",
+   "from_version": "10.0.26100.10013",
+   "to_version": "10.0.26100.10021",
+   "from_key": "EE226932476ADEA5704C5B2DA20943CB1",
+   "to_key": "40582224C6BC077BA187E80D01C5E9501",
+   "from_kb": [
+    "88bc5ef9-0d4e-400c-9c94-a6d5484660b9"
+   ],
+   "kb": [
+    "6a026348-b99e-4efd-8bca-82f1022e50e5"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:8b9a8eeb96377ced81aba843884f495e1505b66bb3ccc8d4da66578f24f69d8c",
+   "layout_to": "v2:sha256:bc18c4d8153100f017f0da6696475ace9ee09589fb5a3e93623afe7cc696dbfb",
+   "types_changed": [
+    {
+     "type": "_KPRCB",
+     "size_from": 40960,
+     "size_to": 40960,
+     "members_added": [
+      "AbDpcOverload",
+      "AbHeadEntryFreeList"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPROCESS",
+     "size_from": 440,
+     "size_to": 440,
+     "members_added": [
+      "AutoBoostState2"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KTHREAD",
+     "size_from": 1184,
+     "size_to": 1184,
+     "members_added": [
+      "AbReleasePending",
+      "AutoBoostThreadState"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "ThreadFlags2Reserved",
+       "from": "2:30",
+       "to": "3:29"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION",
+     "size_from": 24832,
+     "size_to": 24832,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "PageCombine",
+       "from": 17176,
+       "to": 17192
+      },
+      {
+       "name": "Zeroing",
+       "from": 17104,
+       "to": 17120
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Commit",
+       "from": 80,
+       "to": 96
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_COMMIT",
+     "size_from": 80,
+     "size_to": 96,
+     "members_added": [
+      "MaximumCommitConfiguredThreshold",
+      "MaximumCommitThreshold"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ExtremelyHighCommitThreshold",
+       "from": 40,
+       "to": 56
+      },
+      {
+       "name": "HighCommitThreshold",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "name": "IdealCommitTarget",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Lock",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "LowCommitThreshold",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "name": "OverCommit",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SystemCommitReserve",
+       "from": 64,
+       "to": 80
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureStateCache",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "unused",
+       "from": "19:13",
+       "to": "20:12"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_PP_NPAGED_LOOKASIDE_NUMBER",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "LookasideAutoBoost"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "LookasideMaximumList",
+       "from": 11,
+       "to": 12
+      }
+     ]
+    },
+    {
+     "enum": "_RTL_FEATURE_ENABLED_STATE",
+     "status": "added"
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
    "machine": "amd64",
    "from_version": "10.0.26100.1742",
    "to_version": "10.0.26100.7618",
@@ -116823,6 +117054,211 @@
       "ReservedForDVRF57"
      ],
      "constants_renumbered": []
+    }
+   ]
+  },
+  {
+   "channel": "builds/26100",
+   "machine": "amd64",
+   "from_version": "10.0.26100.10013",
+   "to_version": "10.0.26100.10021",
+   "from_key": "CAC9795D3FFFE399C7E94B9FD19A3A281",
+   "to_key": "FA8E53EC35577A24E29DF76894B8C24C1",
+   "from_kb": [
+    "c3e98026-e31c-4082-98e8-b5a7ef6b4cf7"
+   ],
+   "kb": [
+    "8259d05f-2b07-4260-8188-f0f0d2523c7a"
+   ],
+   "date": null,
+   "layout_from": "v2:sha256:c826e09af468c6c80ed91244af2e22901db4608baa20fa562beac9f29c2a5c6f",
+   "layout_to": "v2:sha256:3db82f6990146590af6ac1f16b150bd0e9e14cc288115a3a70d98fc51cded1de",
+   "types_changed": [
+    {
+     "type": "_KPRCB",
+     "size_from": 52992,
+     "size_to": 52992,
+     "members_added": [
+      "AbDpcOverload",
+      "AbHeadEntryFreeList"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KPROCESS",
+     "size_from": 456,
+     "size_to": 456,
+     "members_added": [
+      "AutoBoostState2"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_KTHREAD",
+     "size_from": 1216,
+     "size_to": 1216,
+     "members_added": [
+      "AbReleasePending",
+      "AutoBoostThreadState"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "ThreadFlags2Reserved",
+       "from": "2:30",
+       "to": "3:29"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION",
+     "size_from": 23872,
+     "size_to": 23872,
+     "members_added": [],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "PageCombine",
+       "from": 16984,
+       "to": 17000
+      },
+      {
+       "name": "Zeroing",
+       "from": 16912,
+       "to": 16928
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "Commit",
+       "from": 80,
+       "to": 96
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_MI_PARTITION_COMMIT",
+     "size_from": 80,
+     "size_to": 96,
+     "members_added": [
+      "MaximumCommitConfiguredThreshold",
+      "MaximumCommitThreshold"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ExtremelyHighCommitThreshold",
+       "from": 40,
+       "to": 56
+      },
+      {
+       "name": "HighCommitThreshold",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "name": "IdealCommitTarget",
+       "from": 48,
+       "to": 64
+      },
+      {
+       "name": "Lock",
+       "from": 56,
+       "to": 72
+      },
+      {
+       "name": "LowCommitThreshold",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "name": "OverCommit",
+       "from": 72,
+       "to": 88
+      },
+      {
+       "name": "SystemCommitReserve",
+       "from": 64,
+       "to": 80
+      }
+     ],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureDescriptor",
+     "size_from": 56,
+     "size_to": 56,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "wil_details_FeatureStateCache",
+     "size_from": 8,
+     "size_to": 8,
+     "members_added": [
+      "requiresInitGuard"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [
+      {
+       "name": "unused",
+       "from": "19:13",
+       "to": "20:12"
+      }
+     ],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "_PP_NPAGED_LOOKASIDE_NUMBER",
+     "size_from": 4,
+     "size_to": 4,
+     "constants_added": [
+      "LookasideAutoBoost"
+     ],
+     "constants_removed": [],
+     "constants_renumbered": [
+      {
+       "name": "LookasideMaximumList",
+       "from": 11,
+       "to": 12
+      }
+     ]
+    },
+    {
+     "enum": "_RTL_FEATURE_ENABLED_STATE",
+     "status": "added"
     }
    ]
   },
