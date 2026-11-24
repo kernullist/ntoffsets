@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-23T18:22:25Z",
+ "generated": "2026-11-24T17:56:07Z",
  "sequences": [
   {
    "channel": "11-21H2",
@@ -122,9 +122,9 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "builds": 18,
-   "transitions": 17,
-   "layout_changes": 12,
+   "builds": 19,
+   "transitions": 18,
+   "layout_changes": 13,
    "from_version": "10.0.28000.1575",
    "to_version": null,
    "from_date": "2026-02-10",
@@ -1242,18 +1242,18 @@
   {
    "channel": "11-26H1",
    "machine": "amd64",
-   "from_version": "10.0.28000.3365",
+   "from_version": "10.0.28000.3501",
    "to_version": null,
-   "from_key": "238C901F42C19C9291DBE4744A4854581",
+   "from_key": "C66CB99A9B4D22E7ADF0F4EE888CBB4D1",
    "to_key": "727CCEC0D7555847C4444DE4A55320F01",
    "from_kb": [
-    "KB5127653"
+    "KB5132059"
    ],
    "kb": [
     "KB5132265"
    ],
    "date": "2026-11-19",
-   "layout_from": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
+   "layout_from": "v2:sha256:6825a35d1f4d08c001e2ee601cff9a1f4d97f613cb61948b431b0823fc13fce3",
    "layout_to": "v2:sha256:148972173fa7a86f564f660a5b915ab724601990d4d4759d14d625fc00886eb6",
    "types_changed": [
     {
@@ -1431,21 +1431,6 @@
        "to": "6:2"
       }
      ],
-     "members_retyped": [],
-     "members_renamed": []
-    },
-    {
-     "type": "_OB_HANDLE_REVOCATION_BLOCK",
-     "size_from": 32,
-     "size_to": 48,
-     "members_added": [
-      "ReferenceCount",
-      "Revoked"
-     ],
-     "members_removed": [],
-     "members_moved": [],
-     "members_resized": [],
-     "members_rebitted": [],
      "members_retyped": [],
      "members_renamed": []
     },
@@ -1693,42 +1678,6 @@
      "members_renamed": []
     },
     {
-     "type": "_SEP_LOGON_SESSION_REFERENCES",
-     "size_from": 200,
-     "size_to": 224,
-     "members_added": [
-      "RevocationBlockPtr"
-     ],
-     "members_removed": [],
-     "members_moved": [
-      {
-       "name": "ServerSilo",
-       "from": 168,
-       "to": 192
-      },
-      {
-       "name": "SiblingAuthId",
-       "from": 176,
-       "to": 200
-      },
-      {
-       "name": "TokenList",
-       "from": 184,
-       "to": 208
-      }
-     ],
-     "members_resized": [
-      {
-       "name": "RevocationBlock",
-       "from": 32,
-       "to": 48
-      }
-     ],
-     "members_rebitted": [],
-     "members_retyped": [],
-     "members_renamed": []
-    },
-    {
      "type": "wil_details_FeatureDescriptor",
      "size_from": 56,
      "size_to": 56,
@@ -1744,10 +1693,6 @@
     }
    ],
    "enums_changed": [
-    {
-     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC139537",
-     "status": "added"
-    },
     {
      "enum": "_SYSTEM_INFORMATION_CLASS",
      "size_from": 4,
@@ -2515,6 +2460,82 @@
     }
    ],
    "enums_changed": []
+  },
+  {
+   "channel": "11-26H1",
+   "machine": "amd64",
+   "from_version": "10.0.28000.3365",
+   "to_version": "10.0.28000.3501",
+   "from_key": "238C901F42C19C9291DBE4744A4854581",
+   "to_key": "C66CB99A9B4D22E7ADF0F4EE888CBB4D1",
+   "from_kb": [
+    "KB5127653"
+   ],
+   "kb": [
+    "KB5132059"
+   ],
+   "date": "2026-11-10",
+   "layout_from": "v2:sha256:ddf1258e6bc5ec76e1436218444d7e263de02e251b84bc8905017380dca9d8e3",
+   "layout_to": "v2:sha256:6825a35d1f4d08c001e2ee601cff9a1f4d97f613cb61948b431b0823fc13fce3",
+   "types_changed": [
+    {
+     "type": "_OB_HANDLE_REVOCATION_BLOCK",
+     "size_from": 32,
+     "size_to": 48,
+     "members_added": [
+      "ReferenceCount",
+      "Revoked"
+     ],
+     "members_removed": [],
+     "members_moved": [],
+     "members_resized": [],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    },
+    {
+     "type": "_SEP_LOGON_SESSION_REFERENCES",
+     "size_from": 200,
+     "size_to": 224,
+     "members_added": [
+      "RevocationBlockPtr"
+     ],
+     "members_removed": [],
+     "members_moved": [
+      {
+       "name": "ServerSilo",
+       "from": 168,
+       "to": 192
+      },
+      {
+       "name": "SiblingAuthId",
+       "from": 176,
+       "to": 200
+      },
+      {
+       "name": "TokenList",
+       "from": 184,
+       "to": 208
+      }
+     ],
+     "members_resized": [
+      {
+       "name": "RevocationBlock",
+       "from": 32,
+       "to": 48
+      }
+     ],
+     "members_rebitted": [],
+     "members_retyped": [],
+     "members_renamed": []
+    }
+   ],
+   "enums_changed": [
+    {
+     "enum": "EmptyCVariant_FeatureStaging_Feature_MSRC139537",
+     "status": "added"
+    }
+   ]
   },
   {
    "channel": "11-24H2",

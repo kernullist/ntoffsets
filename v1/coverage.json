@@ -1,14 +1,14 @@
 {
- "as_of": "2026-11-23T18:22:18Z",
+ "as_of": "2026-11-24T17:56:00Z",
  "totals": {
   "known": 2154,
-  "resolved": 2168,
-  "accounted_missing": 215,
+  "resolved": 2169,
+  "accounted_missing": 214,
   "duplicate_entries": 0,
   "unattempted": 0
  },
  "missing_reasons": {
-  "binary_404": 203,
+  "binary_404": 202,
   "pdb_404": 11,
   "undownloadable": 1
  },
@@ -71,7 +71,7 @@
   }
  },
  "by_machine": {
-  "amd64": 1309,
+  "amd64": 1310,
   "arm64": 828,
   "x86": 31
  },
@@ -107,10 +107,10 @@
    "unattempted": 2
   },
   "11-26H1": {
-   "resolved": 33,
+   "resolved": 34,
    "known": 40,
    "missing": 1,
-   "unattempted": 6
+   "unattempted": 5
   },
   "1507": {
    "resolved": 119,
@@ -199,7 +199,7 @@
   "builds": {
    "resolved": 492,
    "known": 451,
-   "missing": 116,
+   "missing": 115,
    "unattempted": 0
   }
  }

@@ -2,28 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>ntoffsets kernel layout changes</title>
 <id>urn:ntoffsets:feed:changes</id>
-<updated>2026-11-23T18:22:25Z</updated>
+<updated>2026-11-24T17:56:07Z</updated>
 <link rel="self" href="https://kernullist.github.io/ntoffsets/v1/feed/changes.xml"/>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/"/>
 <subtitle>Which kernel structs moved, and in which update. No entries means nothing moved.</subtitle>
 <entry>
-<title>11-26H1 amd64 10.0.28000.3365 -&gt; KB5132265: PO_MEMORY_IMAGE, _HEAP_PG_CONTEXT, _KPRCB, _LOADER_PARAMETER_EXTENSION, and 9 more</title>
-<id>urn:ntoffsets:feed:changes:238C901F42C19C9291DBE4744A4854581:727CCEC0D7555847C4444DE4A55320F01</id>
+<title>11-26H1 amd64 10.0.28000.3501 -&gt; KB5132265: PO_MEMORY_IMAGE, _HEAP_PG_CONTEXT, _KPRCB, _LOADER_PARAMETER_EXTENSION, and 6 more</title>
+<id>urn:ntoffsets:feed:changes:C66CB99A9B4D22E7ADF0F4EE888CBB4D1:727CCEC0D7555847C4444DE4A55320F01</id>
 <updated>2026-11-19T00:00:00Z</updated>
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/727CCEC0D7555847C4444DE4A55320F01.json"/>
-<summary>11 type(s) changed in KB5132265 (11-26H1, amd64)</summary>
+<summary>9 type(s) changed in KB5132265 (11-26H1, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: size 0x4f8 -&gt; 0x500; added: Feature_IntelDynamicUpgrade_Enabled; moved: 17; bitfields: 1
 _HEAP_PG_CONTEXT: added: DelayFreeMemoryLimit; removed: DelayFreeCommitPageLimit
 _KPRCB: moved: 1; resized: 2; retyped: 1
 _LOADER_PARAMETER_EXTENSION: added: ApxPolicyEnabled, ApxRecoveryEnabled; bitfields: 1
-_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
 _POP_HIBER_CONTEXT: removed: Feature_Servicing_ARM64_LLVMHibernate_Enabled
 _POP_IRP_DATA: resized: 1
 _PROCESSOR_POWER_STATE: size 0x268 -&gt; 0x270; added: Reserved2; moved: 33; resized: 1
 _PROC_PERF_CHECK_CONTEXT: size 0x48 -&gt; 0x50; added: UtilityCapabilityScale; moved: 2
-_SEP_LOGON_SESSION_REFERENCES: size 0xc8 -&gt; 0xe0; added: RevocationBlockPtr; moved: 3; resized: 1
 wil_details_FeatureDescriptor: removed: requiresInitGuard
-EmptyCVariant_FeatureStaging_Feature_MSRC139537: added
 _SYSTEM_INFORMATION_CLASS: added: SystemCanonicalizeSystemDlls, SystemZombieProcessInformation; renumbered: MaxSystemInfoClass 259-&gt;261</content>
 </entry>
 <entry>
@@ -90,6 +87,16 @@ _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; 
 <summary>2 type(s) changed in KB5131291 (1607, amd64)</summary>
 <content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
 _SEP_LOGON_SESSION_REFERENCES: size 0xc0 -&gt; 0xd8; added: RevocationBlockPtr; moved: 3; resized: 1</content>
+</entry>
+<entry>
+<title>11-26H1 amd64 10.0.28000.3365 -&gt; 10.0.28000.3501: _OB_HANDLE_REVOCATION_BLOCK, _SEP_LOGON_SESSION_REFERENCES, EmptyCVariant_FeatureStaging_Feature_MSRC139537</title>
+<id>urn:ntoffsets:feed:changes:238C901F42C19C9291DBE4744A4854581:C66CB99A9B4D22E7ADF0F4EE888CBB4D1</id>
+<updated>2026-11-10T00:00:00Z</updated>
+<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/C66CB99A9B4D22E7ADF0F4EE888CBB4D1.json"/>
+<summary>2 type(s) changed in KB5132059 (11-26H1, amd64)</summary>
+<content type="text">_OB_HANDLE_REVOCATION_BLOCK: size 0x20 -&gt; 0x30; added: ReferenceCount, Revoked
+_SEP_LOGON_SESSION_REFERENCES: size 0xc8 -&gt; 0xe0; added: RevocationBlockPtr; moved: 3; resized: 1
+EmptyCVariant_FeatureStaging_Feature_MSRC139537: added</content>
 </entry>
 <entry>
 <title>11-24H2 arm64 KB5127648 -&gt; 10.0.26100.9974: PO_MEMORY_IMAGE, _ETHREAD, _MI_PARTITION_STORES, _OB_HANDLE_REVOCATION_BLOCK, and 8 more</title>
@@ -4308,18 +4315,5 @@ _SYSTEM_INFORMATION_CLASS: added: SystemRuntimeAttestationReport; renumbered: Ma
 <link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/33BAAFAED913D5F0180FF18F587357161.json"/>
 <summary>1 type(s) changed in KB5066793 (11-22H2, amd64)</summary>
 <content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled</content>
-</entry>
-<entry>
-<title>11-24H2 arm64 KB5065426/KB5068221 -&gt; KB5065789: PO_MEMORY_IMAGE, _EPROCESS, _HALP_DMA_MASTER_ADAPTER_OBJECT, _MI_VAD_EVENT_BLOCK, and 2 more</title>
-<id>urn:ntoffsets:feed:changes:36D33E649D94FF98D44813A0F326BB4F1:FE0DE78978C1415324DB14B350D856C91</id>
-<updated>2025-09-29T00:00:00Z</updated>
-<link rel="alternate" href="https://kernullist.github.io/ntoffsets/v1/build/FE0DE78978C1415324DB14B350D856C91.json"/>
-<summary>5 type(s) changed in KB5065789 (11-24H2, arm64)</summary>
-<content type="text">PO_MEMORY_IMAGE: removed: Feature_HibernateRelaxVBSPolicy_Enabled
-_EPROCESS: renamed: NumberOfLockedPages -&gt; MmReserved2
-_HALP_DMA_MASTER_ADAPTER_OBJECT: size 0xe0 -&gt; 0xe8; added: QueueLock; moved: 8
-_MI_VAD_EVENT_BLOCK: removed: BitMap
-_POP_HIBER_CONTEXT: added: EnableVpciHibernationCallbacks
-_RTL_FEATURE_CONFIGURATION_PRIORITY: added: FeatureConfigurationPriorityConfigurationSystem; removed: FeatureConfigurationPriorityReserved11</content>
 </entry>
 </feed>
